@@ -1,7 +1,6 @@
 # AoE2DE UGC Guide
-The Ultimate Guide to AoE2DE User Generated Content (UGC)
 
-# About this guide
+The Ultimate Guide to AoE2DE User Generated Content (UGC)
 
 ## What is this guide?
 
@@ -17,7 +16,7 @@ Its fun! You can make your wildest ideas come to life by making custom content. 
 
 ## Topics this guide covers
 
-This guide will cover Making Custom Scenarios, Data Modding and RM Scripting. Note that this is still a work in progress, so not all of the topics are available yet!
+This guide will cover Making Custom Scenarios, Data Modding, RM Scripting and AI Scripting. Note that this is still a work in progress, so not all of the topics are available yet! Some topics already have very comprehensive and good guides out there. Such guides will be linked where relevant!
 
 ## Is this guide relevant for older versions of the game?
 
@@ -30,6 +29,7 @@ You must have Python 3.6 or above installed to be able to use mkdocs
 clone the repository, then set up a virtual python environment and install the necessary packages:
 
 On Linux:
+
 ```sh
 $ python3 -m venv venv
 $ source venv/bin/activate
@@ -37,6 +37,7 @@ $ pip install -r requirements.txt
 ```
 
 On Windows:
+
 ```sh
 > py -m venv venv
 > venv/Scripts/activate
@@ -51,8 +52,10 @@ If you have questions, join our discord [here](https://discord.gg/rNa6cUC76W "Jo
 
 This guide has been written by
 
-| **Author**           | **Discord**   | **GitHub**                                               | **YouTube** | **Twitch** |
-| :-:                  | :-:           | :-:                                                      | :-:         | :-:        |   
-| Alian713             | Alian713#0069 | [here](https://github.com/Divy1211 "Alian's GitHub")     | -           | [here](https://www.twitch.tv/Alian713 "Alian's Twitch") |
-| KSneijders (MrKirby) | MrKirby#5063  | [here](https://github.com/KSneijders "MrKirby's GitHub") | -           | [here](https://www.twitch.tv/MrKirbyOfficial "MrKirby's Twitch") |
-| hszemi | hszemi#2325 | [here](https://github.com/HSZemi "HSZemi's GitHub") | -           | [here](https://www.twitch.tv/hszemi "HSZemi's Twitch") |
+|      **Author**      |  **Discord**  |                         **GitHub**                         | **YouTube** |                            **Twitch**                            |
+| :------------------: | :-----------: | :--------------------------------------------------------: | :---------: | :--------------------------------------------------------------: |
+|       Alian713       | Alian713#0069 |    [here](https://github.com/Divy1211 "Alian's GitHub")    |      -      |     [here](https://www.twitch.tv/Alian713 "Alian's Twitch")      |
+| KSneijders (MrKirby) | MrKirby#5063  |  [here](https://github.com/KSneijders "MrKirby's GitHub")  |      -      | [here](https://www.twitch.tv/MrKirbyOfficial "MrKirby's Twitch") |
+|        hszemi        |  hszemi#2325  |    [here](https://github.com/HSZemi "HSZemi's GitHub")     |      -      |      [here](https://www.twitch.tv/hszemi "HSZemi's Twitch")      |
+|       Bradical       | Bradical#2561 | [here](https://github.com/bradsmithee "Bradical's GitHub") |      -      |                                -                                 |
+|     别云(Syser)      |  Syser#6830   |     [here](https://github.com/iSyser "Syser's GitHub")     |      -      |                                -                                 |

@@ -1,2 +1,5 @@
 mkdocs
 mkdocs-material
+
+# For many reasons, it was ultimately decided to use mkdocs-static-i18n instead of mkdocs-i18n.
+mkdocs-static-i18n
