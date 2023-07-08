@@ -16,7 +16,7 @@ Understanding how damage calculation works and how attacks from one unit to anot
 
 ### 3.1. Introduction
 
-Each unit in the game has two essential properties, a list of `Attack Classes` and a list of `Armour Classes`. These are also commonly called the `Damage Classes`, and are used to calculate the damage each unit does to any other unit. There are a total of 40 damage classes in the game but pierce and melee damage classes are the most commonly known ones, as they are the only ones which are actually shown in game. There is also a 3rd property that we need to know about, which is the `Base Armour`. This is almost always set to 1000 for every unit.
+Each unit in the game has two essential properties, a list of `Attack Classes` and a list of `Armour Classes`. These are also commonly called the `Damage Classes`, and are used to calculate the damage each unit does to any other unit. There are a total of 40 damage classes in the game but pierce and melee damage classes are the most commonly known ones, as they are the only ones which are actually shown in game. There is also a 3rd property that we need to know about, which is the `Base Armour`. This is almost always set to 10000 for every unit.
 
 ### 3.2. List of Damage Classes
 
@@ -153,7 +153,7 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{16}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{16} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -164,7 +164,7 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{21}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{21} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -175,7 +175,7 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{29}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{29} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -186,7 +186,7 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{30}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{30} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 974                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -197,7 +197,7 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{34}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{34} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -208,13 +208,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
     $$
     \begin{aligned}\text{dmg}_{35}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{35} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 989                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
     $$
 
-    Trick: Remember, the value for `Base Armour` is almost always 1000, so unless the unit has an attack of more than 1000 in an attack class, they practically have no effect on the amount of damage dealt! This above calculation with base armour can thus be skipped if that is the case
+    Trick: Remember, the value for `Base Armour` is almost always 10000, so unless the unit has an attack of more than 10000 in an attack class, they practically have no effect on the amount of damage dealt! This above calculation with base armour can thus be skipped if that is the case
 
 4.  Now add all of the differences found above. Round up to 1 if you get 0.
 
@@ -290,14 +290,14 @@ For calculating the total amount of damage that this unupgraded War Elephant dea
 
 The only common damage class is `Base Melee (4)` (highlighted in the table above)
 
-This means that the damage that the War Elephant does to the Halberdier is simply given by $\text{dmg} = 15-1 = 14$ (The calculation with the base armour is not shown here since no attack class has an attack of more than 1000 to overecome the base armour)
+This means that the damage that the War Elephant does to the Halberdier is simply given by $\text{dmg} = 15-1 = 14$ (The calculation with the base armour is not shown here since no attack class has an attack of more than 10000 to overecome the base armour)
 
 ```py
 damage = 0
 
 # 1. for each attack_class that the attacking unit has
 for attack_class, attack in attacker.attack_classes:
-    used_armour = target.base_armour # almost always 1000
+    used_armour = target.base_armour # almost always 10000
     if attack_class in targer.armour_classes:
         used_armour = target.armour_classes[attack_class]
 

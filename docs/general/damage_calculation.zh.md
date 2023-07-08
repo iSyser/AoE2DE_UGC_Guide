@@ -16,7 +16,7 @@ _作者：Alian713_
 
 ### 3.1. 概述
 
-游戏中的每个单位都有两个基本属性，`攻击类型` 列表和 `护甲类型` 列表。通常也统一称为 `伤害类型`，用于计算每个单位对任何其他单位造成的伤害。游戏中共有 40 个伤害类型，其中“基础远程”和“基础近战”两个伤害类型是最常见的，因为它们是唯一在游戏中实际显示的伤害类型。我们还需要了解第 3 个属性，即 `基础护甲`，几乎每个单位都是设置为 1000。
+游戏中的每个单位都有两个基本属性，`攻击类型` 列表和 `护甲类型` 列表。通常也统一称为 `伤害类型`，用于计算每个单位对任何其他单位造成的伤害。游戏中共有 40 个伤害类型，其中“基础远程”和“基础近战”两个伤害类型是最常见的，因为它们是唯一在游戏中实际显示的伤害类型。我们还需要了解第 3 个属性，即 `基础护甲`，几乎每个单位都是设置为 10000。
 
 ### 3.2. 伤害类型列表
 
@@ -153,7 +153,7 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{16}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{16} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -164,7 +164,7 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{21}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{21} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -175,7 +175,7 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{29}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{29} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -186,7 +186,7 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{30}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{30} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 974                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -197,7 +197,7 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{34}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{34} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
@@ -208,13 +208,13 @@ _作者：Alian713_
     $$
     \begin{aligned}\text{dmg}_{35}
     &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{35} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 1000,\; \color{white} 0 \color{#ff6961})\\
+    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 989                ,\; \color{white} 0 \color{#ff6961})\\
     &= \color{#ff6961} 0
     \end{aligned}
     $$
 
-    技巧：请记住，`基础护甲` 的值几乎总是 1000，因此除非该单位的某种类型的攻击力超过 1000，否则它们实际上对造成的伤害总量没有影响！在这种情况下，则可以跳过上述带有基础护甲的计算。
+    技巧：请记住，`基础护甲` 的值几乎总是 10000，因此除非该单位的某种类型的攻击力超过 10000，否则它们实际上对造成的伤害总量没有影响！在这种情况下，则可以跳过上述带有基础护甲的计算。
 
 4.  对以上的所有计算结果求和，若为 0，取 1。
 
@@ -290,14 +290,14 @@ $$
 
 唯一共同的伤害类型是 `基础近战 (4)`（在上表中突出显示）
 
-这意味着战象对戟兵造成的伤害简单地由 $\text{dmg} = 15 - 0 = 15$ 给出（这里没有展示基础护甲的计算，因为没有攻击力大于 1000 的攻击类型来对抗基础护甲）
+这意味着战象对戟兵造成的伤害简单地由 $\text{dmg} = 15 - 0 = 15$ 给出（这里没有展示基础护甲的计算，因为没有攻击力大于 10000 的攻击类型来对抗基础护甲）
 
 ```py
 damage = 0
 
 # 1. 对于攻击单位拥有的每个 attack_class
 for attack_class, attack in attacker.attack_classes:
-    used_armour = target.base_armour # 几乎总是 1000
+    used_armour = target.base_armour # 几乎总是 10000
     if attack_class in targer.armour_classes:
         used_armour = target.armour_classes[attack_class]
 

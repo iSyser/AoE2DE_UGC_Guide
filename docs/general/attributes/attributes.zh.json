@@ -1,80 +1,59 @@
 {
   "0": {
-    "name": "Hit Points",
-    "desc": "This attribute refers to the health of the units",
-    "notes": [],
-    "flags": {}
+    "name": "生命值",
+    "desc": "该属性指的是单位的生命值"
   },
   "1": {
-    "name": "Line of Sight",
-    "desc": "This is the distance a unit can see around itself",
-    "notes": [],
-    "flags": {}
+    "name": "视野",
+    "desc": "这是单位可以看到自身周围的距离"
   },
   "2": {
-    "name": "Garrison Capacity",
-    "desc": "This is the amount of units that can garrison inside another unit",
-    "notes": [],
-    "flags": {}
+    "name": "驻扎容量",
+    "desc": "这是可以驻扎另一些单位的数量"
   },
   "3": {
-    "name": "Unit Size X",
-    "desc": "This determines the x-size of the unit's collision hitbox (width of the unit)",
-    "notes": [],
-    "flags": {}
+    "name": "单位尺寸 X",
+    "desc": "这决定了单位碰撞盒子的 x 尺寸（单位的宽度）"
   },
   "4": {
-    "name": "Unit Size Y",
-    "desc": "This determines the y-size of the unit's collision hitbox (length of the unit)",
-    "notes": [],
-    "flags": {}
+    "name": "单位尺寸 Y",
+    "desc": "这决定了单位碰撞盒子的 y 尺寸（单位的长度）"
   },
   "5": {
-    "name": "Movement Speed",
-    "desc": "This is the movement speed of a unit, measured in tiles per second",
-    "notes": [],
-    "flags": {}
+    "name": "移动速度",
+    "desc": "这是单位的移动速度，单位：格/秒"
   },
   "6": {
-    "name": "Rotation Speed",
-    "desc": "This is the rate at which units can rotate, measured in seconds per frame (this many seconds must pass before the object can switch to the next rotation frame). For example, for a trebuchet to start attacking a building facing the opposite direction, it has to rotate to face that way first",
-    "notes": [],
-    "flags": {}
+    "name": "旋转速度",
+    "desc": "这是可以旋转的单位的旋转速率，单位：秒/帧（在对象可以切换到下一个旋转帧之前需要等待这么多秒）。例如，为了让投石机开始攻击与朝向相反方向的建筑物，它首先需要旋转朝向到那个方向"
   },
   "8": {
-    "name": "Armor",
-    "desc": "This is the quantity of armour a unit has on any of its `Armour Classes`. If you do not know what an `Armour Class` is, refer to the [Damage Calculation](../damage_calculation \"Jump to: Game Mechanics > Damage Calculation\") section of this guide. Note that changing the armour through this option will show it as being added to the base armour amount. (for example: 4+4)",
-    "notes": [],
-    "flags": {}
+    "name": "护甲",
+    "desc": "这是一个单位在其任何 `护甲类型` 上拥有的护甲值。如果您不知道什么是 `护甲类型`，请参阅本指南的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改护甲将显示其已添加到基础护甲值中（例如：4+4）。"
   },
   "9": {
-    "name": "Attack",
-    "desc": "This is the quantity of attack a unit has on any of its `Attack Classes`. If you do not know what an `Attack Class` is, refer to the [Damage Calculation](../damage_calculation \"Jump to: Game Mechanics > Damage Calculation\") section of this guide. Note that changing the attack through this option will show it as being added to the base attack amount. (for example: 6+2)",
-    "notes": [],
-    "flags": {}
+    "name": "攻击力",
+    "desc": "这是一个单位在其任何 `攻击类型` 上拥有的攻击力。如果您不知道什么是 `攻击类型`，请参阅本指南的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改攻击将显示其已添加到基本攻击力中（例如：6+2）。"
   },
   "10": {
-    "name": "Attack Reload Time",
-    "desc": "This is the minimum time that must pass before a unit is able to fire another shot. For melee units it is the minimum time between two successive hits that they can do",
-    "notes": [],
-    "flags": {}
+    "name": "攻击间隔",
+    "desc": "这是单位能够再次射箭之前必须经过的最短时间。对于近战单位来说，这是他们可以进行的两次连续攻击之间的最短时间"
   },
   "11": {
-    "name": "Accuracy Percent",
-    "desc": "This determines how accurately a unit can aim at another unit",
+    "name": "命中率",
+    "desc": "这决定了一个单位瞄准另一个单位的准确度",
     "notes": [
-      "This accuracy is the accuracy of a unit to fire at the exact centre of its target. If the shot fired is not aimed at the exact centre of the target, it may still hit the target if its not off by too much since it can still land within the hitbox of the target, just not at the exact centre",
-      "Thus, bigger targets are actually easier to hit, which explains why buildings are an easier target to hit for trebuchets than small units",
-      "![Visually Smaller](./imgs/visually_smaller.png \"Targets that are farther away are visually smaller\")",
-      "In this image, you can see that shots that were fired in the red area in the 2nd scenario would've hit if the target had been closer like in the first scenario, but since the target is far away, they actually miss",
-      "More technically, the visual angle of an object of the same size that is farther away is smaller, thus giving a smaller room for error for the shot in terms of the range of angles that will make the shot hit",
-      "The chance of a unit getting converted by a monk is also determined by its accuracy",
-      "If you modify an onager to have a big blast radius and give it a small accuracy, then attack a lot of units bunched together, the accuracy determines what percentage of units take damage from the blast of the onager! This is the reason why warwolf trebuchets get 100% accuracy because otherwise the blast wouldn't damage all of the units. Another interesting consequence of this is the delete trick with onagers and mangonels. This is where a mangonel is deleted immediately after it fires its shot and because a dead unit doesn't have an accuracy, it defaults to 100% and thus deals more damage to all the units in the blast radius",
-      "Note: There are two other factors that play a role in determining the damage from the shot fired by the deleted mangonel",
-      "1. The damage from a mangonel's shot is decreased over distance when moving outward from the centre of the blast (the targeted point). However, when the mangonel is deleted, this decrease over distance doesn't happen, and the projectile deals the full 100% damage to all the units in the blast radius!",
-      "2. A shot that is fired from lower elevation would normally deal only 75% of its normal damage due to the elevation damage reduction. deleting a mangonel in this case also makes the damage the full 100% as if there was no elevation difference"
-    ],
-    "flags": {}
+      "该命中率是单位向目标的正中心开火的命中率。如果发射的子弹不是瞄准目标的正中心，如果偏差不是太大，它仍然可能击中目标，因为它仍然可以落在目标的命中范围内，只是不是在正中心",
+      "因此，更大的目标实际上更容易击中，这解释了为什么建筑物比小单位更容易被投石机击中",
+      "![视觉上较小](./imgs/visually_smaller.png \"距离较远的目标视觉上较小\")",
+      "在此图中，您可以看到，在第二个情景中，红色区域散布的打偏的子弹，其实是能够击中像第一个情景中那样近的目标的。",
+      "从技术上讲，距离较远的相同尺寸的物体的视角较小，因此在射击的角度范围方面，容错率更小",
+      "单位被僧侣转换的几率也取决于其命中率",
+      "如果您将投石车修改为具有较大的溅射半径并赋予其较小的命中率，然后攻击大量聚集在一起的单位，则命中率决定了受到投石车溅射伤害的单位百分比！同时这也是战狼号投石机设置 100% 命中率的原因，因为这样可以使得战狼号溅射范围内所有单位都受到伤害。还有一个有趣的用法是投石车的删除技巧。当投石车在抛射后被立即删除时，由于死亡的单位没有命中率，便默认为 100%，从而对溅射半径内的所有单位造成更多伤害",
+      "注意：在确定被删除的投石车抛射砸中的伤害时，还有另外两个因素发挥作用",
+      "1. 当从投石车溅射中心（目标点）向外移动时，其射击造成的伤害会随着距离的增加而降低。 然而，当投石车被删除时，这种随距离的衰减就不会发生，并且抛射物会对溅射半径内的所有单位造成 100% 的全额伤害！",
+      "2. 由于高地存在伤害加减成，从较低高度发射的子弹通常只能造成正常伤害的 75%。在这种情况下删除投石车也会使伤害达到 100%，就好像没有高度差异一样"
+    ]
   },
   "12": {
     "name": "Max Range",

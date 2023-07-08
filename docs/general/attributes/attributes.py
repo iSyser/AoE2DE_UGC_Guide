@@ -1,22 +1,22 @@
 import functools
-import regex
-import json
+
+import ugcdoc
 
 # As the number of languages increases,
 # this section can be moved to the corresponding file
-out_dict = {'default': 'en'}
+md_dict = {None: 'en'}
 
-out_dict['en'] = {'head': """_Written by: Alian713, Syser_
+md_dict['en'] = {'head': """_Written by: Alian713, Syser_
 
 ---
 
-This page is a list of all the unit attributes that can be modified in the scenario editor and their purposes.   
+This page is a list of all the unit attributes that can be modified in the scenario editor and their purposes.
 If you know of any attributes that are not written on this page,
 or if the descriptions of the attributes are wrong, please let the authors of this guide know!
 
 """, "property": "Property", "flag_value": "Flag Value"}
 
-out_dict['zh'] = {'head': """_作者: Alian713, 别云_
+md_dict['zh'] = {'head': """_作者: Alian713, 别云_
 
 ---
 
@@ -25,66 +25,37 @@ out_dict['zh'] = {'head': """_作者: Alian713, 别云_
 """, 'name': "英文原名", "property": "标识", "flag_value": "值"}
 
 
-def validify(name: str) -> str:
-    name = name.upper()
-    name = name.replace(" ", "_")
-    name = name.replace("(", "_")
-    name = name.replace("%", "_PERCENT")
-    name = name.replace("/", "_")
-    name = name.replace(")", "_")
-    name = name.replace("-", "_")
-    name = name.replace("!", "")
-    name = name.replace(".", "_")
-    name = name.replace(",", "_")
-    name = name.replace("'", "_")
-    name = name.replace("+", "AND")
-    name = name.replace("[", "_")
-    name = name.replace("]", "_")
-    name = regex.sub("_+", "_", name)
-    name = regex.sub("_$", "", name)
-    name = regex.sub("^_", "", name)
-    return name
-
-
-def get_key(key_name: str, attr: dict, lang: str = None):
-    if lang and lang != out_dict['default'] and f'{key_name}.{lang}' in attr:
-        return attr[f'{key_name}.{lang}']
-    return attr[key_name]
-
-
 def build_doc(lang: str = None):
-    with open("attributes.json") as file:
-        attrs = json.load(file)
+    def_lang = md_dict[None]
+    lang = lang or def_lang
+    attrs = ugcdoc.load_json_dict("attributes", def_lang, lang)
 
-    lang = lang or out_dict['default']
-    not_def_lang = lang != out_dict['default']
+    out = md_dict[lang]['head']
+    for attr_id in attrs[def_lang]:
+        k = functools.partial(ugcdoc.get_key, dict_set=attrs, parent_key=attr_id, lang=lang)
 
-    out = out_dict[lang]['head']
-    for id_, attr in attrs.items():
-        k = functools.partial(get_key, attr=attr, lang=lang)
-
-        out += f"## {id_}. {k('name')}\n\n"
-
-        if not_def_lang:
-            out += f"-   {out_dict[lang]['name']}: {k('name', lang=None)}\n\n"
+        out += f"## {attr_id}. {k('name')}\n\n"
+        out += f"-   ID: {attr_id}\n\n"
+        if lang != def_lang:
+            out += f"-   {md_dict[lang]['name']}: {k('name', lang=None)}\n\n"
 
         out += f"-   {k('desc')}\n\n"
 
-        dnln = '\n\n'
-        if 0 < len(k('notes')):
-            out += f"-   {f'{dnln}    '.join(k('notes'))}\n\n"
+        if extra := k('notes'):
+            dnln = '\n\n'
+            out += f"-   {f'{dnln}    '.join(extra)}\n\n"
 
-        if 0 < len(k('flags')):
-            out += f"    | {out_dict[lang]['property']} | {out_dict[lang]['flag_value']} |\n"
+        if extra := k('flags'):
+            out += f"    | {md_dict[lang]['property']} | {md_dict[lang]['flag_value']} |\n"
             out += "    | :- | -: |\n"
 
-            for value, desc in attr["flags"].items():
+            for value, desc in extra.items():
                 out += f"    | {desc} | {value} | \n"
             out += "\n"
 
     out = out[:-1]
     output_file = "index"
-    output_file = f"{output_file}.{lang}.md" if not_def_lang else f"{output_file}.md"
+    output_file = f"{output_file}.md" if lang == def_lang else f"{output_file}.{lang}.md"
     with open(output_file, "w") as file:
         file.write(out)
 
