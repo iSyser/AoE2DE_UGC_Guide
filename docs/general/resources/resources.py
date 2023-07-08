@@ -26,7 +26,7 @@ has (so far) not affected the game in any way.
 
 md_dict['zh'] = {'head': r"""# 玩家资源
 
-_作者: Alian713, Bradical, 别云_
+_作者：Alian713, Bradical, 别云_
 
 ---
 

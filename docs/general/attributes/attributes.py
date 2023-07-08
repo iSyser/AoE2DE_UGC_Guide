@@ -16,7 +16,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 """, "property": "Property", "flag_value": "Flag Value"}
 
-md_dict['zh'] = {'head': """_作者: Alian713, 别云_
+md_dict['zh'] = {'head': """_作者：Alian713, 别云_
 
 ---
 
