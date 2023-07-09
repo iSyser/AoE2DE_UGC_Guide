@@ -54,10 +54,7 @@ def build_doc(lang: str = None):
             out += "\n"
 
     out = out[:-1]
-    output_file = "index"
-    output_file = f"{output_file}.md" if lang == def_lang else f"{output_file}.{lang}.md"
-    with open(output_file, "w") as file:
-        file.write(out)
+    ugcdoc.export_md_file("index", out, def_lang, lang)
 
 
 build_doc()
