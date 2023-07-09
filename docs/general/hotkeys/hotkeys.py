@@ -35,7 +35,7 @@ However, if you set a unit's hotkey ID to a building's hotkey ID (or vice versa)
 How do we know which key this is going to be? This key is determined by the first character of the string (the text within quotes) corresponding to the hotkey ID in the file called `key-value-strings-utf8.txt` located in this directory:
 
 ```
-PATH_TO_DE_FOLDER/AoE2DE/resources/en/strings/key-value/
+PATH_TO_THE_FOLDER/AoE2DE/resources/en/strings/key-value/
 ```
 
 If we search for the value `16344` in this file, which is the hotkey ID of the house, it can be seen that the string corresponding to it is `"Q"` and its first character is `Q` which is the hotkey that is used in this case.
@@ -68,7 +68,7 @@ _作者：Alian713_
 
 ## 2. 关于热键 ID
 
-游戏中的每个标准单位都有一个“热键 ID”，它告诉游戏激活热键需要按下哪个键。你可以通过 A.G.E. 查询每个单位的热键 ID 的值是多少。如果您不知道 A.G.E. 是什么，请参阅本指南的[数据模组]("跳转至：数据模组 NON EXISTENT")部分。
+游戏中的每个标准单位都有一个“热键 ID”，它告诉游戏激活热键需要按下哪个键。你可以通过 A.G.E. 查询每个单位的热键 ID 的值是多少。如果您不知道 A.G.E. 是什么，请参阅本手册的[数据模组]("跳转至：数据模组 NON EXISTENT")部分。
 
 将一个单位的热键 ID 设置为与另一个单位相同的值将使两者的热键相同。例如，将民兵的热键 ID 设置为与村民相同的值，则创建民兵的热键将与创建村民的相同。
 

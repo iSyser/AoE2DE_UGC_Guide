@@ -25,7 +25,7 @@ However, if you set a unit's hotkey ID to a building's hotkey ID (or vice versa)
 How do we know which key this is going to be? This key is determined by the first character of the string (the text within quotes) corresponding to the hotkey ID in the file called `key-value-strings-utf8.txt` located in this directory:
 
 ```
-PATH_TO_DE_FOLDER/AoE2DE/resources/en/strings/key-value/
+PATH_TO_THE_FOLDER/AoE2DE/resources/en/strings/key-value/
 ```
 
 If we search for the value `16344` in this file, which is the hotkey ID of the house, it can be seen that the string corresponding to it is `"Q"` and its first character is `Q` which is the hotkey that is used in this case.

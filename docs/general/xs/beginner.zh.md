@@ -1,112 +1,112 @@
-# XS Scripting: A Beginner's Guide
+# XS 脚本：初学者指南
 
-*Written by: Alian713*
+_作者：Alian713_
 
 ---
 
-## Are you a programmer?
+## 你是程序员吗？
 
-If you know how to program in any language then you're wasting your time on this page! See the [For Programmers](../programmer/ "Jump to: XS Scripting > For Programmers") instead, it is a shorter and more precise documentation since XS is just another programming language but with different syntax.
+如果您知道如何用任何语言进行编程，那么您在本页上就是浪费时间！请参阅 [对于程序员](../programmer/ "跳转到：XS 脚本 > 对于程序员")，它是一个更短、更精确的文档，因为 XS 只是另一种具有不同的语法的编程语言。
 
-If you're not a programmer, fear not! You are at the right place to learn all about XS!
+如果您不是程序员，请不要害怕！您来对地方了，这里可以了解有关 XS 的所有知识！
 
-## 1. Using an XS Script
+## 1. 使用 XS 脚本
 
-To use an XS script:
+要使用 XS 脚本：
 
-1. Make sure you can see file extensions. That means that every file on your computer should have a name that looks something like `filename.ext`. If you can see file extensions, then proceed to step 2. If not, then follow these steps:
+1.  确保您可以看到文件扩展名。这意味着您计算机上的每个文件都应该有一个类似于 `文件名.扩展名` 的名称。如果您可以看到文件扩展名，请继续执行步骤 2。如果看不到，请按照以下步骤操作：
 
-    1. Press :material-microsoft-windows: + E
-    2. Click `View` right at the top.
-    3. On the right side of the panel that appears, there will be an option called `File Name Extensions`.
-    4. Check this option if it is not already checked.
+    1. 按 :material-microsoft-windows: + E
+    2. 单击顶部的 `查看`。
+    3. 在出现的面板右侧，将有一个名为 `文件扩展名` 的选项。
+    4. 如果尚未选中此选项，请选中该选项。
 
-2. Navigate to the folder:
+2.  导航至文件夹：
 
-    `PATH_TO_THE_FOLDER/AoE2DE/resources/_common/xs`
-    
-    There should be 2 files in this folder already, called `Constants.xs` and `xs.txt`. In here, create a new file with any name ending with `.xs`. For example, the file can be called `filename.xs`
+    `文件夹路径/AoE2DE/resources/_common/xs`
+
+    该文件夹中应该已经有 2 个文件，名为 `Constants.xs` 和 `xs.txt`。在这里，创建一个新文件，名称以 `.xs` 结尾。例如，该文件可以为 `filename.xs`
 
     !!! Warning "default0.xs"
 
-        There may be an additional file called `default0.xs`. Never write code in this file as this is a temporary file and can be overwritten by the game.
+        可能还有一个名为 `default0.xs` 的附加文件。切勿在此文件中写入代码，因为这是临时文件，会被游戏覆盖。
 
-    The file `Constants.xs` contains a list of constants that can be used in any XS Script, using their name. They are essentially constants that the XS language pre-defines for you.
+    文件 `Constants.xs` 包含可在任何 XS 脚本中使用的常量列表（使用其名称）。它们本质上是 XS 语言为您预先定义的常量。
 
-3. Now open this file that you just created in your favourite text/code editor! If you don't have one already, using [Visual Studio Code (VSC)](https://code.visualstudio.com/download) is recommended.
+3.  现在用你最喜欢的 文本/代码 编辑器打开您刚刚创建的文件！如果您还没有，建议使用 [Visual Studio Code (VSC)](https://code.visualstudio.com/download)。
 
-    A VSC Extension for syntax highlighting and code auto completion for AoE XS Scripting can be found [here](https://marketplace.visualstudio.com/items?itemName=Divy.vscode-xs)
+    用于 AoE XS 脚本的语法高亮显示和代码自动完成的 VSC 扩展可以在[此处](https://marketplace.visualstudio.com/items?itemName=Divy.vscode-xs)找到
 
-4. To begin with using XS, write this basic code in the file:
+4.  要开始使用 XS，请在文件中写入以下基本代码：
 
 ```cpp
-// Anything that is written after a double front slash is a comment.
-// A comment is a line that is ignored when running the script.
-// comments are useful for explaining your code to others and
-// more importantly, your future self.
+// 双斜杠后面写的任何内容都是注释。
+// 注释是运行脚本时被忽略的行。
+// 注释对于向他人解释你的代码很有用，
+// 更重要的是，向未来的你解释自己的代码。
 
-// writing comments is a good habit because it helps you understand your
-// own code better.
-// you will see comments widely used in this guide, to explain almost
-// every bit of code that you see
+// 写注释是一个好习惯，
+// 因为它可以帮助你更好地理解自己的代码。
+// 您将看到本手册中广泛使用的注释，
+// 用于解释您看到的几乎所有代码
 
-// do note though, that even though commenting is a good practise,
-// over commenting code is a worse thing to do. Only comment stuff
-// that really needs commenting!
+// 但请注意，尽管注释是一种很好的做法，
+// 但过度注释代码是一件更糟糕的事情。
+// 只注释真正需要注释的内容！
 
-/* Anything enclosed by a front slash
-and asterisk pair is a
-multi line comment */
+/* 由正斜杠和星号
+对括起来的所有内容
+都是多行注释 */
 
-// Here, you are creating a function that is called 'main'.
+// 在这里，您将创建一个名为 'main' 的函数。
 void main() {
-  // this line says that you have an integer called 'a'
-  // that has a value of 10.
-  // note that almost every statement in XS is ended with a semi colon,
-  // just like in english we use periods to indicate the end of a sentence.
+
+  // 这行表示有一个名为 'a' 的整数，其值为 10。
+  // 请注意，XS 中的几乎每个语句都以分号结尾，
+  // 就像中文一样，我们使用句号来表示句子的结尾。
   int a = 10;
   int b = 20;
 
-  // this line says that you make a new integer called 'c'
-  // and it is the sum of 'a' and 'b'.
+  // 这行表示您创建了一个名为 'c' 的新整数，
+  // 它是 'a' 和 'b' 的和。
   int c = a + b;
 
-  // this line will show in the game chat the value of 'c'.
-  // This shows '30' in chat.
+  // 此行将在游戏聊天中显示 'c' 的值。
+  // 此处在聊天中显示 '30'。
   xsChatData("" + c);
 }
 ```
 
-### 1.1. In a Custom Scenario
+### 1.1. 在自定义场景中
 
-1. Open the scenario in the editor
-2. Under the `Map` tab, type the name of the XS Script that you created in the `Script Filename` field without the `.xs` at the end. For example, if your file is called `filename.xs` then you will write `filename` in this field.
-3. Now, under the `Triggers` tab in the editor, add a new trigger, then add a new effect. (If you do not know what a trigger/effect is, please go through the `Custom Scenarios: Triggers: Trigger Basics` section of this guide)
-4. From the `Effects List` select `Script Call`.
-5. You can now use the functions in the XS Script in the message box, by typing "function_name_here();"
-6. The `main()` function that we made above is automatically run when the scenario is played.
-7. If there are no errors in the code, clicking the `E#0: Script Call` effect will turn it green. If there is an error in the script, an error message will be shown.
-8. Testing the scenario now will run the `Script Call` effect in the trigger defined above, which in turn will run the `main()` function in the XS Script and `30` will be shown in the chat.
+1. 在编辑器中打开场景
+2. 在 `地图` 选项卡下，于 `脚本文件名` 字段中键入您创建的 XS 脚本的名称，末尾不带 `.xs`。 例如，如果您的文件名为 `filename.xs`，那么您将在此字段中写入 `filename`。
+3. 现在，在编辑器的 `触发` 选项卡下，添加新触发，然后添加新效果。（如果您不知道什么是 触发/效果，请参阅本手册的 `自定义场景：触发：触发基础知识`部分）
+4. 从 `效果列表` 中选择 `脚本调用`。
+5. 现在，您可以通过在消息框中键入 "function_name_here();" 使用 XS 脚本中的函数。
+6. 我们上面创建的 `main()` 函数会在场景被游玩时自动执行。
+7. 如果代码没有错误，点击 `E#0：脚本调用` 效果会变成绿色。如果脚本中有错误，将会显示错误消息。
+8. 现在测试场景将在上面定义的触发中运行 `脚本调用` 效果，该效果又将运行 XS 脚本中的 `main()` 函数，并且 `30` 将显示在聊天中。
 
-### 1.2. In an RMS
+### 1.2. 在 RMS 中
 
-1. Open the RMS file in a text editor
-2. At the very top, type `#includeXS filename.xs`. Here, `filename.xs` is the name of the file that you created above.
-3. The `main()` function that we made above is automatically run when a map is generated using the RMS.
-4. To test, load the RMS in a single player (or multi player) lobby and start the game. When the map is generated, the `main()` function in the XS Script will run and `30` will be shown in the chat.
-5. It is recommended that you use a custom scenario to test XS Scripts, as it is easier to debug them in the editor.
+1. 在文本编辑器中打开 RMS 文件
+2. 在最顶部，输入 `#includeXS filename.xs`。此处 `filename.xs` 是您上面创建的文件的名称。
+3. 当使用 RMS 生成地图时，我们上面创建的 `main()` 函数会自动运行。
+4. 要进行测试，请在单人游戏（或多人游戏）大厅中加载 RMS 并开始游戏。生成地图后，XS 脚本中的 `main()` 函数将被执行，并且聊天中将显示 `30`。
+5. 建议您使用自定义场景来测试 XS 脚本，因为在编辑器中调试它们更容易。
 
-Now that you have set up an XS file with a `main()` function inside, you can type code inside this function to do different things! We'll be walking through all of the different things that are known to be possible one by one, and things will become clearer.
+现在您已经创建了一个包含 `main()` 函数的 XS 文件，您可以在该函数中键入代码来执行不同的操作！我们将一一探讨所有已知可能发生的不同事情，事情会变得更加清晰。
 
-## 2. Programming Concepts:
+## 2. 编程概念:
 
-### 2.1. Constants
+### 2.1. 常量
 
-To do anything in an XS Script, we need constants. Any value that remains the same throughout the execution of the script is known as a constant. Quite literally, it remains constant throughout the execution of then script. For example, `#!cpp 10` is a constant. Every number is a constant.
+要在 XS 脚本中执行任何操作，我们需要常量。在脚本执行过程中保持不变的任何值都称为常量。确切地说，它在脚本的整个执行过程中保持不变。 例如，`#!cpp 10` 是一个常量。 每个数字都是一个常数。
 
-### 2.2. Variables
+### 2.2. 变量
 
-Variables are like boxes that are used to store constants. Variables are values that can change during the execution of the script! Think about it this way, if a variable is a box that stores a constant, that constant can be taken out and another one can be put in.  Quite literally, it is a variable (it may change!). For example, the script that we saw earlier uses 3 variables, called `a` `b` and `c`.
+变量就像用于存储常量的盒子。变量是在脚本执行期间可以更改的值！这样想吧，如果变量是一个存储常量的盒子，则可以取出该常量，然后放入另一个常量。确切地说，它是一个变量（它可能会改变！）。 例如，我们之前看到的脚本使用 3 个变量，称为 `a`、`b` 和 `c`。
 
 ```cpp
 void main() {
@@ -117,51 +117,51 @@ void main() {
 }
 ```
 
-Some questions that you might have now are:
+您现在可能有的一些问题是：
 
-1. What is this `#!cpp int` that preceeds the variable's name? That is the "data type" of the variable!
+1.  变量名称前面的 `#!cpp int` 是什么？ 这是变量的“数据类型”！
 
-2. What is a data type you ask? Every variable in a script has a data type, that is, it tells you what kind of value is stored in the variable. Think about it this way, if you want to store water, you need to specify that it must be stored in a bottle. Isn't that kind of obvious you might say? While to a human it might be obvious, a computer is a dumb machine. It does not know what to do unless you tell it, it is like a baby who must be spoonfed every tiny detail and instruction for it to work properly.
+2.  您问数据类型是什么？脚本中的每个变量都有一个数据类型，也就是说，它告诉您变量中存储的值类型。这样想，如果你想储存水，你需要指定它必须存储在瓶子里。你可能会说，这不是很明显吗？虽然对于人类来说，这可能是显而易见的，但计算机是一台愚蠢的机器。除非你告诉它，否则它不知道该怎么做，它就像一个婴儿，必须用勺子喂每一个微小的细节和指令才能正常工作。
 
-3. What other types of data types are there?
+3.  还有哪些其他类型的数据类型？
 
-    There are a total of 5 data types supported by XS, they are:
+    XS 总共支持 5 种数据类型，它们是：
 
-    1. Integer (`#!cpp int` )
+    1.  整数型 (`#!cpp int`)
 
-        You have seen an `#!cpp int` before, an integer is a data type that stores an integer quantity. An integer quantity may be negative, positive, or zero. It never has any fractional or decimal parts (for example, an integer never has `#!cpp 0.5`).
+        你之前见过 `#!cpp int`，整数型是一种存储整数（Integer）数量的数据类型。整数可以是负数、正数或零。它永远不会有任何分数或小数部分（例如，整数型永远不会有 `#!cpp 0.5`）。
 
-        Usage: `#!cpp int a = 10;` This declares a variable of type `#!cpp int` called `a` with a value of `#!cpp 10`
+        用法：`#!cpp int a = 10;` 这声明了一个名为 `a` 的 `#!cpp int` 类型变量，其值为 `#!cpp 10`
 
-    2. Floating Point (`#!cpp float`)
+    2.  浮点型(`#!cpp float`)
 
-        A `#!cpp float` is a data type that can store values with fractional parts or decimals. For example `#!cpp 1.5` is a floating point value.
+        `#!cpp float` 是一种可以存储带有分数或小数部分的值的数据类型。例如 `#!cpp 1.5` 是一个浮点（Floating Point）值。
 
-        Usage: `#!cpp float a = 3.14159;` This declares a variable of type `#!cpp float` called `a` with a value of `#!cpp 3.14159`
-        
-        Why would you ever use an `#!cpp int` then? The reason is because computers take longer to perform calculations with floats! If you know that your calculation will not involve fractional values and decimals, you should always use an integer instead of a floating point value
+        用法：`#!cpp float a = 3.14159;` 这声明了一个名为 `a` 的 `#!cpp float` 类型变量，其值为 `#!cpp 3.14159`
 
-    3. Boolean (`bool`)
+        那么为什么要使用 `#!cpp int` 呢？原因是计算机需要更长的时间来执行浮点数计算！如果您知道您的计算不会涉及分数和小数，则应始终使用整数型而不是浮点值
 
-        A `bool` is a data type, that can only store one of two different values, `#!cpp true` or `#!cpp false`. Any yes or no question is a boolean question in some sense, because there are only two answers, yes or no. Boolean variables are super important for conditions, which we will be looking at later.
+    3.  逻辑型 (`bool`)
 
-        Usage: `#!cpp bool a = true;` This declares a variable of type `bool` called `a` with a value of `#!cpp true`
-        
-        !!! note
+        `bool` 又称布尔，是一种只能存储真（`#!cpp true`）或假（`#!cpp false`）两个布尔值之一的数据类型。任何是或否问题在某种意义上都是布尔问题，因为只有两个答案，是或否。布尔变量对于条件非常重要，我们稍后会讨论。
 
-            A value of `true` is also indicated by `#!cpp 1` and a value of `false` is also indicated by `#!cpp 0`.
+        用法： `#!cpp bool a = true;` 这声明了一个名为 `a` 的 `bool` 类型变量，其值为 `#!cpp true`
 
-    4. String (`string`)
+        !!! note "注意"
 
-        A `string` is a word, a phrase or a sentence. A string is always enclosed by double quotes.
+            `true` 的值也由 `#!cpp 1` 表示，而 `false` 的值也由 `#!cpp 0` 表示。
 
-        Usage: `#!cpp string a = "this is a string! yay";` This declares a variable of type `string` called `a` with a value of `#!cpp "this is a string! yay"`
+    4.  字符串 (`string`)
+
+        `string` 是一个词语、一个句子或一个段落。字符串始终用（半角）双引号括起来。
+
+        用法： `#!cpp string a = "这是一串文本！哈哈";` 这声明了一个名为 `a` 的 `string` 类型变量，其值为 `#!cpp "这是一串文本！哈哈"`
 
         !!! bug
 
-            It is currently not possible to use non-ASCII characters directly in `string`, if you must, please refer to the `Tricks > Using Non-ASCII Characters` section of this guide. It is through implemented by reading and writing files.
+            上文中的中文字符串实际上无法如此实现，目前版本中不能直接在 `string` 中使用非 ASCII 字符，如果必须要使用，请参阅本手册的 `技巧 > 使用非 ASCII 字符` 部分，它是通过读写文件的方式实现的。
 
-    5. Vector (`#!cpp vector`)
+    5.  向量型 (`#!cpp vector`)
 
         A `#!cpp vector` is a variable that can store the coordinates of a point `#!cpp (x, y, z)`. If you don't know what that means, just take it as a variable that stores three different `#!cpp float` values. The first value is called the "X component", the second value is called the "Y component" and the last value is called the "Z component".
 
@@ -169,7 +169,7 @@ Some questions that you might have now are:
 
     Remember that your variable names can be almost anything! However, this does not mean that you should just use single letters or alphabets for variable names. Variable names should be chosen such that they represent, or hint to what the purpose of the variable is. Naming your variables such that they make intuitive sense is a good programming practise.
 
-4. How do I actually change a variable?
+4.  How do I actually change a variable?
 
     ```cpp
     void main() {
@@ -206,7 +206,7 @@ Some questions that you might have now are:
     2. Then we assign a value of `#!cpp 30` to `my var`.
     3. Then we initialise another variable called `my_var2` whose value is equal to the value of `my_var`.
     4. Then we try to assign the string `#!cpp "this is a string"` to `my_var` but remember that `my_var` is an integer, and it is not capable of storing a string, so this will actually give you an error. Think about it this way, you cannot put water in a paper bag, paper bags are not meant to store water!
-    There is an exception to this rule:
+       There is an exception to this rule:
 
     ```cpp
     void main() {
@@ -217,7 +217,7 @@ Some questions that you might have now are:
         // is when going from integers to floats
         float c = a;
 
-        // this will show 10.0 in game chat 
+        // this will show 10.0 in game chat
         xsChatData(""+c);
 
         // or when going from floats to integers.
@@ -225,14 +225,14 @@ Some questions that you might have now are:
         // it is discarded!
         int d = b;
 
-        // this will show 20 in game chat 
+        // this will show 20 in game chat
         xsChatData(""+d);
     }
     ```
 
     5. Lastly, we try to initialise a new variable called `my_var3` but we have not specified a data type! This will also give you an error. Think about it this way, if you want to store water, you need to specify if you want to use a paper bag or a water bottle.
 
-5. Can I make a variable whoes value cannot be changed?
+5.  Can I make a variable whoes value cannot be changed?
 
     Yes! initialising a variable with the word `#!cpp const` will make it a constant, and you won't be able to change its values.
 
@@ -252,7 +252,7 @@ There are some rules that must be followed when naming a variable. They are:
 
 4. Variable names must not be keywords. A keyword is a reserved word in any programming language that has a special meaning! For example, `#!cpp int` is a keyword in XS because it is used to declare a variable of the `#!cpp int` data type.
 
-While these are the only *laws* that you absolutely must follow, there are some conventions or *unwritten rules* that all programmers agree to follow to make their code more readable, and more clear.
+While these are the only _laws_ that you absolutely must follow, there are some conventions or _unwritten rules_ that all programmers agree to follow to make their code more readable, and more clear.
 
 1. When you are writing a variable name that is just one word, it is conventional to write it in all small letters. For example `#!cpp int radius = 10;` or `#!cpp string name = "Alian713";`.
 
@@ -275,14 +275,15 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
 3. Multiplication: `a*b` this gives you the product of two variables, `a` and `b`.
 
     For example:
+
     ```cpp
     void main() {
         int a = 69;
         int b = 420;
-        
+
         // this will chat 489 in game (69+420 = 489)
         xsChatData("result of 420+69 = "+(a+b));
-        
+
         // this will chat 351 in game (420-69 = 351)
         xsChatData("result of 420-69 = "+(b-a));
 
@@ -294,31 +295,32 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
 4. Division: `a/b` this gives you the division of `a` by `b`.
 
     Note that in programming, division is weird with how it works for integers and floats:
-    
+
     For `#!cpp int`, it performs what we call "integer division":
 
     `#!cpp 5/2 = 2`
-    
+
     `#!cpp 17/6 = 2`
-    
+
     Basically, you round down any fractional part to your answer when you do normal division for integers.
-    
+
     For `#!cpp float`, it performs regular division as you would expect:
 
     `#!cpp 5.0/2.0 = 2.5`
-    
+
     `#!cpp 17.0/6.0 = 2.83333`
-    
+
     This gives you the exact result of division.
-    
+
     What if you mix a `#!cpp float` and an `#!cpp int`? In that case, regular division is used.
 
 5. Modulo: `a%b` this gives you the remainder when dividing `a` by `b`.
 
     !!! bug "DataType of Result of Operation"
-        Due to a bug at the moment, the data type of the answer of any operation is decided by the first number used in the operation. This means that `#!cpp 9*5.5` evaluates to `#!cpp 49` instead of `#!cpp 49.5`. However, `#!cpp 5.5*9` will correctly evaluate to `#!cpp 49.5`. Note that this is a bug in XS itself and will probably be fixed in a future update
+    Due to a bug at the moment, the data type of the answer of any operation is decided by the first number used in the operation. This means that `#!cpp 9*5.5` evaluates to `#!cpp 49` instead of `#!cpp 49.5`. However, `#!cpp 5.5*9` will correctly evaluate to `#!cpp 49.5`. Note that this is a bug in XS itself and will probably be fixed in a future update
 
     For Example:
+
     ```cpp
     void main() {
         // this will chat 2 in game (5/2 = 2.5 but remember, this is integer division! so round down to 2)
@@ -344,6 +346,7 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
     ```
 
     Also Additionally, when testing stuff using `xsChatData`, be wary of some quirks that this has:
+
     ```cpp
     void main() {
         // Note that chat data does not send the same thing multiple consecutively
@@ -373,7 +376,7 @@ If you want to increase or decrease the value of a variable by one, then writing
 ```cpp
 void main() {
     int a = 10;
-    
+
     // increase the value of a to 11
     a++;
 
@@ -397,16 +400,17 @@ then this question also has only two answers, yes or no.
 Whenever you use a relational operator, it is like asking one of these questions above. Then how does a computer answer a question like this? Remember, a `boolean` data type can either be `true` or `false`, it does exactly this! Thus, the answers to all relational operations give you boolean values.
 
 1. `a < b` This checks if the number `a` is lesser than `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 < 10 : 1"
 xsChatData("5 < 10 : "+(5 <> 10));
 // remember, in programming, 1 is the same as true
 ```
 
-
 2. `a > b` This checks if the number `a` is greater than `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 > 10 : 0"
 xsChatData("5 > 10 : "+(5 > 10));
@@ -414,7 +418,8 @@ xsChatData("5 > 10 : "+(5 > 10));
 ```
 
 3. `a <= b` This checks if the number `a` is lesser than or equal to `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 <= 10 : 1"
 xsChatData("5 <= 10 : "+(5 <= 10));
@@ -424,7 +429,8 @@ xsChatData("10 <= 10 : "+(10 <= 10));
 ```
 
 4. `a >= b` This checks if the number `a` is greater than or equal to `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 >= 10 : 0"
 xsChatData("5 >= 10 : "+(5 >= 10));
@@ -434,7 +440,8 @@ xsChatData("10 >= 10 : "+(10 >= 10));
 ```
 
 5. `a == b` This checks if the number `a` is equal to `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 == 10 : 0"
 xsChatData("5 == 10 : "+(5 == 10));
@@ -444,7 +451,8 @@ xsChatData("10 == 10 : "+(10 == 10));
 ```
 
 6. `a != b` This checks if the number `a` is not equal to `b`. If it is, then the expression evaluates to `true`, else it evaluates to `false`.
-For example:
+   For example:
+
 ```cpp
 // this will print "5 != 10 : 1"
 xsChatData("5 != 10 : "+(5 != 10));
@@ -454,9 +462,10 @@ xsChatData("10 != 10 : "+(10 != 10));
 ```
 
 !!! Note "Relational Operators on Strings"
-    These relational operators also work on `string` values, for example `a < b` checks if `a` would alphabetically preceed `b`.
+These relational operators also work on `string` values, for example `a < b` checks if `a` would alphabetically preceed `b`.
 
 For Example:
+
 ```cpp
 void main() {
 
@@ -464,7 +473,7 @@ void main() {
     int a = 10;
     float b = 20.0;
     int c = 30;
-    
+
     // this would chat 1
     xsChatData("a < b is "+a < b);
 
@@ -480,13 +489,13 @@ void main() {
     // this would chat 1
     xsChatData("b <= c is "+(b <= c));
 
-    
+
     // With strings:
     string str1 = "ball";
     string str2 = "apple";
     string str3 = "cat";
     string str4 = "cat";
-    
+
     // this would chat 0 in game
     // this is because alphabetically, str1 does not come before str2
     xsChatData("str1 < str2 is "+(str1 < str2));
@@ -526,43 +535,42 @@ Boolean operations allow us to ask these sorts of questions but with boolean val
 1. Boolean AND: This is used to check if two or more boolean values are simultaneously `true`.
 
     Usage: `#!cpp a && b` (Here, `a` and `b` are boolean variables)
-    
+
     This checks if both `a` **AND** `b` are `true`. If they are, the expression evaluates to `true`, otherwise it evaluates to `false`.
 
     Every combination of inputs and outputs for `a && b` can be written in a table:
 
     | **a** | **b** | **a && b** |
-    | :---: | :---: | :---:      |
-    | false | false | false      |
-    | false | true  | false      |
-    | true  | false | false      |
-    | true  | true  | true       |
+    | :---: | :---: | :--------: |
+    | false | false |   false    |
+    | false | true  |   false    |
+    | true  | false |   false    |
+    | true  | true  |    true    |
 
     !!! Tip
-        The AND operation is not limited to just two variables. Any number of variables may be AND-ed together.
-        For Example: `#!cpp a && b && c && d`. For this expression to evaluate to true, ALL of `a`, `b`, `c` and `d` must be true.
-        Writing a table that lists every combination of inputs and outputs for this expression is left as an excersise for the reader.
+    The AND operation is not limited to just two variables. Any number of variables may be AND-ed together.
+    For Example: `#!cpp a && b && c && d`. For this expression to evaluate to true, ALL of `a`, `b`, `c` and `d` must be true.
+    Writing a table that lists every combination of inputs and outputs for this expression is left as an excersise for the reader.
 
 2. Boolean OR: This is used to check if one or more booleans are `true`.
 
     Usage: `#!cpp a || b` (Here, `a` and `b` are boolean variables)
-    
+
     This checks if either `a` **or** `b` is `true`. If one of them is, then the expression evaluates to `true`, else it evaluates to `false`.
 
     Every combination of inputs and outputs for `a || b` can be written in a table:
 
     | **a** | **b** | **a \|\| b** |
-    | :---: | :---: | :---:        |
-    | false | false | false        |
-    | false | true  | true         |
-    | true  | false | true         |
-    | true  | true  | true         |
+    | :---: | :---: | :----------: |
+    | false | false |    false     |
+    | false | true  |     true     |
+    | true  | false |     true     |
+    | true  | true  |     true     |
 
     !!! Tip
-        The OR operation is not limited to just two variables. Any number of variables may be OR-ed together.
-        For Example: `#!cpp a || b || c || d`. For this expression to evaluate to true, only one of `a`, `b`, `c` and `d` needs to be true.
-        Writing a table that lists every combination of inputs and outputs for this expression is left as an excersise for the reader.
-
+    The OR operation is not limited to just two variables. Any number of variables may be OR-ed together.
+    For Example: `#!cpp a || b || c || d`. For this expression to evaluate to true, only one of `a`, `b`, `c` and `d` needs to be true.
+    Writing a table that lists every combination of inputs and outputs for this expression is left as an excersise for the reader.
 
 ANDs and ORs can be used together in the same expression. For example:
 
@@ -571,15 +579,16 @@ ANDs and ORs can be used together in the same expression. For example:
 `a || (b && c)`: for this expression to be `true`, either `a` must be `true`or `b` and `c` must be `true` simultaneously.
 
 !!! Note
-    If no brackets are used when writing these expressions the expression is evaluated left to right. This means that `a || b && c || d` is the same as `((a || b) && c) || d`. Thus, to make it absolutely clear as to what you mean when writing a boolean expression, you should ALWAYS use brackets appropriately for clarity, even though it is not necessary to do so.
+If no brackets are used when writing these expressions the expression is evaluated left to right. This means that `a || b && c || d` is the same as `((a || b) && c) || d`. Thus, to make it absolutely clear as to what you mean when writing a boolean expression, you should ALWAYS use brackets appropriately for clarity, even though it is not necessary to do so.
 
 For example:
+
 ```cpp
 void main() {
     int a = 10;
     int b = 20;
     int c = 30;
-    
+
     // this would assign true to d
     // because both a < b and c > d are true
     bool d = (a < b) && (c > b);
@@ -603,7 +612,8 @@ void main() {
 When two strings are joined to form a new string, it is known as concatenation. Other data types may also be concatenated with strings.
 
 For Example:
-```cpp 
+
+```cpp
 void main() {
     string a = "this is ";
     string b = "string concatenation!";
@@ -627,8 +637,8 @@ Manipulating vectors in XS is done in a bit of a special way:
     We have already seen how this is done: `#!cpp vector v = vector(1, 2, 3);`
 
     !!! warning "No Vars in Vector Initialisation"
-        For some reason, currently we cannot use variables to initialise vectors inside `#!cpp vector()`;
-        This is probably a bug and will be fixed in future versions of XS.
+    For some reason, currently we cannot use variables to initialise vectors inside `#!cpp vector()`;
+    This is probably a bug and will be fixed in future versions of XS.
 
     For example:
 
@@ -680,7 +690,7 @@ Manipulating vectors in XS is done in a bit of a special way:
         myVector = xsVectorSetZ(myVector, 30); // sets the z component of the vector
     }
     ```
-    
+
     Note that it is not necessary to change all 3 components at the same time, you can chose to only change one if you want to.
 
 4. Setting the entire vector:
@@ -697,6 +707,7 @@ Manipulating vectors in XS is done in a bit of a special way:
 5. Obtaining the length of a vector:
 
     The length of a vector can be obtained as follows:
+
     ```cpp
     void main() {
         vector myVector = vector(1, 2, 3);
@@ -705,8 +716,7 @@ Manipulating vectors in XS is done in a bit of a special way:
     ```
 
     !!! Note
-        Mathematically, the length of a vector is given by $\sqrt{x^2+y^2+z^2}$
-
+    Mathematically, the length of a vector is given by $\sqrt{x^2+y^2+z^2}$
 
 6. Normalizing a vector:
 
@@ -720,7 +730,7 @@ Manipulating vectors in XS is done in a bit of a special way:
     ```
 
     !!! note
-        Mathematically, the normalised vector is given by $\left(\cfrac{x}{\sqrt{x^2+y^2+z^2}}, \cfrac{y}{\sqrt{x^2+y^2+z^2}}, \cfrac{z}{\sqrt{x^2+y^2+z^2}}\right)$
+    Mathematically, the normalised vector is given by $\left(\cfrac{x}{\sqrt{x^2+y^2+z^2}}, \cfrac{y}{\sqrt{x^2+y^2+z^2}}, \cfrac{z}{\sqrt{x^2+y^2+z^2}}\right)$
 
 ### 2.5. Flow Control Statements
 
@@ -734,11 +744,12 @@ $\color{red} \text{if} \; \color{yellow} \text{you have a pen,} \; \color{red} \
 
 Similarly, when writing a script, it might be needed to make decisions at some points in your code. Conditionals are decision making statements that can be used to chose which set of instructions to execute depending on given conditions. There are two types of conditionals suported by XS:
 
-1. The `#!cpp if else if` statement
+1.  The `#!cpp if else if` statement
 
     An `#!cpp if else` statement is used whenever you need your script to make decisions. It executes one set of instructions `#!cpp if` a conditon is true or `#!cpp else` it executes another set of instructions.
 
     Usage:
+
     ```cpp
     void main() {
         int a = 10;
@@ -799,15 +810,15 @@ Similarly, when writing a script, it might be needed to make decisions at some p
     ```
 
     !!! Note
-        In the above example, both the `#!cpp (b > a)` and `#!cpp (b == 20)` conditions are true. However, in an `#!cpp if else if` statement, only one branch of instructions is ever executed. Which condition takes proiority is decided by what order you write them in. So in this case, `#!cpp "b > 20"` will be chatted to the screen because that is the first condition which is true.
+    In the above example, both the `#!cpp (b > a)` and `#!cpp (b == 20)` conditions are true. However, in an `#!cpp if else if` statement, only one branch of instructions is ever executed. Which condition takes proiority is decided by what order you write them in. So in this case, `#!cpp "b > 20"` will be chatted to the screen because that is the first condition which is true.
 
     Technically, whenever a condition becomes true and its branch of instructions are executed, all of the remaining conditions are skipped, and not even evaluated.
 
     ???+ Question "Practise"
-        Now that you are armed with the power of `#!cpp if else if`, can you:
-        
+    Now that you are armed with the power of `#!cpp if else if`, can you:
+
         Write a script that would chat to the screen the maximum of 3 given variables.
-        
+
         When you're ready, click the "Answer" to view the solution.
 
         ??? Success "Answer"
@@ -825,7 +836,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
             }
             ```
 
-2. The `#!cpp switch-case` statements:
+2.  The `#!cpp switch-case` statements:
 
     A `#!cpp switch-case` is a branching structure used when you want to do several differnt things depending on the value of a variable:
     For example:
@@ -851,6 +862,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
     ```
 
     This is the same as doing:
+
     ```cpp
     void main() {
         int a = 10;
@@ -870,7 +882,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
     ```
 
     Similar to `#!cpp if else`, if there is only one instruction to execute, the curly braces `{}` can be omitted:
-    
+
     ```cpp
     void main() {
         int a = 10;
@@ -900,10 +912,11 @@ Similarly, when writing a script, it might be needed to repeat certain parts of 
 Sometimes the need arises to repeatedly execute the same statement or a statement where only a few things are changing.
 Loops are statements that allow us to do exactly that! There are two types of loops suported by XS:
 
-1. The `#!cpp while` loop:
+1.  The `#!cpp while` loop:
 
     A `#!cpp while` statement repeatedly executes a block of code as long as (while) something is `true`. This process of repeatedly executing the same block of code is known as iteration!
     For example:
+
     ```cpp
     void main() {
         int a = 0;
@@ -911,7 +924,7 @@ Loops are statements that allow us to do exactly that! There are two types of lo
             xsChatData("a = "+a);
             a++;
             // remember that a++ increases the value of a by one.
-            
+
             // what would happen if you forgot to write a++?
             // your script would get stuck in an "infinite" loop
             // and the game would crash
@@ -920,12 +933,12 @@ Loops are statements that allow us to do exactly that! There are two types of lo
     ```
 
     ???+ Question "Practise"
-        Now that you are armed with the power of `#!cpp while`, can you:
-        
+    Now that you are armed with the power of `#!cpp while`, can you:
+
         Write a script that would chat to the screen the following pattern:
 
         `1, 2, 4, 7, 11, 16... up to 15 terms?`
-        
+
         If you need help, but don't want to see the full solution immediately, click "Hint"
 
         When you're ready, click "Answer" to view the solution.
@@ -946,11 +959,12 @@ Loops are statements that allow us to do exactly that! There are two types of lo
             }
             ```
 
-2. The `#!cpp for` loop:
+2.  The `#!cpp for` loop:
 
     A `#!cpp for` statement is specifically used to loop over a range of values, say `#!cpp 5` to `#!cpp 23`
-    
+
     For example:
+
     ```cpp
     void main() {
         for(a = 5; < 23) {
@@ -1003,6 +1017,7 @@ returnType functionName(dataType parameter1 = defaultValue, dataType parameter2 
     // value must be a data type that is the same as returnType
 }
 ```
+
 If it is not clear what this means, bare with this usage for a minute and see this example below:
 
 ```cpp
@@ -1013,11 +1028,11 @@ int max(int a = 0, int b = 0) {
     // is going to return an integer value,
 
     // max is the name of the function
-    
+
     // this function takes in two integer values, 'a' and 'b'
     // 'a' and 'b' are initialised to 0 by default, meaning if
     // the person using this function doesn't specify what values
-    // to use for 'a' and 'b', 0 will be used. 
+    // to use for 'a' and 'b', 0 will be used.
 
     // a return statement tells the function to "give you back" whatever
     // value is specified.
@@ -1036,7 +1051,7 @@ int max(int a = 0, int b = 0) {
 void main() {
     // this is how the function is then used:
     xsChatData("max "+max(10, 20));
-    // the values for the variables in the function are 
+    // the values for the variables in the function are
 }
 // wait, isn't this 'main' also a function that we've been using so far?
 // yes it is! The 'void' signifies that it doesn't return any value
@@ -1129,7 +1144,6 @@ void main() {
 }
 ```
 
-
 Similarly, Variables initialised inside one function can only be used in that particular function, and do not exist outside of them. These kinds of variables are known as local variables. For example:
 
 ```cpp
@@ -1161,17 +1175,18 @@ void anotherFunction() {
 An array is a data structure that allows you to make ordered, numbered lists of one kind of data type. In every numbered list, each element is identified using its number. This number is known as an index. If `a` is an array of integers, then it might looks something like this:
 
 | Index | Value |
-| :-:   | :-:   |
-| 0     | 23    |
-| 1     | 4     |
-| 2     | 42    |
-| 3     | 32    |
-| 4     | 92    |
- 
+| :---: | :---: |
+|   0   |  23   |
+|   1   |   4   |
+|   2   |  42   |
+|   3   |  32   |
+|   4   |  92   |
+
 The index is what identifies elements in an array and indices for each array always starts from 0. For example: `#!cpp a[2]` is `#!cpp 42`.
 While in most programming languages `#!cpp a[2]` is the way to access elements in an array, that is not how it is done in XS. Lets look at how arrays are used in XS:
 
 For creating arrays, the following functions are used for the relevant data type:
+
 ```cpp
 // creates a sized and named integer array, with every value
 // initialised to defaultValue. returns an integer arrayID.
@@ -1248,7 +1263,6 @@ int xsArraySetVector(int arrayID, int index, vector value)
 
 Note that these Set functions return a value of `#!cpp 1` every time, however this does not need to be stored in a variable.
 
-
 To change the size of an array
 
 ```cpp
@@ -1279,6 +1293,7 @@ There are two kinds of type casting:
 1. Implicit Type Casting
 
     Implicit type casting is done automatically by the script (hence implicit) when you assign one type of value to another, similar data type. For example:
+
     ```cpp
     void main() {
         int a = 5;
@@ -1300,13 +1315,14 @@ There are two kinds of type casting:
         float g = a;
         // anything other than a 0 gives true for bool
         bool h = a;
-        string i = ""+a; 
+        string i = ""+a;
     }
     ```
 
 2. Explicit Type Casting
 
     Explicit type casting is done manually by the programmer (hence explicit). For example:
+
     ```cpp
     void main() {
         float a = 5.5;
@@ -1326,14 +1342,14 @@ rule ruleName // This is the name of the rule. Follows same naming laws as varia
     active/inactive // this is the initial state of the rule, active means that runs by default
                     // and inactive means that it wont run by default.
                     // this is similar to how triggers work when you enable/disable them.
-    
+
     group groupName // the group that this rule belongs to. Follows same naming laws as variables.
 
     minInterval <int> // the minimum time interval that must pass before the block is executed again
     maxInterval <int> // the maximum time interval that may pass before the block has to be executed again
     highFrequency   // Loop the rule 60 times every physical second (this is independant of inagme speed)
                     // Only one of "highFrequency" or "minInterval" and "maxInterval" are used. Both cannot be used together
-    
+
     runImmediately  // It is currently unknown as to what this option does
     priority <int>    // rules are executed in order of their descending priority
 {

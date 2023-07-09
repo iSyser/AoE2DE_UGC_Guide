@@ -1,60 +1,57 @@
-# Basics of the Scenario Editor
+# 场景编辑器的基础知识
 
-*Written by: Alian713*
+_作者：Alian713_
 
 ---
 
-Custom Scenarios allow you to define your own, custom game modes. Literally, they are different "scenarios" the game can be played in.
+自定义场景允许您自定义游戏模式。从字面上看，它们是游戏可以玩的不同“场景”。
 
-## The Scenario Editor
+## 场景编辑器
 
-The Scenario Editor is the tool that every map maker uses to make and test scenarios.
-To open a new scenario in the editor,
+场景编辑器是每个地图制作者用来制作和测试场景的工具。
+要在编辑器中创建新场景，
 
-1. Click `Single Player` in the main menu
-2. Click `Editors`
-3. Click `Create Scenario`
+1. 点击主菜单中的 `单人游戏`
+2. 点击 `编辑器`
+3. 点击 `创建场景`
 
-To open a saved scenario in the editor,
+要在编辑器中打开已保存的场景，
 
-1. Double-click the scenario from the list in the editors menu in step 3 above
+1. 双击上述步骤 3 中编辑器菜单列表中的场景
 
-To open an externally downloaded scenario in the editor,
+要在编辑器中打开外部下载的场景，
 
-1. Click `Open Scenario Folder` in the editors menu in step 3 above
-2. Put the downloaded scenario in this folder
-3. To see the newly added scenario in the editors menu, go back to the main menu and open the editors menu again.
+1. 在上面第 3 步中的编辑器菜单中单击 `打开场景文件夹`
+2. 将下载的场景文件放入该文件夹中
+3. 为了在编辑器菜单中查看新添加的场景，请返回主菜单并再次打开编辑器菜单。
 
-When you load into a new scenario, it is a blank canvas for you to play with!
+当您加载新场景时，它是一个供您玩耍的空白画布！
 
-In the editor, there are quite a few tabs that you can see at the top, their functionalities are discussed below:
+在编辑器中，您可以在顶部看到很多选项卡，它们的功能如下所述：
 
-## 1. Map
+## 1. 地图
 
-Under the `Map` tab in the editor, there are several options to change the map, they are discussed below:
+在编辑器的 `地图` 选项卡下，有几个用于更改地图的选项，下面讨论：
 
-### 1.1. Map Style
+### 1.1. 地图风格
 
-1. `Blank Map`: This option generates a map of the same terrain throughout the map. The default map that is generated when a new scenario is loaded is a blank map with grass terrain.
+1. `空白地图`：此选项生成的整个地图遍布相同地形。加载新场景时生成的默认地图是带有草地地形的空白地图。
+2. `随机地图`：此选项从 RMS 生成地图（RMS 全称 Random Map Script，指随机地图脚本，它们是生成像阿拉伯那样的规则地图的脚本）。
+3. `种子地图`：此选项使用指定种子从 RMS 生成地图。
 
-2. `Random Map`: This option generates a map from an RMS. (RMS stands for Random Map Script, they are scripts that generate regular maps like Arabia)
+!!! question "问题"
 
-3. `Seed Map`: This option generates a map from an RMS using a specified seed. 
+    你问什么是种子？
 
+    游戏中特定 RMS 的每次生成过程都对应一个数字，称为“种子”，用于唯一标识该特定 RMS 生成。使用相同的 RMS 和种子生成两次地图将为您提供完全相同的地图！
 
-!!! question
+### 1.2. AI 地图类型
 
-    What is a seed you ask?
+AI 使用此选项来确定他们正在玩的地图类型。如果你的地图上有 AI，这一点很重要，因为你也希望它们在地图上有水时能建造船坞捕鱼或制海。假设地图是游牧主题，那么将 `AI 地图类型`设置为 `游牧` 将允许 AI 玩家以游牧风格正确地玩游戏。
 
-    Each generation of a particular RMS in the game has a number attached to it called its "seed" that uniquely identifies that particular generation of the RMS. Generating a map with the same RMS and seed twice will give you the exact same map!
+### 1.3. 色调
 
-### 1.2. AI Map Type
-
-This option is used by AIs to figure out what kind of a map they are playing on. This is important if you have AIs in your map because you want them to go for water builds when you have water on your map. Lets say that the map is nomad themed, then setting the `AI Map Type` to `Nomad` would allow AI players to properly play in a nomad style.
-
-### 1.3. Colour Mood
-
-This setting changes the colour theme (lighting) of the map. By default it is set to `Empty` which means no colour theme. Colour themes are used for aesthetic reasons only and do not effect gameplay. For exmaple, if you are making a map set in the winter season, then using the winter colour theme could be an option.
+此设置更改地图的颜色主题（灯光）。默认情况下，它设置为 `空`，这意味着没有颜色主题。 颜色主题仅出于美观原因而使用，不会影响游戏玩法。例如，如果您要制作冬季的地图，那么可以使用冬季颜色主题。
 
 ### 1.4. Team Positions
 
@@ -157,7 +154,6 @@ Different water definitions are shown below:
 `Preset_WickedWitch`:
 ![Preset_WickedWitch](imgs/preset_wicked_witch.png "Preset_WickedWitch")
 
-
 6. `Beach Type`: this option changes the type of beach terrain that is placed down when water terrain is placed. Exploring the different beach types has been left as an excersise for the reader.
 
 ### 3.2. Elevation
@@ -167,21 +163,21 @@ This option allows you to change the elevation of existing tiles on the map.
 1. `Brush Size`: allows you to pick how large of an area you want to affect on the map at once
 
 !!! tip
-    In the editor, there are 7 different levels of elevation to chose from, but the elevation can actually have higher or lower values. In the editor, there is no way to make water have elevation either, but it is actually possible to give water elevation as well. Both of these things requires use of external map editing tools and are covered under the [AoE2ScenarioParser](../useful_tools/parser/basics/ "Jump To: Custom Scenarios > Useful Tools > AoE2ScenarioParser > Parser Basics") section of this guide.
+In the editor, there are 7 different levels of elevation to chose from, but the elevation can actually have higher or lower values. In the editor, there is no way to make water have elevation either, but it is actually possible to give water elevation as well. Both of these things requires use of external map editing tools and are covered under the [AoE2ScenarioParser](../useful_tools/parser/basics/ "Jump To: Custom Scenarios > Useful Tools > AoE2ScenarioParser > Parser Basics") section of this guide.
 
 ### 3.3. Cliffs
 
 This option allows you to place cliffs on your map. There are two types of cliffs to chose from, Granite and Sandstone. They function exactly the same, and differ only in their appearence.
 
 !!! tip
-    A cliff is actually a gaia object that can be rotated, if you go to the `Units` tab, and enable the `Rotate` option, you will be able to click the cliff and rotate it (right click rotates it in the opposite direction). There are a few rotations of the cliff objects that actually do not have graphics for them and hence appear invisible. but since they are still present on the map, just not visible, they block units from going through them. This mechanic can be used to make invisible walls on the map!
+A cliff is actually a gaia object that can be rotated, if you go to the `Units` tab, and enable the `Rotate` option, you will be able to click the cliff and rotate it (right click rotates it in the opposite direction). There are a few rotations of the cliff objects that actually do not have graphics for them and hence appear invisible. but since they are still present on the map, just not visible, they block units from going through them. This mechanic can be used to make invisible walls on the map!
 
 ### 3.4. Map Copy
 
 This option allows you to copy a part of the map and paste it using a brush. There are options to rotate and flip the selected area as well.
 
 !!! bug
-    When a selection that is rectangular is rotated, the highlighted area that shows the brush DOES NOT rotate accordingly to show this rotation, but the game still pastes a rotated as you would expect.
+When a selection that is rectangular is rotated, the highlighted area that shows the brush DOES NOT rotate accordingly to show this rotation, but the game still pastes a rotated as you would expect.
 
 There is also another option called `Change Player`. This option allows you to change the player of the units in the selection to another player when pasting the selection.
 
@@ -194,38 +190,45 @@ This option allows you to selectively remove parts of the map in an area using a
 3. Invisible Units
 4. Layered Terrain
 5. Trees
-6. Units  
+6. Units
 
 !!! abstract
-    The layering mode option in this tab seems to have no effect on the way that elements are erased.
+The layering mode option in this tab seems to have no effect on the way that elements are erased.
 
 ## 4. Options
 
 Under the `Options` tab in the editor, there are options to:
 
 ### 4.1. Point of View
+
 Set the specified player's starting PoV to your current view in the editor using the `set view` button. Once the view is set, check that it works by clicking `go to view`
 
-### 4.2. Testing Difficulty 
+### 4.2. Testing Difficulty
+
 Set the `Testing Difficulty`
 
 ### 4.3. Full Tech Tree
+
 Enable `Full Tech Tree` for all players.
-    
+
 !!! warning
-    This option does not disable civ bonuses unlike the full tech tree option in normal games!
+This option does not disable civ bonuses unlike the full tech tree option in normal games!
 
 ### 4.4. Disable Objects
+
 Disable Buildings, Units or Techs by moving them from the `Full List` to the `Disabled List` by clicking the `<` arrow. remove an object from the disabled list by clicking `>`. The `<<` and `>>` move all items at once  
 Note: Using this option to disable objects is not recommended as there is a better way to do it via triggers which are covered in the `Triggers` section of this guide.
 
 ### 4.5. Collide & Correcting
-Enabling this option makes stationary units move out the way to let moving units pass through. 
+
+Enabling this option makes stationary units move out the way to let moving units pass through.
 
 ### 4.6. Villager Force Drop
+
 Makes villagers instantly lose their resources when their tasks are switched instead of losing when they actually start working on the other task. This mimics FE behaviour, i.e. if villagers are switched from hunters to sheep, they don't lose any food.
 
 ### 4.7. Block Humanity Team Change
+
 Lock Teams ONLY for human players.
 
 ## 5. Players
@@ -233,35 +236,62 @@ Lock Teams ONLY for human players.
 Under the `Players` tab in the editor, there are several properties that can be changed about the players
 
 ### 5.1. Number of Players
+
 The total number of players you have in your scenario
+
 ### 5.2. Starting Age
+
 Specify the starting age for the currently selected player
+
 ### 5.3. Colour
+
 Specify the colour of the currently selected player
+
 ### 5.4. Starting Resources
+
 `Food`, `Wood`, `Stone`, `Gold` determine the starting amount of the currently selected player's resources
+
 ### 5.5. Pop Limit
+
 Determine the maximum population limit allowed for the currently selected player. This value is capped at 500
+
 ### 5.6. Base Priority
-This option seems to have no effect on the game.  
+
+This option seems to have no effect on the game.
 
 !!! question
-    If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
+If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
+
 ### 5.7. Tribe Name
+
 Sets the name for the currently selected player **if** they are an AI. Does not effect human players
+
 ### 5.8. Name String ID
+
 This field is used for refering to names that the game recognises by default. It can be used to automatically set a `Tribe name` by using a value that the game recognises. Trying out the value `1` in this field on an AI and seeing what happens is left as an excersise for the reader.
+
 ### 5.9. Personality
+
 The AI to use for this player if they are not a human player. Pick `E3-p2.ai` to simulate an afk player
+
 ### 5.10. Player Type
+
 This setting doesn't make a difference to gameplay. The only difference between the two options is that setting this to `Either` wont auto fill lobby slots with AIs. Setting it to `AI` will automatically set that player up for you in a lobby game
+
 ### 5.11. Civilization
+
 Set the currently selected player's civilization
+
 ### 5.12. Lock Civ
+
 Prevent the currently selected player from changing their civilization in a lobby
+
 ### 5.13. Architecture
+
 Change the currently selected player's architecture set to another civilization's.
+
 ### 5.14. Swap Players
+
 Swap the settings for the currently selected player with the specified player.
 
 ## 6. Messages
@@ -269,30 +299,38 @@ Swap the settings for the currently selected player with the specified player.
 Under the `Messages` tab, there are different options for displaying text in the scenario.
 
 ### 6.1. Scenario Instructions
+
 This option lets you set the text that is shown in the `Instructions` tab of the `Objectives Panel`.
 
 !!! Note
-    The `Objective Panel` can be opened by clicking the button to the right of the Tech Tree button at the top of the screen.
+The `Objective Panel` can be opened by clicking the button to the right of the Tech Tree button at the top of the screen.
 
 ### 6.2. Objectives
+
 This option lets you set the text that is shown in the `Objectives` tab of the `Objectives Panel`.
 
 ### 6.3. Hints
+
 This option lets you set the text that is shown in the `Hints` tab of the `Objectives Panel`.
 
 ### 6.4. Scout
+
 This option lets you set the text that is shown in the `Scout` tab of the `Objectives Panel`.
 
 ### 6.5. Victory
+
 This option lets you set the text that is shown to players who win the game before the statistics screen.
 
 ### 6.6. Defeat
+
 This option lets you set the text that is shown to players who lose the game before the statistics screen.
 
 ## 7. Units
+
 Under the `Units` tab, there are several options to place and manipulate units.
 
 ### 7.1. Placing Units
+
 Units can be placed on the map from the 4 menus in this tab:
 
 The game categorises all unit objects in the game into 4 categories, `Units`, `Buildings`, `Heroes`, `Others`.
@@ -314,21 +352,26 @@ There are two ways to use these hidden units:
 If you do not know how to do either of those, you can refer to the [Effects](../triggers/effects/effects/ "Jump to: Custom Scenarios > Triggers > Effects") section of this guide for the first option, and/or refer to the [Unhide Editor Units]("Jump to: Unhide Editor Units NON EXISTENT") section of this guide
 
 ### 7.2. Deleting Units
+
 Units that are already placed on the map can be deleted from the map by the following ways:
 
 1. The first and the most obvious option is to use the `Delete` option in this tab. This allows us to delete units one by one from the map.
 2. The first option can be tedious if you need to delete a large amount of units, thus the second option is to use the `Erase Units` option in the `Erase` menu under the `Terrain` tab. Refer to [3.5. Erase](./#35-erase "Jump to: 3.5. Erase") about how to use the `Erase` option.
 
 ### 7.3. Moving Units
+
 Units already placed on the map can be moved around on the map by using the `Move` option in this tab.
 
 ### 7.4. Rotating Units
+
 Units already placed on the map can be rotated by using the `Rotate` option in this tab. After the `Rotate` option is selected, clicking a unit will rotate it clockwise, and right clicking it will rotate it counter clockwise.
 
-### 7.5. Selecting Units 
+### 7.5. Selecting Units
+
 When selecting a unit, its statistics like HP, Attack, Armour and units garrisoned inside it are shown. Units inside other units can be deleted using the garrison delete.
 
 ### 7.6. Converting Units
+
 This option allows you to convert existing units **from** one or more players **to** another player.
 
 When enabled, 9 new options (to the right) appear in the menu for selecting which players' units you want to convert **from**. The currently selected player (on the left) is the player the units will be converted **to**. After picking a `Brush Size` when you click on an area, all of the units belonging to the players being converted **from** will be converted **to** the selected player.
@@ -336,37 +379,43 @@ When enabled, 9 new options (to the right) appear in the menu for selecting whic
 Remember the players being converted **from** are selected on the right side using the checkboxes, and the player being converted **to** is the one selected in the dropdown to the left!
 
 ## 8. Cinematics
-Under the `Cinematics` tab, there are options to change the movie clips displayed before or after a scenario. 
+
+Under the `Cinematics` tab, there are options to change the movie clips displayed before or after a scenario.
 
 !!! bug
-    These are mainly used in the campaigns, and functionality for changing them in scenarios is bugged as of the time of the writing of this guide.
+These are mainly used in the campaigns, and functionality for changing them in scenarios is bugged as of the time of the writing of this guide.
 
 ## 9. Diplomacy
+
 Under the `Diplomacy` tab, there are options to change the diplomacy settings of the game:
 
 ### 9.1. Diplomacy Stance
+
 The grid of checkboxes to the right allows you to change each player's stance with all of the other players.
 
 ### 9.2. Lock Teams
+
 This option makes it so that teams cannot be changed by players in the game. They can still be changed by triggers.
 
 ### 9.3. Players Choose Teams
+
 Disabling this option will not allow players to pick teams in the lobby before the start of the game. The teams will not be locked however, and may still be changed in game **unless** the `Lock Teams` option is also enabled.
 
 ### 9.4. Random Start Points
+
 This option seems to have no effect on the game.
 
 !!! question
-    If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
-
+If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
 
 ## 10. Triggers
+
 Under the `Triggers` tab, triggers can be manipulated in a scenario. Triggers are the most powerful component of a scenario as they allow us to do a plethora of different things in a game. They can be used to add more dynamics and game mechanics to a scenario, almost anything that you could think of (within the context of AoE2 and its own limits) is possible to do in some way using triggers.
 
 Details about how to use triggers are covered in the [Triggers](./triggers/index.md "Jump To: Custom Scenarios > Triggers > Trigger Basics") section of this guide.
 
-
 ## 11. Useful Hotkeys
+
 Some hotkeys that are useful to know and make the workflow of making and testing a scenario faster
 
 1. Scrolling up and down on a dropdown list makes the values go up and down the lists as well

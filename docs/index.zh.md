@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 如果你使用 QQ，也可以通过群号 [226329464](https://qm.qq.com/cgi-bin/qm/qr?k=IW9q54kc033jwsReqxxXo_I-ZgRDNj0_&jump_from=webapi&authKey=8jCDhk6r5pbYFgWrKtHIWbz0G5/oszc3xfMXP4DJxVUnYCE/HB1NkkHZpDT2BvJh) 加入我们的 QQ 群！
 
-本指南由以下作者共同撰写
+本手册由以下作者共同撰写
 
 |      **Author**      |  **Discord**  |                         **GitHub**                         | **YouTube** |                            **Twitch**                            |
 | :------------------: | :-----------: | :--------------------------------------------------------: | :---------: | :--------------------------------------------------------------: |
