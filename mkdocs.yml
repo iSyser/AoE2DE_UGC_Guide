@@ -166,6 +166,7 @@ theme:
     - search.share
     - search.suggest
     # - toc.integrate
+    - toc.follow
   font:
     text: Roboto
     code: Fira Code
@@ -185,15 +186,39 @@ theme:
       quote:    octicons/quote-16
       warning:  octicons/alert-16
   palette:
-    scheme:  slate
-    primary: red
-    accent:  red
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: red
+      accent:  red
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: red
+      accent:  red
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: red
+      accent:  red
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 extra_javascript:
+  # - ./assets/javascripts/hide_toc.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
-  - ./assets/stylesheets/style.css
+  - ./assets/stylesheets/extra.css
 extra:
   analytics:
     provider: google

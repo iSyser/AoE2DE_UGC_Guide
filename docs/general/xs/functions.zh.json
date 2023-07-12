@@ -1,0 +1,169 @@
+[
+  {
+    "name": "Rules",
+    "nickname": "规则",
+    "functions": [
+      {
+        "name": "xsDisableRule",
+        "nickname": "xs禁用规则",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲禁用规则的名称"
+          }
+        ],
+        "desc": "禁用给定的规则。"
+      },
+      {
+        "name": "xsDisableSelf",
+        "nickname": "xs禁用自身",
+        "desc": "禁用该函数所处的规则。不能在规则主体之外使用！"
+      },
+      {
+        "name": "xsEnableRule",
+        "nickname": "xs启用规则",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲启用规则的名称"
+          }
+        ],
+        "desc": "启用给定的规则。"
+      },
+      {
+        "name": "xsIsRuleEnabled",
+        "nickname": "xs规则是否启用",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲检查规则的名称"
+          }
+        ],
+        "desc": "如果规则启用则返回真，否则返回假。"
+      },
+      {
+        "name": "xsSetRulePriority",
+        "nickname": "xs设置规则优先级",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲设置优先级规则的名称"
+          },
+          { "name": "priority", "nickname": "优先级", "desc": "规则的新优先级" }
+        ],
+        "desc": "设置给定规则的优先级。"
+      },
+      {
+        "name": "xsSetRulePrioritySelf",
+        "nickname": "xs设置自身规则优先级",
+        "params": [
+          { "name": "priority", "nickname": "优先级", "desc": "规则的新优先级" }
+        ],
+        "desc": "设置该函数所处规则的优先级。不能在规则主体之外使用！"
+      },
+      {
+        "name": "xsSetRuleMinInterval",
+        "nickname": "xs设置规则最小间隔",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲设置最小间隔规则的名称"
+          },
+          {
+            "name": "interval",
+            "nickname": "间隔",
+            "desc": "规则的新最小时间间隔"
+          }
+        ],
+        "desc": "设置给定规则的再次执行块之前必须经过的最小时间间隔。"
+      },
+      {
+        "name": "xsSetRuleMinIntervalSelf",
+        "nickname": "xs设置自身规则最小间隔",
+        "params": [
+          {
+            "name": "interval",
+            "nickname": "间隔",
+            "desc": "规则的新最小时间间隔"
+          }
+        ],
+        "desc": "设置该函数所处规则的最小间隔。不能在规则主体之外使用！"
+      },
+      {
+        "name": "xsSetRuleMaxInterval",
+        "nickname": "xs设置规则最大间隔",
+        "params": [
+          {
+            "name": "ruleName",
+            "nickname": "规则名称",
+            "desc": "欲设置最大间隔规则的名称"
+          },
+          {
+            "name": "interval",
+            "nickname": "间隔",
+            "desc": "规则的新最大时间间隔"
+          }
+        ],
+        "desc": "设置给定规则的在块必须再次执行之前可能经过的最大时间间隔"
+      },
+      {
+        "name": "xsSetRuleMaxIntervalSelf",
+        "nickname": "xs设置自身规则最大间隔",
+        "params": [
+          {
+            "name": "interval",
+            "nickname": "间隔",
+            "desc": "规则的新最大时间间隔"
+          }
+        ],
+        "desc": "设置该函数所处规则的最大间隔。不能在规则主体之外使用！"
+      },
+      {
+        "name": "xsEnableRuleGroup",
+        "nickname": "xs启用规则组",
+        "params": [
+          {
+            "name": "ruleGroupName",
+            "nickname": "规则组名",
+            "desc": "欲启用规则组的名称"
+          }
+        ],
+        "desc": "启用给定规则组中的所有规则"
+      },
+      {
+        "name": "xsDisableRuleGroup",
+        "nickname": "xs禁用规则组",
+        "params": [
+          {
+            "name": "ruleGroupName",
+            "nickname": "规则组名",
+            "desc": "欲禁用规则组的名称"
+          }
+        ],
+        "desc": "禁用给定规则组中的所有规则"
+      },
+      {
+        "name": "xsIsRuleGroupEnabled",
+        "nickname": "xs规则组是否启用",
+        "params": [
+          {
+            "name": "ruleGroupName",
+            "nickname": "规则组名",
+            "desc": "欲检查规则组的名称"
+          }
+        ],
+        "desc": "如果给定规则组中的所有规则均已启用，则返回真"
+      }
+    ]
+  },
+  { "name": "Vectors", "nickname": "向量", "functions": [] },
+  { "name": "Arrays", "nickname": "数组", "functions": [] },
+  { "name": "Maths", "nickname": "数学", "functions": [] },
+  { "name": "General", "nickname": "通用", "functions": [] },
+  { "name": "Read/Write", "nickname": "文件读写", "functions": [] }
+]

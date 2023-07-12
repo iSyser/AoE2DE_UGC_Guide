@@ -45,7 +45,7 @@ def build_doc(lang: str = None):
 
     out = md_dict[lang]['head']
     for res_id in reses[def_lang]:
-        k = functools.partial(ugcdoc.get_key, dict_set=reses, parent_key=res_id, lang=lang)
+        k = functools.partial(ugcdoc.get_key, dict_set=reses, parent_key=res_id, language=lang)
 
         name = k('name')
         if k('valid') is not None and not k('valid'):
@@ -53,7 +53,7 @@ def build_doc(lang: str = None):
         out += f"## {res_id}. {name}\n\n"
         out += f"-   ID: {res_id}\n\n"
         if lang != def_lang:
-            out += f"-   {md_dict[lang]['name']}: {k('name', lang=None)}\n\n"
+            out += f"-   {md_dict[lang]['name']}: {k('name', language=None)}\n\n"
 
         out += "-   " + md_dict[lang]['purpose'] + f": {k('desc')}\n\n"
 

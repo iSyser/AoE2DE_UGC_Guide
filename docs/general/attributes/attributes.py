@@ -32,12 +32,12 @@ def build_doc(lang: str = None):
 
     out = md_dict[lang]['head']
     for attr_id in attrs[def_lang]:
-        k = functools.partial(ugcdoc.get_key, dict_set=attrs, parent_key=attr_id, lang=lang)
+        k = functools.partial(ugcdoc.get_key, dict_set=attrs, parent_key=attr_id, language=lang)
 
         out += f"## {attr_id}. {k('name')}\n\n"
         out += f"-   ID: {attr_id}\n\n"
         if lang != def_lang:
-            out += f"-   {md_dict[lang]['name']}: {k('name', lang=None)}\n\n"
+            out += f"-   {md_dict[lang]['name']}: {k('name', language=None)}\n\n"
 
         out += f"-   {k('desc')}\n\n"
 

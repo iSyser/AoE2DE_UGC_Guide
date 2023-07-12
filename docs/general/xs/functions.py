@@ -1,40 +1,77 @@
-import json
-with open("./functions.json") as file:
-    function_docs = json.load(file)
+import functools
 
-outmd = """*Written by: Alian713*
-<div id="hide-toc-elements"></div>
+import ugcdoc
+
+# As the number of languages increases,
+# this section can be moved to the corresponding file
+md_dict = {None: 'en'}
+
+md_dict['en'] = {'head': """---
+hide:
+#     - navigation
+#     - toc
 ---
 
-"""
+_Written by: Alian713_
 
-for index, (category, functions) in enumerate(function_docs.items(), 1):
-    functions = sorted(functions, key=lambda x: x["name"]) 
-    outmd+= f"## {index}. {category.title()}\n\n"
+""", "return_type": "Returning Type", "prototype": "Prototype", "parameters": "Parameters", "optional": "(Optional)"}
 
-    for f_index, func in enumerate(functions, 1):
-        outmd += f"### {index}.{f_index}. {func['name']}\n\n"
+md_dict['zh'] = {'head': """---
+hide:
+#     - navigation
+#     - toc
+---
 
-        outmd += f"Returning Type: `#!cpp {func['return_type']}`\n\n"
+_作者：Alian713_
 
-        outmd += f"Prototype: `#!cpp {func['return_type']} {func['name']}("
-        for param in func['params']:
-            outmd+=f"{param['type']} {param['name']}, "        
-        if len(func['params']) != 0:
-            outmd = outmd[:-2]
-        outmd += ")`\n\n"
-
-        if len(func['params']) != 0:
-            outmd+="Parameters:\n\n"
-
-        for p_index, param in enumerate(func['params'], 1):
-            optional = "" if param['required'] else "(Optional)"
-            outmd += f"{p_index}. {optional} `#!cpp {param['type']} {param['name']}`: {param['desc']}\n"
-        
-        outmd+="\n"
-        
-        outmd += f"{func['desc']}\n\n"
+""", "name": "真实函数名", "return_type": "返回类型", "prototype": "函数原型", "parameters": "参数",
+                 "optional": "(可选)"}
 
 
-with open("./functions.md", "w") as file:
-    file.write(outmd)
+def build_doc(lang: str = None):
+    def_lang = md_dict[None]
+    lang = lang or def_lang
+    fun_set = ugcdoc.load_json_dict("functions", def_lang, lang, True)
+
+    out = md_dict[lang]['head']
+    for index, category in enumerate(fun_set[def_lang], 1):
+
+        k = functools.partial(ugcdoc.get_key, dict_set=fun_set, parent_key=category, language=lang)
+
+        # 'nickname' in other languages will not be used.
+        if not (title := k('nickname', default_language=lang)):
+            title = category
+        out += f"## {index}. {title.title()}\n\n"
+
+        func_dict = {None: def_lang,
+                     def_lang: ugcdoc.json_list_2_dict(sorted(k('functions', language=None), key=lambda x: x['name']))}
+        if def_lang != lang:
+            func_dict[lang] = ugcdoc.json_list_2_dict(k('functions', default_language=lang))
+
+        for i_f, func_name in enumerate(func_dict[def_lang], 1):
+            fun = ugcdoc.CXsFunction(func_name, func_dict, lang)
+
+            if fun.have_nickname():
+                out += f"### {index}.{i_f}. {fun.get_name()}\n\n"
+                out += f"{md_dict[lang]['name']}: {fun.get_real_name()}\n\n"
+            else:
+                out += f"### {index}.{i_f}. {fun.get_real_name()}\n\n"
+
+            out += f"{md_dict[lang]['return_type']}: `#!cpp {fun.get_type()}`\n\n"
+            out += f"{md_dict[lang]['prototype']}: `#!cpp {fun.get_prototype()}`\n\n"
+
+            if fun.have_param():
+                out += md_dict[lang]['parameters'] + ":\n\n"
+                for i_p, param in enumerate(fun.get_params(), 1):
+                    optional = "" if param.is_required() else " " + md_dict[lang]['optional']
+                    out += f"{i_p}. {optional} `#!cpp {param.get_type()} {param.get_name()}`: {param.get_desc()}\n"
+
+                out += "\n"
+
+            out += f"{fun.get_desc()}\n\n"
+    out = out[:-1]
+    ugcdoc.export_md_file("functions", out, def_lang, lang)
+
+
+build_doc()
+build_doc('zh')

@@ -1,6 +1,4 @@
 import functools
-import json
-from sys import winver
 
 import ugcdoc
 
@@ -111,7 +109,7 @@ def build_doc(lang: str = None):
     out = md_dict[lang]['head']
 
     for key in keys[def_lang]:
-        k = functools.partial(ugcdoc.get_key, dict_set=keys, parent_key=key, lang=lang)
+        k = functools.partial(ugcdoc.get_key, dict_set=keys, parent_key=key, language=lang)
         if not k('char'):
             continue
 
