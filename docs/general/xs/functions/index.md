@@ -4,11 +4,13 @@ hide:
 #     - toc
 ---
 
+# Functions Reference
+
 _Written by: Alian713_
 
-## 1. Rules
+## 1. Rules { #Rules }
 
-### 1.1. xsDisableRule
+### 1.1. xsDisableRule { #xsDisableRule }
 
 Returning Type: `#!cpp void`
 
@@ -20,7 +22,7 @@ Parameters:
 
 Disables the given rule.
 
-### 1.2. xsDisableRuleGroup
+### 1.2. xsDisableRuleGroup { #xsDisableRuleGroup }
 
 Returning Type: `#!cpp void`
 
@@ -32,7 +34,7 @@ Parameters:
 
 Disables all the rules in the given rule group
 
-### 1.3. xsDisableSelf
+### 1.3. xsDisableSelf { #xsDisableSelf }
 
 Returning Type: `#!cpp void`
 
@@ -40,7 +42,7 @@ Prototype: `#!cpp void xsDisableSelf();`
 
 Disables the rule this function is called inside. Cannot be used outside of a rule's body!
 
-### 1.4. xsEnableRule
+### 1.4. xsEnableRule { #xsEnableRule }
 
 Returning Type: `#!cpp void`
 
@@ -52,7 +54,7 @@ Parameters:
 
 Enables the given rule.
 
-### 1.5. xsEnableRuleGroup
+### 1.5. xsEnableRuleGroup { #xsEnableRuleGroup }
 
 Returning Type: `#!cpp void`
 
@@ -64,7 +66,7 @@ Parameters:
 
 Enables all the rules in the given rule group
 
-### 1.6. xsIsRuleEnabled
+### 1.6. xsIsRuleEnabled { #xsIsRuleEnabled }
 
 Returning Type: `#!cpp bool`
 
@@ -76,7 +78,7 @@ Parameters:
 
 Returns true if the rule is enabled, else returns false.
 
-### 1.7. xsIsRuleGroupEnabled
+### 1.7. xsIsRuleGroupEnabled { #xsIsRuleGroupEnabled }
 
 Returning Type: `#!cpp bool`
 
@@ -88,7 +90,7 @@ Parameters:
 
 Returns true, if all the rules in the given rule group are enabled
 
-### 1.8. xsSetRuleMaxInterval
+### 1.8. xsSetRuleMaxInterval { #xsSetRuleMaxInterval }
 
 Returning Type: `#!cpp void`
 
@@ -101,7 +103,7 @@ Parameters:
 
 Sets the max interval of the given rule.
 
-### 1.9. xsSetRuleMaxIntervalSelf
+### 1.9. xsSetRuleMaxIntervalSelf { #xsSetRuleMaxIntervalSelf }
 
 Returning Type: `#!cpp void`
 
@@ -113,7 +115,7 @@ Parameters:
 
 Sets the max interval of the rule this function is called inside. Cannot be used outside of a rule's body!
 
-### 1.10. xsSetRuleMinInterval
+### 1.10. xsSetRuleMinInterval { #xsSetRuleMinInterval }
 
 Returning Type: `#!cpp void`
 
@@ -126,7 +128,7 @@ Parameters:
 
 Sets the min interval of the given rule.
 
-### 1.11. xsSetRuleMinIntervalSelf
+### 1.11. xsSetRuleMinIntervalSelf { #xsSetRuleMinIntervalSelf }
 
 Returning Type: `#!cpp void`
 
@@ -138,7 +140,7 @@ Parameters:
 
 Sets the min interval of the rule this function is called inside. Cannot be used outside of a rule's body!
 
-### 1.12. xsSetRulePriority
+### 1.12. xsSetRulePriority { #xsSetRulePriority }
 
 Returning Type: `#!cpp void`
 
@@ -151,7 +153,7 @@ Parameters:
 
 Sets the priority of the given rule.
 
-### 1.13. xsSetRulePrioritySelf
+### 1.13. xsSetRulePrioritySelf { #xsSetRulePrioritySelf }
 
 Returning Type: `#!cpp void`
 
@@ -163,9 +165,9 @@ Parameters:
 
 Sets the priority of the rule this function is called inside. Cannot be used outside of a rule's body!
 
-## 2. Vectors
+## 2. Vectors { #Vectors }
 
-### 2.1. xsVectorGetX
+### 2.1. xsVectorGetX { #xsVectorGetX }
 
 Returning Type: `#!cpp float`
 
@@ -177,7 +179,7 @@ Parameters:
 
 The X coordinate of the vector given.
 
-### 2.2. xsVectorGetY
+### 2.2. xsVectorGetY { #xsVectorGetY }
 
 Returning Type: `#!cpp float`
 
@@ -189,7 +191,7 @@ Parameters:
 
 The Y coordinate of the vector given.
 
-### 2.3. xsVectorGetZ
+### 2.3. xsVectorGetZ { #xsVectorGetZ }
 
 Returning Type: `#!cpp float`
 
@@ -201,7 +203,7 @@ Parameters:
 
 The Z coordinate of the vector given.
 
-### 2.4. xsVectorLength
+### 2.4. xsVectorLength { #xsVectorLength }
 
 Returning Type: `#!cpp float`
 
@@ -213,7 +215,7 @@ Parameters:
 
 Returns the length of the given vector.
 
-### 2.5. xsVectorNormalize
+### 2.5. xsVectorNormalize { #xsVectorNormalize }
 
 Returning Type: `#!cpp vector`
 
@@ -225,7 +227,7 @@ Parameters:
 
 Returns the normalised vector in the direction of the given vector.
 
-### 2.6. xsVectorSet
+### 2.6. xsVectorSet { #xsVectorSet }
 
 Returning Type: `#!cpp vector`
 
@@ -239,7 +241,7 @@ Parameters:
 
 Returns a vector with the given X, Y and Z components.
 
-### 2.7. xsVectorSetX
+### 2.7. xsVectorSetX { #xsVectorSetX }
 
 Returning Type: `#!cpp vector`
 
@@ -252,7 +254,7 @@ Parameters:
 
 Returns a new vector with the X component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
 
-### 2.8. xsVectorSetY
+### 2.8. xsVectorSetY { #xsVectorSetY }
 
 Returning Type: `#!cpp vector`
 
@@ -265,7 +267,7 @@ Parameters:
 
 Returns a new vector with the Y component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
 
-### 2.9. xsVectorSetZ
+### 2.9. xsVectorSetZ { #xsVectorSetZ }
 
 Returning Type: `#!cpp vector`
 
@@ -278,9 +280,9 @@ Parameters:
 
 Returns a new vector with the Z component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
 
-## 3. Arrays
+## 3. Arrays { #Arrays }
 
-### 3.1. xsArrayCreateBool
+### 3.1. xsArrayCreateBool { #xsArrayCreateBool }
 
 Returning Type: `#!cpp int`
 
@@ -294,7 +296,7 @@ Parameters:
 
 Creates an array of type bool and returns its ID.
 
-### 3.2. xsArrayCreateFloat
+### 3.2. xsArrayCreateFloat { #xsArrayCreateFloat }
 
 Returning Type: `#!cpp int`
 
@@ -308,7 +310,7 @@ Parameters:
 
 Creates an array of type float and returns its ID.
 
-### 3.3. xsArrayCreateInt
+### 3.3. xsArrayCreateInt { #xsArrayCreateInt }
 
 Returning Type: `#!cpp int`
 
@@ -322,7 +324,7 @@ Parameters:
 
 Creates an array of type int and returns its ID.
 
-### 3.4. xsArrayCreateString
+### 3.4. xsArrayCreateString { #xsArrayCreateString }
 
 Returning Type: `#!cpp int`
 
@@ -336,7 +338,7 @@ Parameters:
 
 Creates an array of type String and returns its ID.
 
-### 3.5. xsArrayCreateVector
+### 3.5. xsArrayCreateVector { #xsArrayCreateVector }
 
 Returning Type: `#!cpp int`
 
@@ -350,7 +352,7 @@ Parameters:
 
 Creates an array of type Vector and returns its ID.
 
-### 3.6. xsArrayGetBool
+### 3.6. xsArrayGetBool { #xsArrayGetBool }
 
 Returning Type: `#!cpp int`
 
@@ -363,7 +365,7 @@ Parameters:
 
 Gets and returns the value of the given bool array at the specifed index.
 
-### 3.7. xsArrayGetFloat
+### 3.7. xsArrayGetFloat { #xsArrayGetFloat }
 
 Returning Type: `#!cpp int`
 
@@ -376,7 +378,7 @@ Parameters:
 
 Gets and returns the value of the given float array at the specifed index.
 
-### 3.8. xsArrayGetInt
+### 3.8. xsArrayGetInt { #xsArrayGetInt }
 
 Returning Type: `#!cpp int`
 
@@ -389,7 +391,7 @@ Parameters:
 
 Gets and returns the value of the given int array at the specifed index.
 
-### 3.9. xsArrayGetSize
+### 3.9. xsArrayGetSize { #xsArrayGetSize }
 
 Returning Type: `#!cpp int`
 
@@ -401,7 +403,7 @@ Parameters:
 
 Returns the length of the given array.
 
-### 3.10. xsArrayGetString
+### 3.10. xsArrayGetString { #xsArrayGetString }
 
 Returning Type: `#!cpp int`
 
@@ -414,7 +416,7 @@ Parameters:
 
 Gets and returns the value of the given String array at the specifed index.
 
-### 3.11. xsArrayGetVector
+### 3.11. xsArrayGetVector { #xsArrayGetVector }
 
 Returning Type: `#!cpp int`
 
@@ -427,7 +429,7 @@ Parameters:
 
 Gets and returns the value of the given Vector array at the specifed index.
 
-### 3.12. xsArrayResizeBool
+### 3.12. xsArrayResizeBool { #xsArrayResizeBool }
 
 Returning Type: `#!cpp int`
 
@@ -440,7 +442,7 @@ Parameters:
 
 Resizes the the given bool array to the specifed size and returns 1.
 
-### 3.13. xsArrayResizeFloat
+### 3.13. xsArrayResizeFloat { #xsArrayResizeFloat }
 
 Returning Type: `#!cpp int`
 
@@ -453,7 +455,7 @@ Parameters:
 
 Resizes the the given float array to the specifed size and returns 1.
 
-### 3.14. xsArrayResizeInt
+### 3.14. xsArrayResizeInt { #xsArrayResizeInt }
 
 Returning Type: `#!cpp int`
 
@@ -466,7 +468,7 @@ Parameters:
 
 Resizes the the given int array to the specifed size and returns 1.
 
-### 3.15. xsArrayResizeString
+### 3.15. xsArrayResizeString { #xsArrayResizeString }
 
 Returning Type: `#!cpp int`
 
@@ -479,7 +481,7 @@ Parameters:
 
 Resizes the the given String array to the specifed size and returns 1.
 
-### 3.16. xsArrayResizeVector
+### 3.16. xsArrayResizeVector { #xsArrayResizeVector }
 
 Returning Type: `#!cpp int`
 
@@ -492,7 +494,7 @@ Parameters:
 
 Resizes the the given Vector array to the specifed size and returns 1.
 
-### 3.17. xsArraySetBool
+### 3.17. xsArraySetBool { #xsArraySetBool }
 
 Returning Type: `#!cpp int`
 
@@ -506,7 +508,7 @@ Parameters:
 
 Sets the valuat the specified indedx e of the given bool arrindex to the provided value and returns 1.
 
-### 3.18. xsArraySetFloat
+### 3.18. xsArraySetFloat { #xsArraySetFloat }
 
 Returning Type: `#!cpp int`
 
@@ -520,7 +522,7 @@ Parameters:
 
 Sets the valueat the specified indedx of the given float array to the provided value and returns 1.
 
-### 3.19. xsArraySetInt
+### 3.19. xsArraySetInt { #xsArraySetInt }
 
 Returning Type: `#!cpp int`
 
@@ -534,7 +536,7 @@ Parameters:
 
 Sets the valat the specified indedx ue of the given int arrindex to the provided value and returns 1.
 
-### 3.20. xsArraySetString
+### 3.20. xsArraySetString { #xsArraySetString }
 
 Returning Type: `#!cpp int`
 
@@ -548,7 +550,7 @@ Parameters:
 
 Sets the value at the specified indedx of the given String array to the provided value and returns 1.
 
-### 3.21. xsArraySetVector
+### 3.21. xsArraySetVector { #xsArraySetVector }
 
 Returning Type: `#!cpp int`
 
@@ -562,9 +564,9 @@ Parameters:
 
 Sets the value at the specified indedx of the given Vector array to the provided value and returns 1.
 
-## 4. Maths
+## 4. Maths { #Maths }
 
-### 4.1. abs
+### 4.1. abs { #abs }
 
 Returning Type: `#!cpp float`
 
@@ -576,7 +578,7 @@ Parameters:
 
 Returns the absolute value (magnitude) of the given number.
 
-### 4.2. acos
+### 4.2. acos { #acos }
 
 Returning Type: `#!cpp float`
 
@@ -588,7 +590,7 @@ Parameters:
 
 Returns the inverse cosine (arccos) of the given value
 
-### 4.3. asin
+### 4.3. asin { #asin }
 
 Returning Type: `#!cpp float`
 
@@ -600,7 +602,7 @@ Parameters:
 
 Returns the inverse sine (arcsin) of the given value
 
-### 4.4. atan
+### 4.4. atan { #atan }
 
 Returning Type: `#!cpp float`
 
@@ -612,7 +614,7 @@ Parameters:
 
 Returns the inverse tangent (arctan) of the given value
 
-### 4.5. atan2
+### 4.5. atan2 { #atan2 }
 
 Returning Type: `#!cpp float`
 
@@ -624,7 +626,7 @@ Parameters:
 
 This is supposed to be the atan2(y, x) function but apparently it only takes one input. ThxDE
 
-### 4.6. cos
+### 4.6. cos { #cos }
 
 Returning Type: `#!cpp float`
 
@@ -636,7 +638,7 @@ Parameters:
 
 Returns the cosine of the angle in radians
 
-### 4.7. pow
+### 4.7. pow { #pow }
 
 Returning Type: `#!cpp float`
 
@@ -649,7 +651,7 @@ Parameters:
 
 Returns x raised to the power y (x\*\*y).
 
-### 4.8. sin
+### 4.8. sin { #sin }
 
 Returning Type: `#!cpp float`
 
@@ -661,7 +663,7 @@ Parameters:
 
 Returns the sine of the angle in radians.
 
-### 4.9. sqrt
+### 4.9. sqrt { #sqrt }
 
 Returning Type: `#!cpp float`
 
@@ -673,7 +675,7 @@ Parameters:
 
 Returns the square root of the given number.
 
-### 4.10. tan
+### 4.10. tan { #tan }
 
 Returning Type: `#!cpp float`
 
@@ -685,9 +687,9 @@ Parameters:
 
 Returns the tangent of the angle in radians
 
-## 5. General
+## 5. General { #General }
 
-### 5.1. xsChatData
+### 5.1. xsChatData { #xsChatData }
 
 Returning Type: `#!cpp void`
 
@@ -700,7 +702,7 @@ Parameters:
 
 Shows the given message in the game chat
 
-### 5.2. xsEffectAmount
+### 5.2. xsEffectAmount { #xsEffectAmount }
 
 Returning Type: `#!cpp void`
 
@@ -716,7 +718,7 @@ Parameters:
 
 Change the specified attribute of the specified unit or technology by the value for the specified player. For more information on this, check the [UserPatch]("Jump to: UserPatch NON EXISTENT") section of the guide
 
-### 5.3. xsGetGameTime
+### 5.3. xsGetGameTime { #xsGetGameTime }
 
 Returning Type: `#!cpp int`
 
@@ -724,7 +726,7 @@ Prototype: `#!cpp int xsGetGameTime();`
 
 Returns the current game time in seconds
 
-### 5.4. xsGetMapHeight
+### 5.4. xsGetMapHeight { #xsGetMapHeight }
 
 Returning Type: `#!cpp int`
 
@@ -732,7 +734,7 @@ Prototype: `#!cpp int xsGetMapHeight();`
 
 Returns the Height of the map.
 
-### 5.5. xsGetMapID
+### 5.5. xsGetMapID { #xsGetMapID }
 
 Returning Type: `#!cpp int`
 
@@ -740,7 +742,7 @@ Prototype: `#!cpp int xsGetMapID();`
 
 Returns the AI map type.
 
-### 5.6. xsGetMapName
+### 5.6. xsGetMapName { #xsGetMapName }
 
 Returning Type: `#!cpp string`
 
@@ -752,7 +754,7 @@ Parameters:
 
 Returns the name of the map currently being played.
 
-### 5.7. xsGetMapWidth
+### 5.7. xsGetMapWidth { #xsGetMapWidth }
 
 Returning Type: `#!cpp int`
 
@@ -760,7 +762,7 @@ Prototype: `#!cpp int xsGetMapWidth();`
 
 Returns the Width of the map.
 
-### 5.8. xsGetNumPlayers
+### 5.8. xsGetNumPlayers { #xsGetNumPlayers }
 
 Returning Type: `#!cpp int`
 
@@ -768,7 +770,7 @@ Prototype: `#!cpp int xsGetNumPlayers();`
 
 Returns the number of players in the game
 
-### 5.9. xsGetObjectCount
+### 5.9. xsGetObjectCount { #xsGetObjectCount }
 
 Returning Type: `#!cpp int`
 
@@ -781,7 +783,7 @@ Parameters:
 
 Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake.
 
-### 5.10. xsGetObjectCountTotal
+### 5.10. xsGetObjectCountTotal { #xsGetObjectCountTotal }
 
 Returning Type: `#!cpp int`
 
@@ -794,7 +796,7 @@ Parameters:
 
 Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake.
 
-### 5.11. xsGetPlayerCivilization
+### 5.11. xsGetPlayerCivilization { #xsGetPlayerCivilization }
 
 Returning Type: `#!cpp int`
 
@@ -806,7 +808,7 @@ Parameters:
 
 Returns the civilization ID of the given player. Refer to the [Constant Reference](../constants/#3-civs "Jump to: XS Scriptin > Constant Reference > #3. Civs") for all the different civ IDs
 
-### 5.12. xsGetPlayerInGame
+### 5.12. xsGetPlayerInGame { #xsGetPlayerInGame }
 
 Returning Type: `#!cpp bool`
 
@@ -818,7 +820,7 @@ Parameters:
 
 Returns true if the player given is still alive, and false otherwise.
 
-### 5.13. xsGetPlayerNumberOfTechs
+### 5.13. xsGetPlayerNumberOfTechs { #xsGetPlayerNumberOfTechs }
 
 Returning Type: `#!cpp int`
 
@@ -830,7 +832,7 @@ Parameters:
 
 Returns the number of technologies available to the player in the entire game.
 
-### 5.14. xsGetRandomNumber
+### 5.14. xsGetRandomNumber { #xsGetRandomNumber }
 
 Returning Type: `#!cpp int`
 
@@ -838,7 +840,7 @@ Prototype: `#!cpp int xsGetRandomNumber();`
 
 Returns a random number between 0 and 32766.
 
-### 5.15. xsGetRandomNumberLH
+### 5.15. xsGetRandomNumberLH { #xsGetRandomNumberLH }
 
 Returning Type: `#!cpp int`
 
@@ -851,7 +853,7 @@ Parameters:
 
 Returns a random number between `low` and `high`
 
-### 5.16. xsGetRandomNumberMax
+### 5.16. xsGetRandomNumberMax { #xsGetRandomNumberMax }
 
 Returning Type: `#!cpp int`
 
@@ -863,7 +865,7 @@ Parameters:
 
 Returns a random number between 0 and `max`.
 
-### 5.17. xsGetTime
+### 5.17. xsGetTime { #xsGetTime }
 
 Returning Type: `#!cpp int`
 
@@ -871,7 +873,7 @@ Prototype: `#!cpp int xsGetTime();`
 
 Returns the current game time - 1 in seconds
 
-### 5.18. xsGetVictoryCondition
+### 5.18. xsGetVictoryCondition { #xsGetVictoryCondition }
 
 Returning Type: `#!cpp int`
 
@@ -879,7 +881,7 @@ Prototype: `#!cpp int xsGetVictoryCondition();`
 
 Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`
 
-### 5.19. xsGetVictoryConditionForSecondaryGameMode
+### 5.19. xsGetVictoryConditionForSecondaryGameMode { #xsGetVictoryConditionForSecondaryGameMode }
 
 Returning Type: `#!cpp int`
 
@@ -887,7 +889,7 @@ Prototype: `#!cpp int xsGetVictoryConditionForSecondaryGameMode();`
 
 Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`
 
-### 5.20. xsGetVictoryPlayer
+### 5.20. xsGetVictoryPlayer { #xsGetVictoryPlayer }
 
 Returning Type: `#!cpp int`
 
@@ -895,7 +897,7 @@ Prototype: `#!cpp int xsGetVictoryPlayer();`
 
 Returns the number of the player with the highest score in a normal game. Returns the number of the player who owns 5 relics or has a wonder if standard victory is enabled. In a game like KoTH, returns the number of the player who owns the monument.
 
-### 5.21. xsGetVictoryPlayerForSecondaryGameMode
+### 5.21. xsGetVictoryPlayerForSecondaryGameMode { #xsGetVictoryPlayerForSecondaryGameMode }
 
 Returning Type: `#!cpp int`
 
@@ -903,7 +905,7 @@ Prototype: `#!cpp int xsGetVictoryPlayerForSecondaryGameMode();`
 
 Returns `1` when no secondary game mode is set. Returns the number of the player who owns the monument in game modes like KotH
 
-### 5.22. xsGetVictoryTime
+### 5.22. xsGetVictoryTime { #xsGetVictoryTime }
 
 Returning Type: `#!cpp int`
 
@@ -911,7 +913,7 @@ Prototype: `#!cpp int xsGetVictoryTime();`
 
 For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise
 
-### 5.23. xsGetVictoryTimeForSecondaryGameMode
+### 5.23. xsGetVictoryTimeForSecondaryGameMode { #xsGetVictoryTimeForSecondaryGameMode }
 
 Returning Type: `#!cpp int`
 
@@ -919,7 +921,7 @@ Prototype: `#!cpp int xsGetVictoryTimeForSecondaryGameMode();`
 
 For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise
 
-### 5.24. xsGetVictoryType
+### 5.24. xsGetVictoryType { #xsGetVictoryType }
 
 Returning Type: `#!cpp int`
 
@@ -939,7 +941,7 @@ Returns an integer corresponding to different victory settings ingame. These are
 
 Last Man Standing returns 0 as well.
 
-### 5.25. xsPlayerAttribute
+### 5.25. xsPlayerAttribute { #xsPlayerAttribute }
 
 Returning Type: `#!cpp float`
 
@@ -952,7 +954,7 @@ Parameters:
 
 Returns the amount the specified resource of the given player.
 
-### 5.26. xsResearchTechnology
+### 5.26. xsResearchTechnology { #xsResearchTechnology }
 
 Returning Type: `#!cpp bool`
 
@@ -967,7 +969,7 @@ Parameters:
 
 Returns a boolean based on whether the technology was researched or not.
 
-### 5.27. xsSetPlayerAttribute
+### 5.27. xsSetPlayerAttribute { #xsSetPlayerAttribute }
 
 Returning Type: `#!cpp void`
 
@@ -981,7 +983,7 @@ Parameters:
 
 Sets the amount of the specified resource of the given player to the provided value.
 
-### 5.28. xsSetTriggerVariable
+### 5.28. xsSetTriggerVariable { #xsSetTriggerVariable }
 
 Returning Type: `#!cpp void`
 
@@ -994,7 +996,7 @@ Parameters:
 
 Sets the value of the variable of the given variable ID to the provided value.
 
-### 5.29. xsTriggerVariable
+### 5.29. xsTriggerVariable { #xsTriggerVariable }
 
 Returning Type: `#!cpp int`
 
@@ -1006,9 +1008,9 @@ Parameters:
 
 Returns the value of the variable of the given variable ID.
 
-## 6. Read/Write
+## 6. Read/Write { #Read/Write }
 
-### 6.1. xsCloseFile
+### 6.1. xsCloseFile { #xsCloseFile }
 
 Returning Type: `#!cpp bool`
 
@@ -1016,7 +1018,7 @@ Prototype: `#!cpp bool xsCloseFile();`
 
 Close the currently opened or created file. Returns `#!cpp true` if the file was successfully closed
 
-### 6.2. xsCreateFile
+### 6.2. xsCreateFile { #xsCreateFile }
 
 Returning Type: `#!cpp bool`
 
@@ -1028,7 +1030,7 @@ Parameters:
 
 Creates a new (or appends to an existing) `.xsdat` file with the same name as the RMS/scenario being played. After invoking this function, the writing functions can be used to write data to the file. Returns `#!cpp true` if the file was successfully created
 
-### 6.3. xsGetDataTypeSize
+### 6.3. xsGetDataTypeSize { #xsGetDataTypeSize }
 
 Returning Type: `#!cpp int`
 
@@ -1040,7 +1042,7 @@ Parameters:
 
 Returns the number of bytes used to store a given type value.
 
-### 6.4. xsGetFilePosition
+### 6.4. xsGetFilePosition { #xsGetFilePosition }
 
 Returning Type: `#!cpp int`
 
@@ -1048,7 +1050,7 @@ Prototype: `#!cpp int xsGetFilePosition();`
 
 Gets the byte (0-indexed) of the file that the next read function will start reading from.
 
-### 6.5. xsGetFileSize
+### 6.5. xsGetFileSize { #xsGetFileSize }
 
 Returning Type: `#!cpp int`
 
@@ -1056,7 +1058,7 @@ Prototype: `#!cpp int xsGetFileSize();`
 
 Gets the size (in bytes) of the currently open file
 
-### 6.6. xsOffsetFilePosition
+### 6.6. xsOffsetFilePosition { #xsOffsetFilePosition }
 
 Returning Type: `#!cpp bool`
 
@@ -1064,12 +1066,12 @@ Prototype: `#!cpp bool xsOffsetFilePosition(int dataType, bool forward);`
 
 Parameters:
 
-1.  `#!cpp int dataType`: The [cOffset constants](../constants/#1-readwrite "Jump To: XS > Constant Reference > Read/Write Constants") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)
+1.  `#!cpp int dataType`: The [cOffset constants](../constants/#1-readwrite "Jump To: XS Scripting > Constant Reference > Read/Write Constants") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)
 2.  (Optional) `#!cpp bool forward`: Default: `#!cpp true`. Setting this to `#!cpp false` will make the file position move back
 
 Moves the file position forward (or backward) relative to the current file position, and by an amount of bytes equivalent to reading the given data type
 
-### 6.7. xsOpenFile
+### 6.7. xsOpenFile { #xsOpenFile }
 
 Returning Type: `#!cpp bool`
 
@@ -1081,7 +1083,7 @@ Parameters:
 
 Opens an existing `.xsdat`file in read only mode. After invoking this function, the reading functions can be used to read data from the file. Returns `#!cpp true` if the file was successfully opened
 
-### 6.8. xsReadFloat
+### 6.8. xsReadFloat { #xsReadFloat }
 
 Returning Type: `#!cpp float`
 
@@ -1089,7 +1091,7 @@ Prototype: `#!cpp float xsReadFloat();`
 
 Reads and returns a float from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a float, which means the value being read is bit casted into a float regardless of what it originally was. This function also moves the file position forward by 4 bytes
 
-### 6.9. xsReadInt
+### 6.9. xsReadInt { #xsReadInt }
 
 Returning Type: `#!cpp int`
 
@@ -1097,7 +1099,7 @@ Prototype: `#!cpp int xsReadInt();`
 
 Reads and returns an integer from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be an integer, which means the value being read is bit casted into an integer regardless of what it originally was. This function also moves the file position forward by 4 bytes
 
-### 6.10. xsReadString
+### 6.10. xsReadString { #xsReadString }
 
 Returning Type: `#!cpp string`
 
@@ -1105,7 +1107,7 @@ Prototype: `#!cpp string xsReadString();`
 
 Reads and returns a string from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a string, which means the value being read is bit casted into a string regardless of what it originally was. This function also moves the file position forward by 4 bytes + the amount of bytes in the length of the string
 
-### 6.11. xsReadVector
+### 6.11. xsReadVector { #xsReadVector }
 
 Returning Type: `#!cpp vector`
 
@@ -1113,7 +1115,7 @@ Prototype: `#!cpp vector xsReadVector();`
 
 Reads and returns a vector from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a vector, which means the value being read is bit casted into a vector regardless of what it originally was. This function also moves the file position forward by 12 bytes
 
-### 6.12. xsSetFilePosition
+### 6.12. xsSetFilePosition { #xsSetFilePosition }
 
 Returning Type: `#!cpp bool`
 
@@ -1125,7 +1127,7 @@ Parameters:
 
 Sets the byte (0-indexed) of the file that the next read function will start reading from.
 
-### 6.13. xsWriteFloat
+### 6.13. xsWriteFloat { #xsWriteFloat }
 
 Returning Type: `#!cpp bool`
 
@@ -1137,7 +1139,7 @@ Parameters:
 
 Writes a floating point number to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the floating point number was successfully written. Floats are written in the 32 bit IEEE 754 format
 
-### 6.14. xsWriteInt
+### 6.14. xsWriteInt { #xsWriteInt }
 
 Returning Type: `#!cpp bool`
 
@@ -1149,7 +1151,7 @@ Parameters:
 
 Writes an integer to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the integer was successfully written. Integers are written as signed 32 bit numbers
 
-### 6.15. xsWriteString
+### 6.15. xsWriteString { #xsWriteString }
 
 Returning Type: `#!cpp bool`
 
@@ -1161,7 +1163,7 @@ Parameters:
 
 Writes a string to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the string was successfully written. A string is written to the file in two parts, an unsigned 32 bit integer (indicates the length of the string) followed by that many bytes making up the actual characters of the string
 
-### 6.16. xsWriteVector
+### 6.16. xsWriteVector { #xsWriteVector }
 
 Returning Type: `#!cpp bool`
 
@@ -1173,9 +1175,9 @@ Parameters:
 
 Writes a vector to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the vector was successfully written. Vectors are written as 3 consecutive floating point numbers, one for each coordinate.
 
-## 7. Functions With Seemingly No Practical Use
+## 7. Functions With Seemingly No Practical Use { #Functions With Seemingly No Practical Use }
 
-### 7.1. xsAddRuntimeEvent
+### 7.1. xsAddRuntimeEvent { #xsAddRuntimeEvent }
 
 Returning Type: `#!cpp bool`
 
@@ -1189,7 +1191,7 @@ Parameters:
 
 A runtime event is called after all the XS code has finished executing but before rules start executing. It calls the function `functionName` given to it with the `functionArgument` passed to it as a parameter. For programmers familiar with the terminology, this is basically a way to set a callback. It also returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins
 
-### 7.2. xsBreakPoint
+### 7.2. xsBreakPoint { #xsBreakPoint }
 
 Returning Type: `#!cpp void`
 
@@ -1197,7 +1199,7 @@ Prototype: `#!cpp void xsBreakPoint();`
 
 This function adds a break point to the execution of code. Do not use this function and beware, if you do, it will likely cause a crash!
 
-### 7.3. xsDumpArrays
+### 7.3. xsDumpArrays { #xsDumpArrays }
 
 Returning Type: `#!cpp void`
 
@@ -1205,7 +1207,7 @@ Prototype: `#!cpp void xsDumpArrays();`
 
 This function is supposed to blogs out all XS arrays. Currently, it does absolutely nothing.
 
-### 7.4. xsGetContextPlayer
+### 7.4. xsGetContextPlayer { #xsGetContextPlayer }
 
 Returning Type: `#!cpp int`
 
@@ -1213,7 +1215,7 @@ Prototype: `#!cpp int xsGetContextPlayer();`
 
 Returns the current context player ID.
 
-### 7.5. xsGetFunctionID
+### 7.5. xsGetFunctionID { #xsGetFunctionID }
 
 Returning Type: `#!cpp int`
 
@@ -1225,7 +1227,7 @@ Parameters:
 
 Returns the hash of a given function. This function has no practical application and is probably for internal usage only.
 
-### 7.6. xsSetContextPlayer
+### 7.6. xsSetContextPlayer { #xsSetContextPlayer }
 
 Returning Type: `#!cpp void`
 

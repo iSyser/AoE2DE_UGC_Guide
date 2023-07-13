@@ -6,7 +6,9 @@ import ugcdoc
 # this section can be moved to the corresponding file
 md_dict = {None: 'en'}
 
-md_dict['en'] = {'head': """_Written by: Alian713, Syser_
+md_dict['en'] = {'head': """# Unit Attributes
+
+_Written by: Alian713, Syser_
 
 ---
 
@@ -16,7 +18,9 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 """, "property": "Property", "flag_value": "Flag Value"}
 
-md_dict['zh'] = {'head': """_作者：Alian713, 别云_
+md_dict['zh'] = {'head': """# 单位属性
+
+_作者：Alian713, 别云_
 
 ---
 
@@ -34,7 +38,7 @@ def build_doc(lang: str = None):
     for attr_id in attrs[def_lang]:
         k = functools.partial(ugcdoc.get_key, dict_set=attrs, parent_key=attr_id, language=lang)
 
-        out += f"## {attr_id}. {k('name')}\n\n"
+        out += f'## {attr_id}. {k("name")} {{ #{attr_id} }}\n\n'
         out += f"-   ID: {attr_id}\n\n"
         if lang != def_lang:
             out += f"-   {md_dict[lang]['name']}: {k('name', language=None)}\n\n"

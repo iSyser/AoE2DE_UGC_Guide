@@ -16,9 +16,9 @@ nav:
   - Game Mechanics:
     -                               "general/index.md"
     - Damage Calculation:           "general/damage_calculation.md"
-    - Attributes:                   "general/attributes/index.md"
-    - Resources:                    "general/resources/index.md"
-    - Hotkeys:                      "general/hotkeys/index.md"
+    -                               "general/attributes/index.md"
+    -                               "general/resources/index.md"
+    -                               "general/hotkeys/index.md"
   - Custom Scenarios:
     -                               "scenarios/index.md"
     - Triggers:
@@ -40,8 +40,8 @@ nav:
     - For Beginners:                "general/xs/beginner.md"
     - For Programmers:              "general/xs/programmer.md"
     - Tricks:                       "general/xs/tricks.md"
-    - Functions Reference:          "general/xs/functions.md"
-    - Constant Reference:           "general/xs/constants.md"
+    -                               "general/xs/functions/index.md"
+    -                               "general/xs/constants/index.md"
     - Known Bugs:
       -                             "general/xs/bugs/index.md"
       - Chat Data:                  "general/xs/bugs/Chat Data.md"
@@ -67,7 +67,6 @@ markdown_extensions:
   - pymdownx.critic           #                                     https://facelessuser.github.io/pymdown-extensions/extensions/critic/
   - pymdownx.details          # Collapsable elements                https://facelessuser.github.io/pymdown-extensions/extensions/details/
   - pymdownx.inlinehilite     # Inline code highlighting            https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
-  - pymdownx.keys             # Add styling keyboard keys           https://facelessuser.github.io/pymdown-extensions/extensions/keys/
   - pymdownx.mark             # Highlighting of text                https://facelessuser.github.io/pymdown-extensions/extensions/mark/
   - pymdownx.smartsymbols     # Creating special characters         https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
   - pymdownx.snippets         #                                     https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
@@ -83,6 +82,8 @@ markdown_extensions:
   - pymdownx.highlight:       # Highlighting code blocks            https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
       linenums:     true
       use_pygments: true
+  - pymdownx.keys:            # Add styling keyboard keys           https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+     strict: false
   - pymdownx.superfences:     # Complicated code fences             https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
       custom_fences:
         - name:   mermaid
@@ -126,9 +127,6 @@ plugins:
           Mods: 模组
 
           Damage Calculation: 伤害计算
-          Attributes: 属性
-          Resources: 资源
-          Hotkeys: 热键
 
           Triggers: 触发
           Effects: 效果

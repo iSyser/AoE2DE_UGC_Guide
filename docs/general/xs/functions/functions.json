@@ -1435,7 +1435,7 @@
             "name": "dataType",
             "type": "int",
             "required": true,
-            "desc": "The [cOffset constants](../constants/#1-readwrite \"Jump To: XS > Constant Reference > Read/Write Constants\") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)"
+            "desc": "The [cOffset constants](../constants/#1-readwrite \"Jump To: XS Scripting > Constant Reference > Read/Write Constants\") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)"
           },
           {
             "name": "forward",

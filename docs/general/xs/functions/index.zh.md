@@ -4,13 +4,13 @@ hide:
 #     - toc
 ---
 
+# 函数参考
+
 _作者：Alian713_
 
-## 1. 规则
+## 1. 规则 { #Rules }
 
-### 1.1. xs 禁用规则
-
-真实函数名: xsDisableRule
+### 1.1. xs 禁用规则 { #xsDisableRule }
 
 返回类型: `#!cpp void`
 
@@ -18,13 +18,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲禁用规则的名称
+1.  `#!cpp string ruleName`(规则名称): 欲禁用规则的名称
 
 禁用给定的规则。
 
-### 1.2. xs 禁用规则组
-
-真实函数名: xsDisableRuleGroup
+### 1.2. xs 禁用规则组 { #xsDisableRuleGroup }
 
 返回类型: `#!cpp void`
 
@@ -32,13 +30,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则组名`: 欲禁用规则组的名称
+1.  `#!cpp string ruleGroupName`(规则组名): 欲禁用规则组的名称
 
 禁用给定规则组中的所有规则
 
-### 1.3. xs 禁用自身
-
-真实函数名: xsDisableSelf
+### 1.3. xs 禁用自身 { #xsDisableSelf }
 
 返回类型: `#!cpp void`
 
@@ -46,9 +42,7 @@ _作者：Alian713_
 
 禁用该函数所处的规则。不能在规则主体之外使用！
 
-### 1.4. xs 启用规则
-
-真实函数名: xsEnableRule
+### 1.4. xs 启用规则 { #xsEnableRule }
 
 返回类型: `#!cpp void`
 
@@ -56,13 +50,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲启用规则的名称
+1.  `#!cpp string ruleName`(规则名称): 欲启用规则的名称
 
 启用给定的规则。
 
-### 1.5. xs 启用规则组
-
-真实函数名: xsEnableRuleGroup
+### 1.5. xs 启用规则组 { #xsEnableRuleGroup }
 
 返回类型: `#!cpp void`
 
@@ -70,13 +62,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则组名`: 欲启用规则组的名称
+1.  `#!cpp string ruleGroupName`(规则组名): 欲启用规则组的名称
 
 启用给定规则组中的所有规则
 
-### 1.6. xs 规则是否启用
-
-真实函数名: xsIsRuleEnabled
+### 1.6. xs 规则是否启用 { #xsIsRuleEnabled }
 
 返回类型: `#!cpp bool`
 
@@ -84,13 +74,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲检查规则的名称
+1.  `#!cpp string ruleName`(规则名称): 欲检查规则的名称
 
 如果规则启用则返回真，否则返回假。
 
-### 1.7. xs 规则组是否启用
-
-真实函数名: xsIsRuleGroupEnabled
+### 1.7. xs 规则组是否启用 { #xsIsRuleGroupEnabled }
 
 返回类型: `#!cpp bool`
 
@@ -98,13 +86,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则组名`: 欲检查规则组的名称
+1.  `#!cpp string ruleGroupName`(规则组名): 欲检查规则组的名称
 
 如果给定规则组中的所有规则均已启用，则返回真
 
-### 1.8. xs 设置规则最大间隔
-
-真实函数名: xsSetRuleMaxInterval
+### 1.8. xs 设置规则最大间隔 { #xsSetRuleMaxInterval }
 
 返回类型: `#!cpp void`
 
@@ -112,14 +98,12 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲设置最大间隔规则的名称
-2.  `#!cpp int 间隔`: 规则的新最大时间间隔
+1.  `#!cpp string ruleName`(规则名称): 欲设置最大间隔规则的名称
+2.  `#!cpp int interval`(间隔): 规则的新最大时间间隔
 
 设置给定规则的在块必须再次执行之前可能经过的最大时间间隔
 
-### 1.9. xs 设置自身规则最大间隔
-
-真实函数名: xsSetRuleMaxIntervalSelf
+### 1.9. xs 设置自身规则最大间隔 { #xsSetRuleMaxIntervalSelf }
 
 返回类型: `#!cpp void`
 
@@ -127,13 +111,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp int 间隔`: 规则的新最大时间间隔
+1.  `#!cpp int interval`(间隔): 规则的新最大时间间隔
 
 设置该函数所处规则的最大间隔。不能在规则主体之外使用！
 
-### 1.10. xs 设置规则最小间隔
-
-真实函数名: xsSetRuleMinInterval
+### 1.10. xs 设置规则最小间隔 { #xsSetRuleMinInterval }
 
 返回类型: `#!cpp void`
 
@@ -141,14 +123,12 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲设置最小间隔规则的名称
-2.  `#!cpp int 间隔`: 规则的新最小时间间隔
+1.  `#!cpp string ruleName`(规则名称): 欲设置最小间隔规则的名称
+2.  `#!cpp int interval`(间隔): 规则的新最小时间间隔
 
 设置给定规则的再次执行块之前必须经过的最小时间间隔。
 
-### 1.11. xs 设置自身规则最小间隔
-
-真实函数名: xsSetRuleMinIntervalSelf
+### 1.11. xs 设置自身规则最小间隔 { #xsSetRuleMinIntervalSelf }
 
 返回类型: `#!cpp void`
 
@@ -156,13 +136,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp int 间隔`: 规则的新最小时间间隔
+1.  `#!cpp int interval`(间隔): 规则的新最小时间间隔
 
 设置该函数所处规则的最小间隔。不能在规则主体之外使用！
 
-### 1.12. xs 设置规则优先级
-
-真实函数名: xsSetRulePriority
+### 1.12. xs 设置规则优先级 { #xsSetRulePriority }
 
 返回类型: `#!cpp void`
 
@@ -170,14 +148,12 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp string 规则名称`: 欲设置优先级规则的名称
-2.  `#!cpp int 优先级`: 规则的新优先级
+1.  `#!cpp string ruleName`(规则名称): 欲设置优先级规则的名称
+2.  `#!cpp int priority`(优先级): 规则的新优先级
 
 设置给定规则的优先级。
 
-### 1.13. xs 设置自身规则优先级
-
-真实函数名: xsSetRulePrioritySelf
+### 1.13. xs 设置自身规则优先级 { #xsSetRulePrioritySelf }
 
 返回类型: `#!cpp void`
 
@@ -185,13 +161,13 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp int 优先级`: 规则的新优先级
+1.  `#!cpp int priority`(优先级): 规则的新优先级
 
 设置该函数所处规则的优先级。不能在规则主体之外使用！
 
-## 2. 向量
+## 2. 向量 { #Vectors }
 
-### 2.1. xsVectorGetX
+### 2.1. xs 向量取横坐标 { #xsVectorGetX }
 
 返回类型: `#!cpp float`
 
@@ -199,11 +175,11 @@ _作者：Alian713_
 
 参数:
 
-1.  `#!cpp vector v`: The vector to get the X coordinate of
+1.  `#!cpp vector v`: 欲获取横坐标的向量
 
-The X coordinate of the vector given.
+获取给定向量的横坐标。
 
-### 2.2. xsVectorGetY
+### 2.2. xs 向量取纵坐标 { #xsVectorGetY }
 
 返回类型: `#!cpp float`
 
@@ -211,11 +187,11 @@ The X coordinate of the vector given.
 
 参数:
 
-1.  `#!cpp vector v`: The vector to get the Y coordinate of
+1.  `#!cpp vector v`: 欲获取纵坐标的向量
 
-The Y coordinate of the vector given.
+获取给定向量的纵坐标。
 
-### 2.3. xsVectorGetZ
+### 2.3. xs 向量取竖坐标 { #xsVectorGetZ }
 
 返回类型: `#!cpp float`
 
@@ -223,11 +199,11 @@ The Y coordinate of the vector given.
 
 参数:
 
-1.  `#!cpp vector v`: The vector to get the Z coordinate of
+1.  `#!cpp vector v`: 欲获取竖坐标的向量
 
-The Z coordinate of the vector given.
+获取给定向量的竖坐标。
 
-### 2.4. xsVectorLength
+### 2.4. xs 向量长度 { #xsVectorLength }
 
 返回类型: `#!cpp float`
 
@@ -235,11 +211,11 @@ The Z coordinate of the vector given.
 
 参数:
 
-1.  `#!cpp vector v`: The vector to calculate the length of
+1.  `#!cpp vector v`: 欲求模长的向量
 
-Returns the length of the given vector.
+返回给定向量的模长
 
-### 2.5. xsVectorNormalize
+### 2.5. xs 向量归一化 { #xsVectorNormalize }
 
 返回类型: `#!cpp vector`
 
@@ -247,11 +223,11 @@ Returns the length of the given vector.
 
 参数:
 
-1.  `#!cpp vector v`: The vector to normalise
+1.  `#!cpp vector v`: 欲归一化的向量
 
-Returns the normalised vector in the direction of the given vector.
+返回给定向量方向上的归一化向量。
 
-### 2.6. xsVectorSet
+### 2.6. xs 向量 { #xsVectorSet }
 
 返回类型: `#!cpp vector`
 
@@ -259,13 +235,13 @@ Returns the normalised vector in the direction of the given vector.
 
 参数:
 
-1.  `#!cpp float x`: The value to set the X coordinate to
-2.  `#!cpp float y`: The value to set the Y coordinate to
-3.  `#!cpp float z`: The value to set the Z coordinate to
+1.  `#!cpp float x`: 欲设置的横坐标值
+2.  `#!cpp float y`: 欲设置的纵坐标值
+3.  `#!cpp float z`: 欲设置的竖坐标值
 
-Returns a vector with the given X, Y and Z components.
+返回具有给定横、纵和竖分量的向量。
 
-### 2.7. xsVectorSetX
+### 2.7. xs 向量置横坐标 { #xsVectorSetX }
 
 返回类型: `#!cpp vector`
 
@@ -273,12 +249,12 @@ Returns a vector with the given X, Y and Z components.
 
 参数:
 
-1.  `#!cpp vector v`: The vector to modify the X coordinate of
-2.  `#!cpp float x`: The value to set the X coordinate to
+1.  `#!cpp vector v`: 欲设置横坐标的向量
+2.  `#!cpp float x`: 欲设置的横坐标值
 
-Returns a new vector with the X component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
+返回一个给定向量的横分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！
 
-### 2.8. xsVectorSetY
+### 2.8. xs 向量置纵坐标 { #xsVectorSetY }
 
 返回类型: `#!cpp vector`
 
@@ -286,12 +262,12 @@ Returns a new vector with the X component of the given vector changed to the giv
 
 参数:
 
-1.  `#!cpp vector v`: The vector to modify the Y coordinate of
-2.  `#!cpp float y`: The value to set the Y coordinate to
+1.  `#!cpp vector v`: 欲设置纵坐标的向量
+2.  `#!cpp float y`: 欲设置的纵坐标值
 
-Returns a new vector with the Y component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
+返回一个给定向量的纵分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！
 
-### 2.9. xsVectorSetZ
+### 2.9. xs 向量置竖坐标 { #xsVectorSetZ }
 
 返回类型: `#!cpp vector`
 
@@ -299,14 +275,14 @@ Returns a new vector with the Y component of the given vector changed to the giv
 
 参数:
 
-1.  `#!cpp vector v`: The vector to modify the Z coordinate of
-2.  `#!cpp float z`: The value to set the Z coordinate to
+1.  `#!cpp vector v`: 欲设置竖坐标的向量
+2.  `#!cpp float z`: 欲设置的竖坐标值
 
-Returns a new vector with the Z component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!
+返回一个给定向量的竖分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！
 
-## 3. 数组
+## 3. 数组 { #Arrays }
 
-### 3.1. xsArrayCreateBool
+### 3.1. xsArrayCreateBool { #xsArrayCreateBool }
 
 返回类型: `#!cpp int`
 
@@ -320,7 +296,7 @@ Returns a new vector with the Z component of the given vector changed to the giv
 
 Creates an array of type bool and returns its ID.
 
-### 3.2. xsArrayCreateFloat
+### 3.2. xsArrayCreateFloat { #xsArrayCreateFloat }
 
 返回类型: `#!cpp int`
 
@@ -334,7 +310,7 @@ Creates an array of type bool and returns its ID.
 
 Creates an array of type float and returns its ID.
 
-### 3.3. xsArrayCreateInt
+### 3.3. xsArrayCreateInt { #xsArrayCreateInt }
 
 返回类型: `#!cpp int`
 
@@ -348,7 +324,7 @@ Creates an array of type float and returns its ID.
 
 Creates an array of type int and returns its ID.
 
-### 3.4. xsArrayCreateString
+### 3.4. xsArrayCreateString { #xsArrayCreateString }
 
 返回类型: `#!cpp int`
 
@@ -362,7 +338,7 @@ Creates an array of type int and returns its ID.
 
 Creates an array of type String and returns its ID.
 
-### 3.5. xsArrayCreateVector
+### 3.5. xsArrayCreateVector { #xsArrayCreateVector }
 
 返回类型: `#!cpp int`
 
@@ -376,7 +352,7 @@ Creates an array of type String and returns its ID.
 
 Creates an array of type Vector and returns its ID.
 
-### 3.6. xsArrayGetBool
+### 3.6. xsArrayGetBool { #xsArrayGetBool }
 
 返回类型: `#!cpp int`
 
@@ -389,7 +365,7 @@ Creates an array of type Vector and returns its ID.
 
 Gets and returns the value of the given bool array at the specifed index.
 
-### 3.7. xsArrayGetFloat
+### 3.7. xsArrayGetFloat { #xsArrayGetFloat }
 
 返回类型: `#!cpp int`
 
@@ -402,7 +378,7 @@ Gets and returns the value of the given bool array at the specifed index.
 
 Gets and returns the value of the given float array at the specifed index.
 
-### 3.8. xsArrayGetInt
+### 3.8. xsArrayGetInt { #xsArrayGetInt }
 
 返回类型: `#!cpp int`
 
@@ -415,7 +391,7 @@ Gets and returns the value of the given float array at the specifed index.
 
 Gets and returns the value of the given int array at the specifed index.
 
-### 3.9. xsArrayGetSize
+### 3.9. xsArrayGetSize { #xsArrayGetSize }
 
 返回类型: `#!cpp int`
 
@@ -427,7 +403,7 @@ Gets and returns the value of the given int array at the specifed index.
 
 Returns the length of the given array.
 
-### 3.10. xsArrayGetString
+### 3.10. xsArrayGetString { #xsArrayGetString }
 
 返回类型: `#!cpp int`
 
@@ -440,7 +416,7 @@ Returns the length of the given array.
 
 Gets and returns the value of the given String array at the specifed index.
 
-### 3.11. xsArrayGetVector
+### 3.11. xsArrayGetVector { #xsArrayGetVector }
 
 返回类型: `#!cpp int`
 
@@ -453,7 +429,7 @@ Gets and returns the value of the given String array at the specifed index.
 
 Gets and returns the value of the given Vector array at the specifed index.
 
-### 3.12. xsArrayResizeBool
+### 3.12. xsArrayResizeBool { #xsArrayResizeBool }
 
 返回类型: `#!cpp int`
 
@@ -466,7 +442,7 @@ Gets and returns the value of the given Vector array at the specifed index.
 
 Resizes the the given bool array to the specifed size and returns 1.
 
-### 3.13. xsArrayResizeFloat
+### 3.13. xsArrayResizeFloat { #xsArrayResizeFloat }
 
 返回类型: `#!cpp int`
 
@@ -479,7 +455,7 @@ Resizes the the given bool array to the specifed size and returns 1.
 
 Resizes the the given float array to the specifed size and returns 1.
 
-### 3.14. xsArrayResizeInt
+### 3.14. xsArrayResizeInt { #xsArrayResizeInt }
 
 返回类型: `#!cpp int`
 
@@ -492,7 +468,7 @@ Resizes the the given float array to the specifed size and returns 1.
 
 Resizes the the given int array to the specifed size and returns 1.
 
-### 3.15. xsArrayResizeString
+### 3.15. xsArrayResizeString { #xsArrayResizeString }
 
 返回类型: `#!cpp int`
 
@@ -505,7 +481,7 @@ Resizes the the given int array to the specifed size and returns 1.
 
 Resizes the the given String array to the specifed size and returns 1.
 
-### 3.16. xsArrayResizeVector
+### 3.16. xsArrayResizeVector { #xsArrayResizeVector }
 
 返回类型: `#!cpp int`
 
@@ -518,7 +494,7 @@ Resizes the the given String array to the specifed size and returns 1.
 
 Resizes the the given Vector array to the specifed size and returns 1.
 
-### 3.17. xsArraySetBool
+### 3.17. xsArraySetBool { #xsArraySetBool }
 
 返回类型: `#!cpp int`
 
@@ -532,7 +508,7 @@ Resizes the the given Vector array to the specifed size and returns 1.
 
 Sets the valuat the specified indedx e of the given bool arrindex to the provided value and returns 1.
 
-### 3.18. xsArraySetFloat
+### 3.18. xsArraySetFloat { #xsArraySetFloat }
 
 返回类型: `#!cpp int`
 
@@ -546,7 +522,7 @@ Sets the valuat the specified indedx e of the given bool arrindex to the provide
 
 Sets the valueat the specified indedx of the given float array to the provided value and returns 1.
 
-### 3.19. xsArraySetInt
+### 3.19. xsArraySetInt { #xsArraySetInt }
 
 返回类型: `#!cpp int`
 
@@ -560,7 +536,7 @@ Sets the valueat the specified indedx of the given float array to the provided v
 
 Sets the valat the specified indedx ue of the given int arrindex to the provided value and returns 1.
 
-### 3.20. xsArraySetString
+### 3.20. xsArraySetString { #xsArraySetString }
 
 返回类型: `#!cpp int`
 
@@ -574,7 +550,7 @@ Sets the valat the specified indedx ue of the given int arrindex to the provided
 
 Sets the value at the specified indedx of the given String array to the provided value and returns 1.
 
-### 3.21. xsArraySetVector
+### 3.21. xsArraySetVector { #xsArraySetVector }
 
 返回类型: `#!cpp int`
 
@@ -588,9 +564,9 @@ Sets the value at the specified indedx of the given String array to the provided
 
 Sets the value at the specified indedx of the given Vector array to the provided value and returns 1.
 
-## 4. 数学
+## 4. 数学 { #Maths }
 
-### 4.1. abs
+### 4.1. abs { #abs }
 
 返回类型: `#!cpp float`
 
@@ -602,7 +578,7 @@ Sets the value at the specified indedx of the given Vector array to the provided
 
 Returns the absolute value (magnitude) of the given number.
 
-### 4.2. acos
+### 4.2. acos { #acos }
 
 返回类型: `#!cpp float`
 
@@ -614,7 +590,7 @@ Returns the absolute value (magnitude) of the given number.
 
 Returns the inverse cosine (arccos) of the given value
 
-### 4.3. asin
+### 4.3. asin { #asin }
 
 返回类型: `#!cpp float`
 
@@ -626,7 +602,7 @@ Returns the inverse cosine (arccos) of the given value
 
 Returns the inverse sine (arcsin) of the given value
 
-### 4.4. atan
+### 4.4. atan { #atan }
 
 返回类型: `#!cpp float`
 
@@ -638,7 +614,7 @@ Returns the inverse sine (arcsin) of the given value
 
 Returns the inverse tangent (arctan) of the given value
 
-### 4.5. atan2
+### 4.5. atan2 { #atan2 }
 
 返回类型: `#!cpp float`
 
@@ -650,7 +626,7 @@ Returns the inverse tangent (arctan) of the given value
 
 This is supposed to be the atan2(y, x) function but apparently it only takes one input. ThxDE
 
-### 4.6. cos
+### 4.6. cos { #cos }
 
 返回类型: `#!cpp float`
 
@@ -662,7 +638,7 @@ This is supposed to be the atan2(y, x) function but apparently it only takes one
 
 Returns the cosine of the angle in radians
 
-### 4.7. pow
+### 4.7. pow { #pow }
 
 返回类型: `#!cpp float`
 
@@ -675,7 +651,7 @@ Returns the cosine of the angle in radians
 
 Returns x raised to the power y (x\*\*y).
 
-### 4.8. sin
+### 4.8. sin { #sin }
 
 返回类型: `#!cpp float`
 
@@ -687,7 +663,7 @@ Returns x raised to the power y (x\*\*y).
 
 Returns the sine of the angle in radians.
 
-### 4.9. sqrt
+### 4.9. sqrt { #sqrt }
 
 返回类型: `#!cpp float`
 
@@ -699,7 +675,7 @@ Returns the sine of the angle in radians.
 
 Returns the square root of the given number.
 
-### 4.10. tan
+### 4.10. tan { #tan }
 
 返回类型: `#!cpp float`
 
@@ -711,9 +687,9 @@ Returns the square root of the given number.
 
 Returns the tangent of the angle in radians
 
-## 5. 通用
+## 5. 通用 { #General }
 
-### 5.1. xsChatData
+### 5.1. xsChatData { #xsChatData }
 
 返回类型: `#!cpp void`
 
@@ -726,7 +702,7 @@ Returns the tangent of the angle in radians
 
 Shows the given message in the game chat
 
-### 5.2. xsEffectAmount
+### 5.2. xsEffectAmount { #xsEffectAmount }
 
 返回类型: `#!cpp void`
 
@@ -742,7 +718,7 @@ Shows the given message in the game chat
 
 Change the specified attribute of the specified unit or technology by the value for the specified player. For more information on this, check the [UserPatch]("Jump to: UserPatch NON EXISTENT") section of the guide
 
-### 5.3. xsGetGameTime
+### 5.3. xsGetGameTime { #xsGetGameTime }
 
 返回类型: `#!cpp int`
 
@@ -750,7 +726,7 @@ Change the specified attribute of the specified unit or technology by the value 
 
 Returns the current game time in seconds
 
-### 5.4. xsGetMapHeight
+### 5.4. xsGetMapHeight { #xsGetMapHeight }
 
 返回类型: `#!cpp int`
 
@@ -758,7 +734,7 @@ Returns the current game time in seconds
 
 Returns the Height of the map.
 
-### 5.5. xsGetMapID
+### 5.5. xsGetMapID { #xsGetMapID }
 
 返回类型: `#!cpp int`
 
@@ -766,7 +742,7 @@ Returns the Height of the map.
 
 Returns the AI map type.
 
-### 5.6. xsGetMapName
+### 5.6. xsGetMapName { #xsGetMapName }
 
 返回类型: `#!cpp string`
 
@@ -778,7 +754,7 @@ Returns the AI map type.
 
 Returns the name of the map currently being played.
 
-### 5.7. xsGetMapWidth
+### 5.7. xsGetMapWidth { #xsGetMapWidth }
 
 返回类型: `#!cpp int`
 
@@ -786,7 +762,7 @@ Returns the name of the map currently being played.
 
 Returns the Width of the map.
 
-### 5.8. xsGetNumPlayers
+### 5.8. xsGetNumPlayers { #xsGetNumPlayers }
 
 返回类型: `#!cpp int`
 
@@ -794,7 +770,7 @@ Returns the Width of the map.
 
 Returns the number of players in the game
 
-### 5.9. xsGetObjectCount
+### 5.9. xsGetObjectCount { #xsGetObjectCount }
 
 返回类型: `#!cpp int`
 
@@ -807,7 +783,7 @@ Returns the number of players in the game
 
 Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake.
 
-### 5.10. xsGetObjectCountTotal
+### 5.10. xsGetObjectCountTotal { #xsGetObjectCountTotal }
 
 返回类型: `#!cpp int`
 
@@ -820,7 +796,7 @@ Returns the number of currently alive objects of with the given ID of the specif
 
 Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake.
 
-### 5.11. xsGetPlayerCivilization
+### 5.11. xsGetPlayerCivilization { #xsGetPlayerCivilization }
 
 返回类型: `#!cpp int`
 
@@ -832,7 +808,7 @@ Returns the number of currently alive objects of with the given ID of the specif
 
 Returns the civilization ID of the given player. Refer to the [Constant Reference](../constants/#3-civs "Jump to: XS Scriptin > Constant Reference > #3. Civs") for all the different civ IDs
 
-### 5.12. xsGetPlayerInGame
+### 5.12. xsGetPlayerInGame { #xsGetPlayerInGame }
 
 返回类型: `#!cpp bool`
 
@@ -844,7 +820,7 @@ Returns the civilization ID of the given player. Refer to the [Constant Referenc
 
 Returns true if the player given is still alive, and false otherwise.
 
-### 5.13. xsGetPlayerNumberOfTechs
+### 5.13. xsGetPlayerNumberOfTechs { #xsGetPlayerNumberOfTechs }
 
 返回类型: `#!cpp int`
 
@@ -856,7 +832,7 @@ Returns true if the player given is still alive, and false otherwise.
 
 Returns the number of technologies available to the player in the entire game.
 
-### 5.14. xsGetRandomNumber
+### 5.14. xsGetRandomNumber { #xsGetRandomNumber }
 
 返回类型: `#!cpp int`
 
@@ -864,7 +840,7 @@ Returns the number of technologies available to the player in the entire game.
 
 Returns a random number between 0 and 32766.
 
-### 5.15. xsGetRandomNumberLH
+### 5.15. xsGetRandomNumberLH { #xsGetRandomNumberLH }
 
 返回类型: `#!cpp int`
 
@@ -877,7 +853,7 @@ Returns a random number between 0 and 32766.
 
 Returns a random number between `low` and `high`
 
-### 5.16. xsGetRandomNumberMax
+### 5.16. xsGetRandomNumberMax { #xsGetRandomNumberMax }
 
 返回类型: `#!cpp int`
 
@@ -889,7 +865,7 @@ Returns a random number between `low` and `high`
 
 Returns a random number between 0 and `max`.
 
-### 5.17. xsGetTime
+### 5.17. xsGetTime { #xsGetTime }
 
 返回类型: `#!cpp int`
 
@@ -897,7 +873,7 @@ Returns a random number between 0 and `max`.
 
 Returns the current game time - 1 in seconds
 
-### 5.18. xsGetVictoryCondition
+### 5.18. xsGetVictoryCondition { #xsGetVictoryCondition }
 
 返回类型: `#!cpp int`
 
@@ -905,7 +881,7 @@ Returns the current game time - 1 in seconds
 
 Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`
 
-### 5.19. xsGetVictoryConditionForSecondaryGameMode
+### 5.19. xsGetVictoryConditionForSecondaryGameMode { #xsGetVictoryConditionForSecondaryGameMode }
 
 返回类型: `#!cpp int`
 
@@ -913,7 +889,7 @@ Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVicto
 
 Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`
 
-### 5.20. xsGetVictoryPlayer
+### 5.20. xsGetVictoryPlayer { #xsGetVictoryPlayer }
 
 返回类型: `#!cpp int`
 
@@ -921,7 +897,7 @@ Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVicto
 
 Returns the number of the player with the highest score in a normal game. Returns the number of the player who owns 5 relics or has a wonder if standard victory is enabled. In a game like KoTH, returns the number of the player who owns the monument.
 
-### 5.21. xsGetVictoryPlayerForSecondaryGameMode
+### 5.21. xsGetVictoryPlayerForSecondaryGameMode { #xsGetVictoryPlayerForSecondaryGameMode }
 
 返回类型: `#!cpp int`
 
@@ -929,7 +905,7 @@ Returns the number of the player with the highest score in a normal game. Return
 
 Returns `1` when no secondary game mode is set. Returns the number of the player who owns the monument in game modes like KotH
 
-### 5.22. xsGetVictoryTime
+### 5.22. xsGetVictoryTime { #xsGetVictoryTime }
 
 返回类型: `#!cpp int`
 
@@ -937,7 +913,7 @@ Returns `1` when no secondary game mode is set. Returns the number of the player
 
 For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise
 
-### 5.23. xsGetVictoryTimeForSecondaryGameMode
+### 5.23. xsGetVictoryTimeForSecondaryGameMode { #xsGetVictoryTimeForSecondaryGameMode }
 
 返回类型: `#!cpp int`
 
@@ -945,7 +921,7 @@ For game modes like KoTH and other game modes where there is a timer on the scre
 
 For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise
 
-### 5.24. xsGetVictoryType
+### 5.24. xsGetVictoryType { #xsGetVictoryType }
 
 返回类型: `#!cpp int`
 
@@ -965,7 +941,7 @@ Returns an integer corresponding to different victory settings ingame. These are
 
 Last Man Standing returns 0 as well.
 
-### 5.25. xsPlayerAttribute
+### 5.25. xsPlayerAttribute { #xsPlayerAttribute }
 
 返回类型: `#!cpp float`
 
@@ -978,7 +954,7 @@ Last Man Standing returns 0 as well.
 
 Returns the amount the specified resource of the given player.
 
-### 5.26. xsResearchTechnology
+### 5.26. xsResearchTechnology { #xsResearchTechnology }
 
 返回类型: `#!cpp bool`
 
@@ -993,7 +969,7 @@ Returns the amount the specified resource of the given player.
 
 Returns a boolean based on whether the technology was researched or not.
 
-### 5.27. xsSetPlayerAttribute
+### 5.27. xsSetPlayerAttribute { #xsSetPlayerAttribute }
 
 返回类型: `#!cpp void`
 
@@ -1007,7 +983,7 @@ Returns a boolean based on whether the technology was researched or not.
 
 Sets the amount of the specified resource of the given player to the provided value.
 
-### 5.28. xsSetTriggerVariable
+### 5.28. xsSetTriggerVariable { #xsSetTriggerVariable }
 
 返回类型: `#!cpp void`
 
@@ -1020,7 +996,7 @@ Sets the amount of the specified resource of the given player to the provided va
 
 Sets the value of the variable of the given variable ID to the provided value.
 
-### 5.29. xsTriggerVariable
+### 5.29. xsTriggerVariable { #xsTriggerVariable }
 
 返回类型: `#!cpp int`
 
@@ -1032,9 +1008,9 @@ Sets the value of the variable of the given variable ID to the provided value.
 
 Returns the value of the variable of the given variable ID.
 
-## 6. 文件读写
+## 6. 文件读写 { #Read/Write }
 
-### 6.1. xsCloseFile
+### 6.1. xsCloseFile { #xsCloseFile }
 
 返回类型: `#!cpp bool`
 
@@ -1042,7 +1018,7 @@ Returns the value of the variable of the given variable ID.
 
 Close the currently opened or created file. Returns `#!cpp true` if the file was successfully closed
 
-### 6.2. xsCreateFile
+### 6.2. xsCreateFile { #xsCreateFile }
 
 返回类型: `#!cpp bool`
 
@@ -1054,7 +1030,7 @@ Close the currently opened or created file. Returns `#!cpp true` if the file was
 
 Creates a new (or appends to an existing) `.xsdat` file with the same name as the RMS/scenario being played. After invoking this function, the writing functions can be used to write data to the file. Returns `#!cpp true` if the file was successfully created
 
-### 6.3. xsGetDataTypeSize
+### 6.3. xsGetDataTypeSize { #xsGetDataTypeSize }
 
 返回类型: `#!cpp int`
 
@@ -1066,7 +1042,7 @@ Creates a new (or appends to an existing) `.xsdat` file with the same name as th
 
 Returns the number of bytes used to store a given type value.
 
-### 6.4. xsGetFilePosition
+### 6.4. xsGetFilePosition { #xsGetFilePosition }
 
 返回类型: `#!cpp int`
 
@@ -1074,7 +1050,7 @@ Returns the number of bytes used to store a given type value.
 
 Gets the byte (0-indexed) of the file that the next read function will start reading from.
 
-### 6.5. xsGetFileSize
+### 6.5. xsGetFileSize { #xsGetFileSize }
 
 返回类型: `#!cpp int`
 
@@ -1082,7 +1058,7 @@ Gets the byte (0-indexed) of the file that the next read function will start rea
 
 Gets the size (in bytes) of the currently open file
 
-### 6.6. xsOffsetFilePosition
+### 6.6. xsOffsetFilePosition { #xsOffsetFilePosition }
 
 返回类型: `#!cpp bool`
 
@@ -1090,12 +1066,12 @@ Gets the size (in bytes) of the currently open file
 
 参数:
 
-1.  `#!cpp int dataType`: The [cOffset constants](../constants/#1-readwrite "Jump To: XS > Constant Reference > Read/Write Constants") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)
+1.  `#!cpp int dataType`: The [cOffset constants](../constants/#1-readwrite "Jump To: XS Scripting > Constant Reference > Read/Write Constants") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)
 2.  (可选) `#!cpp bool forward`: Default: `#!cpp true`. Setting this to `#!cpp false` will make the file position move back
 
 Moves the file position forward (or backward) relative to the current file position, and by an amount of bytes equivalent to reading the given data type
 
-### 6.7. xsOpenFile
+### 6.7. xsOpenFile { #xsOpenFile }
 
 返回类型: `#!cpp bool`
 
@@ -1107,7 +1083,7 @@ Moves the file position forward (or backward) relative to the current file posit
 
 Opens an existing `.xsdat`file in read only mode. After invoking this function, the reading functions can be used to read data from the file. Returns `#!cpp true` if the file was successfully opened
 
-### 6.8. xsReadFloat
+### 6.8. xsReadFloat { #xsReadFloat }
 
 返回类型: `#!cpp float`
 
@@ -1115,7 +1091,7 @@ Opens an existing `.xsdat`file in read only mode. After invoking this function, 
 
 Reads and returns a float from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a float, which means the value being read is bit casted into a float regardless of what it originally was. This function also moves the file position forward by 4 bytes
 
-### 6.9. xsReadInt
+### 6.9. xsReadInt { #xsReadInt }
 
 返回类型: `#!cpp int`
 
@@ -1123,7 +1099,7 @@ Reads and returns a float from the previously opened `.xsdat` file. Note that th
 
 Reads and returns an integer from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be an integer, which means the value being read is bit casted into an integer regardless of what it originally was. This function also moves the file position forward by 4 bytes
 
-### 6.10. xsReadString
+### 6.10. xsReadString { #xsReadString }
 
 返回类型: `#!cpp string`
 
@@ -1131,7 +1107,7 @@ Reads and returns an integer from the previously opened `.xsdat` file. Note that
 
 Reads and returns a string from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a string, which means the value being read is bit casted into a string regardless of what it originally was. This function also moves the file position forward by 4 bytes + the amount of bytes in the length of the string
 
-### 6.11. xsReadVector
+### 6.11. xsReadVector { #xsReadVector }
 
 返回类型: `#!cpp vector`
 
@@ -1139,7 +1115,7 @@ Reads and returns a string from the previously opened `.xsdat` file. Note that t
 
 Reads and returns a vector from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a vector, which means the value being read is bit casted into a vector regardless of what it originally was. This function also moves the file position forward by 12 bytes
 
-### 6.12. xsSetFilePosition
+### 6.12. xsSetFilePosition { #xsSetFilePosition }
 
 返回类型: `#!cpp bool`
 
@@ -1151,7 +1127,7 @@ Reads and returns a vector from the previously opened `.xsdat` file. Note that t
 
 Sets the byte (0-indexed) of the file that the next read function will start reading from.
 
-### 6.13. xsWriteFloat
+### 6.13. xsWriteFloat { #xsWriteFloat }
 
 返回类型: `#!cpp bool`
 
@@ -1163,7 +1139,7 @@ Sets the byte (0-indexed) of the file that the next read function will start rea
 
 Writes a floating point number to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the floating point number was successfully written. Floats are written in the 32 bit IEEE 754 format
 
-### 6.14. xsWriteInt
+### 6.14. xsWriteInt { #xsWriteInt }
 
 返回类型: `#!cpp bool`
 
@@ -1175,7 +1151,7 @@ Writes a floating point number to the previously created `.xsdat` file. Causes a
 
 Writes an integer to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the integer was successfully written. Integers are written as signed 32 bit numbers
 
-### 6.15. xsWriteString
+### 6.15. xsWriteString { #xsWriteString }
 
 返回类型: `#!cpp bool`
 
@@ -1187,7 +1163,7 @@ Writes an integer to the previously created `.xsdat` file. Causes an error if a 
 
 Writes a string to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the string was successfully written. A string is written to the file in two parts, an unsigned 32 bit integer (indicates the length of the string) followed by that many bytes making up the actual characters of the string
 
-### 6.16. xsWriteVector
+### 6.16. xsWriteVector { #xsWriteVector }
 
 返回类型: `#!cpp bool`
 
@@ -1199,9 +1175,9 @@ Writes a string to the previously created `.xsdat` file. Causes an error if a fi
 
 Writes a vector to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the vector was successfully written. Vectors are written as 3 consecutive floating point numbers, one for each coordinate.
 
-## 7. Functions With Seemingly No Practical Use
+## 7. Functions With Seemingly No Practical Use { #Functions With Seemingly No Practical Use }
 
-### 7.1. xsAddRuntimeEvent
+### 7.1. xsAddRuntimeEvent { #xsAddRuntimeEvent }
 
 返回类型: `#!cpp bool`
 
@@ -1215,7 +1191,7 @@ Writes a vector to the previously created `.xsdat` file. Causes an error if a fi
 
 A runtime event is called after all the XS code has finished executing but before rules start executing. It calls the function `functionName` given to it with the `functionArgument` passed to it as a parameter. For programmers familiar with the terminology, this is basically a way to set a callback. It also returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins
 
-### 7.2. xsBreakPoint
+### 7.2. xsBreakPoint { #xsBreakPoint }
 
 返回类型: `#!cpp void`
 
@@ -1223,7 +1199,7 @@ A runtime event is called after all the XS code has finished executing but befor
 
 This function adds a break point to the execution of code. Do not use this function and beware, if you do, it will likely cause a crash!
 
-### 7.3. xsDumpArrays
+### 7.3. xsDumpArrays { #xsDumpArrays }
 
 返回类型: `#!cpp void`
 
@@ -1231,7 +1207,7 @@ This function adds a break point to the execution of code. Do not use this funct
 
 This function is supposed to blogs out all XS arrays. Currently, it does absolutely nothing.
 
-### 7.4. xsGetContextPlayer
+### 7.4. xsGetContextPlayer { #xsGetContextPlayer }
 
 返回类型: `#!cpp int`
 
@@ -1239,7 +1215,7 @@ This function is supposed to blogs out all XS arrays. Currently, it does absolut
 
 Returns the current context player ID.
 
-### 7.5. xsGetFunctionID
+### 7.5. xsGetFunctionID { #xsGetFunctionID }
 
 返回类型: `#!cpp int`
 
@@ -1251,7 +1227,7 @@ Returns the current context player ID.
 
 Returns the hash of a given function. This function has no practical application and is probably for internal usage only.
 
-### 7.6. xsSetContextPlayer
+### 7.6. xsSetContextPlayer { #xsSetContextPlayer }
 
 返回类型: `#!cpp void`
 

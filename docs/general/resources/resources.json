@@ -1737,23 +1737,23 @@
     "defaults": {
       "1754": "(Caravanserai) Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "256": {
     "name": "Speed Up Building Range",
-    "desc": "This specifies the range (in tiles) of the area created around the building ([Speed Up Building Type](./#255-speed-up-building-type)) (square, from the edges of the building) for the speed up effect",
+    "desc": "This specifies the range (in tiles) of the area created around the building ([Speed Up Building Type](./#255)) (square, from the edges of the building) for the speed up effect",
     "defaults": {
       "8": "Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "257": {
     "name": "Speed Up Percentage",
-    "desc": "The formulae given below are used with this resource as the `value` to adjust the attribute ([Speed Up Effect Type](./#259-speed-up-effect-type)) of all units of class ([Speed Up Object Type](./#258-speed-up-object-type)) when they are in the range of the speed up effect",
+    "desc": "The formulae given below are used with this resource as the `value` to adjust the attribute ([Speed Up Effect Type](./#259)) of all units of class ([Speed Up Object Type](./#258)) when they are in the range of the speed up effect",
     "defaults": {
       "0.2": "Default"
     },
-    "note": "For each of the attributes that work with this resource, the new value to set is determined using the following formulae:\n\n    (013) `new_workrate = original + value`\n\n    (005) `new_movement_speed = original * (1 + value)`\n\n    (109) `new_regeneration_rate = original + (3600/value)`\n\n    See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "For each of the attributes that work with this resource, the new value to set is determined using the following formulae:\n\n    (013) `new_workrate = original + value`\n\n    (005) `new_movement_speed = original * (1 + value)`\n\n    (109) `new_regeneration_rate = original + (3600/value)`\n\n    See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "258": {
     "name": "Speed Up Object Type",
@@ -1761,7 +1761,7 @@
     "defaults": {
       "919": "(Trade Cart class) Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "259": {
     "name": "Speed Up Effect Type",
@@ -1769,7 +1769,7 @@
     "defaults": {
       "5": "(Movement Speed) Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "260": {
     "name": "Speed Up Secondary Effect Type",
@@ -1777,15 +1777,15 @@
     "defaults": {
       "109": "(Regeneration Rate) Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "261": {
     "name": "Speed Up Secondary Percentage",
-    "desc": "This amount is added to the secondary attribute ([Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)) of all units of class ([Speed Up Object Type](./#258-speed-up-object-type)) when they are in the range of the speed up effect",
+    "desc": "This amount is added to the secondary attribute ([Speed Up Secondary Effect Type](./#260)) of all units of class ([Speed Up Object Type](./#258)) when they are in the range of the speed up effect",
     "defaults": {
       "60": "Default"
     },
-    "note": "See also:\n\n    [Speed Up Building Type](./#255-speed-up-building-type)\n\n    [Speed Up Building Range](./#256-speed-up-building-range)\n\n    [Speed Up Percentage](./#257-speed-up-percentage)\n\n    [Speed Up Object Type](./#258-speed-up-object-type)\n\n    [Speed Up Effect Type](./#259-speed-up-effect-type)\n\n    [Speed Up Secondary Effect Type](./#260-speed-up-secondary-effect-type)\n\n    [Speed Up Secondary Percentage](./#261-speed-up-secondary-percentage)"
+    "note": "See also:\n\n    [Speed Up Building Type](./#255)\n\n    [Speed Up Building Range](./#256)\n\n    [Speed Up Percentage](./#257)\n\n    [Speed Up Object Type](./#258)\n\n    [Speed Up Effect Type](./#259)\n\n    [Speed Up Secondary Effect Type](./#260)\n\n    [Speed Up Secondary Percentage](./#261)"
   },
   "262": {
     "name": "Extra Elephant Convert Resist",

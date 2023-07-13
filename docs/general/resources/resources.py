@@ -50,7 +50,7 @@ def build_doc(lang: str = None):
         name = k('name')
         if k('valid') is not None and not k('valid'):
             name = f"{md_dict[lang]['invalid']} {name}"
-        out += f"## {res_id}. {name}\n\n"
+        out += f"## {res_id}. {name} {{ #{res_id} }}\n\n"
         out += f"-   ID: {res_id}\n\n"
         if lang != def_lang:
             out += f"-   {md_dict[lang]['name']}: {k('name', language=None)}\n\n"

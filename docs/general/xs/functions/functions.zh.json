@@ -161,7 +161,79 @@
       }
     ]
   },
-  { "name": "Vectors", "nickname": "向量", "functions": [] },
+  {
+    "name": "Vectors",
+    "nickname": "向量",
+    "functions": [
+      {
+        "name": "xsVectorGetX",
+        "nickname": "xs向量取横坐标",
+        "params": [{ "name": "v", "desc": "欲获取横坐标的向量" }],
+        "desc": "获取给定向量的横坐标。"
+      },
+      {
+        "name": "xsVectorGetY",
+        "nickname": "xs向量取纵坐标",
+        "params": [{ "name": "v", "desc": "欲获取纵坐标的向量" }],
+        "desc": "获取给定向量的纵坐标。"
+      },
+      {
+        "name": "xsVectorGetZ",
+        "nickname": "xs向量取竖坐标",
+        "params": [{ "name": "v", "desc": "欲获取竖坐标的向量" }],
+        "desc": "获取给定向量的竖坐标。"
+      },
+      {
+        "name": "xsVectorSetX",
+        "nickname": "xs向量置横坐标",
+        "params": [
+          { "name": "v", "desc": "欲设置横坐标的向量" },
+          { "name": "x", "desc": "欲设置的横坐标值" }
+        ],
+        "desc": "返回一个给定向量的横分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！"
+      },
+      {
+        "name": "xsVectorSetY",
+        "nickname": "xs向量置纵坐标",
+        "params": [
+          { "name": "v", "desc": "欲设置纵坐标的向量" },
+          { "name": "y", "desc": "欲设置的纵坐标值" }
+        ],
+        "desc": "返回一个给定向量的纵分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！"
+      },
+      {
+        "name": "xsVectorSetZ",
+        "nickname": "xs向量置竖坐标",
+        "params": [
+          { "name": "v", "desc": "欲设置竖坐标的向量" },
+          { "name": "z", "desc": "欲设置的竖坐标值" }
+        ],
+        "desc": "返回一个给定向量的竖分量更改为给定值的新向量。注意：此函数不会修改作为参数给出的向量！"
+      },
+      {
+        "name": "xsVectorSet",
+        "nickname": "xs向量",
+        "params": [
+          { "name": "x", "desc": "欲设置的横坐标值" },
+          { "name": "y", "desc": "欲设置的纵坐标值" },
+          { "name": "z", "desc": "欲设置的竖坐标值" }
+        ],
+        "desc": "返回具有给定横、纵和竖分量的向量。"
+      },
+      {
+        "name": "xsVectorLength",
+        "nickname": "xs向量长度",
+        "params": [{ "name": "v", "desc": "欲求模长的向量" }],
+        "desc": "返回给定向量的模长"
+      },
+      {
+        "name": "xsVectorNormalize",
+        "nickname": "xs向量归一化",
+        "params": [{ "name": "v", "desc": "欲归一化的向量" }],
+        "desc": "返回给定向量方向上的归一化向量。"
+      }
+    ]
+  },
   { "name": "Arrays", "nickname": "数组", "functions": [] },
   { "name": "Maths", "nickname": "数学", "functions": [] },
   { "name": "General", "nickname": "通用", "functions": [] },

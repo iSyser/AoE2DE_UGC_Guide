@@ -262,7 +262,7 @@
   },
   "44": {
     "name": "Blast Attack Level",
-    "desc": "A unit deals blast damage to ***other*** units with ***equal or higher*** [Blast Defense Level](./#45-blast-defense-level \"Jump to: Blast Defense Level\") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same",
+    "desc": "A unit deals blast damage to ***other*** units with ***equal or higher*** [Blast Defense Level](./#45 \"Jump to: Blast Defense Level\") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same",
     "notes": [
       "One of the flags 0-3 can be combined with one of the flags from 4-64 by adding the two values"
     ],
@@ -281,7 +281,7 @@
   },
   "45": {
     "name": "Blast Defense Level",
-    "desc": "A unit feels the blast damage from ***other*** units with ***equal or lower*** [Blast Attack Level](./#44-blast-attack-level \"Jump to: Blast Attack Level\") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same",
+    "desc": "A unit feels the blast damage from ***other*** units with ***equal or lower*** [Blast Attack Level](./#44 \"Jump to: Blast Attack Level\") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same",
     "notes": [],
     "flags": {
       "0": "damage resources, nearby allied units and tress",
@@ -367,7 +367,7 @@
   "54": {
     "name": "Unit Trait",
     "desc": "This is a combinable bit field. Controls the following properties:",
-    "notes": ["See Also:\n\n    [Trait Piece](./#56-trait-piece)"],
+    "notes": ["See Also:\n\n    [Trait Piece](./#56)"],
     "flags": {
       "1": "Garrison Unit",
       "2": "Ship Unit",
@@ -379,7 +379,7 @@
   "56": {
     "name": "Trait Piece",
     "desc": "This can be set to the ID of a unit that is used along with some of the Unit Traits",
-    "notes": ["See Also:\n\n    [Unit Trait](./#54-unit-trait)"],
+    "notes": ["See Also:\n\n    [Unit Trait](./#54)"],
     "flags": {
       "1": "Unused",
       "2": "Unused",
@@ -542,7 +542,7 @@
   },
   "109": {
     "name": "Regeneration Rate",
-    "desc": "The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40-hero-status \"Jump to: 26. Hero Status\") of a unit",
+    "desc": "The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 \"Jump to: 26. Hero Status\") of a unit",
     "notes": [],
     "flags": {}
   },

@@ -16,7 +16,7 @@ To use an XS script:
 
 1.  Make sure you can see file extensions. That means that every file on your computer should have a name that looks something like `filename.ext`. If you can see file extensions, then proceed to step 2. If not, then follow these steps:
 
-    1. Press :material-microsoft-windows: + E
+    1. Press ++windows+e++
     2. Click `View` right at the top.
     3. On the right side of the panel that appears, there will be an option called `File Name Extensions`.
     4. Check this option if it is not already checked.

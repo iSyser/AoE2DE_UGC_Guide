@@ -1,3 +1,5 @@
+# Unit Attributes
+
 _Written by: Alian713, Syser_
 
 ---
@@ -6,67 +8,67 @@ This page is a list of all the unit attributes that can be modified in the scena
 If you know of any attributes that are not written on this page,
 or if the descriptions of the attributes are wrong, please let the authors of this guide know!
 
-## 0. Hit Points
+## 0. Hit Points { #0 }
 
 -   ID: 0
 
 -   This attribute refers to the health of the units
 
-## 1. Line of Sight
+## 1. Line of Sight { #1 }
 
 -   ID: 1
 
 -   This is the distance a unit can see around itself
 
-## 2. Garrison Capacity
+## 2. Garrison Capacity { #2 }
 
 -   ID: 2
 
 -   This is the amount of units that can garrison inside another unit
 
-## 3. Unit Size X
+## 3. Unit Size X { #3 }
 
 -   ID: 3
 
 -   This determines the x-size of the unit's collision hitbox (width of the unit)
 
-## 4. Unit Size Y
+## 4. Unit Size Y { #4 }
 
 -   ID: 4
 
 -   This determines the y-size of the unit's collision hitbox (length of the unit)
 
-## 5. Movement Speed
+## 5. Movement Speed { #5 }
 
 -   ID: 5
 
 -   This is the movement speed of a unit, measured in tiles per second
 
-## 6. Rotation Speed
+## 6. Rotation Speed { #6 }
 
 -   ID: 6
 
 -   This is the rate at which units can rotate, measured in seconds per frame (this many seconds must pass before the object can switch to the next rotation frame). For example, for a trebuchet to start attacking a building facing the opposite direction, it has to rotate to face that way first
 
-## 8. Armor
+## 8. Armor { #8 }
 
 -   ID: 8
 
 -   This is the quantity of armour a unit has on any of its `Armour Classes`. If you do not know what an `Armour Class` is, refer to the [Damage Calculation](../damage_calculation "Jump to: Game Mechanics > Damage Calculation") section of this guide. Note that changing the armour through this option will show it as being added to the base armour amount. (for example: 4+4)
 
-## 9. Attack
+## 9. Attack { #9 }
 
 -   ID: 9
 
 -   This is the quantity of attack a unit has on any of its `Attack Classes`. If you do not know what an `Attack Class` is, refer to the [Damage Calculation](../damage_calculation "Jump to: Game Mechanics > Damage Calculation") section of this guide. Note that changing the attack through this option will show it as being added to the base attack amount. (for example: 6+2)
 
-## 10. Attack Reload Time
+## 10. Attack Reload Time { #10 }
 
 -   ID: 10
 
 -   This is the minimum time that must pass before a unit is able to fire another shot. For melee units it is the minimum time between two successive hits that they can do
 
-## 11. Accuracy Percent
+## 11. Accuracy Percent { #11 }
 
 -   ID: 11
 
@@ -92,49 +94,49 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
     2. A shot that is fired from lower elevation would normally deal only 75% of its normal damage due to the elevation damage reduction. deleting a mangonel in this case also makes the damage the full 100% as if there was no elevation difference
 
-## 12. Max Range
+## 12. Max Range { #12 }
 
 -   ID: 12
 
 -   This is the maximum range of a unit. Note that to be able to shoot at a target, it must be visible to the unit via its own line of sight or from another unit's line of sight
 
-## 13. Work Rate
+## 13. Work Rate { #13 }
 
 -   ID: 13
 
 -   This is the work rate for any unit that can do work. Villagers, Fishing Ships, Serjeants
 
-## 14. Carry Capacity
+## 14. Carry Capacity { #14 }
 
 -   ID: 14
 
 -   This is the carry capacity of Villagers
 
-## 15. Base Armor
+## 15. Base Armor { #15 }
 
 -   ID: 15
 
 -   This is the quantity of base armour a unit has on any of its `Armour Classes`. If you do not know what an `Armour Class` is, refer to the [Damage Calculation](../damage_calculation "Jump to: Game Mechanics > Damage Calculation") section of this guide. Note that changing the armour through this option will show it as the base armour itself, and it will not be added to the regular amount
 
-## 16. Projectile Unit
+## 16. Projectile Unit { #16 }
 
 -   ID: 16
 
 -   This is the ID of the projectile that a unit fires
 
-## 17. Building Icon Override
+## 17. Building Icon Override { #17 }
 
 -   ID: 17
 
 -   The functionality of this attribute is unknown as it doesn't always behave certainly. If you know what this attribute does, please let the authors of this guide know!
 
-## 18. Terrain Defense Bonus
+## 18. Terrain Defense Bonus { #18 }
 
 -   ID: 18
 
 -   Unknown... What does this attribute do?
 
-## 19. Projectile Smart Mode
+## 19. Projectile Smart Mode { #19 }
 
 -   ID: 19
 
@@ -150,55 +152,55 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Has Ballistics                  |          1 |
     | Deals full damage on missed hit |          2 |
 
-## 20. Minimum Range
+## 20. Minimum Range { #20 }
 
 -   ID: 20
 
 -   The minimum distance a unit must be from an attacking unit for the attacking unit to be able to fire its projectile
 
-## 21. Amount of 1st Resource Storage
+## 21. Amount of 1st Resource Storage { #21 }
 
 -   ID: 21
 
 -   This is the amount of 1st resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
 
-## 22. Blast Width
+## 22. Blast Width { #22 }
 
 -   ID: 22
 
 -   All enemy units inside this radius take damage from an attacking unit. This is used by elephants, Druzhina Halberdiers, and Logistica Cataphracts
 
-## 23. Search Radius
+## 23. Search Radius { #23 }
 
 -   ID: 23
 
 -   The maximum distance at which a unit can detect and auto attack enemy units
 
-## 24. Bonus Damage Resistance
+## 24. Bonus Damage Resistance { #24 }
 
 -   ID: 24
 
 -   Used by Sicilians for the 50% bonus damage resistance. Set to 0.5 for all Sicilian land military units except siege
 
-## 25. Icon ID
+## 25. Icon ID { #25 }
 
 -   ID: 25
 
 -   The ID of the icon that you want a unit to show
 
-## 26. Amount of 2nd Resource Storage
+## 26. Amount of 2nd Resource Storage { #26 }
 
 -   ID: 26
 
 -   This is the amount of 2nd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
 
-## 27. Amount of 3rd Resource Storage
+## 27. Amount of 3rd Resource Storage { #27 }
 
 -   ID: 27
 
 -   This is the amount of 3rd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
 
-## 28. Fog Visibility
+## 28. Fog Visibility { #28 }
 
 -   ID: 28
 
@@ -212,7 +214,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Inverted Visibility |          3 |
     | Check Doppelganger  |          4 |
 
-## 29. Occlusion Mode
+## 29. Occlusion Mode { #29 }
 
 -   ID: 29
 
@@ -225,7 +227,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Other units' outlines are rendered when they are behind this unit                  |          2 |
     | Display outline on this unit's foundation when behind other units that have flag 2 |          4 |
 
-## 30. Garrison Type
+## 30. Garrison Type { #30 }
 
 -   ID: 30
 
@@ -241,13 +243,13 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Siege     |         32 |
     | Ships     |         64 |
 
-## 32. Unit Size Z
+## 32. Unit Size Z { #32 }
 
 -   ID: 32
 
 -   This determines the z-size of the unit's collision hitbox (height of the unit)
 
-## 40. Hero Status
+## 40. Hero Status { #40 }
 
 -   ID: 40
 
@@ -272,29 +274,29 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Hero Glow                        |         64 |
     | Invert All Flags (except flag 1) |        128 |
 
-## 41. Frame Delay
+## 41. Frame Delay { #41 }
 
 -   ID: 41
 
 -   The amount of delay between the point when the attacking animation starts and the actual hit happening for military units. This is what makes Cavalry Archers annoying to micro
 
-## 42. Train Location
+## 42. Train Location { #42 }
 
 -   ID: 42
 
 -   The ID of the unit that trains any given unit. Barracks train Militia, so the train location of a Militia is the ID of the Barracks
 
-## 43. Train Button
+## 43. Train Button { #43 }
 
 -   ID: 43
 
 -   The button used for training any given unit. For example, Militia are trained by using the first button, hence the Button Location of Militia is 1. This number ranges from 0-15
 
-## 44. Blast Attack Level
+## 44. Blast Attack Level { #44 }
 
 -   ID: 44
 
--   A unit deals blast damage to **_other_** units with **_equal or higher_** [Blast Defense Level](./#45-blast-defense-level "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
+-   A unit deals blast damage to **_other_** units with **_equal or higher_** [Blast Defense Level](./#45 "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
 
 -   One of the flags 0-3 can be combined with one of the flags from 4-64 by adding the two values
 
@@ -311,11 +313,11 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Attenuate damage as distance from the centre of attack increases (infantry only)                   |         64 |
     | Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone |        128 |
 
-## 45. Blast Defense Level
+## 45. Blast Defense Level { #45 }
 
 -   ID: 45
 
--   A unit feels the blast damage from **_other_** units with **_equal or lower_** [Blast Attack Level](./#44-blast-attack-level "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
+-   A unit feels the blast damage from **_other_** units with **_equal or lower_** [Blast Attack Level](./#44 "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
 
     | Property                                        | Flag Value |
     | :---------------------------------------------- | ---------: |
@@ -324,43 +326,43 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | damage nearby allied units                      |          2 |
     | damage targeted unit only                       |          3 |
 
-## 46. Shown Attack
+## 46. Shown Attack { #46 }
 
 -   ID: 46
 
 -   The amount of attack that is displayed as a unit's attack (may not actually be the true attack)
 
-## 47. Shown Range
+## 47. Shown Range { #47 }
 
 -   ID: 47
 
 -   The quantity that is displayed as a unit's attack ingame (may not actually be the true attack)
 
-## 48. Shown Melee Armor
+## 48. Shown Melee Armor { #48 }
 
 -   ID: 48
 
 -   The quantity that is displayed as a unit's melee armour ingame (may not actually be the true armour)
 
-## 49. Shown Pierce Armor
+## 49. Shown Pierce Armor { #49 }
 
 -   ID: 49
 
 -   The quantity that is displayed as a unit's pierce armour ingame (may not actually be the true armour)
 
-## 50. Object Name ID
+## 50. Object Name ID { #50 }
 
 -   ID: 50
 
 -   The string ID to use for the name of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set names by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader
 
-## 51. Short Description ID
+## 51. Short Description ID { #51 }
 
 -   ID: 51
 
 -   The string ID for the Short Description of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set a Short Description by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader
 
-## 53. Terrain Restriction ID
+## 53. Terrain Restriction ID { #53 }
 
 -   ID: 53
 
@@ -400,7 +402,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | All Except Water Packet Trebuchet |         29 |
     | Water Smallest Trail              |         30 |
 
-## 54. Unit Trait
+## 54. Unit Trait { #54 }
 
 -   ID: 54
 
@@ -408,7 +410,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   See Also:
 
-    [Trait Piece](./#56-trait-piece)
+    [Trait Piece](./#56)
 
     | Property                            | Flag Value |
     | :---------------------------------- | ---------: |
@@ -418,7 +420,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Transform Into Another Unit (Ratha) |          8 |
     | Auto Scout Unit                     |         16 |
 
-## 56. Trait Piece
+## 56. Trait Piece { #56 }
 
 -   ID: 56
 
@@ -426,7 +428,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   See Also:
 
-    [Unit Trait](./#54-unit-trait)
+    [Unit Trait](./#54)
 
     | Property       | Flag Value |
     | :------------- | ---------: |
@@ -436,31 +438,31 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Transform Unit |          8 |
     | Unused         |         16 |
 
-## 57. Dead Unit ID
+## 57. Dead Unit ID { #57 }
 
 -   ID: 57
 
 -   This is the ID of the unit to spawn after the current unit dies. This is whats used to make the dismounted konniks possible
 
-## 58. Hotkey ID
+## 58. Hotkey ID { #58 }
 
 -   ID: 58
 
 -   This number determines which hotkey is assigned to a unit
 
-## 59. Maximum Charge
+## 59. Maximum Charge { #59 }
 
 -   ID: 59
 
 -   The maximum amount of charge that a unit can hold
 
-## 60. Recharge Rate
+## 60. Recharge Rate { #60 }
 
 -   ID: 60
 
 -   The rate of charge regeneration per second
 
-## 61. Charge Event
+## 61. Charge Event { #61 }
 
 -   ID: 61
 
@@ -470,7 +472,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | :--------------------------------------------------------------------- | ---------: |
     | If charge type is set to `1`, `2` or `3`, depletes charge on attacking |          1 |
 
-## 62. Charge Type
+## 62. Charge Type { #62 }
 
 -   ID: 62
 
@@ -483,7 +485,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Area attack charge |          3 |
     | Agility charge     |          4 |
 
-## 63. Combat Ability
+## 63. Combat Ability { #63 }
 
 -   ID: 63
 
@@ -497,25 +499,25 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Attack ground ability                                |          8 |
     | Bulk volley release (kipchak/siege weapons)          |         16 |
 
-## 64. Attack Dispersion
+## 64. Attack Dispersion { #64 }
 
 -   ID: 64
 
 -   Half of the radius from the target unit in which missed projectiles fired by this unit can land in
 
-## 65. Secondary Projectile Unit
+## 65. Secondary Projectile Unit { #65 }
 
 -   ID: 65
 
 -   This is the ID of the secondary projectile that a unit fires (Chu Ko Nu)
 
-## 66. Blood Unit
+## 66. Blood Unit { #66 }
 
 -   ID: 66
 
 -   This is the ID of a secondary unit to spawn after the current unit dies. This could potentially be used along with dead unit ID to spawn two units after a single unit dies
 
-## 67. Projectile Hit Mode
+## 67. Projectile Hit Mode { #67 }
 
 -   ID: 67
 
@@ -527,7 +529,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Collide with any damage-able units in the path to the targetted unit |          1 |
     | Collide with any unit in the path to the targetted unit              |          2 |
 
-## 68. Projectile Vanish Mode
+## 68. Projectile Vanish Mode { #68 }
 
 -   ID: 68
 
@@ -538,73 +540,73 @@ or if the descriptions of the attributes are wrong, please let the authors of th
     | Disappear on first impact |          0 |
     | Pass through              |          1 |
 
-## 69. Projectile Arc
+## 69. Projectile Arc { #69 }
 
 -   ID: 69
 
 -   Controls the maximum height of the fired projectile
 
-## 100. Resource Costs
+## 100. Resource Costs { #100 }
 
 -   ID: 100
 
 -   Refers to the first resource cost of a unit. Refer to A.G.E. to see which resource cost that is
 
-## 101. Train Time
+## 101. Train Time { #101 }
 
 -   ID: 101
 
 -   This is the amount of time it takes to create a unit
 
-## 102. Total Missiles
+## 102. Total Missiles { #102 }
 
 -   ID: 102
 
 -   This is the number of projectiles a unit fires. The Chu Ko Nu fires 3 and the Elite Chu Ko Nu fires 5
 
-## 103. Food Costs
+## 103. Food Costs { #103 }
 
 -   ID: 103
 
 -   The food cost of a unit
 
-## 104. Wood Costs
+## 104. Wood Costs { #104 }
 
 -   ID: 104
 
 -   The wood cost of a unit
 
-## 105. Gold Costs
+## 105. Gold Costs { #105 }
 
 -   ID: 105
 
 -   The gold cost of a unit
 
-## 106. Stone Costs
+## 106. Stone Costs { #106 }
 
 -   ID: 106
 
 -   The stone cost of a unit
 
-## 107. Max Total Missiles
+## 107. Max Total Missiles { #107 }
 
 -   ID: 107
 
 -   The maximum number of projectiles a unit can fire when other units are garrisoned inside of it. A castle fires 5 projectiles by default but can fire more if units are garrisoned inside it. This attribute controls the maximum number of those
 
-## 108. Garrison Heal Rate
+## 108. Garrison Heal Rate { #108 }
 
 -   ID: 108
 
 -   The rate measured in HP/s at which garissoned units are healed inside a given building
 
-## 109. Regeneration Rate
+## 109. Regeneration Rate { #109 }
 
 -   ID: 109
 
--   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40-hero-status "Jump to: 26. Hero Status") of a unit
+-   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 "Jump to: 26. Hero Status") of a unit
 
-## 110. Population
+## 110. Population { #110 }
 
 -   ID: 110
 

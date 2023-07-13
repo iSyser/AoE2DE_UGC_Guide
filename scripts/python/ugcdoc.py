@@ -80,95 +80,114 @@ def export_md_file(file_name: str, content: str, default_language: str, language
         file.write(content)
 
 
-class CXsParam:
-    def __init__(self, param_def: dict, param_local: dict = None):
-        self.name: str = ""
-        self.nickname: str = ""
-        self.type: str = ""
-        self.desc: str = ""
-        self.required: bool = False
+class CXsBase:
+    def __init__(self, info_def: dict, info_local: dict = None):
+        self._name: str = info_def['name']
+        self._nickname: str = ""
+        self._type: str = info_def.get('type')
+        self._desc: str = ""
 
-        if param_local:
-            self.nickname = param_local.get('nickname')
-            self.desc = param_local.get('desc')
+        if info_local:
+            self._nickname = info_local.get('nickname')
+            self._desc = info_local.get('desc')
 
-        self.name = param_def['name']
-        self.type = param_def['type']
-        if not self.desc:
-            self.desc = param_def['desc']
-        self.required = param_def['required']
+        if not self._desc:
+            self._desc = info_def['desc']
 
-    def is_required(self) -> bool:
-        return self.required
+    def __str__(self) -> str:
+        return self.get_type() + ' ' + self.get_real_name()
 
     def have_nickname(self) -> bool:
-        return bool(self.nickname)
+        return bool(self._nickname)
 
     def get_name(self) -> str:
-        return self.nickname or self.name
+        return self._nickname or self._name
 
     def get_real_name(self) -> str:
-        return self.name
+        return self._name
 
     def get_type(self):
-        return self.type
+        return self._type
 
     def get_desc(self) -> str:
-        return self.desc
+        return self._desc
 
 
-class CXsFunction:
+class CXsConstant(CXsBase):
+    def __init__(self, info_def: dict, info_local: dict = None):
+        super().__init__(info_def, info_local)
+
+        self._desc_name: str = ""
+        desc_name = self.get_name()[1:]
+        remove_str = "Attribute"
+        if desc_name.startswith(remove_str):
+            desc_name = desc_name[len(remove_str):]
+        for c in desc_name:
+            if c.isupper():
+                self._desc_name += ' '
+            self._desc_name += c
+        self._desc_name = self._desc_name.strip()
+
+        self._value: str = info_def['value']
+
+        self._desc = self._desc.replace("GET_NAME", self._desc_name).replace("GET_ID", str(self._value))
+
+        self._usage = info_def['usage']
+        if info_local and (usage_local := info_local.get('usage')):
+            for k in self._usage:
+                # if "example" == k:
+                #     continue
+                self._usage[k] = usage_local.get(k) or self._usage[k]
+
+    def get_value(self) -> str:
+        return self._value
+
+    def get_usage(self) -> dict:
+        return self._usage
+
+
+class CXsParam(CXsBase):
+    def __init__(self, info_def: dict, info_local: dict = None):
+        super().__init__(info_def, info_local)
+
+        self._required = info_def['required']
+
+    def is_required(self) -> bool:
+        return self._required
+
+
+class CXsFunction(CXsBase):
 
     def __init__(self, fun_name: str, fun_dict: dict, lang: str = None):
-        self.name: str = ""
-        self.nickname: str = ""
-        self.type: str = ""
-        self.desc: str = ""
-        self.params: list[CXsParam] = []
 
         def_lang = fun_dict[None]
         lang = lang or def_lang
 
         info_def = fun_dict[def_lang][fun_name]
 
-        l: list = []
         if lang != def_lang and lang in fun_dict and (info_local := fun_dict[lang].get(fun_name)):
-            self.nickname = info_local.get('nickname')
-            self.desc = info_local.get('desc')
             l = info_local.get('params')
+        else:
+            info_local = None
+            l = []
 
+        super().__init__(info_def, info_local)
+        if not self._type:
+            self._type = info_def['return_type']
         if params := info_def.get('params'):
-            self.params = [CXsParam(p, l[i] if l else None) for i, p in enumerate(params)]
+            self._params = [CXsParam(p, l[i] if l else None) for i, p in enumerate(params)]
+        else:
+            self._params: list[CXsParam] = []
 
-        self.name = info_def['name']
-        self.type = info_def['return_type']
-        if not self.desc:
-            self.desc = info_def['desc']
-
-    def have_nickname(self) -> bool:
-        return bool(self.nickname)
-
-    def have_param(self) -> bool:
-        return bool(self.params)
-
-    def get_name(self) -> str:
-        return self.nickname or self.name
-
-    def get_real_name(self) -> str:
-        return self.name
-
-    def get_type(self):
-        return self.type
-
-    def get_desc(self) -> str:
-        return self.desc
-
-    def get_params(self) -> list[CXsParam]:
-        return self.params
-
-    def get_prototype(self) -> str:
+    def __str__(self) -> str:
         prototype = self.get_type() + ' ' + self.get_real_name() + "("
-        if params := self.params:
-            prototype += ', '.join([p.get_type() + ' ' + p.get_real_name() for p in params])
+        if params := self._params:
+            prototype += ', '.join([str(p) for p in params])
         prototype += ");"
         return prototype
+
+    def have_param(self) -> bool:
+        return bool(self._params)
+
+    def get_params(self) -> list[CXsParam]:
+        return self._params

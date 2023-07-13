@@ -12,6 +12,8 @@ hide:
 #     - toc
 ---
 
+# Functions Reference
+
 _Written by: Alian713_
 
 """, "return_type": "Returning Type", "prototype": "Prototype", "parameters": "Parameters", "optional": "(Optional)"}
@@ -22,10 +24,11 @@ hide:
 #     - toc
 ---
 
+# 函数参考
+
 _作者：Alian713_
 
-""", "name": "真实函数名", "return_type": "返回类型", "prototype": "函数原型", "parameters": "参数",
-                 "optional": "(可选)"}
+""", "return_type": "返回类型", "prototype": "函数原型", "parameters": "参数", "optional": "(可选)"}
 
 
 def build_doc(lang: str = None):
@@ -41,7 +44,7 @@ def build_doc(lang: str = None):
         # 'nickname' in other languages will not be used.
         if not (title := k('nickname', default_language=lang)):
             title = category
-        out += f"## {index}. {title.title()}\n\n"
+        out += f"## {index}. {title.title()} {{ #{category} }}\n\n"
 
         func_dict = {None: def_lang,
                      def_lang: ugcdoc.json_list_2_dict(sorted(k('functions', language=None), key=lambda x: x['name']))}
@@ -51,26 +54,26 @@ def build_doc(lang: str = None):
         for i_f, func_name in enumerate(func_dict[def_lang], 1):
             fun = ugcdoc.CXsFunction(func_name, func_dict, lang)
 
-            if fun.have_nickname():
-                out += f"### {index}.{i_f}. {fun.get_name()}\n\n"
-                out += f"{md_dict[lang]['name']}: {fun.get_real_name()}\n\n"
-            else:
-                out += f"### {index}.{i_f}. {fun.get_real_name()}\n\n"
+            out += f"### {index}.{i_f}. {fun.get_name()} {{ #{fun.get_real_name()} }}\n\n"
 
             out += f"{md_dict[lang]['return_type']}: `#!cpp {fun.get_type()}`\n\n"
-            out += f"{md_dict[lang]['prototype']}: `#!cpp {fun.get_prototype()}`\n\n"
+            out += f"{md_dict[lang]['prototype']}: `#!cpp {fun}`\n\n"
 
             if fun.have_param():
                 out += md_dict[lang]['parameters'] + ":\n\n"
                 for i_p, param in enumerate(fun.get_params(), 1):
                     optional = "" if param.is_required() else " " + md_dict[lang]['optional']
-                    out += f"{i_p}. {optional} `#!cpp {param.get_type()} {param.get_name()}`: {param.get_desc()}\n"
+                    out += f"{i_p}. {optional} `#!cpp {param}`"
+                    if param.have_nickname():
+                        out += f"({param.get_name()})"
+                    out += f": {param.get_desc()}\n"
 
                 out += "\n"
 
             out += f"{fun.get_desc()}\n\n"
+
     out = out[:-1]
-    ugcdoc.export_md_file("functions", out, def_lang, lang)
+    ugcdoc.export_md_file("index", out, def_lang, lang)
 
 
 build_doc()
