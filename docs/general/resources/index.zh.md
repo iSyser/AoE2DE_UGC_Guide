@@ -2448,11 +2448,11 @@ _作者：Alian713, Bradical, 别云_
 
 -   英文原名: Villagers Idle Periods Total
 
--   用途: Amount of villagers that _entered_ an idle state since game start
+-   用途: Amount of villagers that *entered* an idle state since game start
 
--   注意:
+-   注意: 
     1. This only updates every 5 physical minutes.
-    2. The number of villagers that _entered_ an idle state since the last updated is added to this resource.
+    2. The number of villagers that *entered* an idle state since the last updated is added to this resource.
     3. Starting villager count is the initial value
 
 ## 250. Villagers Idle Seconds Total { #250 }
@@ -2463,7 +2463,7 @@ _作者：Alian713, Bradical, 别云_
 
 -   用途: Amount of total seconds all villagers have been idle since game start
 
--   注意:
+-   注意: 
     1. This only updates every 5 physical minutes.
     2. The idle time in seconds for all villagers since the last time this resource was updated is added to this resource.
     3. A villager immediately adds its own idle time to this resource if it dies

@@ -1952,11 +1952,11 @@ has (so far) not affected the game in any way.
 
 -   ID: 249
 
--   Purpose: Amount of villagers that _entered_ an idle state since game start
+-   Purpose: Amount of villagers that *entered* an idle state since game start
 
--   Note:
+-   Note: 
     1. This only updates every 5 physical minutes.
-    2. The number of villagers that _entered_ an idle state since the last updated is added to this resource.
+    2. The number of villagers that *entered* an idle state since the last updated is added to this resource.
     3. Starting villager count is the initial value
 
 ## 250. Villagers Idle Seconds Total { #250 }
@@ -1965,7 +1965,7 @@ has (so far) not affected the game in any way.
 
 -   Purpose: Amount of total seconds all villagers have been idle since game start
 
--   Note:
+-   Note: 
     1. This only updates every 5 physical minutes.
     2. The idle time in seconds for all villagers since the last time this resource was updated is added to this resource.
     3. A villager immediately adds its own idle time to this resource if it dies

@@ -1,16 +1,7 @@
 {
-  "0": {
-    "name": "生命值",
-    "desc": "该属性指的是单位的生命值"
-  },
-  "1": {
-    "name": "视野",
-    "desc": "这是单位可以看到自身周围的距离"
-  },
-  "2": {
-    "name": "驻扎容量",
-    "desc": "这是可以驻扎另一些单位的数量"
-  },
+  "0": { "name": "生命值", "desc": "该属性指的是单位的生命值" },
+  "1": { "name": "视野", "desc": "这是单位可以看到自身周围的距离" },
+  "2": { "name": "驻扎容量", "desc": "这是可以驻扎另一些单位的数量" },
   "3": {
     "name": "单位尺寸 X",
     "desc": "这决定了单位碰撞盒子的 x 尺寸（单位的宽度）"
@@ -19,21 +10,18 @@
     "name": "单位尺寸 Y",
     "desc": "这决定了单位碰撞盒子的 y 尺寸（单位的长度）"
   },
-  "5": {
-    "name": "移动速度",
-    "desc": "这是单位的移动速度，单位：格/秒"
-  },
+  "5": { "name": "移动速度", "desc": "这是单位的移动速度，单位：格/秒" },
   "6": {
     "name": "旋转速度",
     "desc": "这是可以旋转的单位的旋转速率，单位：秒/帧（在对象可以切换到下一个旋转帧之前需要等待这么多秒）。例如，为了让投石机开始攻击与朝向相反方向的建筑物，它首先需要旋转朝向到那个方向"
   },
   "8": {
     "name": "护甲",
-    "desc": "这是一个单位在其任何 `护甲类型` 上拥有的护甲值。如果您不知道什么是 `护甲类型`，请参阅本手册的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改护甲将显示其已添加到基础护甲值中（例如：4+4）。"
+    "desc": "这是一个单位在其任何 `护甲类型` 上拥有的护甲值。如果您不知道 `护甲类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改护甲将显示其已添加到基础护甲值中（例如：4+4）。"
   },
   "9": {
     "name": "攻击力",
-    "desc": "这是一个单位在其任何 `攻击类型` 上拥有的攻击力。如果您不知道什么是 `攻击类型`，请参阅本手册的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改攻击将显示其已添加到基本攻击力中（例如：6+2）。"
+    "desc": "这是一个单位在其任何 `攻击类型` 上拥有的攻击力。如果您不知道 `攻击类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改攻击将显示其已添加到基本攻击力中（例如：6+2）。"
   },
   "10": {
     "name": "攻击间隔",
@@ -56,479 +44,110 @@
     ]
   },
   "12": {
-    "name": "Max Range",
-    "desc": "This is the maximum range of a unit. Note that to be able to shoot at a target, it must be visible to the unit via its own line of sight or from another unit's line of sight",
-    "notes": [],
-    "flags": {}
+    "name": "最大射程",
+    "desc": "这是单位的最大射击范围。请注意，为了能够射击目标，该单位必须可以通过自己或其他单位的视野看到该目标。"
   },
   "13": {
-    "name": "Work Rate",
-    "desc": "This is the work rate for any unit that can do work. Villagers, Fishing Ships, Serjeants",
-    "notes": [],
-    "flags": {}
+    "name": "工作效率",
+    "desc": "这是任何可以工作的单位的工作率，如村民、渔船、萨金特卫兵等"
   },
-  "14": {
-    "name": "Carry Capacity",
-    "desc": "This is the carry capacity of Villagers",
-    "notes": [],
-    "flags": {}
-  },
+  "14": { "name": "携带容量", "desc": "这是村民的携带容量" },
   "15": {
-    "name": "Base Armor",
-    "desc": "This is the quantity of base armour a unit has on any of its `Armour Classes`. If you do not know what an `Armour Class` is, refer to the [Damage Calculation](../damage_calculation \"Jump to: Game Mechanics > Damage Calculation\") section of this guide. Note that changing the armour through this option will show it as the base armour itself, and it will not be added to the regular amount",
-    "notes": [],
-    "flags": {}
+    "name": "基础护甲",
+    "desc": "这是一个单位在其任何 `护甲类型` 上所拥有的基础护甲值。如果您不知道 `护甲类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation \"跳转至：游戏机制 > 伤害计算\")部分。请注意，通过此选项更改护甲将显示为基础护甲本身，并且不会添加到常规数量中。"
   },
-  "16": {
-    "name": "Projectile Unit",
-    "desc": "This is the ID of the projectile that a unit fires",
-    "notes": [],
-    "flags": {}
-  },
+  "16": { "name": "抛射单位", "desc": "这是单位发射的抛射物（子弹）的 ID" },
   "17": {
-    "name": "Building Icon Override",
-    "desc": "The functionality of this attribute is unknown as it doesn't always behave certainly. If you know what this attribute does, please let the authors of this guide know!",
-    "notes": [],
-    "flags": {}
+    "name": "建筑覆盖图标",
+    "desc": "该属性的功能未知，因为它的行为并不总是确定。如果您知道此属性的作用，请告知本手册的作者！"
   },
   "18": {
-    "name": "Terrain Defense Bonus",
-    "desc": "Unknown... What does this attribute do?",
-    "notes": [],
-    "flags": {}
+    "name": "附加防御地形表",
+    "desc": "这是一个单位在计算伤害时所使用的地形表 ID",
+    "notes": [
+      "地形表是一系列地形的集合，游戏共有 33 个地形表。请参阅 A.G.E. 查看这些表的详细信息。",
+      "每个表中的每个地形都对应一个伤害倍率，单位在每种地形上受到的伤害都会乘以对应的倍率。一般情况下，倍率为 1，但有一些例外。",
+      "例如，表 `陆地 (4)` 中的 \"裂开的沙漠\" 的伤害倍率是 1.2，这意味着如果一个单位的本属性值为 `4`，而它又正在 \"裂开的沙漠\" 受到伤害，则它所受到的最终伤害会是正常情况下的 120%",
+      "又如，表 `陆地 - 农场 (8)` 中的 \"道路\" 的伤害倍率是 0.01，这意味着所有在 \"道路\" 的本属性值为 `8` 的单位，所受到的最终伤害会是正常情况下的 1%"
+    ]
   },
   "19": {
-    "name": "Projectile Smart Mode",
-    "desc": "This is a combinable bit field. Controls the following two behaviours for projectiles:",
+    "name": "抛射物智能模式",
+    "desc": "这是一个可组合的位字段。控制抛射物的以下两种行为：",
     "notes": [
-      "For example, if we set this property of the projectile used by an archer to `1`, it will have ballistics. (This is exactly what researching ballistics does in the first place). If we set this property to `2`, a missed projectile that hits another unit will deal its full damage instead of the 50% that it would normally do",
-      "What if we want to enable both properties at once? This is achieved by adding the flag values for both of them together. Setting this property to `3` enables both effects"
+      "例如，如果我们将弓箭手使用的抛射物的此属性设置为 `1`，它将具有弹道学（这正是研究弹道学的首要目的）。如果我们将此属性设置为 `2`，则向另一个单位射击的未命中抛射物将造成全部伤害，而不是通常情况下的 50%",
+      "如果我们想同时启用这两个属性怎么办？可以通过将两者的标志值相加（位或）来实现。将此属性设置为 `3` 可启用两种效果"
     ],
-    "flags": {
-      "0": "No Ballistics",
-      "1": "Has Ballistics",
-      "2": "Deals full damage on missed hit"
-    }
+    "flags": { "0": "无弹道学", "1": "有弹道学", "2": "未击中时也造成全部伤害" }
   },
   "20": {
-    "name": "Minimum Range",
-    "desc": "The minimum distance a unit must be from an attacking unit for the attacking unit to be able to fire its projectile",
-    "notes": [],
-    "flags": {}
+    "name": "最小射程",
+    "desc": "使攻击单位能够发射其抛射物，单位与攻击单位之间必须保持的最小距离"
   },
   "21": {
-    "name": "Amount of 1st Resource Storage",
-    "desc": "This is the amount of 1st resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
-    "notes": [],
-    "flags": {}
+    "name": "第 1 资源存储量",
+    "desc": "这是任何单位中包含的第 1 资源的数量。请参阅 A.G.E. 查看每个单位的资源"
   },
   "22": {
-    "name": "Blast Width",
-    "desc": "All enemy units inside this radius take damage from an attacking unit. This is used by elephants, Druzhina Halberdiers, and Logistica Cataphracts",
-    "notes": [],
-    "flags": {}
+    "name": "溅射半径",
+    "desc": "该半径内的所有敌方单位都会受到攻击单位的伤害。这也是战象、斯拉夫和拜占庭的金冠所使用的"
   },
   "23": {
-    "name": "Search Radius",
-    "desc": "The maximum distance at which a unit can detect and auto attack enemy units",
-    "notes": [],
-    "flags": {}
+    "name": "搜索半径",
+    "desc": "单位可以探测并自动攻击敌方单位的最大距离"
   },
   "24": {
-    "name": "Bonus Damage Resistance",
-    "desc": "Used by Sicilians for the 50% bonus damage resistance. Set to 0.5 for all Sicilian land military units except siege",
-    "notes": [],
-    "flags": {}
+    "name": "附加伤害抗性",
+    "desc": "西西里人使用它获得 33% 的附加伤害抗性。西西里的以下类型的单位设置为 0.33：\n    -   `射手 (0)`\n    -   `步兵 (6)`\n    -   `骑兵 (12)`\n    -   `征服者 & 飞镖骑兵 (23)`\n    -   `爆破单位 (35)`\n    -   `骑射手 (36)`\n    -   `火枪单位 (44)`\n    -   `斥候 (47)`"
   },
   "25": {
-    "name": "Icon ID",
-    "desc": "The ID of the icon that you want a unit to show",
-    "notes": [],
-    "flags": {}
+    "name": "图标 ID",
+    "desc": "您希望单位显示的图标的 ID"
   },
   "26": {
-    "name": "Amount of 2nd Resource Storage",
-    "desc": "This is the amount of 2nd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
-    "notes": [],
-    "flags": {}
+    "name": "第 2 资源存储量",
+    "desc": "这是任何单位中包含的第二资源的数量。请参阅 A.G.E. 查看每个单位的资源"
   },
   "27": {
-    "name": "Amount of 3rd Resource Storage",
-    "desc": "This is the amount of 3rd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
-    "notes": [],
-    "flags": {}
+    "name": "第 3 资源存储量",
+    "desc": "这是任何单位中包含的第三种资源的数量。请参阅 A.G.E. 查看每个单位的资源"
   },
   "28": {
-    "name": "Fog Visibility",
-    "desc": "Controls visibility of a unit through the fog of war",
-    "notes": [],
+    "name": "战雾可视性",
+    "desc": "控制单位在战争迷雾中的可视性",
     "flags": {
-      "0": "Not Visible",
-      "1": "Always Visible",
+      "0": "不可视",
+      "1": "总是可视",
       "2": "Visible If Alive",
-      "3": "Inverted Visibility",
+      "3": "反转可视性",
       "4": "Check Doppelganger"
     }
   },
   "29": {
     "name": "Occlusion Mode",
-    "desc": "This is a combinable bit field. Controls the outlines of units as seen through other units",
-    "notes": [],
+    "desc": "这是一个可组合的位字段。控制透过其他单位看到的单位轮廓",
     "flags": {
-      "0": "No outline",
-      "1": "Display outline when behind other units that have flag 2",
-      "2": "Other units' outlines are rendered when they are behind this unit",
-      "4": "Display outline on this unit's foundation when behind other units that have flag 2"
+      "0": "无轮廓",
+      "1": "当位于具有标志 2 的其他单位后面时，显示轮廓",
+      "2": "当其他单位位于该单位后面时，会渲染它们的轮廓",
+      "4": "当位于具有标志 2 的其他单位后面时，在该单位的基础上显示轮廓"
     }
   },
   "30": {
-    "name": "Garrison Type",
-    "desc": "This is a combinable bit field. Controls which units are able to garrison in a building. A unit needs to have the garrison in building task to be able to garrison in a building to begin with",
-    "notes": [],
+    "name": "驻扎类型",
+    "desc": "这是一个可组合的位字段。控制哪些单位能够驻扎在建筑物中。一个单位需要有驻守建筑任务才能开始驻守建筑物",
     "flags": {
-      "1": "Villagers",
-      "2": "Infantry",
-      "4": "Cavalry",
-      "8": "Monks",
-      "16": "Herdables",
-      "32": "Siege",
-      "64": "Ships"
+      "1": "村民",
+      "2": "步兵",
+      "4": "骑兵",
+      "8": "僧侣",
+      "16": "畜牧",
+      "32": "攻城武器",
+      "64": "船"
     }
   },
   "32": {
-    "name": "Unit Size Z",
-    "desc": "This determines the z-size of the unit's collision hitbox (height of the unit)",
-    "notes": [],
-    "flags": {}
-  },
-  "40": {
-    "name": "Hero Status",
-    "desc": "This is a combinable bit field. Controls the following properties:",
-    "notes": [
-      "For example, if we set the hero status of a knight to 2, a monk will not be able to convert it. If we set the hero status of a militia to 4, it will regenerate HP automatically",
-      "What if we want to enable multiple properties at once? This is achieved by adding the flag values for those properties together and setting the hero status to that value. For example, if we want to make a paladin both unconvertable and regenerate HP automatically, we can set its hero status to 2+4 = 6. This means that the hero status of a unit can take on any values in the range 1-63. If you set it to any other value, it does not have any effect on the unit",
-      "This works because notice that there is one and only one way to add different flag values together to obtain a particular value for the hero status! For example, if we have a value of 20 for the hero status of a unit, the only way to make 20 from the above flag values is to add 4 and 16. Thus, we know that the properties corresponding to the flag values 4 (self regeneration) and 16 (protected formation by default) must be enabled for that unit",
-      "This is a consequence of the fact that every number can be represented as a unique sum of powers of two (binary numbers)"
-    ],
-    "flags": {
-      "1": "Full Hero Status",
-      "2": "Cannot be Converted",
-      "4": "Self Regeneration (30 HP/min)",
-      "8": "Defensive Stance by Default",
-      "16": "Protected Formation by Default",
-      "32": "Safe Delete Confirmation",
-      "64": "Hero Glow",
-      "128": "Invert All Flags (except flag 1)"
-    }
-  },
-  "41": {
-    "name": "Frame Delay",
-    "desc": "The amount of delay between the point when the attacking animation starts and the actual hit happening for military units. This is what makes Cavalry Archers annoying to micro",
-    "notes": [],
-    "flags": {}
-  },
-  "42": {
-    "name": "Train Location",
-    "desc": "The ID of the unit that trains any given unit. Barracks train Militia, so the train location of a Militia is the ID of the Barracks",
-    "notes": [],
-    "flags": {}
-  },
-  "43": {
-    "name": "Train Button",
-    "desc": "The button used for training any given unit. For example, Militia are trained by using the first button, hence the Button Location of Militia is 1. This number ranges from 0-15",
-    "notes": [],
-    "flags": {}
-  },
-  "44": {
-    "name": "Blast Attack Level",
-    "desc": "A unit deals blast damage to ***other*** units with ***equal or higher*** [Blast Defense Level](./#45 \"Jump to: Blast Defense Level\") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same",
-    "notes": [
-      "One of the flags 0-3 can be combined with one of the flags from 4-64 by adding the two values"
-    ],
-    "flags": {
-      "0": "damage resources, nearby allied units and tress",
-      "1": "damage trees, nearby allied units",
-      "2": "damage nearby allied units",
-      "3": "damage targeted unit only",
-      "4": "Deal a fixed 5 HP of damage to nearby units",
-      "8": "Deal 50% of unit's own damage to nearby units",
-      "16": "Deal 25% of unit's own damage to nearby units",
-      "32": "Deal 33% of unit's own damage to nearby units",
-      "64": "Attenuate damage as distance from the centre of attack increases (infantry only)",
-      "128": "Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone"
-    }
-  },
-  "45": {
-    "name": "Blast Defense Level",
-    "desc": "A unit feels the blast damage from ***other*** units with ***equal or lower*** [Blast Attack Level](./#44 \"Jump to: Blast Attack Level\") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same",
-    "notes": [],
-    "flags": {
-      "0": "damage resources, nearby allied units and tress",
-      "1": "damage trees, nearby allied units",
-      "2": "damage nearby allied units",
-      "3": "damage targeted unit only"
-    }
-  },
-  "46": {
-    "name": "Shown Attack",
-    "desc": "The amount of attack that is displayed as a unit's attack (may not actually be the true attack)",
-    "notes": [],
-    "flags": {}
-  },
-  "47": {
-    "name": "Shown Range",
-    "desc": "The quantity that is displayed as a unit's attack ingame (may not actually be the true attack)",
-    "notes": [],
-    "flags": {}
-  },
-  "48": {
-    "name": "Shown Melee Armor",
-    "desc": "The quantity that is displayed as a unit's melee armour ingame (may not actually be the true armour)",
-    "notes": [],
-    "flags": {}
-  },
-  "49": {
-    "name": "Shown Pierce Armor",
-    "desc": "The quantity that is displayed as a unit's pierce armour ingame (may not actually be the true armour)",
-    "notes": [],
-    "flags": {}
-  },
-  "50": {
-    "name": "Object Name ID",
-    "desc": "The string ID to use for the name of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set names by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader",
-    "notes": [],
-    "flags": {}
-  },
-  "51": {
-    "name": "Short Description ID",
-    "desc": "The string ID for the Short Description of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set a Short Description by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader",
-    "notes": [],
-    "flags": {}
-  },
-  "53": {
-    "name": "Terrain Restriction ID",
-    "desc": "This number determines how a unit interacts with terrains and which terrains it can walk on",
-    "notes": [],
-    "flags": {
-      "0": "All",
-      "1": "Land And Shallows",
-      "2": "Beach",
-      "3": "Water Small Trail",
-      "4": "Land",
-      "5": "Nothing",
-      "6": "Water No Trail",
-      "7": "All Except Water",
-      "8": "Land Except Farm",
-      "9": "Nothing 2",
-      "10": "Land And Beach",
-      "11": "Land Except Farm 2",
-      "12": "All Except Water Bridge Cannon",
-      "13": "Water Medium Trail",
-      "14": "All Except Water Bridge Arrow",
-      "15": "Water Large Trail",
-      "16": "Grass And Beach",
-      "17": "Water And Bridge Except Beach",
-      "18": "All Except Water Bridge Spear",
-      "19": "Only Water And Ice",
-      "20": "All Except Water Wheel",
-      "21": "Shallow Water",
-      "22": "All Dart",
-      "23": "All Arrow Fire",
-      "24": "All Cannon Fire",
-      "25": "All Spear Fire",
-      "26": "All Dart Fire",
-      "27": "All Laser",
-      "28": "All Except Water Cavalry",
-      "29": "All Except Water Packet Trebuchet",
-      "30": "Water Smallest Trail"
-    }
-  },
-  "54": {
-    "name": "Unit Trait",
-    "desc": "This is a combinable bit field. Controls the following properties:",
-    "notes": ["See Also:\n\n    [Trait Piece](./#56)"],
-    "flags": {
-      "1": "Garrison Unit",
-      "2": "Ship Unit",
-      "4": "Build Another Building (Serjeants)",
-      "8": "Transform Into Another Unit (Ratha)",
-      "16": "Auto Scout Unit"
-    }
-  },
-  "56": {
-    "name": "Trait Piece",
-    "desc": "This can be set to the ID of a unit that is used along with some of the Unit Traits",
-    "notes": ["See Also:\n\n    [Unit Trait](./#54)"],
-    "flags": {
-      "1": "Unused",
-      "2": "Unused",
-      "4": "Build Unit",
-      "8": "Transform Unit",
-      "16": "Unused"
-    }
-  },
-  "57": {
-    "name": "Dead Unit ID",
-    "desc": "This is the ID of the unit to spawn after the current unit dies. This is whats used to make the dismounted konniks possible",
-    "notes": [],
-    "flags": {}
-  },
-  "58": {
-    "name": "Hotkey ID",
-    "desc": "This number determines which hotkey is assigned to a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "59": {
-    "name": "Maximum Charge",
-    "desc": "The maximum amount of charge that a unit can hold",
-    "notes": [],
-    "flags": {}
-  },
-  "60": {
-    "name": "Recharge Rate",
-    "desc": "The rate of charge regeneration per second",
-    "notes": [],
-    "flags": {}
-  },
-  "61": {
-    "name": "Charge Event",
-    "desc": "This action depletes the unit's charge",
-    "notes": [],
-    "flags": {
-      "1": "If charge type is set to `1`, `2` or `3`, depletes charge on attacking"
-    }
-  },
-  "62": {
-    "name": "Charge Type",
-    "desc": "The type of charge that a unit holds",
-    "notes": [],
-    "flags": {
-      "1": "Attack charge",
-      "2": "??? charge",
-      "3": "Area attack charge",
-      "4": "Agility charge"
-    }
-  },
-  "63": {
-    "name": "Combat Ability",
-    "desc": "Combinable bit field. Controls several attacking behaviours for units",
-    "notes": [],
-    "flags": {
-      "1": "Ignore melee and pierce armours of the targeted unit",
-      "2": "Resist armour-ignoring attacks",
-      "4": "Damage the targeted unit's armor (Obuch)",
-      "8": "Attack ground ability",
-      "16": "Bulk volley release (kipchak/siege weapons)"
-    }
-  },
-  "64": {
-    "name": "Attack Dispersion",
-    "desc": "Half of the radius from the target unit in which missed projectiles fired by this unit can land in",
-    "notes": [],
-    "flags": {}
-  },
-  "65": {
-    "name": "Secondary Projectile Unit",
-    "desc": "This is the ID of the secondary projectile that a unit fires (Chu Ko Nu)",
-    "notes": [],
-    "flags": {}
-  },
-  "66": {
-    "name": "Blood Unit",
-    "desc": "This is the ID of a secondary unit to spawn after the current unit dies. This could potentially be used along with dead unit ID to spawn two units after a single unit dies",
-    "notes": [],
-    "flags": {}
-  },
-  "67": {
-    "name": "Projectile Hit Mode",
-    "desc": "Controls how a projectile collides with units in the path of its target. Currently changing this through XS has no effect",
-    "notes": [],
-    "flags": {
-      "0": "Collide only with the targeted unit",
-      "1": "Collide with any damage-able units in the path to the targetted unit",
-      "2": "Collide with any unit in the path to the targetted unit"
-    }
-  },
-  "68": {
-    "name": "Projectile Vanish Mode",
-    "desc": "Controls if a projectile passes through or disappears on impact. Currently changing this through XS has no effect",
-    "notes": [],
-    "flags": {
-      "0": "Disappear on first impact",
-      "1": "Pass through"
-    }
-  },
-  "69": {
-    "name": "Projectile Arc",
-    "desc": "Controls the maximum height of the fired projectile",
-    "notes": [],
-    "flags": {}
-  },
-  "100": {
-    "name": "Resource Costs",
-    "desc": "Refers to the first resource cost of a unit. Refer to A.G.E. to see which resource cost that is",
-    "notes": [],
-    "flags": {}
-  },
-  "101": {
-    "name": "Train Time",
-    "desc": "This is the amount of time it takes to create a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "102": {
-    "name": "Total Missiles",
-    "desc": "This is the number of projectiles a unit fires. The Chu Ko Nu fires 3 and the Elite Chu Ko Nu fires 5",
-    "notes": [],
-    "flags": {}
-  },
-  "103": {
-    "name": "Food Costs",
-    "desc": "The food cost of a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "104": {
-    "name": "Wood Costs",
-    "desc": "The wood cost of a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "105": {
-    "name": "Gold Costs",
-    "desc": "The gold cost of a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "106": {
-    "name": "Stone Costs",
-    "desc": "The stone cost of a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "107": {
-    "name": "Max Total Missiles",
-    "desc": "The maximum number of projectiles a unit can fire when other units are garrisoned inside of it. A castle fires 5 projectiles by default but can fire more if units are garrisoned inside it. This attribute controls the maximum number of those",
-    "notes": [],
-    "flags": {}
-  },
-  "108": {
-    "name": "Garrison Heal Rate",
-    "desc": "The rate measured in HP/s at which garissoned units are healed inside a given building",
-    "notes": [],
-    "flags": {}
-  },
-  "109": {
-    "name": "Regeneration Rate",
-    "desc": "The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 \"Jump to: 26. Hero Status\") of a unit",
-    "notes": [],
-    "flags": {}
-  },
-  "110": {
-    "name": "Population",
-    "desc": "Modifies the population headroom storage of a unit. Negative values = require population (units), positive values = give population (houses). This is not a real attribute that exists in A.G.E., just seems like a way to edit the population heardroom provided by a unit",
-    "notes": [],
-    "flags": {}
+    "name": "单位尺寸 Z",
+    "desc": "这决定了单位碰撞盒子的 z 尺寸（单位的高度）"
   }
 }

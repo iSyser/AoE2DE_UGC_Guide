@@ -114,8 +114,13 @@
   },
   "18": {
     "name": "Terrain Defense Bonus",
-    "desc": "Unknown... What does this attribute do?",
-    "notes": [],
+    "desc": "This is the Terrain Table ID a unit uses when calculating damage",
+    "notes": [
+      "The Terrain Table is a collection of a series of terrains. There are 33 terrain tables in the game. Refer to A.G.E. to see the details of these tables.",
+      "Each terrain in each table corresponds to a damage multiplier, and the damage a unit takes on each terrain is multiplied by the corresponding multiplier. In general, the multiplier is 1, but there are some exceptions.",
+      "For example, the \"Desert, Cracked\" in table `Land (4)` has a damage multiplier of 1.2, which means that if a unit has this attribute value of `4` and it is taking damage at the \"Desert, Cracked\", it will end up taking 120% of normal damage",
+      "As another example, the \"Road\" in Table `Land - farm (8)` has a damage multiplier of 0.01, which means that all units with a value of `8` in this attribute at the \"Road\" will receive 1% of the final damage they normally receive."
+    ],
     "flags": {}
   },
   "19": {
@@ -157,7 +162,7 @@
   },
   "24": {
     "name": "Bonus Damage Resistance",
-    "desc": "Used by Sicilians for the 50% bonus damage resistance. Set to 0.5 for all Sicilian land military units except siege",
+    "desc": "Used by Sicilians for the 33% bonus damage resistance. Sicilian units of the following types are set to 0.33:\n    -   `Archer (0)`\n    -   `Infantry (6)`\n    -   `Cavalry (12)`\n    -   `Conquistador & Arambai (23)`\n    -   `Petard (35)`\n    -   `Cavalry Archer (36)`\n    -   `Hand Cannoneer (44)`\n    -   `Scout (47)`",
     "notes": [],
     "flags": {}
   },
@@ -542,7 +547,7 @@
   },
   "109": {
     "name": "Regeneration Rate",
-    "desc": "The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 \"Jump to: 26. Hero Status\") of a unit",
+    "desc": "The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 \"Jump to: Hero Status\") of a unit",
     "notes": [],
     "flags": {}
   },

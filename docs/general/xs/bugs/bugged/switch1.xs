@@ -1,5 +1,0 @@
-void main() {
-    switch("test") {
-        
-    }
-}

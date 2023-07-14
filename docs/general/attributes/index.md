@@ -134,7 +134,15 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   ID: 18
 
--   Unknown... What does this attribute do?
+-   This is the Terrain Table ID a unit uses when calculating damage
+
+-   The Terrain Table is a collection of a series of terrains. There are 33 terrain tables in the game. Refer to A.G.E. to see the details of these tables.
+
+    Each terrain in each table corresponds to a damage multiplier, and the damage a unit takes on each terrain is multiplied by the corresponding multiplier. In general, the multiplier is 1, but there are some exceptions.
+
+    For example, the "Desert, Cracked" in table `Land (4)` has a damage multiplier of 1.2, which means that if a unit has this attribute value of `4` and it is taking damage at the "Desert, Cracked", it will end up taking 120% of normal damage
+
+    As another example, the "Road" in Table `Land - farm (8)` has a damage multiplier of 0.01, which means that all units with a value of `8` in this attribute at the "Road" will receive 1% of the final damage they normally receive.
 
 ## 19. Projectile Smart Mode { #19 }
 
@@ -146,11 +154,11 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
     What if we want to enable both properties at once? This is achieved by adding the flag values for both of them together. Setting this property to `3` enables both effects
 
-    | Property                        | Flag Value |
-    | :------------------------------ | ---------: |
-    | No Ballistics                   |          0 |
-    | Has Ballistics                  |          1 |
-    | Deals full damage on missed hit |          2 |
+    | Property | Flag Value |
+    | :- | -: |
+    | No Ballistics | 0 | 
+    | Has Ballistics | 1 | 
+    | Deals full damage on missed hit | 2 | 
 
 ## 20. Minimum Range { #20 }
 
@@ -180,7 +188,15 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   ID: 24
 
--   Used by Sicilians for the 50% bonus damage resistance. Set to 0.5 for all Sicilian land military units except siege
+-   Used by Sicilians for the 33% bonus damage resistance. Sicilian units of the following types are set to 0.33:
+    -   `Archer (0)`
+    -   `Infantry (6)`
+    -   `Cavalry (12)`
+    -   `Conquistador & Arambai (23)`
+    -   `Petard (35)`
+    -   `Cavalry Archer (36)`
+    -   `Hand Cannoneer (44)`
+    -   `Scout (47)`
 
 ## 25. Icon ID { #25 }
 
@@ -206,13 +222,13 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   Controls visibility of a unit through the fog of war
 
-    | Property            | Flag Value |
-    | :------------------ | ---------: |
-    | Not Visible         |          0 |
-    | Always Visible      |          1 |
-    | Visible If Alive    |          2 |
-    | Inverted Visibility |          3 |
-    | Check Doppelganger  |          4 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Not Visible | 0 | 
+    | Always Visible | 1 | 
+    | Visible If Alive | 2 | 
+    | Inverted Visibility | 3 | 
+    | Check Doppelganger | 4 | 
 
 ## 29. Occlusion Mode { #29 }
 
@@ -220,12 +236,12 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   This is a combinable bit field. Controls the outlines of units as seen through other units
 
-    | Property                                                                           | Flag Value |
-    | :--------------------------------------------------------------------------------- | ---------: |
-    | No outline                                                                         |          0 |
-    | Display outline when behind other units that have flag 2                           |          1 |
-    | Other units' outlines are rendered when they are behind this unit                  |          2 |
-    | Display outline on this unit's foundation when behind other units that have flag 2 |          4 |
+    | Property | Flag Value |
+    | :- | -: |
+    | No outline | 0 | 
+    | Display outline when behind other units that have flag 2 | 1 | 
+    | Other units' outlines are rendered when they are behind this unit | 2 | 
+    | Display outline on this unit's foundation when behind other units that have flag 2 | 4 | 
 
 ## 30. Garrison Type { #30 }
 
@@ -233,15 +249,15 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   This is a combinable bit field. Controls which units are able to garrison in a building. A unit needs to have the garrison in building task to be able to garrison in a building to begin with
 
-    | Property  | Flag Value |
-    | :-------- | ---------: |
-    | Villagers |          1 |
-    | Infantry  |          2 |
-    | Cavalry   |          4 |
-    | Monks     |          8 |
-    | Herdables |         16 |
-    | Siege     |         32 |
-    | Ships     |         64 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Villagers | 1 | 
+    | Infantry | 2 | 
+    | Cavalry | 4 | 
+    | Monks | 8 | 
+    | Herdables | 16 | 
+    | Siege | 32 | 
+    | Ships | 64 | 
 
 ## 32. Unit Size Z { #32 }
 
@@ -263,16 +279,16 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
     This is a consequence of the fact that every number can be represented as a unique sum of powers of two (binary numbers)
 
-    | Property                         | Flag Value |
-    | :------------------------------- | ---------: |
-    | Full Hero Status                 |          1 |
-    | Cannot be Converted              |          2 |
-    | Self Regeneration (30 HP/min)    |          4 |
-    | Defensive Stance by Default      |          8 |
-    | Protected Formation by Default   |         16 |
-    | Safe Delete Confirmation         |         32 |
-    | Hero Glow                        |         64 |
-    | Invert All Flags (except flag 1) |        128 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Full Hero Status | 1 | 
+    | Cannot be Converted | 2 | 
+    | Self Regeneration (30 HP/min) | 4 | 
+    | Defensive Stance by Default | 8 | 
+    | Protected Formation by Default | 16 | 
+    | Safe Delete Confirmation | 32 | 
+    | Hero Glow | 64 | 
+    | Invert All Flags (except flag 1) | 128 | 
 
 ## 41. Frame Delay { #41 }
 
@@ -296,35 +312,35 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   ID: 44
 
--   A unit deals blast damage to **_other_** units with **_equal or higher_** [Blast Defense Level](./#45 "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
+-   A unit deals blast damage to ***other*** units with ***equal or higher*** [Blast Defense Level](./#45 "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
 
 -   One of the flags 0-3 can be combined with one of the flags from 4-64 by adding the two values
 
-    | Property                                                                                           | Flag Value |
-    | :------------------------------------------------------------------------------------------------- | ---------: |
-    | damage resources, nearby allied units and tress                                                    |          0 |
-    | damage trees, nearby allied units                                                                  |          1 |
-    | damage nearby allied units                                                                         |          2 |
-    | damage targeted unit only                                                                          |          3 |
-    | Deal a fixed 5 HP of damage to nearby units                                                        |          4 |
-    | Deal 50% of unit's own damage to nearby units                                                      |          8 |
-    | Deal 25% of unit's own damage to nearby units                                                      |         16 |
-    | Deal 33% of unit's own damage to nearby units                                                      |         32 |
-    | Attenuate damage as distance from the centre of attack increases (infantry only)                   |         64 |
-    | Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone |        128 |
+    | Property | Flag Value |
+    | :- | -: |
+    | damage resources, nearby allied units and tress | 0 | 
+    | damage trees, nearby allied units | 1 | 
+    | damage nearby allied units | 2 | 
+    | damage targeted unit only | 3 | 
+    | Deal a fixed 5 HP of damage to nearby units | 4 | 
+    | Deal 50% of unit's own damage to nearby units | 8 | 
+    | Deal 25% of unit's own damage to nearby units | 16 | 
+    | Deal 33% of unit's own damage to nearby units | 32 | 
+    | Attenuate damage as distance from the centre of attack increases (infantry only) | 64 | 
+    | Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone | 128 | 
 
 ## 45. Blast Defense Level { #45 }
 
 -   ID: 45
 
--   A unit feels the blast damage from **_other_** units with **_equal or lower_** [Blast Attack Level](./#44 "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
+-   A unit feels the blast damage from ***other*** units with ***equal or lower*** [Blast Attack Level](./#44 "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
 
-    | Property                                        | Flag Value |
-    | :---------------------------------------------- | ---------: |
-    | damage resources, nearby allied units and tress |          0 |
-    | damage trees, nearby allied units               |          1 |
-    | damage nearby allied units                      |          2 |
-    | damage targeted unit only                       |          3 |
+    | Property | Flag Value |
+    | :- | -: |
+    | damage resources, nearby allied units and tress | 0 | 
+    | damage trees, nearby allied units | 1 | 
+    | damage nearby allied units | 2 | 
+    | damage targeted unit only | 3 | 
 
 ## 46. Shown Attack { #46 }
 
@@ -368,39 +384,39 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   This number determines how a unit interacts with terrains and which terrains it can walk on
 
-    | Property                          | Flag Value |
-    | :-------------------------------- | ---------: |
-    | All                               |          0 |
-    | Land And Shallows                 |          1 |
-    | Beach                             |          2 |
-    | Water Small Trail                 |          3 |
-    | Land                              |          4 |
-    | Nothing                           |          5 |
-    | Water No Trail                    |          6 |
-    | All Except Water                  |          7 |
-    | Land Except Farm                  |          8 |
-    | Nothing 2                         |          9 |
-    | Land And Beach                    |         10 |
-    | Land Except Farm 2                |         11 |
-    | All Except Water Bridge Cannon    |         12 |
-    | Water Medium Trail                |         13 |
-    | All Except Water Bridge Arrow     |         14 |
-    | Water Large Trail                 |         15 |
-    | Grass And Beach                   |         16 |
-    | Water And Bridge Except Beach     |         17 |
-    | All Except Water Bridge Spear     |         18 |
-    | Only Water And Ice                |         19 |
-    | All Except Water Wheel            |         20 |
-    | Shallow Water                     |         21 |
-    | All Dart                          |         22 |
-    | All Arrow Fire                    |         23 |
-    | All Cannon Fire                   |         24 |
-    | All Spear Fire                    |         25 |
-    | All Dart Fire                     |         26 |
-    | All Laser                         |         27 |
-    | All Except Water Cavalry          |         28 |
-    | All Except Water Packet Trebuchet |         29 |
-    | Water Smallest Trail              |         30 |
+    | Property | Flag Value |
+    | :- | -: |
+    | All | 0 | 
+    | Land And Shallows | 1 | 
+    | Beach | 2 | 
+    | Water Small Trail | 3 | 
+    | Land | 4 | 
+    | Nothing | 5 | 
+    | Water No Trail | 6 | 
+    | All Except Water | 7 | 
+    | Land Except Farm | 8 | 
+    | Nothing 2 | 9 | 
+    | Land And Beach | 10 | 
+    | Land Except Farm 2 | 11 | 
+    | All Except Water Bridge Cannon | 12 | 
+    | Water Medium Trail | 13 | 
+    | All Except Water Bridge Arrow | 14 | 
+    | Water Large Trail | 15 | 
+    | Grass And Beach | 16 | 
+    | Water And Bridge Except Beach | 17 | 
+    | All Except Water Bridge Spear | 18 | 
+    | Only Water And Ice | 19 | 
+    | All Except Water Wheel | 20 | 
+    | Shallow Water | 21 | 
+    | All Dart | 22 | 
+    | All Arrow Fire | 23 | 
+    | All Cannon Fire | 24 | 
+    | All Spear Fire | 25 | 
+    | All Dart Fire | 26 | 
+    | All Laser | 27 | 
+    | All Except Water Cavalry | 28 | 
+    | All Except Water Packet Trebuchet | 29 | 
+    | Water Smallest Trail | 30 | 
 
 ## 54. Unit Trait { #54 }
 
@@ -412,13 +428,13 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
     [Trait Piece](./#56)
 
-    | Property                            | Flag Value |
-    | :---------------------------------- | ---------: |
-    | Garrison Unit                       |          1 |
-    | Ship Unit                           |          2 |
-    | Build Another Building (Serjeants)  |          4 |
-    | Transform Into Another Unit (Ratha) |          8 |
-    | Auto Scout Unit                     |         16 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Garrison Unit | 1 | 
+    | Ship Unit | 2 | 
+    | Build Another Building (Serjeants) | 4 | 
+    | Transform Into Another Unit (Ratha) | 8 | 
+    | Auto Scout Unit | 16 | 
 
 ## 56. Trait Piece { #56 }
 
@@ -430,13 +446,13 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
     [Unit Trait](./#54)
 
-    | Property       | Flag Value |
-    | :------------- | ---------: |
-    | Unused         |          1 |
-    | Unused         |          2 |
-    | Build Unit     |          4 |
-    | Transform Unit |          8 |
-    | Unused         |         16 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Unused | 1 | 
+    | Unused | 2 | 
+    | Build Unit | 4 | 
+    | Transform Unit | 8 | 
+    | Unused | 16 | 
 
 ## 57. Dead Unit ID { #57 }
 
@@ -468,9 +484,9 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   This action depletes the unit's charge
 
-    | Property                                                               | Flag Value |
-    | :--------------------------------------------------------------------- | ---------: |
-    | If charge type is set to `1`, `2` or `3`, depletes charge on attacking |          1 |
+    | Property | Flag Value |
+    | :- | -: |
+    | If charge type is set to `1`, `2` or `3`, depletes charge on attacking | 1 | 
 
 ## 62. Charge Type { #62 }
 
@@ -478,12 +494,12 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   The type of charge that a unit holds
 
-    | Property           | Flag Value |
-    | :----------------- | ---------: |
-    | Attack charge      |          1 |
-    | ??? charge         |          2 |
-    | Area attack charge |          3 |
-    | Agility charge     |          4 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Attack charge | 1 | 
+    | ??? charge | 2 | 
+    | Area attack charge | 3 | 
+    | Agility charge | 4 | 
 
 ## 63. Combat Ability { #63 }
 
@@ -491,13 +507,13 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   Combinable bit field. Controls several attacking behaviours for units
 
-    | Property                                             | Flag Value |
-    | :--------------------------------------------------- | ---------: |
-    | Ignore melee and pierce armours of the targeted unit |          1 |
-    | Resist armour-ignoring attacks                       |          2 |
-    | Damage the targeted unit's armor (Obuch)             |          4 |
-    | Attack ground ability                                |          8 |
-    | Bulk volley release (kipchak/siege weapons)          |         16 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Ignore melee and pierce armours of the targeted unit | 1 | 
+    | Resist armour-ignoring attacks | 2 | 
+    | Damage the targeted unit's armor (Obuch) | 4 | 
+    | Attack ground ability | 8 | 
+    | Bulk volley release (kipchak/siege weapons) | 16 | 
 
 ## 64. Attack Dispersion { #64 }
 
@@ -523,11 +539,11 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   Controls how a projectile collides with units in the path of its target. Currently changing this through XS has no effect
 
-    | Property                                                             | Flag Value |
-    | :------------------------------------------------------------------- | ---------: |
-    | Collide only with the targeted unit                                  |          0 |
-    | Collide with any damage-able units in the path to the targetted unit |          1 |
-    | Collide with any unit in the path to the targetted unit              |          2 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Collide only with the targeted unit | 0 | 
+    | Collide with any damage-able units in the path to the targetted unit | 1 | 
+    | Collide with any unit in the path to the targetted unit | 2 | 
 
 ## 68. Projectile Vanish Mode { #68 }
 
@@ -535,10 +551,10 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   Controls if a projectile passes through or disappears on impact. Currently changing this through XS has no effect
 
-    | Property                  | Flag Value |
-    | :------------------------ | ---------: |
-    | Disappear on first impact |          0 |
-    | Pass through              |          1 |
+    | Property | Flag Value |
+    | :- | -: |
+    | Disappear on first impact | 0 | 
+    | Pass through | 1 | 
 
 ## 69. Projectile Arc { #69 }
 
@@ -604,7 +620,7 @@ or if the descriptions of the attributes are wrong, please let the authors of th
 
 -   ID: 109
 
--   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 "Jump to: 26. Hero Status") of a unit
+-   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 "Jump to: Hero Status") of a unit
 
 ## 110. Population { #110 }
 

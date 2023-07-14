@@ -31,6 +31,10 @@ def f2math(md: str) -> str:
     return md
 
 
+def str2title(title: str) -> str:
+    return regex.sub(r'\W', '', title)
+
+
 def json_list_2_dict(src: list) -> dict:
     result = {}
     if not src:

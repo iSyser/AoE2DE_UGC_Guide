@@ -1,0 +1,27 @@
+[
+  { "name": "Fixed", "nickname": "已修复", "bugs": [] },
+  { "name": "Effect Amount", "nickname": "函数 EffectAmount", "bugs": [] },
+  {
+    "name": "Editor",
+    "nickname": "编辑器",
+    "bugs": [
+      {
+        "name": "Script Call A Function With Parameters",
+        "nickname": "脚本调用带参数的函数",
+        "desc": "当使用脚本调用来调用 XS 文件中定义的带参数的函数时，所有 XS 执行都会停止。没有显示语法错误，这完全静默地发生。",
+        "Expected Behaviour": "函数调用按预期工作，不会导致整个 XS 执行崩溃。",
+        "Reproduction Steps": [
+          "创建新场景或 RMS",
+          "使用以下代码创建新的 XS 脚本：GET_CODE",
+          "将脚本包含在场景中，并使用脚本调用 条件/效果 创建触发",
+          "在脚本调用的消息框中输入 `#!cpp test(1, 2)`",
+          "游玩场景时，屏幕上没有任何文字聊天，执行失败也无提示。"
+        ]
+      }
+    ]
+  },
+  { "name": "Language Syntax", "nickname": "语言句法", "bugs": [] },
+  { "name": "Important", "nickname": "重要", "bugs": [] },
+  { "name": "Crashes", "nickname": "崩溃", "bugs": [] },
+  { "name": "Chat Data", "nickname": "函数 ChatData" }
+]

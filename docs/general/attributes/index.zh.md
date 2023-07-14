@@ -68,7 +68,7 @@ _作者：Alian713, 别云_
 
 -   英文原名: Armor
 
--   这是一个单位在其任何 `护甲类型` 上拥有的护甲值。如果您不知道什么是 `护甲类型`，请参阅本手册的[伤害计算](../damage_calculation "跳转至：游戏机制 > 伤害计算")部分。请注意，通过此选项更改护甲将显示其已添加到基础护甲值中（例如：4+4）。
+-   这是一个单位在其任何 `护甲类型` 上拥有的护甲值。如果您不知道 `护甲类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation "跳转至：游戏机制 > 伤害计算")部分。请注意，通过此选项更改护甲将显示其已添加到基础护甲值中（例如：4+4）。
 
 ## 9. 攻击力 { #9 }
 
@@ -76,7 +76,7 @@ _作者：Alian713, 别云_
 
 -   英文原名: Attack
 
--   这是一个单位在其任何 `攻击类型` 上拥有的攻击力。如果您不知道什么是 `攻击类型`，请参阅本手册的[伤害计算](../damage_calculation "跳转至：游戏机制 > 伤害计算")部分。请注意，通过此选项更改攻击将显示其已添加到基本攻击力中（例如：6+2）。
+-   这是一个单位在其任何 `攻击类型` 上拥有的攻击力。如果您不知道 `攻击类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation "跳转至：游戏机制 > 伤害计算")部分。请注意，通过此选项更改攻击将显示其已添加到基本攻击力中（例如：6+2）。
 
 ## 10. 攻击间隔 { #10 }
 
@@ -114,159 +114,175 @@ _作者：Alian713, 别云_
 
     2. 由于高地存在伤害加减成，从较低高度发射的子弹通常只能造成正常伤害的 75%。在这种情况下删除投石车也会使伤害达到 100%，就好像没有高度差异一样
 
-## 12. Max Range { #12 }
+## 12. 最大射程 { #12 }
 
 -   ID: 12
 
 -   英文原名: Max Range
 
--   This is the maximum range of a unit. Note that to be able to shoot at a target, it must be visible to the unit via its own line of sight or from another unit's line of sight
+-   这是单位的最大射击范围。请注意，为了能够射击目标，该单位必须可以通过自己或其他单位的视野看到该目标。
 
-## 13. Work Rate { #13 }
+## 13. 工作效率 { #13 }
 
 -   ID: 13
 
 -   英文原名: Work Rate
 
--   This is the work rate for any unit that can do work. Villagers, Fishing Ships, Serjeants
+-   这是任何可以工作的单位的工作率，如村民、渔船、萨金特卫兵等
 
-## 14. Carry Capacity { #14 }
+## 14. 携带容量 { #14 }
 
 -   ID: 14
 
 -   英文原名: Carry Capacity
 
--   This is the carry capacity of Villagers
+-   这是村民的携带容量
 
-## 15. Base Armor { #15 }
+## 15. 基础护甲 { #15 }
 
 -   ID: 15
 
 -   英文原名: Base Armor
 
--   This is the quantity of base armour a unit has on any of its `Armour Classes`. If you do not know what an `Armour Class` is, refer to the [Damage Calculation](../damage_calculation "Jump to: Game Mechanics > Damage Calculation") section of this guide. Note that changing the armour through this option will show it as the base armour itself, and it will not be added to the regular amount
+-   这是一个单位在其任何 `护甲类型` 上所拥有的基础护甲值。如果您不知道 `护甲类型` 是什么，请参阅本手册的[伤害计算](../damage_calculation "跳转至：游戏机制 > 伤害计算")部分。请注意，通过此选项更改护甲将显示为基础护甲本身，并且不会添加到常规数量中。
 
-## 16. Projectile Unit { #16 }
+## 16. 抛射单位 { #16 }
 
 -   ID: 16
 
 -   英文原名: Projectile Unit
 
--   This is the ID of the projectile that a unit fires
+-   这是单位发射的抛射物（子弹）的 ID
 
-## 17. Building Icon Override { #17 }
+## 17. 建筑覆盖图标 { #17 }
 
 -   ID: 17
 
 -   英文原名: Building Icon Override
 
--   The functionality of this attribute is unknown as it doesn't always behave certainly. If you know what this attribute does, please let the authors of this guide know!
+-   该属性的功能未知，因为它的行为并不总是确定。如果您知道此属性的作用，请告知本手册的作者！
 
-## 18. Terrain Defense Bonus { #18 }
+## 18. 附加防御地形表 { #18 }
 
 -   ID: 18
 
 -   英文原名: Terrain Defense Bonus
 
--   Unknown... What does this attribute do?
+-   这是一个单位在计算伤害时所使用的地形表 ID
 
-## 19. Projectile Smart Mode { #19 }
+-   地形表是一系列地形的集合，游戏共有 33 个地形表。请参阅 A.G.E. 查看这些表的详细信息。
+
+    每个表中的每个地形都对应一个伤害倍率，单位在每种地形上受到的伤害都会乘以对应的倍率。一般情况下，倍率为 1，但有一些例外。
+
+    例如，表 `陆地 (4)` 中的 "裂开的沙漠" 的伤害倍率是 1.2，这意味着如果一个单位的本属性值为 `4`，而它又正在 "裂开的沙漠" 受到伤害，则它所受到的最终伤害会是正常情况下的 120%
+
+    又如，表 `陆地 - 农场 (8)` 中的 "道路" 的伤害倍率是 0.01，这意味着所有在 "道路" 的本属性值为 `8` 的单位，所受到的最终伤害会是正常情况下的 1%
+
+## 19. 抛射物智能模式 { #19 }
 
 -   ID: 19
 
 -   英文原名: Projectile Smart Mode
 
--   This is a combinable bit field. Controls the following two behaviours for projectiles:
+-   这是一个可组合的位字段。控制抛射物的以下两种行为：
 
--   For example, if we set this property of the projectile used by an archer to `1`, it will have ballistics. (This is exactly what researching ballistics does in the first place). If we set this property to `2`, a missed projectile that hits another unit will deal its full damage instead of the 50% that it would normally do
+-   例如，如果我们将弓箭手使用的抛射物的此属性设置为 `1`，它将具有弹道学（这正是研究弹道学的首要目的）。如果我们将此属性设置为 `2`，则向另一个单位射击的未命中抛射物将造成全部伤害，而不是通常情况下的 50%
 
-    What if we want to enable both properties at once? This is achieved by adding the flag values for both of them together. Setting this property to `3` enables both effects
+    如果我们想同时启用这两个属性怎么办？可以通过将两者的标志值相加（位或）来实现。将此属性设置为 `3` 可启用两种效果
 
-    | 标识                            |  值 |
-    | :------------------------------ | --: |
-    | No Ballistics                   |   0 |
-    | Has Ballistics                  |   1 |
-    | Deals full damage on missed hit |   2 |
+    | 标识 | 值 |
+    | :- | -: |
+    | 无弹道学 | 0 | 
+    | 有弹道学 | 1 | 
+    | 未击中时也造成全部伤害 | 2 | 
 
-## 20. Minimum Range { #20 }
+## 20. 最小射程 { #20 }
 
 -   ID: 20
 
 -   英文原名: Minimum Range
 
--   The minimum distance a unit must be from an attacking unit for the attacking unit to be able to fire its projectile
+-   使攻击单位能够发射其抛射物，单位与攻击单位之间必须保持的最小距离
 
-## 21. Amount of 1st Resource Storage { #21 }
+## 21. 第 1 资源存储量 { #21 }
 
 -   ID: 21
 
 -   英文原名: Amount of 1st Resource Storage
 
--   This is the amount of 1st resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
+-   这是任何单位中包含的第 1 资源的数量。请参阅 A.G.E. 查看每个单位的资源
 
-## 22. Blast Width { #22 }
+## 22. 溅射半径 { #22 }
 
 -   ID: 22
 
 -   英文原名: Blast Width
 
--   All enemy units inside this radius take damage from an attacking unit. This is used by elephants, Druzhina Halberdiers, and Logistica Cataphracts
+-   该半径内的所有敌方单位都会受到攻击单位的伤害。这也是战象、斯拉夫和拜占庭的金冠所使用的
 
-## 23. Search Radius { #23 }
+## 23. 搜索半径 { #23 }
 
 -   ID: 23
 
 -   英文原名: Search Radius
 
--   The maximum distance at which a unit can detect and auto attack enemy units
+-   单位可以探测并自动攻击敌方单位的最大距离
 
-## 24. Bonus Damage Resistance { #24 }
+## 24. 附加伤害抗性 { #24 }
 
 -   ID: 24
 
 -   英文原名: Bonus Damage Resistance
 
--   Used by Sicilians for the 50% bonus damage resistance. Set to 0.5 for all Sicilian land military units except siege
+-   西西里人使用它获得 33% 的附加伤害抗性。西西里的以下类型的单位设置为 0.33：
+    -   `射手 (0)`
+    -   `步兵 (6)`
+    -   `骑兵 (12)`
+    -   `征服者 & 飞镖骑兵 (23)`
+    -   `爆破单位 (35)`
+    -   `骑射手 (36)`
+    -   `火枪单位 (44)`
+    -   `斥候 (47)`
 
-## 25. Icon ID { #25 }
+## 25. 图标 ID { #25 }
 
 -   ID: 25
 
 -   英文原名: Icon ID
 
--   The ID of the icon that you want a unit to show
+-   您希望单位显示的图标的 ID
 
-## 26. Amount of 2nd Resource Storage { #26 }
+## 26. 第 2 资源存储量 { #26 }
 
 -   ID: 26
 
 -   英文原名: Amount of 2nd Resource Storage
 
--   This is the amount of 2nd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
+-   这是任何单位中包含的第二资源的数量。请参阅 A.G.E. 查看每个单位的资源
 
-## 27. Amount of 3rd Resource Storage { #27 }
+## 27. 第 3 资源存储量 { #27 }
 
 -   ID: 27
 
 -   英文原名: Amount of 3rd Resource Storage
 
--   This is the amount of 3rd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit
+-   这是任何单位中包含的第三种资源的数量。请参阅 A.G.E. 查看每个单位的资源
 
-## 28. Fog Visibility { #28 }
+## 28. 战雾可视性 { #28 }
 
 -   ID: 28
 
 -   英文原名: Fog Visibility
 
--   Controls visibility of a unit through the fog of war
+-   控制单位在战争迷雾中的可视性
 
-    | 标识                |  值 |
-    | :------------------ | --: |
-    | Not Visible         |   0 |
-    | Always Visible      |   1 |
-    | Visible If Alive    |   2 |
-    | Inverted Visibility |   3 |
-    | Check Doppelganger  |   4 |
+    | 标识 | 值 |
+    | :- | -: |
+    | 不可视 | 0 | 
+    | 总是可视 | 1 | 
+    | Visible If Alive | 2 | 
+    | 反转可视性 | 3 | 
+    | Check Doppelganger | 4 | 
 
 ## 29. Occlusion Mode { #29 }
 
@@ -274,40 +290,40 @@ _作者：Alian713, 别云_
 
 -   英文原名: Occlusion Mode
 
--   This is a combinable bit field. Controls the outlines of units as seen through other units
+-   这是一个可组合的位字段。控制透过其他单位看到的单位轮廓
 
-    | 标识                                                                               |  值 |
-    | :--------------------------------------------------------------------------------- | --: |
-    | No outline                                                                         |   0 |
-    | Display outline when behind other units that have flag 2                           |   1 |
-    | Other units' outlines are rendered when they are behind this unit                  |   2 |
-    | Display outline on this unit's foundation when behind other units that have flag 2 |   4 |
+    | 标识 | 值 |
+    | :- | -: |
+    | 无轮廓 | 0 | 
+    | 当位于具有标志 2 的其他单位后面时，显示轮廓 | 1 | 
+    | 当其他单位位于该单位后面时，会渲染它们的轮廓 | 2 | 
+    | 当位于具有标志 2 的其他单位后面时，在该单位的基础上显示轮廓 | 4 | 
 
-## 30. Garrison Type { #30 }
+## 30. 驻扎类型 { #30 }
 
 -   ID: 30
 
 -   英文原名: Garrison Type
 
--   This is a combinable bit field. Controls which units are able to garrison in a building. A unit needs to have the garrison in building task to be able to garrison in a building to begin with
+-   这是一个可组合的位字段。控制哪些单位能够驻扎在建筑物中。一个单位需要有驻守建筑任务才能开始驻守建筑物
 
-    | 标识      |  值 |
-    | :-------- | --: |
-    | Villagers |   1 |
-    | Infantry  |   2 |
-    | Cavalry   |   4 |
-    | Monks     |   8 |
-    | Herdables |  16 |
-    | Siege     |  32 |
-    | Ships     |  64 |
+    | 标识 | 值 |
+    | :- | -: |
+    | 村民 | 1 | 
+    | 步兵 | 2 | 
+    | 骑兵 | 4 | 
+    | 僧侣 | 8 | 
+    | 畜牧 | 16 | 
+    | 攻城武器 | 32 | 
+    | 船 | 64 | 
 
-## 32. Unit Size Z { #32 }
+## 32. 单位尺寸 Z { #32 }
 
 -   ID: 32
 
 -   英文原名: Unit Size Z
 
--   This determines the z-size of the unit's collision hitbox (height of the unit)
+-   这决定了单位碰撞盒子的 z 尺寸（单位的高度）
 
 ## 40. Hero Status { #40 }
 
@@ -325,16 +341,16 @@ _作者：Alian713, 别云_
 
     This is a consequence of the fact that every number can be represented as a unique sum of powers of two (binary numbers)
 
-    | 标识                             |  值 |
-    | :------------------------------- | --: |
-    | Full Hero Status                 |   1 |
-    | Cannot be Converted              |   2 |
-    | Self Regeneration (30 HP/min)    |   4 |
-    | Defensive Stance by Default      |   8 |
-    | Protected Formation by Default   |  16 |
-    | Safe Delete Confirmation         |  32 |
-    | Hero Glow                        |  64 |
-    | Invert All Flags (except flag 1) | 128 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Full Hero Status | 1 | 
+    | Cannot be Converted | 2 | 
+    | Self Regeneration (30 HP/min) | 4 | 
+    | Defensive Stance by Default | 8 | 
+    | Protected Formation by Default | 16 | 
+    | Safe Delete Confirmation | 32 | 
+    | Hero Glow | 64 | 
+    | Invert All Flags (except flag 1) | 128 | 
 
 ## 41. Frame Delay { #41 }
 
@@ -366,22 +382,22 @@ _作者：Alian713, 别云_
 
 -   英文原名: Blast Attack Level
 
--   A unit deals blast damage to **_other_** units with **_equal or higher_** [Blast Defense Level](./#45 "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
+-   A unit deals blast damage to ***other*** units with ***equal or higher*** [Blast Defense Level](./#45 "Jump to: Blast Defense Level") that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same
 
 -   One of the flags 0-3 can be combined with one of the flags from 4-64 by adding the two values
 
-    | 标识                                                                                               |  值 |
-    | :------------------------------------------------------------------------------------------------- | --: |
-    | damage resources, nearby allied units and tress                                                    |   0 |
-    | damage trees, nearby allied units                                                                  |   1 |
-    | damage nearby allied units                                                                         |   2 |
-    | damage targeted unit only                                                                          |   3 |
-    | Deal a fixed 5 HP of damage to nearby units                                                        |   4 |
-    | Deal 50% of unit's own damage to nearby units                                                      |   8 |
-    | Deal 25% of unit's own damage to nearby units                                                      |  16 |
-    | Deal 33% of unit's own damage to nearby units                                                      |  32 |
-    | Attenuate damage as distance from the centre of attack increases (infantry only)                   |  64 |
-    | Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone | 128 |
+    | 标识 | 值 |
+    | :- | -: |
+    | damage resources, nearby allied units and tress | 0 | 
+    | damage trees, nearby allied units | 1 | 
+    | damage nearby allied units | 2 | 
+    | damage targeted unit only | 3 | 
+    | Deal a fixed 5 HP of damage to nearby units | 4 | 
+    | Deal 50% of unit's own damage to nearby units | 8 | 
+    | Deal 25% of unit's own damage to nearby units | 16 | 
+    | Deal 33% of unit's own damage to nearby units | 32 | 
+    | Attenuate damage as distance from the centre of attack increases (infantry only) | 64 | 
+    | Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone | 128 | 
 
 ## 45. Blast Defense Level { #45 }
 
@@ -389,14 +405,14 @@ _作者：Alian713, 别云_
 
 -   英文原名: Blast Defense Level
 
--   A unit feels the blast damage from **_other_** units with **_equal or lower_** [Blast Attack Level](./#44 "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
+-   A unit feels the blast damage from ***other*** units with ***equal or lower*** [Blast Attack Level](./#44 "Jump to: Blast Attack Level") and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same
 
-    | 标识                                            |  值 |
-    | :---------------------------------------------- | --: |
-    | damage resources, nearby allied units and tress |   0 |
-    | damage trees, nearby allied units               |   1 |
-    | damage nearby allied units                      |   2 |
-    | damage targeted unit only                       |   3 |
+    | 标识 | 值 |
+    | :- | -: |
+    | damage resources, nearby allied units and tress | 0 | 
+    | damage trees, nearby allied units | 1 | 
+    | damage nearby allied units | 2 | 
+    | damage targeted unit only | 3 | 
 
 ## 46. Shown Attack { #46 }
 
@@ -454,39 +470,39 @@ _作者：Alian713, 别云_
 
 -   This number determines how a unit interacts with terrains and which terrains it can walk on
 
-    | 标识                              |  值 |
-    | :-------------------------------- | --: |
-    | All                               |   0 |
-    | Land And Shallows                 |   1 |
-    | Beach                             |   2 |
-    | Water Small Trail                 |   3 |
-    | Land                              |   4 |
-    | Nothing                           |   5 |
-    | Water No Trail                    |   6 |
-    | All Except Water                  |   7 |
-    | Land Except Farm                  |   8 |
-    | Nothing 2                         |   9 |
-    | Land And Beach                    |  10 |
-    | Land Except Farm 2                |  11 |
-    | All Except Water Bridge Cannon    |  12 |
-    | Water Medium Trail                |  13 |
-    | All Except Water Bridge Arrow     |  14 |
-    | Water Large Trail                 |  15 |
-    | Grass And Beach                   |  16 |
-    | Water And Bridge Except Beach     |  17 |
-    | All Except Water Bridge Spear     |  18 |
-    | Only Water And Ice                |  19 |
-    | All Except Water Wheel            |  20 |
-    | Shallow Water                     |  21 |
-    | All Dart                          |  22 |
-    | All Arrow Fire                    |  23 |
-    | All Cannon Fire                   |  24 |
-    | All Spear Fire                    |  25 |
-    | All Dart Fire                     |  26 |
-    | All Laser                         |  27 |
-    | All Except Water Cavalry          |  28 |
-    | All Except Water Packet Trebuchet |  29 |
-    | Water Smallest Trail              |  30 |
+    | 标识 | 值 |
+    | :- | -: |
+    | All | 0 | 
+    | Land And Shallows | 1 | 
+    | Beach | 2 | 
+    | Water Small Trail | 3 | 
+    | Land | 4 | 
+    | Nothing | 5 | 
+    | Water No Trail | 6 | 
+    | All Except Water | 7 | 
+    | Land Except Farm | 8 | 
+    | Nothing 2 | 9 | 
+    | Land And Beach | 10 | 
+    | Land Except Farm 2 | 11 | 
+    | All Except Water Bridge Cannon | 12 | 
+    | Water Medium Trail | 13 | 
+    | All Except Water Bridge Arrow | 14 | 
+    | Water Large Trail | 15 | 
+    | Grass And Beach | 16 | 
+    | Water And Bridge Except Beach | 17 | 
+    | All Except Water Bridge Spear | 18 | 
+    | Only Water And Ice | 19 | 
+    | All Except Water Wheel | 20 | 
+    | Shallow Water | 21 | 
+    | All Dart | 22 | 
+    | All Arrow Fire | 23 | 
+    | All Cannon Fire | 24 | 
+    | All Spear Fire | 25 | 
+    | All Dart Fire | 26 | 
+    | All Laser | 27 | 
+    | All Except Water Cavalry | 28 | 
+    | All Except Water Packet Trebuchet | 29 | 
+    | Water Smallest Trail | 30 | 
 
 ## 54. Unit Trait { #54 }
 
@@ -500,13 +516,13 @@ _作者：Alian713, 别云_
 
     [Trait Piece](./#56)
 
-    | 标识                                |  值 |
-    | :---------------------------------- | --: |
-    | Garrison Unit                       |   1 |
-    | Ship Unit                           |   2 |
-    | Build Another Building (Serjeants)  |   4 |
-    | Transform Into Another Unit (Ratha) |   8 |
-    | Auto Scout Unit                     |  16 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Garrison Unit | 1 | 
+    | Ship Unit | 2 | 
+    | Build Another Building (Serjeants) | 4 | 
+    | Transform Into Another Unit (Ratha) | 8 | 
+    | Auto Scout Unit | 16 | 
 
 ## 56. Trait Piece { #56 }
 
@@ -520,13 +536,13 @@ _作者：Alian713, 别云_
 
     [Unit Trait](./#54)
 
-    | 标识           |  值 |
-    | :------------- | --: |
-    | Unused         |   1 |
-    | Unused         |   2 |
-    | Build Unit     |   4 |
-    | Transform Unit |   8 |
-    | Unused         |  16 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Unused | 1 | 
+    | Unused | 2 | 
+    | Build Unit | 4 | 
+    | Transform Unit | 8 | 
+    | Unused | 16 | 
 
 ## 57. Dead Unit ID { #57 }
 
@@ -568,9 +584,9 @@ _作者：Alian713, 别云_
 
 -   This action depletes the unit's charge
 
-    | 标识                                                                   |  值 |
-    | :--------------------------------------------------------------------- | --: |
-    | If charge type is set to `1`, `2` or `3`, depletes charge on attacking |   1 |
+    | 标识 | 值 |
+    | :- | -: |
+    | If charge type is set to `1`, `2` or `3`, depletes charge on attacking | 1 | 
 
 ## 62. Charge Type { #62 }
 
@@ -580,12 +596,12 @@ _作者：Alian713, 别云_
 
 -   The type of charge that a unit holds
 
-    | 标识               |  值 |
-    | :----------------- | --: |
-    | Attack charge      |   1 |
-    | ??? charge         |   2 |
-    | Area attack charge |   3 |
-    | Agility charge     |   4 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Attack charge | 1 | 
+    | ??? charge | 2 | 
+    | Area attack charge | 3 | 
+    | Agility charge | 4 | 
 
 ## 63. Combat Ability { #63 }
 
@@ -595,13 +611,13 @@ _作者：Alian713, 别云_
 
 -   Combinable bit field. Controls several attacking behaviours for units
 
-    | 标识                                                 |  值 |
-    | :--------------------------------------------------- | --: |
-    | Ignore melee and pierce armours of the targeted unit |   1 |
-    | Resist armour-ignoring attacks                       |   2 |
-    | Damage the targeted unit's armor (Obuch)             |   4 |
-    | Attack ground ability                                |   8 |
-    | Bulk volley release (kipchak/siege weapons)          |  16 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Ignore melee and pierce armours of the targeted unit | 1 | 
+    | Resist armour-ignoring attacks | 2 | 
+    | Damage the targeted unit's armor (Obuch) | 4 | 
+    | Attack ground ability | 8 | 
+    | Bulk volley release (kipchak/siege weapons) | 16 | 
 
 ## 64. Attack Dispersion { #64 }
 
@@ -635,11 +651,11 @@ _作者：Alian713, 别云_
 
 -   Controls how a projectile collides with units in the path of its target. Currently changing this through XS has no effect
 
-    | 标识                                                                 |  值 |
-    | :------------------------------------------------------------------- | --: |
-    | Collide only with the targeted unit                                  |   0 |
-    | Collide with any damage-able units in the path to the targetted unit |   1 |
-    | Collide with any unit in the path to the targetted unit              |   2 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Collide only with the targeted unit | 0 | 
+    | Collide with any damage-able units in the path to the targetted unit | 1 | 
+    | Collide with any unit in the path to the targetted unit | 2 | 
 
 ## 68. Projectile Vanish Mode { #68 }
 
@@ -649,10 +665,10 @@ _作者：Alian713, 别云_
 
 -   Controls if a projectile passes through or disappears on impact. Currently changing this through XS has no effect
 
-    | 标识                      |  值 |
-    | :------------------------ | --: |
-    | Disappear on first impact |   0 |
-    | Pass through              |   1 |
+    | 标识 | 值 |
+    | :- | -: |
+    | Disappear on first impact | 0 | 
+    | Pass through | 1 | 
 
 ## 69. Projectile Arc { #69 }
 
@@ -740,7 +756,7 @@ _作者：Alian713, 别云_
 
 -   英文原名: Regeneration Rate
 
--   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 "Jump to: 26. Hero Status") of a unit
+-   The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the [Hero Status](./#40 "Jump to: Hero Status") of a unit
 
 ## 110. Population { #110 }
 

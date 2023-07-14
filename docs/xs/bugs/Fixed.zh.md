@@ -1,0 +1,58 @@
+# 已修复
+
+## 1. `xsEffectAmount` Crashes When Source Player Does Not Exist { #1 }
+
+描述: When an attribute for a player that is not present in the game is modified, a crash occurs
+
+预期行为: Expressions and variables should be able to be used when initialising Vectors.
+
+复现步骤:
+
+1. Create a new scenario or RMS
+2. Create a new XS script with the following code:
+
+    ```cpp
+    void main() {
+      xsEffectAmount(cSetAttribute, 1071, cAmountFirstStorage, current_pop - 250,
+                     8);
+      // if the game is not an 8 player game, this will crash
+    }
+
+    ```
+
+3. Include the script in the scenario or RMS
+4. When a game is played with less than 8 players, a crash will occur
+
+## 2. `xsEffectAmount` Crashes When Negative ID Is Provided For Tech/Object { #2 }
+
+描述: When a negative object/tech ID is provided when using `cSetAttribute` (or similar operations), a crash occurs
+
+预期行为: Expressions and variables should be able to be used when initialising Vectors.
+
+复现步骤:
+
+1. Create a new scenario or RMS
+2. Create a new XS script with the following code:
+
+    ```cpp
+    void main() { xsEffectAmount(cEnableObject, -1, cEnableObject, 0); }
+
+    ```
+
+3. Include the script in the scenario or RMS
+4. When a game is played, a crash will occur
+
+## 3. XS Files Do Not Transfer In A Lobby { #3 }
+
+描述: When playing in a multiplayer lobby, the required XS scripts are not transfered to other players from the host. (Currently, `#includeXS` works for scripts that the host has in their profile folder, but recursive includes and scripts from other sources are still not transferred)
+
+预期行为: The main XS script and all XS scripts imported in the main script using `#!cpp include "fileName.xs";` (and potentially more imported scripts inside those scripts too) should be transfered to everyone.
+
+复现步骤:
+
+1. Create a new scenario or RMS
+2. Create a new XS script that chats something to the screen
+3. Include the script in the scenario or RMS
+4. Host a lobby with at least two human players
+5. Set the map as the above scenario or RMS
+6. When the game is started, the host sees the message chatted but the others get a `failed to open file` error

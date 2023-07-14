@@ -97,9 +97,9 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     The damage classes which are in common are (they are also highlighted in the table above):
 
-    - `Base Melee (4)`
-    - `War Elephants (5)`
-    - `Cavalry (8)`
+    -   `Base Melee (4)`
+    -   `War Elephants (5)`
+    -   `Cavalry (8)`
 
     For which the War Elephant has armour classes and the Halberdier has attack classes.
 
@@ -331,15 +331,4 @@ A2. One of the unused damage classes can be used for this purpose. Giving the de
 
 ### 3.6. The Sicilian 33% Bonus Damage Reduction
 
-The damage from all classes except the `Base Pierce (3)`, `Base Melee (4)` and `Unused (31)` is multiplied by $(1 - 0.33)$ before it is added to the total damage for Sicilian units. This property of bonus damage resistance is controlled by the [Bonus Damage Resist](../attributes/attributes/#24-bonus-damage-resistance "Jump to: Game Mechanics > Attributes > Bonus Damage Resist") attribute of a unit. (Yes, every single unit can have a different value for this)
-
-Actually, not all Sicilian units enjoy this reduction, but only units of the types listed in the list below.
-
-- `Archer (0)`
-- `Infantry (6)`
-- `Cavalry (12)`
-- `Conquistador & Arambai (23)`
-- `Petard (35)`
-- `Cavalry Archer (36)`
-- `Hand Cannoneer (44)`
-- `Scout (47)`
+The damage from all classes except the `Base Pierce (3)`, `Base Melee (4)` and `Unused (31)` is multiplied by $(1 - 0.33)$ before it is added to the total damage for Sicilian units. This property of bonus damage resistance is controlled by the [Bonus Damage Resist](../attributes/#24 "Jump to: Game Mechanics > Attributes > Bonus Damage Resist") attribute of a unit. (Yes, every single unit can have a different value for this)
