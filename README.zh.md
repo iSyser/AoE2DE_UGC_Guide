@@ -54,10 +54,10 @@ pip install -r requirements.txt
 
 本手册由以下作者共同撰写
 
-|      **Author**      |  **Discord**  |                         **GitHub**                         | **YouTube** |                            **Twitch**                            |
+|       **作者**       |  **Discord**  |                         **GitHub**                         | **YouTube** |                            **Twitch**                            |
 | :------------------: | :-----------: | :--------------------------------------------------------: | :---------: | :--------------------------------------------------------------: |
-|       Alian713       | Alian713#0069 |    [here](https://github.com/Divy1211 "Alian's GitHub")    |      -      |     [here](https://www.twitch.tv/Alian713 "Alian's Twitch")      |
-| KSneijders (MrKirby) | MrKirby#5063  |  [here](https://github.com/KSneijders "MrKirby's GitHub")  |      -      | [here](https://www.twitch.tv/MrKirbyOfficial "MrKirby's Twitch") |
-|        hszemi        |  hszemi#2325  |    [here](https://github.com/HSZemi "HSZemi's GitHub")     |      -      |      [here](https://www.twitch.tv/hszemi "HSZemi's Twitch")      |
-|       Bradical       | Bradical#2561 | [here](https://github.com/bradsmithee "Bradical's GitHub") |      -      |                                -                                 |
-|     别云(Syser)      |  Syser#6830   |     [here](https://github.com/iSyser "Syser's GitHub")     |      -      |                                -                                 |
+|       Alian713       | Alian713#0069 |    [此处](https://github.com/Divy1211 "Alian's GitHub")    |      -      |     [此处](https://www.twitch.tv/Alian713 "Alian's Twitch")      |
+| KSneijders (MrKirby) | MrKirby#5063  |  [此处](https://github.com/KSneijders "MrKirby's GitHub")  |      -      | [此处](https://www.twitch.tv/MrKirbyOfficial "MrKirby's Twitch") |
+|        hszemi        |  hszemi#2325  |    [此处](https://github.com/HSZemi "HSZemi's GitHub")     |      -      |      [此处](https://www.twitch.tv/hszemi "HSZemi's Twitch")      |
+|       Bradical       | Bradical#2561 | [此处](https://github.com/bradsmithee "Bradical's GitHub") |      -      |                                -                                 |
+|     别云(Syser)      |  Syser#6830   |     [此处](https://github.com/iSyser "Syser's GitHub")     |      -      |                                -                                 |

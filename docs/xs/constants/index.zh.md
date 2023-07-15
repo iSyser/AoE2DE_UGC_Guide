@@ -8,363 +8,487 @@ hide:
 
 _作者：Alian713_
 
-## 1. Read/Write { #ReadWrite }
+## 1. 文件读写 { #ReadWrite }
 
-### 1.1. cOffsetString { #cOffsetString }
+### 1.1. c偏移字符串 { #cOffsetString }
 
-值: `#!cpp int 0`
-
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)
-
-### 1.2. cOffsetInterger { #cOffsetInterger }
-
-值: `#!cpp int 1`
-
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)
-
-### 1.3. cOffsetFloat { #cOffsetFloat }
-
-值: `#!cpp int 2`
-
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)
-
-### 1.4. cOffsetVector { #cOffsetVector }
-
-值: `#!cpp int 3`
-
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)
-
-## 2. Age { #Age }
-
-### 2.1. cDarkAge { #cDarkAge }
+英文原名: cOffsetString
 
 值: `#!cpp int 0`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Dark Age
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储字符串所需的字节数（4 个字节 + 由前 4 个字节表示的整数确定的字节数）
 
-### 2.2. cFeudalAge { #cFeudalAge }
+### 1.2. c偏移整数 { #cOffsetInterger }
+
+英文原名: cOffsetInterger
 
 值: `#!cpp int 1`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Feudal Age
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储整数所需的字节数（4 个字节）
 
-### 2.3. cCastleAge { #cCastleAge }
+### 1.3. c偏移浮点数 { #cOffsetFloat }
+
+英文原名: cOffsetFloat
 
 值: `#!cpp int 2`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Castle Age
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储浮点数所需的字节数（4 个字节）
 
-### 2.4. cImperialAge { #cImperialAge }
+### 1.4. c偏移向量 { #cOffsetVector }
+
+英文原名: cOffsetVector
 
 值: `#!cpp int 3`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Imperial Age
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储向量所需的字节数（12 字节）
 
-## 3. Value { #Value }
+## 2. 时代 { #Age }
 
-### 3.1. cActivationTime { #cActivationTime }
+### 2.1. c黑暗时代 { #cDarkAge }
+
+英文原名: cDarkAge
+
+值: `#!cpp int 0`
+
+玩家资源 [当前时代](../../general/resources/#6 "跳转至：游戏机制 > 玩家资源 > 当前时代") 的值，表明处于黑暗时代
+
+### 2.2. c封建时代 { #cFeudalAge }
+
+英文原名: cFeudalAge
+
+值: `#!cpp int 1`
+
+玩家资源 [当前时代](../../general/resources/#6 "跳转至：游戏机制 > 玩家资源 > 当前时代") 的值，表明处于封建时代
+
+### 2.3. c城堡时代 { #cCastleAge }
+
+英文原名: cCastleAge
+
+值: `#!cpp int 2`
+
+玩家资源 [当前时代](../../general/resources/#6 "跳转至：游戏机制 > 玩家资源 > 当前时代") 的值，表明处于城堡时代
+
+### 2.4. c帝王时代 { #cImperialAge }
+
+英文原名: cImperialAge
+
+值: `#!cpp int 3`
+
+玩家资源 [当前时代](../../general/resources/#6 "跳转至：游戏机制 > 玩家资源 > 当前时代") 的值，表明处于帝王时代
+
+## 3. 值 { #Value }
+
+### 3.1. c激活时间 { #cActivationTime }
+
+英文原名: cActivationTime
 
 值: `#!cpp int None`
 
-This value is only defined inside the body of a rule. It holds the time of initial activation of that rule
+该值仅在规则体内定义。它存储了该规则的初始激活时间
 
-### 3.2. cOriginVector { #cOriginVector }
+### 3.2. c原点向量 { #cOriginVector }
+
+英文原名: cOriginVector
 
 值: `#!cpp vector (0, 0, 0)`
 
-The Origin Vector
+原点向量
 
-### 3.3. cInvalidVector { #cInvalidVector }
+### 3.3. c无效向量 { #cInvalidVector }
+
+英文原名: cInvalidVector
 
 值: `#!cpp vector (-1, -1, -1)`
 
-The Invalid Vector
+无效向量
 
-## 4. Victory Conditions { #VictoryConditions }
+## 4. 胜利条件 { #VictoryConditions }
 
-### 4.1. cStandardVictory { #cStandardVictory }
+### 4.1. c标准胜利 { #cStandardVictory }
+
+英文原名: cStandardVictory
 
 值: `#!cpp int 100`
 
-one of the values returned by the `xsGetVictoryCondition` function
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
 
-### 4.2. cWonderVictory { #cWonderVictory }
+### 4.2. c奇观胜利 { #cWonderVictory }
+
+英文原名: cWonderVictory
 
 值: `#!cpp int 101`
 
-one of the values returned by the `xsGetVictoryCondition` function
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
 
-### 4.3. cRelicVictory { #cRelicVictory }
+### 4.3. c圣物胜利 { #cRelicVictory }
+
+英文原名: cRelicVictory
 
 值: `#!cpp int 102`
 
-one of the values returned by the `xsGetVictoryCondition` function
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
 
-### 4.4. cKingOfTheHillVictory { #cKingOfTheHillVictory }
+### 4.4. c占山为王胜利 { #cKingOfTheHillVictory }
+
+英文原名: cKingOfTheHillVictory
 
 值: `#!cpp int 103`
 
-one of the values returned by the `xsGetVictoryCondition` function
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
 
-## 5. Civs { #Civs }
+## 5. 文明 { #Civs }
 
-### 5.1. cGaia { #cGaia }
+### 5.1. c大地之母 { #cGaia }
+
+英文原名: cGaia
 
 值: `#!cpp int 0`
 
-This is the civilization ID of Gaia
+这是 大地之母 的文明 ID
 
-### 5.2. cBritons { #cBritons }
+### 5.2. c不列颠 { #cBritons }
+
+英文原名: cBritons
 
 值: `#!cpp int 1`
 
-This is the civilization ID of Britons
+这是 不列颠 的文明 ID
 
-### 5.3. cFranks { #cFranks }
+### 5.3. c法兰克 { #cFranks }
+
+英文原名: cFranks
 
 值: `#!cpp int 2`
 
-This is the civilization ID of Franks
+这是 法兰克 的文明 ID
 
-### 5.4. cGoths { #cGoths }
+### 5.4. c哥特 { #cGoths }
+
+英文原名: cGoths
 
 值: `#!cpp int 3`
 
-This is the civilization ID of Goths
+这是 哥特 的文明 ID
 
-### 5.5. cTeutons { #cTeutons }
+### 5.5. c条顿 { #cTeutons }
+
+英文原名: cTeutons
 
 值: `#!cpp int 4`
 
-This is the civilization ID of Teutons
+这是 条顿 的文明 ID
 
-### 5.6. cJapanese { #cJapanese }
+### 5.6. c日本 { #cJapanese }
+
+英文原名: cJapanese
 
 值: `#!cpp int 5`
 
-This is the civilization ID of Japanese
+这是 日本 的文明 ID
 
-### 5.7. cChinese { #cChinese }
+### 5.7. 中国 { #cChinese }
+
+英文原名: cChinese
 
 值: `#!cpp int 6`
 
-This is the civilization ID of Chinese
+这是 国 的文明 ID
 
-### 5.8. cByzantines { #cByzantines }
+### 5.8. c拜占庭 { #cByzantines }
+
+英文原名: cByzantines
 
 值: `#!cpp int 7`
 
-This is the civilization ID of Byzantines
+这是 拜占庭 的文明 ID
 
-### 5.9. cPersians { #cPersians }
+### 5.9. c波斯 { #cPersians }
+
+英文原名: cPersians
 
 值: `#!cpp int 8`
 
-This is the civilization ID of Persians
+这是 波斯 的文明 ID
 
-### 5.10. cSaracens { #cSaracens }
+### 5.10. c萨拉森 { #cSaracens }
+
+英文原名: cSaracens
 
 值: `#!cpp int 9`
 
-This is the civilization ID of Saracens
+这是 萨拉森 的文明 ID
 
-### 5.11. cTurks { #cTurks }
+### 5.11. c土耳其 { #cTurks }
+
+英文原名: cTurks
 
 值: `#!cpp int 10`
 
-This is the civilization ID of Turks
+这是 土耳其 的文明 ID
 
-### 5.12. cVikings { #cVikings }
+### 5.12. c维京 { #cVikings }
+
+英文原名: cVikings
 
 值: `#!cpp int 11`
 
-This is the civilization ID of Vikings
+这是 维京 的文明 ID
 
-### 5.13. cMongols { #cMongols }
+### 5.13. c蒙古 { #cMongols }
+
+英文原名: cMongols
 
 值: `#!cpp int 12`
 
-This is the civilization ID of Mongols
+这是 蒙古 的文明 ID
 
-### 5.14. cCelts { #cCelts }
+### 5.14. c凯尔特 { #cCelts }
+
+英文原名: cCelts
 
 值: `#!cpp int 13`
 
-This is the civilization ID of Celts
+这是 凯尔特 的文明 ID
 
-### 5.15. cSpanish { #cSpanish }
+### 5.15. c西班牙 { #cSpanish }
+
+英文原名: cSpanish
 
 值: `#!cpp int 14`
 
-This is the civilization ID of Spanish
+这是 西班牙 的文明 ID
 
-### 5.16. cAztecs { #cAztecs }
+### 5.16. c阿兹特克 { #cAztecs }
+
+英文原名: cAztecs
 
 值: `#!cpp int 15`
 
-This is the civilization ID of Aztecs
+这是 阿兹特克 的文明 ID
 
-### 5.17. cMayans { #cMayans }
+### 5.17. c玛雅 { #cMayans }
+
+英文原名: cMayans
 
 值: `#!cpp int 16`
 
-This is the civilization ID of Mayans
+这是 玛雅 的文明 ID
 
-### 5.18. cHuns { #cHuns }
+### 5.18. c匈奴 { #cHuns }
+
+英文原名: cHuns
 
 值: `#!cpp int 17`
 
-This is the civilization ID of Huns
+这是 匈奴 的文明 ID
 
-### 5.19. cKoreans { #cKoreans }
+### 5.19. c高丽 { #cKoreans }
+
+英文原名: cKoreans
 
 值: `#!cpp int 18`
 
-This is the civilization ID of Koreans
+这是 高丽 的文明 ID
 
-### 5.20. cItalians { #cItalians }
+### 5.20. c意大利 { #cItalians }
+
+英文原名: cItalians
 
 值: `#!cpp int 19`
 
-This is the civilization ID of Italians
+这是 意大利 的文明 ID
 
-### 5.21. cIndians { #cIndians }
+### 5.21. c印度斯坦人 { #cIndians }
+
+英文原名: cIndians
 
 值: `#!cpp int 20`
 
-This is the civilization ID of Indians
+这是 印度斯坦人 的文明 ID
 
-### 5.22. cIncas { #cIncas }
+### 5.22. c印加 { #cIncas }
+
+英文原名: cIncas
 
 值: `#!cpp int 21`
 
-This is the civilization ID of Incas
+这是 印加 的文明 ID
 
-### 5.23. cMagyars { #cMagyars }
+### 5.23. c马扎尔 { #cMagyars }
+
+英文原名: cMagyars
 
 值: `#!cpp int 22`
 
-This is the civilization ID of Magyars
+这是 马扎尔 的文明 ID
 
-### 5.24. cSlavs { #cSlavs }
+### 5.24. c斯拉夫 { #cSlavs }
+
+英文原名: cSlavs
 
 值: `#!cpp int 23`
 
-This is the civilization ID of Slavs
+这是 斯拉夫 的文明 ID
 
-### 5.25. cPortuguese { #cPortuguese }
+### 5.25. c葡萄牙 { #cPortuguese }
+
+英文原名: cPortuguese
 
 值: `#!cpp int 24`
 
-This is the civilization ID of Portuguese
+这是 葡萄牙 的文明 ID
 
-### 5.26. cEthiopians { #cEthiopians }
+### 5.26. c埃塞俄比亚 { #cEthiopians }
+
+英文原名: cEthiopians
 
 值: `#!cpp int 25`
 
-This is the civilization ID of Ethiopians
+这是 埃塞俄比亚 的文明 ID
 
-### 5.27. cMalians { #cMalians }
+### 5.27. c马里 { #cMalians }
+
+英文原名: cMalians
 
 值: `#!cpp int 26`
 
-This is the civilization ID of Malians
+这是 马里 的文明 ID
 
-### 5.28. cBerbers { #cBerbers }
+### 5.28. c柏柏尔 { #cBerbers }
+
+英文原名: cBerbers
 
 值: `#!cpp int 27`
 
-This is the civilization ID of Berbers
+这是 柏柏尔 的文明 ID
 
-### 5.29. cKhmer { #cKhmer }
+### 5.29. c高棉 { #cKhmer }
+
+英文原名: cKhmer
 
 值: `#!cpp int 28`
 
-This is the civilization ID of Khmer
+这是 高棉 的文明 ID
 
-### 5.30. cMalay { #cMalay }
+### 5.30. c马来 { #cMalay }
+
+英文原名: cMalay
 
 值: `#!cpp int 29`
 
-This is the civilization ID of Malay
+这是 马来 的文明 ID
 
-### 5.31. cBurmese { #cBurmese }
+### 5.31. c缅甸 { #cBurmese }
+
+英文原名: cBurmese
 
 值: `#!cpp int 30`
 
-This is the civilization ID of Burmese
+这是 缅甸 的文明 ID
 
-### 5.32. cVietnamese { #cVietnamese }
+### 5.32. c越南 { #cVietnamese }
+
+英文原名: cVietnamese
 
 值: `#!cpp int 31`
 
-This is the civilization ID of Vietnamese
+这是 越南 的文明 ID
 
-### 5.33. cBulgarians { #cBulgarians }
+### 5.33. c保加利亚 { #cBulgarians }
+
+英文原名: cBulgarians
 
 值: `#!cpp int 32`
 
-This is the civilization ID of Bulgarians
+这是 保加利亚 的文明 ID
 
-### 5.34. cTatars { #cTatars }
+### 5.34. c鞑靼 { #cTatars }
+
+英文原名: cTatars
 
 值: `#!cpp int 33`
 
-This is the civilization ID of Tatars
+这是 鞑靼 的文明 ID
 
-### 5.35. cCumans { #cCumans }
+### 5.35. c库曼 { #cCumans }
+
+英文原名: cCumans
 
 值: `#!cpp int 34`
 
-This is the civilization ID of Cumans
+这是 库曼 的文明 ID
 
-### 5.36. cLithuanians { #cLithuanians }
+### 5.36. c立陶宛 { #cLithuanians }
+
+英文原名: cLithuanians
 
 值: `#!cpp int 35`
 
-This is the civilization ID of Lithuanians
+这是 立陶宛 的文明 ID
 
-### 5.37. cBurgundians { #cBurgundians }
+### 5.37. c勃艮第 { #cBurgundians }
+
+英文原名: cBurgundians
 
 值: `#!cpp int 36`
 
-This is the civilization ID of Burgundians
+这是 勃艮第 的文明 ID
 
-### 5.38. cSicilians { #cSicilians }
+### 5.38. c西西里 { #cSicilians }
+
+英文原名: cSicilians
 
 值: `#!cpp int 37`
 
-This is the civilization ID of Sicilians
+这是 西西里 的文明 ID
 
-### 5.39. cPoles { #cPoles }
+### 5.39. c波兰人 { #cPoles }
+
+英文原名: cPoles
 
 值: `#!cpp int 38`
 
-This is the civilization ID of Poles
+这是 波兰人 的文明 ID
 
-### 5.40. cBohemians { #cBohemians }
+### 5.40. c波希米亚人 { #cBohemians }
+
+英文原名: cBohemians
 
 值: `#!cpp int 39`
 
-This is the civilization ID of Bohemians
+这是 波希米亚人 的文明 ID
 
-### 5.41. cDravidians { #cDravidians }
+### 5.41. c达罗毗荼人 { #cDravidians }
+
+英文原名: cDravidians
 
 值: `#!cpp int 40`
 
-This is the civilization ID of Dravidians
+这是 达罗毗荼人 的文明 ID
 
-### 5.42. cBengalis { #cBengalis }
+### 5.42. c孟加拉人 { #cBengalis }
+
+英文原名: cBengalis
 
 值: `#!cpp int 41`
 
-This is the civilization ID of Bengalis
+这是 孟加拉人 的文明 ID
 
-### 5.43. cGurjaras { #cGurjaras }
+### 5.43. c瞿折罗人 { #cGurjaras }
+
+英文原名: cGurjaras
 
 值: `#!cpp int 42`
 
-This is the civilization ID of Gurjaras
+这是 瞿折罗人 的文明 ID
+
+### 5.44. c罗马人 { #cRomans }
+
+英文原名: cRomans
+
+值: `#!cpp int 43`
+
+这是 罗马人 的文明 ID
 
 ## 6. EffectAmount 效果类型 { #EffectAmountEffectType }
 
@@ -1642,7 +1766,7 @@ This is the ID used to target the Misc Building Class
 
 This is the ID used to target the Controlled Animal Class
 
-## 11. Resource { #Resource }
+## 11. 资源 { #Resource }
 
 ### 11.1. cAttributeFood { #cAttributeFood }
 

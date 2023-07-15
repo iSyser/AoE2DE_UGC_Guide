@@ -6,28 +6,28 @@
         "name": "cOffsetString",
         "value": 0,
         "type": "int",
-        "desc": "Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\"). Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)",
+        "desc": "Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\") function. Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)",
         "usage": null
       },
       {
         "name": "cOffsetInterger",
         "value": 1,
         "type": "int",
-        "desc": "Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\"). Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)",
+        "desc": "Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\") function. Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)",
         "usage": null
       },
       {
         "name": "cOffsetFloat",
         "value": 2,
         "type": "int",
-        "desc": "Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\"). Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)",
+        "desc": "Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\") function. Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)",
         "usage": null
       },
       {
         "name": "cOffsetVector",
         "value": 3,
         "type": "int",
-        "desc": "Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\"). Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)",
+        "desc": "Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition \"Jump To: XS Scripting > Function Reference > xsOffsetFilePosition\") function. Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)",
         "usage": null
       }
     ]
@@ -39,28 +39,28 @@
         "name": "cDarkAge",
         "value": 0,
         "type": "int",
-        "desc": "Value of the [Current Age](/general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Dark Age",
+        "desc": "Value of the [Current Age](../../general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Dark Age",
         "usage": null
       },
       {
         "name": "cFeudalAge",
         "value": 1,
         "type": "int",
-        "desc": "Value of the [Current Age](/general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Feudal Age",
+        "desc": "Value of the [Current Age](../../general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Feudal Age",
         "usage": null
       },
       {
         "name": "cCastleAge",
         "value": 2,
         "type": "int",
-        "desc": "Value of the [Current Age](/general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Castle Age",
+        "desc": "Value of the [Current Age](../../general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Castle Age",
         "usage": null
       },
       {
         "name": "cImperialAge",
         "value": 3,
         "type": "int",
-        "desc": "Value of the [Current Age](/general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Imperial Age",
+        "desc": "Value of the [Current Age](../../general/resources/#6 \"Jump to: Game Mechanics > Player Resources > Current Age\") resource when a player is in the Imperial Age",
         "usage": null
       }
     ]
@@ -98,28 +98,28 @@
         "name": "cStandardVictory",
         "value": 100,
         "type": "int",
-        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "desc": "one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition \"Jump To: XS Scripting > Function Reference > xsGetVictoryCondition\") function",
         "usage": null
       },
       {
         "name": "cWonderVictory",
         "value": 101,
         "type": "int",
-        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "desc": "one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition \"Jump To: XS Scripting > Function Reference > xsGetVictoryCondition\") function",
         "usage": null
       },
       {
         "name": "cRelicVictory",
         "value": 102,
         "type": "int",
-        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "desc": "one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition \"Jump To: XS Scripting > Function Reference > xsGetVictoryCondition\") function",
         "usage": null
       },
       {
         "name": "cKingOfTheHillVictory",
         "value": 103,
         "type": "int",
-        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "desc": "one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition \"Jump To: XS Scripting > Function Reference > xsGetVictoryCondition\") function",
         "usage": null
       }
     ]
@@ -424,6 +424,13 @@
       {
         "name": "cGurjaras",
         "value": 42,
+        "type": "int",
+        "desc": "This is the civilization ID of GET_NAME",
+        "usage": null
+      },
+      {
+        "name": "cRomans",
+        "value": 43,
         "type": "int",
         "desc": "This is the civilization ID of GET_NAME",
         "usage": null

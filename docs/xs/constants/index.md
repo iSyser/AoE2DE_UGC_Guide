@@ -14,25 +14,25 @@ _Written by: Alian713_
 
 Value: `#!cpp int 0`
 
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)
+Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition") function. Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)
 
 ### 1.2. cOffsetInterger { #cOffsetInterger }
 
 Value: `#!cpp int 1`
 
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)
+Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition") function. Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)
 
 ### 1.3. cOffsetFloat { #cOffsetFloat }
 
 Value: `#!cpp int 2`
 
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)
+Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition") function. Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)
 
 ### 1.4. cOffsetVector { #cOffsetVector }
 
 Value: `#!cpp int 3`
 
-Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition"). Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)
+Used with the [`xsOffsetFilePosition()`](../functions/#xsOffsetFilePosition "Jump To: XS Scripting > Function Reference > xsOffsetFilePosition") function. Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)
 
 ## 2. Age { #Age }
 
@@ -40,25 +40,25 @@ Used with the [xsOffsetFilePosition](../functions/#xsOffsetFilePosition "Jump To
 
 Value: `#!cpp int 0`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Dark Age
+Value of the [Current Age](../../general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Dark Age
 
 ### 2.2. cFeudalAge { #cFeudalAge }
 
 Value: `#!cpp int 1`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Feudal Age
+Value of the [Current Age](../../general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Feudal Age
 
 ### 2.3. cCastleAge { #cCastleAge }
 
 Value: `#!cpp int 2`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Castle Age
+Value of the [Current Age](../../general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Castle Age
 
 ### 2.4. cImperialAge { #cImperialAge }
 
 Value: `#!cpp int 3`
 
-Value of the [Current Age](/general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Imperial Age
+Value of the [Current Age](../../general/resources/#6 "Jump to: Game Mechanics > Player Resources > Current Age") resource when a player is in the Imperial Age
 
 ## 3. Value { #Value }
 
@@ -86,25 +86,25 @@ The Invalid Vector
 
 Value: `#!cpp int 100`
 
-one of the values returned by the `xsGetVictoryCondition` function
+one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition "Jump To: XS Scripting > Function Reference > xsGetVictoryCondition") function
 
 ### 4.2. cWonderVictory { #cWonderVictory }
 
 Value: `#!cpp int 101`
 
-one of the values returned by the `xsGetVictoryCondition` function
+one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition "Jump To: XS Scripting > Function Reference > xsGetVictoryCondition") function
 
 ### 4.3. cRelicVictory { #cRelicVictory }
 
 Value: `#!cpp int 102`
 
-one of the values returned by the `xsGetVictoryCondition` function
+one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition "Jump To: XS Scripting > Function Reference > xsGetVictoryCondition") function
 
 ### 4.4. cKingOfTheHillVictory { #cKingOfTheHillVictory }
 
 Value: `#!cpp int 103`
 
-one of the values returned by the `xsGetVictoryCondition` function
+one of the values returned by the [`xsGetVictoryCondition()`](../functions/#xsGetVictoryCondition "Jump To: XS Scripting > Function Reference > xsGetVictoryCondition") function
 
 ## 5. Civs { #Civs }
 
@@ -365,6 +365,12 @@ This is the civilization ID of Bengalis
 Value: `#!cpp int 42`
 
 This is the civilization ID of Gurjaras
+
+### 5.44. cRomans { #cRomans }
+
+Value: `#!cpp int 43`
+
+This is the civilization ID of Romans
 
 ## 6. EffectAmount Effect Type { #EffectAmountEffectType }
 
