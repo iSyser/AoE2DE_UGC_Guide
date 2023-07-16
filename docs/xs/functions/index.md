@@ -941,7 +941,24 @@ Returns an integer corresponding to different victory settings ingame. These are
 
 Last Man Standing returns 0 as well.
 
-### 5.25. xsPlayerAttribute { #xsPlayerAttribute }
+### 5.25. xsObjectHasAction { #xsObjectHasAction }
+
+Returning Type: `#!cpp bool`
+
+Prototype: `#!cpp bool xsObjectHasAction(int playerID, int unitType, int actionID, int targetPlayerID, int targetType, int targetUnitLevel);`
+
+Parameters:
+
+1.  `#!cpp int playerID`: Unknown
+2.  `#!cpp int unitType`: Unknown
+3.  `#!cpp int actionID`: Unknown
+4.  `#!cpp int targetPlayerID`: Unknown
+5.  `#!cpp int targetType`: Unknown
+6.  `#!cpp int targetUnitLevel`: Unknown
+
+Unknown
+
+### 5.26. xsPlayerAttribute { #xsPlayerAttribute }
 
 Returning Type: `#!cpp float`
 
@@ -954,7 +971,7 @@ Parameters:
 
 Returns the amount the specified resource of the given player.
 
-### 5.26. xsResearchTechnology { #xsResearchTechnology }
+### 5.27. xsResearchTechnology { #xsResearchTechnology }
 
 Returning Type: `#!cpp bool`
 
@@ -969,7 +986,7 @@ Parameters:
 
 Returns a boolean based on whether the technology was researched or not.
 
-### 5.27. xsSetPlayerAttribute { #xsSetPlayerAttribute }
+### 5.28. xsSetPlayerAttribute { #xsSetPlayerAttribute }
 
 Returning Type: `#!cpp void`
 
@@ -983,7 +1000,7 @@ Parameters:
 
 Sets the amount of the specified resource of the given player to the provided value.
 
-### 5.28. xsSetTriggerVariable { #xsSetTriggerVariable }
+### 5.29. xsSetTriggerVariable { #xsSetTriggerVariable }
 
 Returning Type: `#!cpp void`
 
@@ -996,7 +1013,7 @@ Parameters:
 
 Sets the value of the variable of the given variable ID to the provided value.
 
-### 5.29. xsTriggerVariable { #xsTriggerVariable }
+### 5.30. xsTriggerVariable { #xsTriggerVariable }
 
 Returning Type: `#!cpp int`
 

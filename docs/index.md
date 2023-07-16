@@ -34,6 +34,7 @@ On Linux:
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
+
 ```
 
 On Windows:
@@ -42,6 +43,7 @@ On Windows:
 > py -m venv venv
 > venv/Scripts/activate
 > pip install -r requirements.txt
+
 ```
 
 Now you can build and view the site by running `mkdocs serve`.

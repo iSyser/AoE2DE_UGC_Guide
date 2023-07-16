@@ -307,6 +307,7 @@ for attack_class, attack in attacker.attack_classes:
 
 # if the total damage is less than 1, round it up to 1
 damage = max(damage, 1)
+
 ```
 
 Every unit in the game always has the `Base Pierce (3)`, `Base Melee (4)` and `Unused (31)` damage classes.

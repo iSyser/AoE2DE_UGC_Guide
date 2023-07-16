@@ -31,7 +31,6 @@ Last Updated: `{info['today'].strftime('%d.%m.%Y')}`
 Game Platform: {info['platform']}
 
 OS: {info['os']}
-
 """, "desc": "Description", "expected": "Expected Behaviour", "steps": "Reproduction Steps"}
 
 md_dict['zh'] = {'head': f"""# 已知的 XS 脚本中的错误和怪异行为
@@ -55,7 +54,6 @@ _作者：Alian713_
 游戏平台：:{info['platform']}
 
 操作系统：{info['os']}
-
 """, "desc": "描述", "expected": "预期行为", "steps": "复现步骤"}
 
 

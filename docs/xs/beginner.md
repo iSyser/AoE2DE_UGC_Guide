@@ -75,6 +75,7 @@ void main() {
   // This shows '30' in chat.
   xsChatData("" + c);
 }
+
 ```
 
 ### 1.1. In a Custom Scenario
@@ -115,6 +116,7 @@ void main() {
   int c = a + b;
   xsChatData("" + c);
 }
+
 ```
 
 Some questions that you might have now are:
@@ -197,6 +199,7 @@ Some questions that you might have now are:
 
       float my_var4 = my_var;
     }
+
     ```
 
     This process of changing the value that a variable stores is called "assignment". So in the above example,
@@ -228,6 +231,7 @@ Some questions that you might have now are:
           // this will show 20 in game chat
           xsChatData("" + d);
         }
+
         ```
 
     5. Lastly, we try to initialise a new variable called `my_var3` but we have not specified a data type! This will also give you an error. Think about it this way, if you want to store water, you need to specify if you want to use a paper bag or a water bottle.
@@ -296,6 +300,7 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
       // this will chat 28980 in game (420 * 69 = 28980)
       xsChatData("result of 420 * 69 = " + (a * b));
     }
+
     ```
 
 4.  Division: `#!cpp a / b` this gives you the division of `a` by `b`.
@@ -355,6 +360,7 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
       // Due to a bug at the moment, this will actually show 0.0
       // Modulo on fractions does not work properly at this time.
     }
+
     ```
 
     Also Additionally, when testing stuff using `xsChatData`, be wary of some quirks that this has:
@@ -373,6 +379,7 @@ The most obvious thing that we can do with numbers, is do arithmetic with them. 
       xsChatData("this will make them non consecutive");
       xsChatData("this is shown twice");
     }
+
     ```
 
     The way around this is to use a unique number or letter at the start of every message so that even if the content of the message is the same, the number is different so that it gets shown the right amount of times
@@ -395,6 +402,7 @@ void main() {
   // decrease the value of a back to 10
   a--;
 }
+
 ```
 
 #### 2.4.4. Relational Operations
@@ -417,6 +425,7 @@ Whenever you use a relational operator, it is like asking one of these questions
     // this will print "5 < 10 : 1"
     xsChatData("5 < 10 : " + (5 < 10));
     // remember, in programming, 1 is the same as true
+
     ```
 
 2. `#!cpp a > b` This checks if the number `a` is greater than `b`. If it is, then the expression evaluates to `#!cpp true`, else it evaluates to `#!cpp false`. For example:
@@ -425,6 +434,7 @@ Whenever you use a relational operator, it is like asking one of these questions
     // this will print "5 > 10 : 0"
     xsChatData("5 > 10 : " + (5 > 10));
     // remember, in programming, 0 is the same as false
+
     ```
 
 3. `#!cpp a <= b` This checks if the number `a` is lesser than or equal to `b`. If it is, then the expression evaluates to `#!cpp true`, else it evaluates to `#!cpp false`. For example:
@@ -435,6 +445,7 @@ Whenever you use a relational operator, it is like asking one of these questions
 
     // this will print "10 <= 10 : 1"
     xsChatData("10 <= 10 : " + (10 <= 10));
+
     ```
 
 4. `#!cpp a >= b` This checks if the number `a` is greater than or equal to `b`. If it is, then the expression evaluates to `#!cpp true`, else it evaluates to `#!cpp false`. For example:
@@ -445,6 +456,7 @@ Whenever you use a relational operator, it is like asking one of these questions
 
     // this will print "10 >= 10 : 1"
     xsChatData("10 >= 10 : " + (10 >= 10));
+
     ```
 
 5. `#!cpp a == b` This checks if the number `a` is equal to `b`. If it is, then the expression evaluates to `#!cpp true`, else it evaluates to `#!cpp false`. For example:
@@ -455,6 +467,7 @@ Whenever you use a relational operator, it is like asking one of these questions
 
     // this will print "10 == 10 : 1"
     xsChatData("10 == 10 : " + (10 == 10));
+
     ```
 
 6. `#!cpp a != b` This checks if the number `a` is not equal to `b`. If it is, then the expression evaluates to `#!cpp true`, else it evaluates to `#!cpp false`. For example:
@@ -465,6 +478,7 @@ Whenever you use a relational operator, it is like asking one of these questions
 
     // this will print "10 != 10 : 0"
     xsChatData("10 != 10 : " + (10 != 10));
+
     ```
 
 !!! Note "Relational Operators on Strings"
@@ -516,6 +530,7 @@ void main() {
   // this would chat true
   xsChatData("str1 != str2 is " + (str1 != str2));
 }
+
 ```
 
 #### 2.4.5. Boolean Operations
@@ -615,6 +630,7 @@ void main() {
   // because neither a > b nor  c < b is true
   d = (a > b) || (c < b);
 }
+
 ```
 
 #### 2.4.6. Concatenation
@@ -636,6 +652,7 @@ void main() {
   xsChatData(a + b + " " + c + " " + d + " " + e + " " + v);
   // remember, true and false are also represented by 1 and 0 respectively!
 }
+
 ```
 
 #### 2.4.7. Vector Operations
@@ -675,6 +692,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       // Similarly, cOriginVector is a pre-defined constant that XS recognises,
       // it is the vector (0, 0, 0)
     }
+
     ```
 
 2.  Obtaining the X, Y, and Z components of a vector:
@@ -689,6 +707,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       float y = xsVectorGetY(myVector); // gives you the y component of the vector
       float z = xsVectorGetZ(myVector); // gives you the z component of the vector
     }
+
     ```
 
 3.  Setting the X, Y, and Z components of a vector individually:
@@ -702,6 +721,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       myVector = xsVectorSetY(myVector, 20); // sets the y component of the vector
       myVector = xsVectorSetZ(myVector, 30); // sets the z component of the vector
     }
+
     ```
 
     Note that it is not necessary to change all 3 components at the same time, you can chose to only change one if you want to.
@@ -715,6 +735,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       vector myVector = vector(1, 2, 3);
       myVector = xsVectorSet(10, 20, 30);
     }
+
     ```
 
 5.  Obtaining the length of a vector:
@@ -726,6 +747,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       vector myVector = vector(1, 2, 3);
       float length = xsVectorLength(myVector);
     }
+
     ```
 
     !!! note
@@ -741,6 +763,7 @@ Manipulating vectors in XS is done in a bit of a special way:
       vector myVector = vector(1, 2, 3);
       vector unitVectorAlongMyVector = xsVectorNormalize(myVector);
     }
+
     ```
 
     !!! note
@@ -783,6 +806,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
         xsChatData("b <= a confirmed!");
       }
     }
+
     ```
 
     Anything that is written inside curly braces `{}` is known as a "block" of code. A block of code written under an `#!cpp if` is called the "body" of that `#!cpp if`.
@@ -798,6 +822,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
       else
         xsChatData("does only another thing");
     }
+
     ```
 
     An `#!cpp if` statement does not need to be followed by an `#!cpp else` statement everytime:
@@ -809,6 +834,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
       if (b > a)
         xsChatData("doesn't do anything if the conditon is false");
     }
+
     ```
 
     What if you need to check multiple conditions and do separate things for each case? this is when you use an `#!cpp if else if` statement!
@@ -824,6 +850,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
       else
         xsChatData("no condition is true");
     }
+
     ```
 
     !!! Note
@@ -854,6 +881,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
               else
                 xsChatData("the maximum is c: " + c)
             }
+
             ```
 
 2.  The `#!cpp switch-case` statements
@@ -880,6 +908,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
       }
       }
     }
+
     ```
 
     This is the same as doing:
@@ -898,6 +927,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
         xsChatData("do this");
       }
     }
+
     ```
 
     Similar to `#!cpp if else`, if there is only one instruction to execute, the curly braces `{}` can be omitted:
@@ -914,6 +944,7 @@ Similarly, when writing a script, it might be needed to make decisions at some p
         xsChatData("else do this");
       }
     }
+
     ```
 
 #### 2.5.2. Loops
@@ -950,6 +981,7 @@ Loops are statements that allow us to do exactly that! There are two types of lo
         // and the game would crash
       }
     }
+
     ```
 
     ???+ Question "Practise"
@@ -980,6 +1012,7 @@ Loops are statements that allow us to do exactly that! There are two types of lo
                 increase++;
               }
             }
+
             ```
 
 2.  The `#!cpp for` loop
@@ -1006,6 +1039,7 @@ Loops are statements that allow us to do exactly that! There are two types of lo
         // that you need to decrease a instead of increasing it.
       }
     }
+
     ```
 
 How do we pick which loop to use? Firstly, a `#!cpp while` loop can do all that a `#!cpp for` loop can. However, a `#!cpp while` loop is much slower than a `#!cpp for` loop in performance! If it is possible, you should **always** stick to using `#!cpp for` loops! A `#!cpp for` loop also takes care of increasing or decreasing the variables of iteration, which means that you cannot accidently cause an "infinite" loop unlike a `#!cpp while` loop.
@@ -1040,6 +1074,7 @@ returnType functionName(dataType parameter1 = defaultValue,
   return (value);
   // value must be a data type that is the same as returnType
 }
+
 ```
 
 If it is not clear what this means, bare with this usage for a minute and see this example below:
@@ -1084,6 +1119,7 @@ void main() {
 
 // since there is nothing writting inside the brackets after 'main',
 // it does not take in any parameters either
+
 ```
 
 Function names follow the same laws and conventions that variable names do.
@@ -1119,6 +1155,7 @@ void main() {
   xsChatData("cross: " + crossProduct(a, b));
   xsChatData("add: " + add(a, b));
 }
+
 ```
 
 ```cpp
@@ -1148,9 +1185,10 @@ vector add(vector a = cInvalidVector, vector b = cInvalidVector) {
   addition = xsVectorSetZ(addition, xsVectorGetZ(a) + xsVectorGetZ(b));
   return (addition);
 }
+
 ```
 
-This way, for every file that you need to use "VectorOperations.xs" in, you just need to write `#!cpp include "/relative/or/absolute/path/to/file";` and you can use all the functions that you wrote in it in that file as well!
+This way, for every file that you need to use "VectorOperations.xs" in, you just need to write `#!cpp include "relative/or/absolute/path/to/file.xs";` and you can use all the functions that you wrote in it in that file as well!
 
 Code that is written like this, where:
 
@@ -1170,6 +1208,7 @@ void main() {
   a++; // wait, a doesn't exist yet! you cannot do this.
   int a = 10;
 }
+
 ```
 
 Similarly, Variables initialised inside one function can only be used in that particular function, and do not exist outside of them. These kinds of variables are known as local variables. For example:
@@ -1182,6 +1221,7 @@ void anotherFunction() {
   int a = 44;
   // this a is completely different and independent from the a in main();
 }
+
 ```
 
 What if you want a variable that is shared between functions? A variable like this must be declared outside of all functions. Such a variable is known as a global variable. For example:
@@ -1190,6 +1230,7 @@ What if you want a variable that is shared between functions? A variable like th
 int a = 10;
 void main() { a++; }
 void anotherFunction() { a++; }
+
 ```
 
 ### 2.8. Arrays
@@ -1230,6 +1271,7 @@ int xsArrayCreateString(int size, string defaultValue, string name);
 // creates a sized and named vector array, with every value
 // initialised to defaultValue. returns an integer arrayID.
 int xsArrayCreateVector(int size, vector defaultValue, string name);
+
 ```
 
 For the name of the array, any string may be used but all names must be unique
@@ -1253,6 +1295,7 @@ string xsArrayGetString(int arrayID, int index);
 
 // returns a vector from the specified index of the specified array
 vector xsArrayGetVector(int arrayID, int index);
+
 ```
 
 If you ever try to access values in arrays that dont exist (invalid arrayID) or values at indices that dont exist (negative indices or indices more than the length of the array) then the default values for the data types are returned. These are:
@@ -1263,6 +1306,7 @@ float defaultValue = -1.0;
 bool defaultValue = false;
 string defaultValue = "";
 vector defaultValue = vector(0, 0, 0);
+
 ```
 
 To set a value at a specific index in an array, we use the following functions for the relevant data types:
@@ -1282,6 +1326,7 @@ int xsArraySetString(int arrayID, int index, string value);
 
 // Sets the value at the specified index in the specified array.
 int xsArraySetVector(int arrayID, int index, vector value);
+
 ```
 
 Note that these Set functions return a value of `#!cpp 1` every time, however this does not need to be stored in a variable.
@@ -1299,6 +1344,7 @@ int xsArrayResizeBool(int arrayID, int newSize);
 int xsArrayResizeString(int arrayID, int newSize);
 // Resize the specified array.
 int xsArrayResizeVector(int arrayID, int newSize);
+
 ```
 
 Note that these Resize functions return a value of `#!cpp 1` every time, however this does not need to be stored in a variable.
@@ -1345,6 +1391,7 @@ There are two kinds of type casting:
 
       string l = "" + a;
     }
+
     ```
 
 2. Explicit Type Casting
@@ -1358,6 +1405,7 @@ There are two kinds of type casting:
       float b = (int)a;    // assigns 5.0 to b
       float c = (int)22.5; // assigns 22.0 to c
     }
+
     ```
 
 ## 3. Rules
@@ -1383,6 +1431,7 @@ rule ruleName       // This is the name of the rule. Follows same naming laws as
 {
   // code to execute
 }
+
 ```
 
 Example Usages:
@@ -1399,6 +1448,7 @@ rule chatTheValueOfA
     xsChatData("a = " + a);
     a++;
 }
+
 ```
 
 There are a lot of built in XS functions that can interact with rules. Check the [Rules](../functions/#Rules "Jump to: XS Scripting > Function Reference > Rules") Section of this guide.

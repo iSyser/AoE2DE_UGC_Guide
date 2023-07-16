@@ -34,6 +34,7 @@
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
 ```
 
 在 Windows 上：
@@ -42,6 +43,7 @@ pip install -r requirements.txt
 py -m venv venv
 venv/Scripts/activate
 pip install -r requirements.txt
+
 ```
 
 现在你可以通过执行 `mkdocs serve` 来构建和查看站点了。

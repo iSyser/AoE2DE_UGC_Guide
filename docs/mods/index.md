@@ -60,6 +60,7 @@ Finally, in order to give your new local mod a recognisable name in the Mod cent
     "Description":"A Description of your liking",
     "Title":"funktown test mod"
 }
+
 ```
 
 The contents of your `local` mods folder should now look like this:

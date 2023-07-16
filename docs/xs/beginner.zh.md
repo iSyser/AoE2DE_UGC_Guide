@@ -6,7 +6,7 @@ _作者：Alian713_
 
 ## 你是程序员吗？
 
-如果您知道如何用任何语言进行编程，那么您在本页上就是浪费时间！请参阅 [对于程序员](../programmer/ "跳转至：XS 脚本 > 对于程序员")，它是一个更短、更精确的文档，因为 XS 只是另一种具有不同的语法的编程语言。
+如果您知道如何用任何语言进行编程，那么您在本页上就是浪费时间！请参阅 [对于程序员](../programmer/ "跳转至：XS 脚本语言 > 对于程序员")，它是一个更短、更精确的文档，因为 XS 只是另一种具有不同的语法的编程语言。
 
 如果您不是程序员，请不要害怕！您来对地方了，这里可以了解有关 XS 的所有知识！
 
@@ -75,13 +75,14 @@ void main() {
   // 此处在聊天中显示 '30'。
   xsChatData("" + c);
 }
+
 ```
 
 ### 1.1. 在自定义场景中
 
 1. 在编辑器中打开场景
-2. 在 `地图` 选项卡下，于 `脚本文件名` 字段中键入您创建的 XS 脚本的名称，末尾不带 `.xs`。 例如，如果您的文件名为 `filename.xs`，那么您将在此字段中写入 `filename`。
-3. 现在，在编辑器的 `触发` 选项卡下，添加新触发，然后添加新效果。（如果您不知道 触发/效果 是什么，请参阅本手册的 `自定义场景：触发：触发基础知识`部分）
+2. 在 `地图` 选项卡下，于 `脚本文件名` 字段中键入您创建的 XS 脚本的名称，末尾不带 `.xs`。例如，如果您的文件名为 `filename.xs`，那么您将在此字段中写入 `filename`。
+3. 现在，在编辑器的 `触发` 选项卡下，添加新触发，然后添加新效果。（如果您不知道 触发/效果 是什么，请参阅本手册的 `自定义场景：触发：触发基础知识` 部分）
 4. 从 `效果列表` 中选择 `脚本调用`。
 5. 现在，您可以通过在消息框中键入 "function_name_here();" 使用 XS 脚本中的函数。
 6. 我们上面创建的 `main()` 函数会在场景被游玩时自动执行。
@@ -115,6 +116,7 @@ void main() {
   int c = a + b;
   xsChatData("" + c);
 }
+
 ```
 
 您现在可能有的一些问题是：
@@ -197,6 +199,7 @@ void main() {
 
       float my_var4 = my_var;
     }
+
     ```
 
     更改变量存储的值的过程称为“赋值”。所以在上面的例子中，
@@ -228,6 +231,7 @@ void main() {
           // 这将在游戏聊天中显示 20
           xsChatData("" + d);
         }
+
         ```
 
     5. 最后，我们尝试初始化一个名为 `my_var3` 的新变量，但我们尚未指定数据类型！这也会抛出一个错误。想想看，如果你想储存水，你需要指定你想用纸袋还是水瓶。
@@ -296,6 +300,7 @@ void main() {
       // 这将在游戏中显示 28980 聊天 (420 * 69 = 28980)
       xsChatData("result of 420 * 69 = " + (a * b));
     }
+
     ```
 
 4.  除法：`#!cpp a / b` 给出 `a` 除以 `b` 的商。
@@ -355,6 +360,7 @@ void main() {
       // 由于目前存在 Bug，实际上会显示 0.0
       // 小数求模目前无法正常工作。
     }
+
     ```
 
     此外，当使用 `xsChatData` 测试内容时，请注意以下一些怪异杂项：
@@ -373,6 +379,7 @@ void main() {
       xsChatData("this will make them non consecutive");
       xsChatData("this is shown twice");
     }
+
     ```
 
     解决这个问题的方法是在每条消息的开头使用唯一的数字或字母，这样即使消息的内容相同，数字也不同，以便显示正确的次数
@@ -395,6 +402,7 @@ void main() {
   // 将 a 的值减少回 10
   a--;
 }
+
 ```
 
 #### 2.4.4. 关系运算
@@ -417,6 +425,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
     // 这将打印“5 < 10 : 1”
     xsChatData("5 < 10 : " + (5 < 10));
     // 请记住，在编程中，1 与 true 相同
+
     ```
 
 2. `#!cpp a > b` 这会检查数字 `a` 是否大于 `b`。如果是，则表达式的计算结果为 `#!cpp true`，否则计算结果为 `#!cpp false`。例如：
@@ -425,6 +434,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
     // 这将打印“5 > 10 : 0”
     xsChatData("5 > 10 : " + (5 > 10));
     // 请记住，在编程中，0 与 false相同
+
     ```
 
 3. `#!cpp a <= b` 这会检查数字 `a` 是否小于或等于 `b`。如果是，则表达式的计算结果为 `#!cpp true`，否则计算结果为 `#!cpp false`。例如：
@@ -435,6 +445,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
 
     // 这将打印“10 <= 10 : 1”
     xsChatData("10 <= 10 : " + (10 <= 10));
+
     ```
 
 4. `a >= b` 这会检查数字 `a` 是否大于或等于 `b`。如果是，则表达式的计算结果为 `#!cpp true`，否则计算结果为 `#!cpp false`。例如：
@@ -445,6 +456,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
 
     // 这将打印“10 >= 10 : 1”
     xsChatData("10 >= 10 : " + (10 >= 10));
+
     ```
 
 5. `#!cpp a == b` 这会检查数字 `a` 是否等于 `b`。如果是，则表达式的计算结果为 `#!cpp true`，否则计算结果为 `#!cpp false`。例如：
@@ -455,6 +467,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
 
     // 这将打印“10 == 10 : 1”
     xsChatData("10 == 10 : " + (10 == 10));
+
     ```
 
 6. `#!cpp a != b` 这会检查数字 `a` 是否不等于 `b`。如果是，则表达式的计算结果为 `#!cpp true`，否则计算结果为 `#!cpp false`。例如：
@@ -465,6 +478,7 @@ $\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
 
     // 这将打印“10 != 10 : 0”
     xsChatData("10 != 10 : " + (10 != 10));
+
     ```
 
 !!! Note "字符串的关系运算符"
@@ -516,6 +530,7 @@ void main() {
   // 这将显示聊天 ttrue
   xsChatData("str1 != str2 is " + (str1 != str2));
 }
+
 ```
 
 #### 2.4.5. 逻辑运算
@@ -615,6 +630,7 @@ void main() {
   // 因为 a > b 和 c < b 都不为真
   d = (a > b) || (c < b);
 }
+
 ```
 
 #### 2.4.6. 串联
@@ -636,6 +652,7 @@ void main() {
   xsChatData(a + b + " " + c + " " + d + " " + e + " " + v);
   // 注意，true 和 false 也分别用 1 和 0 表示！
 }
+
 ```
 
 #### 2.4.7. 向量运算
@@ -675,6 +692,7 @@ void main() {
       // 类似地，cOriginVector 是 XS 识别的预定义常量，
       // 它是向量 (0, 0, 0）
     }
+
     ```
 
 2.  获取向量的 X、Y 和 Z 分量：
@@ -689,6 +707,7 @@ void main() {
       float y = xsVectorGetY(myVector); // 给出向量的 y 分量
       float z = xsVectorGetZ(myVector); // 给出向量的 z 分量
     }
+
     ```
 
 3.  单独设置向量的 X、Y 和 Z 分量：
@@ -702,6 +721,7 @@ void main() {
       myVector = xsVectorSetY(myVector, 20); // 设置向量的 y 分量
       myVector = xsVectorSetZ(myVector, 30); // 设置向量的 z 分量
     }
+
     ```
 
     请注意，不必同时更改所有 3 个分量，您可以根据需要选择仅更改其中一个。
@@ -715,6 +735,7 @@ void main() {
       vector myVector = vector(1, 2, 3);
       myVector = xsVectorSet(10, 20, 30);
     }
+
     ```
 
 5.  获取向量的模长：
@@ -726,6 +747,7 @@ void main() {
       vector myVector = vector(1, 2, 3);
       float length = xsVectorLength(myVector);
     }
+
     ```
 
     !!! note "注意"
@@ -741,6 +763,7 @@ void main() {
       vector myVector = vector(1, 2, 3);
       vector unitVectorAlongMyVector = xsVectorNormalize(myVector);
     }
+
     ```
 
     !!! note "注意"
@@ -783,6 +806,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
         xsChatData("b <= a confirmed!");
       }
     }
+
     ```
 
     任何写在大括号 `{}` 内的内容都被称为代码“块”。在 `#!cpp if` 下编写的代码块称为该 `#!cpp if` 的“主体”。
@@ -798,6 +822,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
       else
         xsChatData("does only another thing");
     }
+
     ```
 
     `#!cpp if` 语句不需要每次都跟有 `#!cpp else` 语句：
@@ -809,6 +834,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
       if (b > a)
         xsChatData("doesn't do anything if the conditon is false");
     }
+
     ```
 
     如果您需要检查多个条件并针对每种情况执行单独的操作怎么办？这时你应该使用`#!cpp if else if` 语句！
@@ -824,6 +850,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
       else
         xsChatData("no condition is true");
     }
+
     ```
 
     !!! Note "注意"
@@ -854,6 +881,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
               else
                 xsChatData("the maximum is c: " + c)
             }
+
             ```
 
 2.  `#!cpp switch-case` 语句
@@ -880,6 +908,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
       }
       }
     }
+
     ```
 
     这与以下操作等价：
@@ -898,6 +927,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
         xsChatData("do this");
       }
     }
+
     ```
 
     与 `#!cpp if else` 类似，如果只有一条指令要执行，大括号 `{}` 可以省略：
@@ -914,6 +944,7 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
         xsChatData("else do this");
       }
     }
+
     ```
 
 #### 2.5.2. 循环语句
@@ -950,6 +981,7 @@ $\color{red} \text{对} \; \color{yellow} \text{每个} \; \color{red} \text{从
         // 并且游戏会崩溃
       }
     }
+
     ```
 
     ???+ Question "实践"
@@ -980,6 +1012,7 @@ $\color{red} \text{对} \; \color{yellow} \text{每个} \; \color{red} \text{从
                 increase++;
               }
             }
+
             ```
 
 2.  `#!cpp for` 循环
@@ -1006,6 +1039,7 @@ $\color{red} \text{对} \; \color{yellow} \text{每个} \; \color{red} \text{从
         // 您需要减少 a 而不是增加它。
       }
     }
+
     ```
 
 我们如何选择使用哪个循环？ 首先，`#!cpp while` 循环可以完成 `#!cpp for` 循环可以做的所有事情。然而，`#!cpp while` 循环在性能上比 `#!cpp for` 循环慢得多！如果可能的话，您应该坚持**始终**使用 `#!cpp for` 循环！`#!cpp for` 循环还负责增加或减少迭代变量，这意味着您不会像`#!cpp while` 循环一样意外地导致“无限”循环。
@@ -1040,6 +1074,7 @@ returnType functionName(dataType parameter1 = defaultValue,
   return (value);
   // value 必须与 returnType 的数据类型相同
 }
+
 ```
 
 如果不清楚这意味着什么，请先了解一下这个用法，然后看下面的示例：
@@ -1084,11 +1119,12 @@ void main() {
 
 // 由于 “main” 后面的括号内没有任何内容，
 // 因此它也不接受任何参数
+
 ```
 
 函数名称遵循与变量名称相同的规则和约定。
 
-本指南的[函数参考](../functions/ "跳转至：XS 脚本 > 函数参考")部分列出了所有内置 XS 函数及其描述。
+本指南的[函数参考](../functions/ "跳转至：XS 脚本语言 > 函数参考")部分列出了所有内置 XS 函数及其描述。
 
 #### 2.6.2. 文件结构
 
@@ -1119,6 +1155,7 @@ void main() {
   xsChatData("cross: " + crossProduct(a, b));
   xsChatData("add: " + add(a, b));
 }
+
 ```
 
 ```cpp
@@ -1148,9 +1185,10 @@ vector add(vector a = cInvalidVector, vector b = cInvalidVector) {
   addition = xsVectorSetZ(addition, xsVectorGetZ(a) + xsVectorGetZ(b));
   return (addition);
 }
+
 ```
 
-这样，对于每个需要使用 `VectorOperations.xs` 的文件，您只需编写 `#!cpp include "/文件/的/相对/或/绝对/路径";` 就可以在该文件中使用您在其中编写的所有函数!
+这样，对于每个需要使用 `VectorOperations.xs` 的文件，您只需编写 `#!cpp include "相对/或/绝对/路径/到/文件.xs";` 就可以在该文件中使用您在其中编写的所有函数!
 
 像这样写的代码：
 
@@ -1170,6 +1208,7 @@ void main() {
   a++; // 等等，a 还不存在！你不可以这么做。
   int a = 10;
 }
+
 ```
 
 同样，在一个函数内部初始化的变量只能在该特定函数中使用，并且不能存在于该函数之外。这些类型的变量称为局部变量。例如：
@@ -1182,6 +1221,7 @@ void anotherFunction() {
   int a = 44;
   // 这个 a 与 main(); 中的 a 完全不同并且独立
 }
+
 ```
 
 如果您想要一个能在函数之间共享的变量怎么办？像这样的变量必须在所有函数之外声明。这样的变量称为全局变量。例如：
@@ -1190,6 +1230,7 @@ void anotherFunction() {
 int a = 10;
 void main() { a++; }
 void anotherFunction() { a++; }
+
 ```
 
 ### 2.8. 数组
@@ -1230,6 +1271,7 @@ int xsArrayCreateString(int size, string defaultValue, string name);
 // 创建一个特定大小的的命名向量数组，每个值都初始化为 defaultValue。
 // 返回一个向量数组ID。
 int xsArrayCreateVector(int size, vector defaultValue, string name);
+
 ```
 
 对于数组的名称，可以使用任何字符串，但所有名称必须是唯一的
@@ -1253,6 +1295,7 @@ string xsArrayGetString(int arrayID, int index);
 
 // 返回指定数组的指定索引处的向量
 vector xsArrayGetVector(int arrayID, int index);
+
 ```
 
 如果您尝试访问不存在的数组（无效的 arrayID）或不存在的索引（负索引或大于等于数组长度的索引），则返回数据类型的默认值。这些是：
@@ -1263,6 +1306,7 @@ float defaultValue = -1.0;
 bool defaultValue = false;
 string defaultValue = "";
 vector defaultValue = vector(0, 0, 0);
+
 ```
 
 要设置在数组中的特定索引处的值，我们对相关数据类型使用以下函数：
@@ -1282,6 +1326,7 @@ int xsArraySetString(int arrayID, int index, string value);
 
 // 设置指定数组中指定索引处的值。
 int xsArraySetVector(int arrayID, int index, vector value);
+
 ```
 
 请注意，这些 Set 函数每次都会返回 `#!cpp 1`，但这不需要存储在变量中。
@@ -1299,6 +1344,7 @@ int xsArrayResizeBool(int arrayID, int newSize);
 int xsArrayResizeString(int arrayID, int newSize);
 // 调整指定数组的大小。
 int xsArrayResizeVector(int arrayID, int newSize);
+
 ```
 
 请注意，这些 Resize 函数每次都会返回 `#!cpp 1`，但这不需要存储在变量中。
@@ -1345,6 +1391,7 @@ int xsArrayResizeVector(int arrayID, int newSize);
 
       string l = "" + a;
     }
+
     ```
 
 2. 显式类型转换
@@ -1358,6 +1405,7 @@ int xsArrayResizeVector(int arrayID, int newSize);
       float b = (int)a;    // 将 5.0 赋给 b
       float c = (int)22.5; // 将 22.0 赋给 c
     }
+
     ```
 
 ## 3. 规则
@@ -1365,13 +1413,13 @@ int xsArrayResizeVector(int arrayID, int newSize);
 规则是一段代码，可以设置为在整个游戏过程中以设定的时间间隔重复执行。规则始终在函数外部初始化。它的用法如下：
 
 ```cpp
-rule ruleName       // 这是规则的名称。 遵循与变量相同的命名规则。
+rule ruleName       // 这是规则的名称。遵循与变量相同的命名规则。
 
   active/inactive   // 这是规则的初始状态，active 意味着默认运行，
                     // inactive 意味着默认情况下不会运行。
                     // 这与 启用/禁用 触发器时触发器的工作方式类似。
 
-  group groupName   // 该规则所属的组。 遵循与变量相同的命名规则。
+  group groupName   // 该规则所属的组。遵循与变量相同的命名规则。
 
   minInterval <int> // 再次执行块之前必须经过的最小时间间隔
   maxInterval <int> // 在块必须再次执行之前可能经过的最大时间间隔
@@ -1383,6 +1431,7 @@ rule ruleName       // 这是规则的名称。 遵循与变量相同的命名�
 {
   // 要执行的代码
 }
+
 ```
 
 例程：
@@ -1399,9 +1448,10 @@ rule chatTheValueOfA
   xsChatData("a = " + a);
   a++;
 }
+
 ```
 
-有很多内置的 XS 函数可以与规则交互。请参阅本指南的[规则](../functions/#Rules "跳转至：XS 脚本 > 函数参考 > 规则")部分。
+有很多内置的 XS 函数可以与规则交互。请参阅本指南的 [规则](../functions/#Rules "跳转至：XS 脚本语言 > 函数参考 > 规则") 部分。
 
 变量 `cActivationTime` 在规则块内使用时，给出规则的激活时间（以秒为单位）。
 

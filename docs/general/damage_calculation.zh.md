@@ -307,6 +307,7 @@ for attack_class, attack in attacker.attack_classes:
 
 # 若总伤害小于 1，取 1。
 damage = max(damage, 1)
+
 ```
 
 游戏中的每个单位都具有 `基础远程 (3)`、`基础近战 (4)` 和 `未使用 (31)` 伤害类型。

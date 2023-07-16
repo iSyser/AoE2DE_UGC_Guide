@@ -16,7 +16,7 @@ _作者：Alian713_
 
 值: `#!cpp int 0`
 
-与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储字符串所需的字节数（4 个字节 + 由前 4 个字节表示的整数确定的字节数）
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本语言 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储字符串所需的字节数（4 个字节 + 由前 4 个字节表示的整数确定的字节数）
 
 ### 1.2. c偏移整数 { #cOffsetInterger }
 
@@ -24,7 +24,7 @@ _作者：Alian713_
 
 值: `#!cpp int 1`
 
-与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储整数所需的字节数（4 个字节）
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本语言 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储整数所需的字节数（4 个字节）
 
 ### 1.3. c偏移浮点数 { #cOffsetFloat }
 
@@ -32,7 +32,7 @@ _作者：Alian713_
 
 值: `#!cpp int 2`
 
-与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储浮点数所需的字节数（4 个字节）
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本语言 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储浮点数所需的字节数（4 个字节）
 
 ### 1.4. c偏移向量 { #cOffsetVector }
 
@@ -40,7 +40,7 @@ _作者：Alian713_
 
 值: `#!cpp int 3`
 
-与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储向量所需的字节数（12 字节）
+与函数 [`xs偏移文件位置()`](../functions/#xsOffsetFilePosition "跳转至：XS 脚本语言 > 函数参考 > xs偏移文件位置") 一起使用。使偏移函数将文件位置移动存储向量所需的字节数（12 字节）
 
 ## 2. 时代 { #Age }
 
@@ -110,7 +110,7 @@ _作者：Alian713_
 
 值: `#!cpp int 100`
 
-函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本语言 > 函数参考 > xs取胜利条件") 的返回值之一
 
 ### 4.2. c奇观胜利 { #cWonderVictory }
 
@@ -118,7 +118,7 @@ _作者：Alian713_
 
 值: `#!cpp int 101`
 
-函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本语言 > 函数参考 > xs取胜利条件") 的返回值之一
 
 ### 4.3. c圣物胜利 { #cRelicVictory }
 
@@ -126,7 +126,7 @@ _作者：Alian713_
 
 值: `#!cpp int 102`
 
-函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本语言 > 函数参考 > xs取胜利条件") 的返回值之一
 
 ### 4.4. c占山为王胜利 { #cKingOfTheHillVictory }
 
@@ -134,7 +134,7 @@ _作者：Alian713_
 
 值: `#!cpp int 103`
 
-函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本 > 函数参考 > xs取胜利条件") 的返回值之一
+函数 [`xs取胜利条件()`](../functions/#xsGetVictoryCondition "跳转至：XS 脚本语言 > 函数参考 > xs取胜利条件") 的返回值之一
 
 ## 5. 文明 { #Civs }
 

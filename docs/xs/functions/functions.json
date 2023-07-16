@@ -1306,6 +1306,49 @@
           }
         ],
         "desc": "Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake."
+      },
+      {
+        "name": "xsObjectHasAction",
+        "return_type": "bool",
+        "params": [
+          {
+            "name": "playerID",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          },
+          {
+            "name": "unitType",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          },
+          {
+            "name": "actionID",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          },
+          {
+            "name": "targetPlayerID",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          },
+          {
+            "name": "targetType",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          },
+          {
+            "name": "targetUnitLevel",
+            "type": "int",
+            "required": true,
+            "desc": "Unknown"
+          }
+        ],
+        "desc": "Unknown"
       }
     ]
   },
