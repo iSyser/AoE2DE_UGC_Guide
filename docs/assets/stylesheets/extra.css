@@ -1,20 +1,37 @@
+::selection {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color--light);
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #eee;
+
+  --armour-color: darkgreen;
+  --attack-color: darkred;
+  --function-color: darkblue;
+  --set-color: darkorange;
+}
 @media screen {
-  .md-header {
-    box-shadow: 0 0 20px -10px #000000;
-  }
-  .md-tabs {
-    background-color: var(--md-primary-fg-color--dark);
-    box-shadow: 0 0 20px -10px #000000;
-  }
-  [data-md-color-scheme="default"] {
-    --md-default-bg-color: #ddd;
-  }
   [data-md-color-scheme="slate"] {
     --md-hue: 64;
-    .md-typeset code {
-      background-color: hsl(var(--md-hue) 75% 8%);
-    }
+
+    --armour-color: lightgreen;
+    --attack-color: lightcoral;
+    --function-color: lightskyblue;
+    --set-color: lightpink;
   }
+
+  /* ::selection {
+    background: #ccc;
+    color: #ff645d;
+  } */
+}
+.md-header {
+  box-shadow: 0 0 20px -10px #000000;
+}
+.md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+  box-shadow: 0 0 20px -10px #000000;
 }
 .highlighttable .linenos {
   background-color: var(--md-default-bg-color);
@@ -46,9 +63,5 @@ tr:hover {
 #cs1 + div table tr:nth-child(4) ,
 /* formatting for damage calculation table under topic 3.4. */
 #cs2 + div table tr:nth-child(3) {
-  box-shadow: inset 0 0 8px 2px var(--md-accent-fg-color);
-}
-
-.arithmatex {
-  font-size: 1em;
+  box-shadow: inset 0 0 8px 2px var(--md-accent-fg-color) !important;
 }

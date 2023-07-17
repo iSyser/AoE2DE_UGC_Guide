@@ -105,11 +105,11 @@ _作者：Alian713_
 
 2.  对于每个共同的伤害类型，从攻击单位的攻击值中减去防御单位的护甲值。如果得到负值，则取 0。
 
-    设 $\color{yellow} Ar_i$ 是战象的类型 ID 为 $i$ 的护甲值。例如，$\color{yellow} Ar_{19}$ 指的是战象的 `独特单位` 护甲值；
+    设 $\textcolor{var(--armour-color)}{Ar_i}$ 是战象的类型 ID 为 $i$ 的护甲值。例如，$\textcolor{var(--armour-color)}{Ar_{19}}$ 指的是战象的 `独特单位` 护甲值；
 
-    而 $\color{#bfe3b4} At_i$ 是戟兵的类型 ID 为 $i$ 的攻击值。例如，$\color{#bfe3b4} At_{16}$ 指长戟兵的 `船 & 破坏者` 攻击值。
+    而 $\textcolor{var(--attack-color)}{At_i}$ 是戟兵的类型 ID 为 $i$ 的攻击值。例如，$\textcolor{var(--attack-color)}{At_{16}}$ 指长戟兵的 `船 & 破坏者` 攻击值。
 
-    $\color{yellow} Ba$ 是防御单位——战象的基础护甲值。
+    $\textcolor{var(--armour-color)}{Ba}$ 是防御单位——战象的基础护甲值。
 
     （请注意，游戏中每个护甲类型的 ID 可以在主题 3.2. 下的表格中找到）
 
@@ -117,10 +117,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_4
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_4 - \color{yellow} Ar_4,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 6    - \color{yellow} 1   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 5                         ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 5
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_4} - \textcolor{var(--armour-color)}{Ar_4},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{6}    - \textcolor{var(--armour-color)}{1}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{5}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{5}
     \end{aligned}
     $$
 
@@ -128,10 +131,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_5
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_5 - \color{yellow} Ar_5,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 28   - \color{yellow} 0   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 28                        ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 28
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_5} - \textcolor{var(--armour-color)}{Ar_5},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{28}   - \textcolor{var(--armour-color)}{0}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{28}                                          ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{28}
     \end{aligned}
     $$
 
@@ -139,10 +145,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_8
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} Ar_8 - \color{yellow} At_8,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 32   - \color{yellow} 0   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 32                        ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 32
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_8} - \textcolor{var(--armour-color)}{Ar_8},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{32}   - \textcolor{var(--armour-color)}{0}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{32}                                          ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{32}
     \end{aligned}
     $$
 
@@ -152,10 +161,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{16}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{16} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{16}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{17}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9983}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -163,10 +175,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{21}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{21} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{21}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{1}       - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9999}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -174,10 +189,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{29}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{29} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{29}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{1}       - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9999}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -185,10 +203,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{30}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{30} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 974                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{30}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{26}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9974}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -196,10 +217,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{34}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{34} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{34}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{17}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9983}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -207,10 +231,13 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}_{35}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{35} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 989                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{35}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{11}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9989}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -220,19 +247,19 @@ _作者：Alian713_
 
     $$
     \begin{aligned}\text{dmg}
-    &= \color{#add8e6}\text{max}( && \hspace{-2em}\color{#bfe3b4}\text{dmg}_4 +
-                                                                 \text{dmg}_5 +
-                                                                 \text{dmg}_8 +
-                                                                 \text{dmg}_{16} +
-                                                                 \text{dmg}_{21} +\\
-    &                             && \hspace{-2em}\color{#bfe3b4}\text{dmg}_{29} +
-                                                                 \text{dmg}_{30} +
-                                                                 \text{dmg}_{34} +
-                                                                 \text{dmg}_{35},\;
-                                     \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= \color{#add8e6}\text{max}(&&\hspace{-2em}\color{#bfe3b4} 5+28+32+0,\; \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= \color{#add8e6}\text{max}(&&\hspace{-2em}\color{#bfe3b4} 65,\; \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= 65
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em}\text{dmg}_4 +
+                                                                      \text{dmg}_5 +
+                                                                      \text{dmg}_8 +
+                                                                      \text{dmg}_{16} +
+                                                                      \text{dmg}_{21} +\\
+    &                                                 && \hspace{-2em}\text{dmg}_{29} +
+                                                                      \text{dmg}_{30} +
+                                                                      \text{dmg}_{34} +
+                                                                      \text{dmg}_{35},\,
+                                                        1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em} 5+28+32+0,\, 1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em} 65       ,\, 1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{65}
     \end{aligned}
     $$
 
@@ -240,23 +267,26 @@ _作者：Alian713_
 
 任意两个单位之间的伤害计算的通用公式是：
 
-设 $\color{#a66fb5} D$ 是攻击单位的所有攻击类型的集合，
+设 $\textcolor{var(--set-color)}{D}$ 是攻击单位的所有攻击类型的集合，
 
-$\color{#bfe3b4} At_i$ 是攻击单位类型 ID 为 $i$ 的攻击力。例如，$\color{#bfe3b4} At_1$ 指的是该单位的类型为 `步兵` 的攻击力。
+$\textcolor{var(--attack-color)}{At_i}$ 是攻击单位类型 ID 为 $i$ 的攻击力。例如，$\textcolor{var(--attack-color)}{At_1}$ 指的是该单位的类型为 `步兵` 的攻击力。
 
-$\color{yellow} Ar_i$ 是防御单位类型 ID 为 $i$ 的护甲值。例如，$\color{yellow} Ar_{19}$ 指的是防御单位的类型为 `独特单位` 的护甲。如果防御单位不存在对应护甲类型，则在这种情况下使用基础护甲值！
+$\textcolor{var(--armour-color)}{Ar_i}$ 是防御单位类型 ID 为 $i$ 的护甲值。例如，$\textcolor{var(--armour-color)}{Ar_{19}}$ 指的是防御单位的类型为 `独特单位` 的护甲。如果防御单位不存在对应护甲类型，则在这种情况下使用基础护甲值！
 
 （请注意，游戏中每个护甲类型的 ID 可以在主题 3.2. 下的表格中找到）
 
 则：
 
 $$
-\text{dmg} =  \color{#ff6961} \text{max}( \color{#a66fb5} \sum\limits_{\forall \; i \; \in D}^{}
-                               \color{#add8e6}\text{max}( \color{#bfe3b4} At_i-\color{yellow} Ar_i, \; \color{white} 0 \color{#add8e6}), \;
-                               \color{white} 1 \color{#ff6961})
+\text{dmg} = \textcolor{var(--function-color)}{\text{max}(}
+             \textcolor{var(--set-color)}{\sum_{\forall \; i \; \in D}}
+             \textcolor{var(--function-color)}{\text{max}(}
+             \textcolor{var(--attack-color)}{At_i} -
+             \textcolor{var(--armour-color)}{Ar_i},\,0
+             \textcolor{var(--function-color)}{)},\, 1 \textcolor{var(--function-color)}{)}
 $$
 
-注：$\color{#a66fb5} \sum\limits_{\forall \; i \; \in D}^{}$ 的含义是，对所有属于 $D$ 的 $i$ 求某些和
+注：$\textcolor{var(--set-color)}{\sum\limits_{\forall \; i \; \in D}}$ 的含义是，对所有属于 $D$ 的 $i$ 求某些和
 
 ### 3.4. 代码解释
 

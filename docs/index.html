@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      (function (supported) {
+        let dst;
+        for (const lang of navigator.languages) {
+          if ((dst = supported.find((e) => RegExp(`^${e}\\b`).test(lang)))) {
+            break;
+          }
+        }
+        dst = (dst || "") + "/about";
+        location.replace(dst);
+      })(["zh"]);
+    </script>
+  </body>
+</html>

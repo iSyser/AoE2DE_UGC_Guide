@@ -20,7 +20,7 @@ This section is a list of known bugs, quirks and weird behaviour in XS Scripting
 
 Any new bugs discovered will be added to the list. This list will also be updated with each AoEII:DE update, removing any bugs that get fixed.
 
-If you know of a bug that is not documented here, or if a bug listed here is actually fixed in the _indicated_ game version, reach out to the authors of this guide! Check the [About](/) page for relevant information about the authors.
+If you know of a bug that is not documented here, or if a bug listed here is actually fixed in the _indicated_ game version, reach out to the authors of this guide! Check the [About](../../about) page for relevant information about the authors.
 
 The following is the author's environment at the time of writing this section.
 
@@ -43,7 +43,7 @@ _作者：Alian713_
 
 任何新发现的错误都将添加到列表中。此列表也将随着每次 AoEII:DE 更新而更新，消除任何已修复的错误。
 
-如果您知道此处未记录的错误，或者此处列出的错误实际上已在*指定的*游戏版本中修复，请联系本指南的作者！查询[关于](/)页面以获取有关作者的相关信息。
+如果您知道此处未记录的错误，或者此处列出的错误实际上已在*指定的*游戏版本中修复，请联系本指南的作者！查询[关于](../../about)页面以获取有关作者的相关信息。
 
 以下是撰写本节时作者的环境。
 

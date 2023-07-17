@@ -7,12 +7,12 @@ Description:
 1. In a lobby, to other players:
     1. In an RMS:
         1. [ ] from the game dir
-        2. [X] from the profile dir
-        3. [X] from the mods (local/subscribed) dir
+        2. [x] from the profile dir
+        3. [x] from the mods (local/subscribed) dir
     2. In a Scenario:
         1. [ ] from the game dir
-        2. [X] from the profile dir
-        3. [X] from the mods (local/subscribed) dir
+        2. [x] from the profile dir
+        3. [x] from the mods (local/subscribed) dir
 2. To spectators:
     1. In an RMS:
         1. [ ] from the game dir

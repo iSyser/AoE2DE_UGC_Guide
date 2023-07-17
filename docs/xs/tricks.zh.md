@@ -48,7 +48,7 @@ xsChatData(tip + "，世界！");
 以中文为例，我们假定你正在编辑器中测试场景，而不是单人游戏或者发布的战役，请在以下目录中创建 `file4utf.xs` 文件：
 
 ```
-%USERPROFILE%/Games/Age of Empires 2 DE/你的 ID/resources/_common/xs/
+%USERPROFILE%/Games/Age of Empires 2 DE/你的 ID/resources/_common/xs
 ```
 
 内容是：

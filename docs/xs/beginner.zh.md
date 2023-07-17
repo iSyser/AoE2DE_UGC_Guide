@@ -410,11 +410,11 @@ void main() {
 关系运算使我们能够将一个数字与另一个数字进行比较。通过这些，您可以了解一个变量是否大于另一个变量、两个变量是否相等等等。
 
 如果有两个数字
-$\color{yellow} \text{A}$ 和 $\color{yellow}\text{B}$
+$\textcolor{var(--set-color)}{\text{A}}$ 和 $\textcolor{var(--set-color)}{\text{B}}$
 ，并且问你
-“$\text{是否} \; \color{yellow}\text{A} \; \color{red} \text{大于} \; \color{yellow}\text{B}$？”
+“$\text{是否} \; \textcolor{var(--set-color)}{\text{A}} \; \textcolor{var(--function-color)}{\text{大于}} \; \textcolor{var(--set-color)}{\text{B}}$？”
 那么你只有两个可能的答案，是或否。同样，如果问你
-“$\text{是否} \; \color{yellow}\text{A} \; \color{red} \text{等于} \; \color{yellow}\text{B}$？”
+“$\text{是否} \; \textcolor{var(--set-color)}{\text{A}} \; \textcolor{var(--function-color)}{\text{等于}} \; \textcolor{var(--set-color)}{\text{B}}$？”
 那么这个问题也只有两个答案，是或否。
 
 每当您使用关系运算符时，就像问上述问题一样。那么计算机如何回答这样的问题呢？回想上文，布尔（`#!cpp bool`）数据类型可以是真（`#!cpp true`）或假（`#!cpp false`），计算机正是通过这个来回答的！因此，所有关系运算的答案都是布尔值。
@@ -538,19 +538,19 @@ void main() {
 如果完成一项任务需要两个或更多的东西，我们可以说“需要这个**与**那个才能完成该任务”。例如：
 
 要给某人写电子邮件，您必须有
-“$\color{yellow} \text{一台计算机} \; \color{red} \text{与} \; \color{yellow} \text{可用的互联网}$”
+“$\textcolor{var(--set-color)}{\text{一台计算机}} \; \textcolor{var(--function-color)}{\text{与}} \; \textcolor{var(--set-color)}{\text{可用的互联网}}$”
 
 要画东西，你必须有
-“$\color{yellow} \text{纸} \; \color{red} \text{与} \; \color{yellow} \text{颜料} \; \color{red} \text{与} \; \color{yellow} \text{画笔}$”
+“$\textcolor{var(--set-color)}{\text{纸}} \; \textcolor{var(--function-color)}{\text{与}} \; \textcolor{var(--set-color)}{\text{颜料}} \; \textcolor{var(--function-color)}{\text{与}} \; \textcolor{var(--set-color)}{\text{画笔}}$”
 
 类似地，如果完成一项任务需要一件或多件事情，我们会说“需要这个**或**那个才能完成该任务”。例如：
 
 要玩电子游戏，您需要有
-“$\color{yellow} \text{一台计算机} \; \color{red} \text{或} \; \color{yellow} \text{一个游戏机}$”
+“$\textcolor{var(--set-color)}{\text{一台计算机}} \; \textcolor{var(--function-color)}{\text{或}} \; \textcolor{var(--set-color)}{\text{一个游戏机}}$”
 请注意，如果您同时拥有两者，您仍然可以玩电子游戏！
 
 要画东西，你必须有
-“$\color{yellow} \text{一支铅笔} \; \color{red} \text{或} \; \color{yellow} \text{一支钢笔} \; \color{red} \text{与} \; \color{yellow} \text{一张纸}$”
+“$\textcolor{var(--set-color)}{\text{一支铅笔}} \; \textcolor{var(--function-color)}{\text{或}} \; \textcolor{var(--set-color)}{\text{一支钢笔}} \; \textcolor{var(--function-color)}{\text{与}} \; \textcolor{var(--set-color)}{\text{一张纸}}$”
 
 逻辑（布尔）运算允许我们提出这些类型的问题，但使用的是布尔值。例如，如果您想问“是否 A 大于 B 和 C？”，需要布尔逻辑。
 
@@ -778,7 +778,7 @@ void main() {
 
 生活中有时您需要做出决定，而这些决定取决于某些条件。例如，假设您在课堂上，那么您可能需要做出的决定是：
 
-$\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} \text{则} \; \color{white} \text{可以在纸上写字，} \; \color{red} \text{否则} \; \color{white} \text{借一支笔}$
+$\textcolor{var(--function-color)}{\text{如果}} \; \textcolor{var(--set-color)}{\text{你有笔，}} \; \textcolor{var(--function-color)}{\text{则}} \; \text{可以在纸上写字，} \; \textcolor{var(--function-color)}{\text{否则}} \; \text{借一支笔}$
 
 同样，在编写脚本时，可能需要在代码中的某些点做出决定。条件语句是决策语句，可用于根据给定条件选择要执行的指令集。XS 支持两种类型的条件语句：
 
@@ -951,11 +951,11 @@ $\color{red} \text{如果} \; \color{yellow} \text{你有笔，} \; \color{red} 
 
 生活中有时你需要在某些条件下反复坚持做某件事。例如，假设您正在玩游戏，并且陷入了一场不断死亡的 Boss 战中，您正在做的事情可能是：
 
-$\color{red} \text{当} \; \color{yellow} \text{你还没有打败 Boss，} \; \color{white} \text{再试一次}$
+$\textcolor{var(--function-color)}{\text{当}} \; \textcolor{var(--set-color)}{\text{你还没有打败 Boss，}} \; \text{再试一次}$
 
 如果你想将一些数乘二的结果全部写出来，你可以这样做：
 
-$\color{red} \text{对} \; \color{yellow} \text{每个} \; \color{red} \text{从 1 到 10 之间的} \; \color{green} \text{数} \; \color{white} \text{写出 }2 \times \color{green} \text{数}$
+$\textcolor{var(--function-color)}{\text{对}} \; \textcolor{var(--set-color)}{\text{每个}} \; \textcolor{var(--function-color)}{\text{从 1 到 10 之间的}} \; \textcolor{var(--armour-color)}{\text{数}} \; \text{写出 }2 \times \textcolor{var(--armour-color)}{\text{数}}$
 
 同样，在编写脚本时，可能需要多次重复代码的某些部分。循环语句可用于在条件为真时重复执行代码块。
 

@@ -1,4 +1,4 @@
-# 函数 Effectamount
+# 函数 Effect Amount
 
 ## 1. `xsEffectAmount` effect `cMulAttribute` and `cAddAttribute` with attribute `cAttack/cArmor` { #1 }
 

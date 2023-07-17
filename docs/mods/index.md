@@ -1,4 +1,4 @@
-*Written By: hszemi*
+_Written By: hszemi_
 
 ---
 
@@ -15,10 +15,10 @@ The hard part is figuring out which files you need to modify, and how.
 
 Of course you can edit files in your game folder directly, but that has the following disadvantages:
 
-- It modifies your vanilla game
-- You cannot switch easily between different modifications
-- You cannot quickly disable and enable your modifications
-- If you break something, you can't simply fetch the original file from your game files and start again
+-   It modifies your vanilla game
+-   You cannot switch easily between different modifications
+-   You cannot quickly disable and enable your modifications
+-   If you break something, you can't simply fetch the original file from your game files and start again
 
 This is solved by bundling your modifications into game mods, which you can then manage comfortably through the in-game mod center.
 
@@ -36,8 +36,9 @@ If you are subscribed to a mod, the game regularly checks for new versions of th
 ## Creating a local mod
 
 First, you need to locate your local mod folder. You can usually find it at the following location:
+
 ```
-C:\Users\<username>\Games\Age of Empires 2 DE\<number>\mods
+%USERPROFILE%/Games/Age of Empires 2 DE/Your ID/mods
 ```
 
 It contains two folders: A `local` folder, which contains your local mods, and a `subscribed` folder, which contains the mods you subscribed to.
@@ -55,12 +56,11 @@ Finally, in order to give your new local mod a recognisable name in the Mod cent
 
 ```json
 {
-    "Author":"Your Name",
-    "CacheStatus":0,
-    "Description":"A Description of your liking",
-    "Title":"funktown test mod"
+    "Author": "Your Name",
+    "CacheStatus": 0,
+    "Description": "A Description of your liking",
+    "Title": "funktown test mod"
 }
-
 ```
 
 The contents of your `local` mods folder should now look like this:
@@ -71,13 +71,11 @@ The contents of your `local` mods folder should now look like this:
 
 There are two ways to publish a mod: By publishing it from inside the game, or by uploading it as a zipped archive to the ageofempires.com website
 
-
 ### Publishing from within the game
 
 1. You need to be signed in via XBOX Live inside the game in order to publish mods from within the game.
 2. In the mod centre, open the tab "My mods", where your local mods are listed.
 3. Select the mod you want to publish, and click "Publish Mod".
-
 
 ### Publishing by uploading a zip file on ageofempires.com
 
@@ -90,12 +88,10 @@ There are two ways to publish a mod: By publishing it from inside the game, or b
 6. Once you submit, your mod is being published.
    Be patient, this may take multiple minutes.
 
-
 ## Updating a published mod
 
 As time goes on, you might want to update or improve your mod.
 And then, you of course want to update your published mod, so everyone else can profit from the improvements as well.
-
 
 ### Updating from withing the game
 
@@ -109,7 +105,6 @@ To update a mod via the game:
 6. select the folder that contains your mod using the "Select Folder" option at the top left of the UI
 7. click "Publish" and wait for a few seconds. Once the mod is up, you will be redirected to the ageofempires.com page for your mod
 
-
 ### Updating via ageofempires.com
 
 To update a mod via the ageofempires.com website, you:
@@ -119,7 +114,6 @@ To update a mod via the ageofempires.com website, you:
 3. select your new zip file under "Zip File Upload".
 4. you also have the ability to describe what changed in this update in the "Change List" field.
 5. click "Submit", wait for a few seconds/minutes, and your mod should be updated.
-
 
 ## Troubleshooting
 
@@ -139,5 +133,3 @@ Double-check your folder names for typos, and your folder structure overall if i
 
 Maybe you are trying to combine a data mod with a User Interface or Content mod.
 While that should be possible according to the patch notes, this functionality seems to be broken again.
-
-

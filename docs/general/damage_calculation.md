@@ -105,11 +105,11 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
 2.  For each damage class that is in common, subtract the armour of the defending unit from the attack of the attacking unit. Round up to 0 if you get a negative value.
 
-    Here, $\color{yellow} Ar_i$ is the quantity of the armour class with id $i$ for the War Elephant. For example, $\color{yellow} Ar_{19}$ refers to the `Unique Units` armour class of the War Elephant.
+    Here, $\textcolor{var(--armour-color)}{Ar_i}$ is the quantity of the armour class with id $i$ for the War Elephant. For example, $\textcolor{var(--armour-color)}{Ar_{19}}$ refers to the `Unique Units` armour class of the War Elephant.
 
-    $\color{#bfe3b4} At_i$ is the quantity of the attack class with id $i$ for the Halberdier. For example, $\color{#bfe3b4} At_{16}$ refers to the `Ships and saboteer` attack class of the Halberdier.
+    $\textcolor{var(--attack-color)}{At_i}$ is the quantity of the attack class with id $i$ for the Halberdier. For example, $\textcolor{var(--attack-color)}{At_{16}}$ refers to the `Ships and saboteer` attack class of the Halberdier.
 
-    $\color{yellow} Ba$ is the Base Armour value for the defending unit, the war elephant.
+    $\textcolor{var(--armour-color)}{Ba}$ is the Base Armour value for the defending unit, the war elephant.
 
     (Note that the ids for every armour class in the game can be found in the table under the topic 3.2.)
 
@@ -117,10 +117,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_4
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_4 - \color{yellow} Ar_4,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 6    - \color{yellow} 1   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 5                         ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 5
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_4} - \textcolor{var(--armour-color)}{Ar_4},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{6}    - \textcolor{var(--armour-color)}{1}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{5}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{5}
     \end{aligned}
     $$
 
@@ -128,10 +131,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_5
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_5 - \color{yellow} Ar_5,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 28   - \color{yellow} 0   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 28                        ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 28
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_5} - \textcolor{var(--armour-color)}{Ar_5},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{28}   - \textcolor{var(--armour-color)}{0}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{28}                                          ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{28}
     \end{aligned}
     $$
 
@@ -139,10 +145,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_8
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} Ar_8 - \color{yellow} At_8,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 32   - \color{yellow} 0   ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 32                        ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 32
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_8} - \textcolor{var(--armour-color)}{Ar_8},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{32}   - \textcolor{var(--armour-color)}{0}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{32}                                          ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{32}
     \end{aligned}
     $$
 
@@ -152,10 +161,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{16}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{16} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{16}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{17}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9983}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -163,10 +175,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{21}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{21} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{21}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{1}       - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9999}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -174,10 +189,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{29}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{29} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 1       - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 999                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{29}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{1}       - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9999}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -185,10 +203,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{30}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{30} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 26      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 974                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{30}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{26}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9974}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -196,10 +217,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{34}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{34} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 17      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 983                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{34}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{17}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9983}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -207,10 +231,13 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}_{35}
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} At_{35} - \color{yellow} Ba  ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4} 11      - \color{yellow} 10000,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961}\text{max}( \color{#bfe3b4}         - 989                ,\; \color{white} 0 \color{#ff6961})\\
-    &= \color{#ff6961} 0
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{At_{35}} - \textcolor{var(--armour-color)}{Ba}   ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{11}      - \textcolor{var(--armour-color)}{10000},\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(}
+       \textcolor{var(--attack-color)}{-9989}                                           ,\,0 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{0}
     \end{aligned}
     $$
 
@@ -220,19 +247,19 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
     $$
     \begin{aligned}\text{dmg}
-    &= \color{#add8e6}\text{max}( && \hspace{-2em}\color{#bfe3b4}\text{dmg}_4 +
-                                                                 \text{dmg}_5 +
-                                                                 \text{dmg}_8 +
-                                                                 \text{dmg}_{16} +
-                                                                 \text{dmg}_{21} +\\
-    &                             && \hspace{-2em}\color{#bfe3b4}\text{dmg}_{29} +
-                                                                 \text{dmg}_{30} +
-                                                                 \text{dmg}_{34} +
-                                                                 \text{dmg}_{35},\;
-                                     \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= \color{#add8e6}\text{max}(&&\hspace{-2em}\color{#bfe3b4} 5+28+32+0,\; \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= \color{#add8e6}\text{max}(&&\hspace{-2em}\color{#bfe3b4} 65,\; \color{#bfe3b4} 1 \color{#add8e6})\\
-    &= 65
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em}\text{dmg}_4 +
+                                                                      \text{dmg}_5 +
+                                                                      \text{dmg}_8 +
+                                                                      \text{dmg}_{16} +
+                                                                      \text{dmg}_{21} +\\
+    &                                                 && \hspace{-2em}\text{dmg}_{29} +
+                                                                      \text{dmg}_{30} +
+                                                                      \text{dmg}_{34} +
+                                                                      \text{dmg}_{35},\,
+                                                        1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em} 5+28+32+0,\, 1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{\text{max}(} && \hspace{-2em} 65       ,\, 1 \textcolor{var(--function-color)}{)}\\
+    &= \textcolor{var(--function-color)}{65}
     \end{aligned}
     $$
 
@@ -240,23 +267,26 @@ For calculating the total amount of damage that this unupgraded Halberdier deals
 
 The General formula for damage calculation between any two units is thus:
 
-if $\color{#a66fb5} D$ is the set of all attack classes for the attacking unit,
+if $\textcolor{var(--set-color)}{D}$ is the set of all attack classes for the attacking unit,
 
-$\color{#bfe3b4} At_i$ is the quanitity of the attack class with id $i$ for the attacking unit. For example, $\color{#bfe3b4} At_1$ refers to the `Infantry` attack class of the unit.
+$\textcolor{var(--attack-color)}{At_i}$ is the quanitity of the attack class with id $i$ for the attacking unit. For example, $\textcolor{var(--attack-color)}{At_1}$ refers to the `Infantry` attack class of the unit.
 
-$\color{yellow} Ar_i$ is quantity of the armour class with id $i$ for the defending unit. For example, $\color{yellow} Ar_{19}$ refers to the `Unique Unit` armour class of the defending unit. Note that if an armour class does not exist for the defending unit, use the base armour value in that case!
+$\textcolor{var(--armour-color)}{Ar_i}$ is quantity of the armour class with id $i$ for the defending unit. For example, $\textcolor{var(--armour-color)}{Ar_{19}}$ refers to the `Unique Unit` armour class of the defending unit. Note that if an armour class does not exist for the defending unit, use the base armour value in that case!
 
 (Note that the ids for every armour class in the game can be found in the table under the topic 3.2.)
 
 then:
 
 $$
-\text{dmg} =  \color{#ff6961} \text{max}( \color{#a66fb5} \sum\limits_{\forall \; i \; \in D}^{}
-                               \color{#add8e6}\text{max}( \color{#bfe3b4} At_i-\color{yellow} Ar_i, \; \color{white} 0 \color{#add8e6}), \;
-                               \color{white} 1 \color{#ff6961})
+\text{dmg} = \textcolor{var(--function-color)}{\text{max}(}
+             \textcolor{var(--set-color)}{\sum_{\forall \; i \; \in D}}
+             \textcolor{var(--function-color)}{\text{max}(}
+             \textcolor{var(--attack-color)}{At_i} -
+             \textcolor{var(--armour-color)}{Ar_i},\,0
+             \textcolor{var(--function-color)}{)},\, 1 \textcolor{var(--function-color)}{)}
 $$
 
-Note: $\color{#a66fb5} \sum\limits_{\forall \; i \; \in D}^{}$ means, add up something $for$ $all$ $i$ $in$ $D$
+Note: $\textcolor{var(--set-color)}{\sum\limits_{\forall \; i \; \in D}}$ means, add up something $for$ $all$ $i$ $in$ $D$
 
 ### 3.4. Explanation Using Code
 

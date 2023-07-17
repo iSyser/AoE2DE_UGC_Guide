@@ -410,11 +410,11 @@ void main() {
 Relational operations allow us to compare one number with another. With these, you can find out if one variable is greater than another or not, if two variables are equal or not, and much more.
 
 If you have two numbers
-$\color{yellow} \text{A}$ and $\color{yellow}\text{B}$,
+$\textcolor{var(--set-color)}{\text{A}}$ and $\textcolor{var(--set-color)}{\text{B}}$,
 and are asked
-"$\text{if} \; \color{yellow}\text{A} \; \color{red} \text{is greater than} \; \color{yellow}\text{B}$?"
+"$\text{if} \; \textcolor{var(--set-color)}{\text{A}} \; \textcolor{var(--function-color)}{\text{is greater than}} \; \textcolor{var(--set-color)}{\text{B}}$?"
 then you can have only two possible answers, it will either be yes or no. Similarly, if you are asked
-"$\text{if} \; \color{yellow}\text{A} \; \color{red} \text{is equal to} \; \color{yellow}\text{B}$?"
+"$\text{if} \; \textcolor{var(--set-color)}{\text{A}} \; \textcolor{var(--function-color)}{\text{is equal to}} \; \textcolor{var(--set-color)}{\text{B}}$?"
 then this question also has only two answers, yes or no.
 
 Whenever you use a relational operator, it is like asking one of these questions above. Then how does a computer answer a question like this? Remember, a `#!cpp bool` data type can either be `#!cpp true` or `#!cpp false`, it does exactly this! Thus, the answers to all relational operations give you boolean values.
@@ -538,19 +538,19 @@ void main() {
 If two or more things are required to do a task, we can say that "this AND that are required to do the task". For example:
 
 To write an email to someone, you must
-"$\color{yellow} \text{have a computer} \; \color{red} \text{and} \; \color{yellow} \text{have active internet}$"
+"$\textcolor{var(--set-color)}{\text{have a computer}} \; \textcolor{var(--function-color)}{\text{and}} \; \textcolor{var(--set-color)}{\text{have active internet}}$"
 
 To paint something, you must
-"$\color{yellow} \text{have a paper} \; \color{red} \text{and} \; \color{yellow} \text{have paint} \; \color{red} \text{and} \; \color{yellow} \text{have a paint brush}$"
+"$\textcolor{var(--set-color)}{\text{have a paper}} \; \textcolor{var(--function-color)}{\text{and}} \; \textcolor{var(--set-color)}{\text{have paint}} \; \textcolor{var(--function-color)}{\text{and}} \; \textcolor{var(--set-color)}{\text{have a paint brush}}$"
 
 Similarly, if only one, or more things are required to do a task we say that "this OR that is needed to do the task". For example:
 
 To play a video game, you need to
-"$\color{yellow} \text{own a computer} \; \color{red} \text{or} \; \color{yellow} \text{own a gaming console}$"
+"$\textcolor{var(--set-color)}{\text{own a computer}} \; \textcolor{var(--function-color)}{\text{or}} \; \textcolor{var(--set-color)}{\text{own a gaming console}}$"
 Note that you can still play video games if you own both!
 
 To draw something you must
-"$\color{yellow} \text{have a pencil} \; \color{red} \text{or} \; \color{yellow} \text{have a pen} \; \color{red} \text{and} \; \color{yellow} \text{have a paper}$"
+"$\textcolor{var(--set-color)}{\text{have a pencil}} \; \textcolor{var(--function-color)}{\text{or}} \; \textcolor{var(--set-color)}{\text{have a pen}} \; \textcolor{var(--function-color)}{\text{and}} \; \textcolor{var(--set-color)}{\text{have a paper}}$"
 
 Boolean operations allow us to ask these sorts of questions but with boolean values instead. For example, if you wanted to ask "is A greater than B and C?" then you require boolean operations.
 
@@ -778,7 +778,7 @@ There are two types of flow control statements:
 
 There are times in life when you need to make decisions, and these decisions depend on certain conditions. For example, suppose that you are in a class, then a decision that you might have to make would be:
 
-$\color{red} \text{if} \; \color{yellow} \text{you have a pen,} \; \color{red} \text{then} \; \color{white} \text{you can write on a piece of paper,} \; \color{red} \text{else} \; \color{white} \text{you borrow a pen}$
+$\textcolor{var(--function-color)}{\text{if}} \; \textcolor{var(--set-color)}{\text{you have a pen,}} \; \textcolor{var(--function-color)}{\text{then}} \; \text{you can write on a piece of paper,} \; \textcolor{var(--function-color)}{\text{else}} \; \text{you borrow a pen}$
 
 Similarly, when writing a script, it might be needed to make decisions at some points in your code. Conditionals are decision making statements that can be used to chose which set of instructions to execute depending on given conditions. There are two types of conditionals suported by XS:
 
@@ -951,11 +951,11 @@ Similarly, when writing a script, it might be needed to make decisions at some p
 
 There are times in life when you need to repeatedly keep doing something under certain conditions. For example, suppose that you are playing a game and you are stuck on a boss fight where you keep dying, something that you are doing might be:
 
-$\color{red} \text{while} \; \color{yellow} \text{you have not defeated the boss,} \; \color{white} \text{try again}$
+$\textcolor{var(--function-color)}{\text{while}} \; \textcolor{var(--set-color)}{\text{you have not defeated the boss,}} \; \text{try again}$
 
 If you wanted to write out the times two table, you might do:
 
-$\color{red} \text{for} \; \color{yellow} \text{every} \; \color{green} \text{number} \; \color{red} \text{between 1 and 10} \; \color{white} \text{write }2 \times \color{green} \text{number}$
+$\textcolor{var(--function-color)}{\text{for}} \; \textcolor{var(--set-color)}{\text{every}} \; \textcolor{var(--armour-color)}{\text{number}} \; \textcolor{var(--function-color)}{\text{between 1 and 10}} \; \text{write }2 \times \textcolor{var(--armour-color)}{\text{number}}$
 
 Similarly, when writing a script, it might be needed to repeat certain parts of your code multiple times. Loops are statements that can be used to repeatedly execute a block of code given a condition is true.
 

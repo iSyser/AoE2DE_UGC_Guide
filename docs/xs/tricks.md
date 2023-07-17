@@ -48,7 +48,7 @@ However, you can see people talking in different languages in the game, and the 
 Taking Chinese as an example, we assume that you are testing the scene in the editor, not a single player game or a published campaign, please create a `file4utf.xs` file in the following directory:
 
 ```
-%USERPROFILE%/Games/Age of Empires 2 DE/Your ID/resources/_common/xs/
+%USERPROFILE%/Games/Age of Empires 2 DE/Your ID/resources/_common/xs
 ```
 
 The content is:

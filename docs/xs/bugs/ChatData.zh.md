@@ -1,4 +1,4 @@
-# 函数 Chatdata
+# 函数 Chat Data
 
 ## 1. Cannot Print `#!cpp 0` Or `#!cpp 1` At The Start Of The Line In `xsChatData()` { #1 }
 

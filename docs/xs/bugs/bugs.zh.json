@@ -1,6 +1,6 @@
 [
   { "name": "Fixed", "nickname": "已修复", "bugs": [] },
-  { "name": "Effect Amount", "nickname": "函数 EffectAmount", "bugs": [] },
+  { "name": "Effect Amount", "nickname": "函数 Effect Amount", "bugs": [] },
   {
     "name": "Editor",
     "nickname": "编辑器",
@@ -21,7 +21,39 @@
     ]
   },
   { "name": "Language Syntax", "nickname": "语言句法", "bugs": [] },
-  { "name": "Important", "nickname": "重要", "bugs": [] },
+  {
+    "name": "Important",
+    "nickname": "重要",
+    "bugs": [
+      {
+        "name": "XS File Transferring",
+        "nickname": "XS 文件传输",
+        "desc": "\n\n1. 在大厅中，对其他玩家：\n    1. 在 RMS 中：\n        1. [ ] 来自游戏目录\n        2. [x] 来自配置文件目录\n        3. [x] 来自模组（本地/订阅）目录\n    2. 在场景中：\n        1. [ ] 来自游戏目录\n        2. [x] 来自配置文件目录\n        3. [x] 来自模组（本地/订阅）目录\n2. 对观战者：\n    1. 在 RMS 中：\n        1. [ ] 来自游戏目录\n        2. [ ] 来自配置目录\n        3. [ ] 将直接包含的 XS（使用 #includeXS）文件从 mods（本地/订阅）目录传输到其他目录，但位于错误的临时文件夹位置\n    2. 在场景中：\n        1. [ ] 来自游戏目录\n        2. [ ] 来自配置目录\n        3. [ ] 将直接包含的 XS（使用脚本文件名框）文件从 mods（本地/订阅）目录传输到其他目录，但位于错误的临时文件夹位置"
+      },
+      {
+        "name": "Technology Related XS function Do Not Work In RMS",
+        "nickname": "科技相关的 XS 功能在 RMS 中不起作用",
+        "desc": "`xsResearchTechnology` 和 `xsGetPlayerNumberOfTechs` 不能在 RMS 中使用",
+        "Expected Behaviour": "这些功能应该像在场景中一样在 RMS 中工作",
+        "Reproduction Steps": [
+          "创建新的 RMS",
+          "使用以下代码创建新的 XS 脚本：GET_CODE",
+          "使用包含 XS 脚本的 RMS 玩游戏时，会显示解析错误"
+        ]
+      },
+      {
+        "name": "Object Count Related XS function Do Not Work In RMS",
+        "nickname": "对象计数相关的 XS 功能在 RMS 中不起作用",
+        "desc": "`xsGetObjectCount` 和 `xsGetObjectCountTotal` 不能在 RMS 中使用",
+        "Expected Behaviour": "这些功能应该像在场景中一样在 RMS 中工作",
+        "Reproduction Steps": [
+          "创建新的 RMS",
+          "使用以下代码创建新的 XS 脚本：GET_CODE",
+          "使用包含 XS 脚本的 RMS 玩游戏时，会显示解析错误"
+        ]
+      }
+    ]
+  },
   { "name": "Crashes", "nickname": "崩溃", "bugs": [] },
-  { "name": "Chat Data", "nickname": "函数 ChatData" }
+  { "name": "Chat Data", "nickname": "函数 Chat Data" }
 ]
