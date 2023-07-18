@@ -41,9 +41,7 @@ Under the `Map` tab in the editor, there are several options to change the map, 
 
 3. `Seed Map`: This option generates a map from an RMS using a specified seed.
 
-!!! question
-
-    What is a seed you ask?
+!!! question "What is a seed?"
 
     Each generation of a particular RMS in the game has a number attached to it called its "seed" that uniquely identifies that particular generation of the RMS. Generating a map with the same RMS and seed twice will give you the exact same map!
 
@@ -310,11 +308,9 @@ Disabling this option will not allow players to pick teams in the lobby before t
 
 ### 5.4. Random Start Points
 
-This option seems to have no effect on the game.
+This option causes all players in the game to use a random color, regardless of the color they chose in the lobby. If you don't create any units for a player of a certain color, the game will create default units.
 
-!!! question
-
-    If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
+Note that even colors not used in the game may be randomly assigned. For example, if there are only two players in the scenario, namely blue and red, and blue has many barracks and castles, after this option is turned on, the colors of the two players may be green and purple. In this case, since no player controls blue, blue's barracks and castles, as well as all other units, are removed.
 
 ## 6. Global Victory
 
@@ -346,7 +342,18 @@ This victory condition can be customised using the following options:
 4. `Any One` a player can complete any one of the victory condition enabled above to win
 5. `All` a player has to complete all of the victory conditions enabled above to win
 
-### 6.6. 2.6 第二游戏模式
+### 6.6. Secondary Game Mode
+
+Select and combine different game modes together to add additional victory conditions:
+
+1. `Empire Wars Mode` This will cause players to spawn with additional villagers, camps, houses and farms.
+2. `Sudden Death Mode` This will cause players to lose once their home Town Center is destroyed. You cannot build additional Town Centers.
+3. `Regicide Mode` This will cause players to spawn a King with additional villagers. If you lose your King, you are defeated.
+4. `King of the Hill Mode` This mode requires that players hold all the monuments on the map to win.
+
+!!! bug
+
+    `Regicide Mode`` is always visible even when not in the `Secondary Game Mode` panel, and obscures other elements.
 
 ## 7. Options
 
@@ -438,16 +445,17 @@ Some hotkeys that are useful to know and make the workflow of making and testing
 
 1. Scrolling up and down on a dropdown list makes the values go up and down the lists as well
 2. Pressing or holding a letter in any object selection menu will cycle through the list of objects
-3. If you are on a tab where a player can be selected (except triggers) then pressing numbers 1-8 will switch to that player
-4. When testing a scenario, pressing ++ctrl+shift++ and `F#` where # is the number of a player, will let you control that player. For example, pressing ++ctrl+shift+f4++ will shift your control to player 4
-5. Scrolling when placing objects will rotate them. Some gaia buildings and units have entirely different graphics for different rotations!
-6. Pressing ++ctrl+g++ once allows for off grid placement of units. Pressing it again allows for stacking units and off grid placement together. Pressing a 3rd time allows for on grid unit placement with stacking enabled. Pressing a 4th time makes it go back to default! Even Buildings can be stacked using this option!
-7. ++ctrl+q++ Quit the scenario editor
-8. ++ctrl+a++ Toggle hitboxes on every unit on the map
-9. ++ctrl+s++ Save the scenario
-10. ++ctrl+l++ Load a scenario
-11. ++ctrl+n++ Create a new scenario
-12. Tabs
+3. If you are on a tab where a player can be selected (except triggers) then pressing numbers ++1++-++8++ will switch to that player
+4. If you are under the `Terrain` tab, you can quickly change the `Brush Size` by the number ++1++-++9++ or ++num1++-++num9++
+5. When testing a scenario, pressing ++ctrl+shift++ and `F#` where # is the number of a player, will let you control that player. For example, pressing ++ctrl+shift+f4++ will shift your control to player 4
+6. Scrolling when placing objects will rotate them. Some gaia buildings and units have entirely different graphics for different rotations!
+7. Pressing ++ctrl+g++ once allows for off grid placement of units. Pressing it again allows for stacking units and off grid placement together. Pressing a 3rd time allows for on grid unit placement with stacking enabled. Pressing a 4th time makes it go back to default! Even Buildings can be stacked using this option!
+8. ++ctrl+q++ Quit the scenario editor
+9. ++ctrl+a++ Toggle hitboxes on every unit on the map
+10. ++ctrl+s++ Save the scenario
+11. ++ctrl+l++ Load a scenario
+12. ++ctrl+n++ Create a new scenario
+13. Tabs
     1. ++f1++-++f10++ selects a tab in the scenario editor. ++f1++ - Map, ++f2++ - Terrain, and so on
     2. ++ctrl+w++ Switch to the Messages tab
     3. ++ctrl+r++ Switch to the Triggers tab
@@ -459,4 +467,4 @@ Some hotkeys that are useful to know and make the workflow of making and testing
     9. ++ctrl+c++ Switch to the Cinematics tab
     10. ++ctrl+v++ Switch to the Global Victory tab
     11. ++ctrl+m++ Switch to the Map tab
-13. ++ctrl+space++ Test Scenario (Currently bugged, causes a crash in the game D:)
+14. ++ctrl+space++ Test Scenario (Currently bugged, causes a crash in the game D:)

@@ -1,6 +1,6 @@
 # Basics of Triggers
 
-*Written by: Alian713*
+_Written by: Alian713_
 
 ---
 
@@ -14,7 +14,7 @@ Triggers introduce dynamics into a game and allow us to make interesting game mo
 
 ## 1. Getting Started: The UI
 
-To work with triggers in your scenario, you need to go to the `Triggers` tab in the editor. Here, you will see two boxes to the left. The box at the top lists all the existing triggers in a scenario. When a trigger is selected, the box at the bottom displays the list of conditions and effects for that trigger. 
+To work with triggers in your scenario, you need to go to the `Triggers` tab in the editor. Here, you will see two boxes to the left. The box at the top lists all the existing triggers in a scenario. When a trigger is selected, the box at the bottom displays the list of conditions and effects for that trigger.
 
 What do the buttons under the boxes do?
 
@@ -32,7 +32,7 @@ What do the buttons under the boxes do?
     3. `Delete`: delete the selected condition or effect. This cannot be undone!
     4. `Copy`: copy the selected condition or effect.
 
-But wait, what are effects and conditions? Effects and Conditions are the basic elements of triggers that allow us to take certain actions, make decisions and do a lot more cool stuff. They are covered in more detail in the [Effects](../effects/effects "Jump to: Triggers > Effects") and [Conditions]("Jump to: Triggers > Conditions NONEXISTENT") sections of the guide
+But wait, what are effects and conditions? Effects and Conditions are the basic elements of triggers that allow us to take certain actions, make decisions and do a lot more cool stuff. They are covered in more detail in the [Effects](./effects "Jump to: Triggers > Effects") and [Conditions]("Jump to: Triggers > Conditions NON EXISTENT") sections of the guide
 
 For now, simply put, an effect is the action that the trigger has to take and a condition is literally the thing which must be fulfilled before the action is allowed to be taken.
 
@@ -44,9 +44,9 @@ When a trigger is selected, the settings related to it are displayed. The follow
 2. `Looping`: this property controls if the trigger deactivates itself after running once or if it repeatedly executes its effects when its conditions are fulfilled. Triggers loop once every second
 3. `Description`: this textbox is used for displaying objectives in the `Objectives` panel of the scenario. See the setting below:
 4. `Display as objective`: When this checkbox is selected, the text in the `Description` field is shown in the `Objectives` panel of the scenario. The `Objectives` panel is the one that is opened when you click the button next to the tech tree at the top of the screen ingame. This panel is visible to ALL players in the game.
-5. `Description String Table ID`: This field is the same as the [5.8. Name String ID](../../basics/#58-name-string-id "Jump to: Custom Scenarios > Scenario Basics > 5.8. Name String ID")
+5. `Description String Table ID`: This field is the same as the [3.8. Name String ID](../#38-name-string-id "Jump to: Custom Scenarios > Scenario Basics > 3.8. Name String ID")
 6. `Short Description`: This textbox is used for displaying objectives on screen ingame. See the setting below:
-7. `Display on Screen`: When this checkbox is selected, the text in the `Short Description` field is shown to the right side of the screen of ALL players in the game. If it does not show up for you when you enable this, try pressing the `F4` key (or the score button) a few times.
+7. `Display on Screen`: When this checkbox is selected, the text in the `Short Description` field is shown to the right side of the screen of ALL players in the game. If it does not show up for you when you enable this, try pressing the ++f4++ key (or the score button) a few times.
 8. `Make Header`: When this checkbox is selected and `Display on Screen` is also selected, that particular `Short Description` is displayed with a bigger font size.
 9. `Mute Objectives`: When this checkbox is selected, completing an objective will not trigger a sound.
 10. `Display Order`: The objectives are displayed in descending order of priority.
@@ -62,4 +62,4 @@ When a trigger is selected, the settings related to it are displayed. The follow
 
 4. Triggers are executed in the order that they were created in, and not the order of their appearence from top to bottom. The effects inside one trigger are also executed in the order that they were created in, and not the order of their appearence from top to bottom. The conditions inside a trigger are checked according to the order that they were created in as well.
 
-5. For the effects of a trigger to execute, all the conditions of the trigger must be fulfilled except in one case (when an OR condition is used). A trigger will give up on checking the rest of its conditions as soon as a condition that is false is encountered except in one case (when an OR condition is used). These rules are discussed in greater detail in the [Conditions]("Jump to: Triggers > Conditions NONEXISTENT") section of the guide.
+5. For the effects of a trigger to execute, all the conditions of the trigger must be fulfilled except in one case (when an OR condition is used). A trigger will give up on checking the rest of its conditions as soon as a condition that is false is encountered except in one case (when an OR condition is used). These rules are discussed in greater detail in the [Conditions]("Jump to: Triggers > Conditions NON EXISTENT") section of the guide.

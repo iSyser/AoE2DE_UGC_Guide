@@ -50,9 +50,13 @@ pip install -r requirements.txt
 
 ## 作者简介
 
-如果你有问题，请在[这里](https://discord.gg/rNa6cUC76W "加入 All About UGC Discord!")加入我们的 Discord！
+如果你有问题，请在这里加入我们的 Discord：
 
-如果你使用 QQ，也可以通过群号 [226329464](https://qm.qq.com/cgi-bin/qm/qr?k=IW9q54kc033jwsReqxxXo_I-ZgRDNj0_&jump_from=webapi&authKey=8jCDhk6r5pbYFgWrKtHIWbz0G5/oszc3xfMXP4DJxVUnYCE/HB1NkkHZpDT2BvJh) 加入我们的 QQ 群！
+[:simple-discord: 加入 Discord](https://discord.gg/rNa6cUC76W "加入 All About UGC discord!"){target="\_blank" .md-button}
+
+如果你使用 QQ，也可以通过群号 **226329464** 加入我们的 QQ 群：
+
+[:fontawesome-brands-qq: 加入 QQ 群](https://qm.qq.com/cgi-bin/qm/qr?k=IW9q54kc033jwsReqxxXo_I-ZgRDNj0_&jump_from=webapi&authKey=8jCDhk6r5pbYFgWrKtHIWbz0G5/oszc3xfMXP4DJxVUnYCE/HB1NkkHZpDT2BvJh){ target="\_blank" .md-button }
 
 本手册由以下作者共同撰写
 

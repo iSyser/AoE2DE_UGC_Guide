@@ -50,7 +50,7 @@ Now you can build and view the site by running `mkdocs serve`.
 
 ## About the Authors
 
-If you have questions, join our discord [here](https://discord.gg/rNa6cUC76W "Join the All About UGC discord!")!
+If you have questions, join our discord [here](https://discord.gg/rNa6cUC76W "Join the All About UGC discord!"){target="\_blank"}!
 
 This guide has been written by
 

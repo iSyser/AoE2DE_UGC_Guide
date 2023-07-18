@@ -1,6 +1,6 @@
 # AoE2ScenarioParser
 
-*Written by: KSneijders (MrKirby)*
+_Written by: KSneijders (MrKirby)_
 
 ---
 
@@ -18,7 +18,7 @@ Check out the [official AoE2ScenarioParser documentation] for the most up-to-dat
 
 ## Python Installation
 
-For the most up-to-date installation guide, you should check out the official `AoE2ScenarioParser` docs. 
+For the most up-to-date installation guide, you should check out the official `AoE2ScenarioParser` docs.
 
 Which can be found [here].
 
