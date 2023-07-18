@@ -9,13 +9,16 @@
     <script>
       "use strict";
       (function (supported) {
-        let dst;
-        for (const lang of navigator.languages) {
-          if ((dst = supported.find((e) => RegExp(`^${e}\\b`).test(lang)))) {
-            break;
+        let dst = "";
+        if ("/" == location.pathname) {
+          for (const lang of navigator.languages) {
+            if ((dst = supported.find((e) => RegExp(`^${e}\\b`).test(lang)))) {
+              break;
+            }
           }
+          dst = (dst || "") + "/";
         }
-        dst = (dst || "") + "/about";
+        dst += "about";
         location.replace(dst);
       })(["zh"]);
     </script>

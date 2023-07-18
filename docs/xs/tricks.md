@@ -1,3 +1,5 @@
+# Tricks
+
 _Written by: Alian713, Syser_
 
 ---

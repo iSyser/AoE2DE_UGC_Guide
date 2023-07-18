@@ -23,7 +23,7 @@ nav:
     -                               "scenarios/index.md"
     - Triggers:
       -                             "scenarios/triggers/index.md"
-      - Effects:                    "scenarios/triggers/effects/effects.md"
+      -                             "scenarios/triggers/effects/index.md"
     #   - Conditions:               "scenarios/triggers/conditions/conditions.md"
     #   - Variables:                "scenarios/triggers/variables.md"
     # - Tricks and Tips:            "scenarios/tricks.md"
@@ -39,7 +39,7 @@ nav:
     -                               "xs/index.md"
     - For Beginners:                "xs/beginner.md"
     - For Programmers:              "xs/programmer.md"
-    - Tricks:                       "xs/tricks.md"
+    -                               "xs/tricks.md"
     -                               "xs/functions/index.md"
     -                               "xs/constants/index.md"
     - Known Bugs:
@@ -60,38 +60,37 @@ nav:
 #     - RMS Basics:                 "rms/basics.md"
 
 markdown_extensions:
-  - attr_list
   - admonition                # Create not and warning boxes        https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition
+  - attr_list
   - md_in_html
+  - pymdownx.arithmatex:      # Preserve LaTeX math equations       https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
+      generic: true
   - pymdownx.caret            # Handling sub- and superscripts      https://facelessuser.github.io/pymdown-extensions/extensions/caret/
   - pymdownx.critic           #                                     https://facelessuser.github.io/pymdown-extensions/extensions/critic/
   - pymdownx.details          # Collapsable elements                https://facelessuser.github.io/pymdown-extensions/extensions/details/
-  - pymdownx.inlinehilite     # Inline code highlighting            https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
-  - pymdownx.mark             # Highlighting of text                https://facelessuser.github.io/pymdown-extensions/extensions/mark/
-  - pymdownx.smartsymbols     # Creating special characters         https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
-  - pymdownx.snippets         #                                     https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
-  - pymdownx.superfences
-  - pymdownx.tabbed           # Tabs                                https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
-  - pymdownx.tasklist         #                                     https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
-  - pymdownx.tilde            # Strikethrough of text               https://facelessuser.github.io/pymdown-extensions/extensions/tilde/
-  - pymdownx.arithmatex:      # Preserve LaTeX math equations       https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
-      generic: true
   - pymdownx.emoji:           # Emojis                              https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
       emoji_index:     !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:       # Highlighting code blocks            https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
       linenums:     true
       use_pygments: true
+  - pymdownx.inlinehilite     # Inline code highlighting            https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
   - pymdownx.keys:            # Add styling keyboard keys           https://facelessuser.github.io/pymdown-extensions/extensions/keys/
      strict: false
+  - pymdownx.mark             # Highlighting of text                https://facelessuser.github.io/pymdown-extensions/extensions/mark/
+  - pymdownx.smartsymbols     # Creating special characters         https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
+  - pymdownx.snippets         #                                     https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
   - pymdownx.superfences:     # Complicated code fences             https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
       custom_fences:
         - name:   mermaid
           class:  mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:           # Tabs                                https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+      alternate_style: true
   - pymdownx.tasklist:        # Creating Check-able tasklist        https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
       custom_checkbox:    true
       clickable_checkbox: true
+  - pymdownx.tilde            # Strikethrough of text               https://facelessuser.github.io/pymdown-extensions/extensions/tilde/
   - toc:
       permalink: true
 
@@ -128,7 +127,7 @@ plugins:
 
           Damage Calculation: 伤害计算
 
-          Triggers: 触发
+          Triggers: 触发器
           Effects: 效果
           Conditions: 条件
           Variables: 变量
@@ -141,11 +140,8 @@ plugins:
           AoE2ScenarioParser: ASP (场景解析器)
 
           For Beginners: 对于初学者
-
           For Programmers: 对于程序员
-          Tricks: 技巧
-          Functions Reference: 函数参考
-          Constant Reference: 常量参考
+          
           Known Bugs: 已知 Bugs
 
 theme:

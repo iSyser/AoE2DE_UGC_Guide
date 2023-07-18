@@ -96,8 +96,8 @@
     "constants": [
       {
         "name": "cGaia",
-        "nickname": "c大地之母",
-        "desc": "这是 GET_NAME 的文明 ID"
+        "nickname": "c盖亚",
+        "desc": "这是 GET_NAME（大地之母） 的文明 ID"
       },
       {
         "name": "cBritons",

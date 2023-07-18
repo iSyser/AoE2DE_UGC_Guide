@@ -2,7 +2,6 @@
   background: var(--md-accent-fg-color);
   color: var(--md-accent-bg-color--light);
 }
-
 [data-md-color-scheme="default"] {
   --md-default-bg-color: #eee;
 
@@ -10,6 +9,7 @@
   --attack-color: darkred;
   --function-color: darkblue;
   --set-color: darkorange;
+  --accent-color: var(--md-accent-fg-color);
 }
 @media screen {
   [data-md-color-scheme="slate"] {
@@ -19,12 +19,8 @@
     --attack-color: lightcoral;
     --function-color: lightskyblue;
     --set-color: lightpink;
+    --accent-color: var(--md-accent-fg-color);
   }
-
-  /* ::selection {
-    background: #ccc;
-    color: #ff645d;
-  } */
 }
 .md-header {
   box-shadow: 0 0 20px -10px #000000;

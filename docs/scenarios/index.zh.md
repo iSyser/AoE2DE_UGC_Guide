@@ -36,7 +36,9 @@ _作者：Alian713_
 ### 1.1. 地图风格
 
 1. `空白地图`：此选项生成的整个地图遍布相同地形。加载新场景时生成的默认地图是带有草地地形的空白地图。
+
 2. `随机地图`：此选项从 RMS 生成地图（RMS 全称 Random Map Script，指随机地图脚本，它们是生成像阿拉伯那样的规则地图的脚本）。
+
 3. `种子地图`：此选项使用指定种子从 RMS 生成地图。
 
 !!! question "问题"
@@ -53,392 +55,408 @@ AI 使用此选项来确定他们正在玩的地图类型。如果你的地图�
 
 此设置更改地图的颜色主题（灯光）。默认情况下，它设置为 `空`，这意味着没有颜色主题。 颜色主题仅出于美观原因而使用，不会影响游戏玩法。例如，如果您要制作冬季的地图，那么可以使用冬季颜色主题。
 
-### 1.4. Team Positions
+### 1.4. 队伍位置
 
-This setting is for when you generate maps from an RMS. It determines if players **in the same team** are placed in order of their colour or if they are randomly distributed throughout the map
+此设置适用于从 RMS 生成地图时。它确定**同一团队**中的玩家是否按颜色顺序放置，或者是否随机分布在整个地图上
 
-For example, The teams are currently set to Players 1,3,5,7 vs Players 2,4,6,8 and generating the map with team positions on gives this result:
+例如，当前队伍设置为玩家 1, 3, 5, 7 vs 玩家 2, 4, 6, 8 并开启队伍位置，则会生成以下地图：
 
-![Team Positions On](imgs/team_pos_on.png "Team Positions On")
+![队伍位置开启](imgs/team_pos_on.png "队伍位置开启")
 
-Notice that players 1,3,5,7 who are on the same team have, generated in that particular order (going counter clockwise in the image) and that players 2,4,6,8 have also generated in that order.
+请注意，同一团队中的玩家 1, 3, 5, 7 已按特定顺序生成（在图像中逆时针方向），玩家 2, 4, 6, 8 也按该顺序生成。
 
-Generating the map with team positions off on the other hand, gives this result:
+另一方面，在队伍位置关闭的情况下生成地图会给出以下结果：
 
-![Team Positions Off](imgs/team_pos_off.png "Team Positions Off")
+![队伍位置关闭](imgs/team_pos_off.png "队伍位置关闭")
 
-Notice that now, players 1,3,5,7 who are on the same team, have generated in random positions. Similarly players 2,4,6,8 have generated in no particular order. Also note that even though the positions within the team are random, the players are still grouped on each side of the map by team.
+请注意，现在同一团队中的玩家 1, 3, 5, 7 已生成在随机位置。同样，玩家 2, 4, 6, 8 的生成也没有特定的顺序。另请注意，即使团队内的位置是随机的，玩家仍然按团队分组在地图的每一侧。
 
-To be more precise, this option generates players in each team in order of their player numbers. Players do not have to be in the specific teams used in the above exmaple for this to work.
+更准确地说，此选项按照玩家编号的顺序生成每个团队中的玩家。玩家不必加入上述示例中使用的特定团队也可实现此功能。
 
-### 1.5. Extend Map
+### 1.5. 扩展地图
 
-This features is useful for expanding an already existing map if you need to use more space. To use it,
+此功能用于扩展现有的您需要使用更多空间的地图。要使用它，
 
-1. Click the checkbox called `Extend Map`.
-2. This brings up two new options, `New Map Size` and a `Map Offset`.
-3. `New Map Size`: the size of the new map that will be generated.
-4. `Map Offset`: determines where to place the existing map on the new map.
+1. 单击 `扩展地图` 复选框。
+2. 这会出现两个新选项，`新地图尺寸` 和 `地图偏移`。
+3. `新地图尺寸`：将生成的新地图的尺寸。
+4. `地图偏移`：确定现有地图在新地图上的放置位置。
 
-For example, Extending this 4 player map with a `New Map Size` of `8 players` and a `Map Offset` of `North`
+例如，将下面 4 玩家地图扩展成 `8 玩家` 的 `新地图尺寸` 和 `北` 的 `地图偏移`
 
-![Before Extending](imgs/extend_before.png "Before Extending")
+![扩展前](imgs/extend_before.png "扩展前")
 
-gives the following result:
+得到如下结果：
 
-![After Extending](imgs/extend_after.png "After Extending")
+![扩展后](imgs/extend_after.png "扩展后")
 
-Remember, the top corner of the map is North!
+请记住，地图的顶角是北！
 
-![Map Directions](imgs/directions.png "Map Directions")
+![地图方位](imgs/directions.png "地图方位")
 
-### 1.6. Script Filename
+### 1.6. 脚本文件名
 
-This is the place where you need to enter the name of any XS scripts that you are using in your map. XS scripts are covered in the `XS Scripts` section of this guide
+您需要在此处输入您在地图中使用的任何 XS 脚本的名称。本手册的 `XS 脚本语言` 部分介绍了 XS 脚本
 
-## 2. Global Victory
+## 2. 地形
 
-Under the `Global Victory` tab in the editor, there are options that allow you to define custom victory conditions for all players. They are all discussed below:
+在编辑器的 `地形` 选项卡下，有很多用于修改地图地形的选项。下面对它们中的每一个进行讨论：
 
-### 2.1. Standard
+### 2.1. 地图
 
-A player wins by either defeating all enemies, or capturing 5 relics and holding them for 200 years, or constructing and holding a wonder for 200 years
+此选项允许您在地图上手动放置地形。
 
-### 2.2. Conquest
+1.  `画刷尺寸`：允许您选择一次要影响地图上的区域大小。
+2.  `分层模式`：允许您在基础地形之上混合并分层另一种类型的地形。请注意，地形属性（例如可以放置在地形上的建筑物）仍然由基础地形决定。这意味着您将无法在铺有草地的冰上建造建筑物，但可以在铺有冰的草地上建造建筑物
+3.  `养眼美景`：确定您放置的地形是否会自动在其上方生成养眼的美景。养眼美景是指仅出于美观原因而生成的植物和其他单位，因此得名“养眼美景”
+4.  `岸上无波`：在整个地图上禁用水面上的波浪
+5.  `水域清晰度`：这个选项改变了渲染 3D 水域时整个地图上水的样子
 
-A player can only win by defeating all enemy players
+    不同的水域清晰度如下：
 
-### 2.3. Score
+    === "预置\_主要"
 
-The first player to reach the specified score wins
+        ![预置_主要](imgs/preset_main.png "预置_主要")
 
-### 2.4. Time Limit
+    === "预置\_遗朝 1"
 
-The game is played until the specified time limit. When the time limit is reached, the player with the highest score wins
+        ![预置_遗朝1](imgs/preset_fe1.png "预置_遗朝1")
 
-### 2.5. Custom
+    === "预置\_遗朝 2"
 
-This victory condition can be customised using the following options:
+        ![预置_遗朝2](imgs/preset_fe2.png "预置_遗朝2")
 
-1. `Conquest` this is the same as the victory condition in point 2. above
-2. `Exploration` the first player to reach the specified percentage of the map explored wins the game. (There is a text box infront of this option to specify percentage)
-3. `Relics` the first player to capture the specified quantity of relics wins the game. Unlike Standard Victory, a playar wins as soon as they have gathered the relics and do not need to hold them for 200 years. (There is a text box infront of this option to specify quantity)
-4. `Any One` a player can complete any one of the victory condition enabled above to win
-5. `All` a player has to complete all of the victory conditions enabled above to win
+    === "预置\_邪恶女巫"
 
-## 3. Terrain
+        ![预置_邪恶女巫](imgs/preset_wicked_witch.png "预置_邪恶女巫")
 
-Under the `Terrain` tab in the editor, there are a lot of options to modify the terrain of the map. Each of them are discussed below:
+6.  `海滩类型`: 此选项会更改放置水域地形时放置的海滩地形的类型。作为练习，请读者探索不同的海滩类型。
 
-### 3.1. Map
+### 2.2. 高地
 
-This option allows you to manually place down terrain on the map.
+此选项允许您更改地图上现有图块的高度。
 
-1. `Brush Size`: allows you to pick how large of an area you want to affect on the map at once
-2. `Layering Mode`: allows you to blend and layer another type of terrain on top of the base terrain. Note that the terrain properties like buildings that can be placed on terrain are still determined by the base terrain. This means that you won't be able to build buildings on ice layered with grass but you will be able to build buildings on grass layered with ice
-3. `Eye Candy`: determines if the terrain you place automatically spawns eye candy on top of it. Eye candy are plants and other units that are generated for aesthetic reasons only, hence the name "eye candy"
-4. `No Waves on Shore`: disables waves on water throughout the map
-5. `Water Definitions`: this option changes what water looks like throughout the map
+1. `画刷尺寸`: 允许您选择一次要影响地图上的区域大小
 
-Different water definitions are shown below:
+!!! tip "提示"
 
-`Preset_Main`:
-![Preset_Main](imgs/preset_main.png "Preset_Main")
+    在编辑器中，有 7 种不同高度的高地可供选择，但高度实际上可以具有更高或更低的值。在编辑器中，也无法使水域具有高度，但实际上也可以赋予水高度。这两件事都需要使用外部地图编辑工具，并且在本指南的 [ASP (场景解析器)](./useful_tools/parser/#basics "跳转到：自定义场景 > 实用工具 > ASP (场景解析器) > 解析器基础知识") 部分中进行了介绍。
 
-`Preset_FE1`:
-![Preset_FE1](imgs/preset_fe1.png "Preset_FE1")
+### 2.3. 悬崖
 
-`Preset_FE2`:
-![Preset_FE2](imgs/preset_fe2.png "Preset_FE2")
+此选项允许您在地图上放置悬崖。有两种类型的悬崖可供选择：花岗岩和砂岩。它们的功能完全相同，只是外观不同。
 
-`Preset_WickedWitch`:
-![Preset_WickedWitch](imgs/preset_wicked_witch.png "Preset_WickedWitch")
+!!! tip "提示"
 
-6. `Beach Type`: this option changes the type of beach terrain that is placed down when water terrain is placed. Exploring the different beach types has been left as an excersise for the reader.
+    悬崖实际上是一个可以旋转的盖亚物体，如果你进入 `单位` 选项卡，并启用 `旋转` 选项，你将能够单击悬崖并旋转它（右键单击将其沿相反方向旋转）。 有一些悬崖物体的旋转面实际上没有图形，因此看起来不可见。但由于它们仍然存在于地图上，只是不可见，因此它们会阻止单位通过它们。这个机制可以用来在地图上建造隐形墙！
 
-### 3.2. Elevation
+### 2.4. 地图复制
 
-This option allows you to change the elevation of existing tiles on the map.
-
-1. `Brush Size`: allows you to pick how large of an area you want to affect on the map at once
-
-!!! tip
-In the editor, there are 7 different levels of elevation to chose from, but the elevation can actually have higher or lower values. In the editor, there is no way to make water have elevation either, but it is actually possible to give water elevation as well. Both of these things requires use of external map editing tools and are covered under the [AoE2ScenarioParser](../useful_tools/parser/basics/ "Jump To: Custom Scenarios > Useful Tools > AoE2ScenarioParser > Parser Basics") section of this guide.
-
-### 3.3. Cliffs
-
-This option allows you to place cliffs on your map. There are two types of cliffs to chose from, Granite and Sandstone. They function exactly the same, and differ only in their appearence.
-
-!!! tip
-A cliff is actually a gaia object that can be rotated, if you go to the `Units` tab, and enable the `Rotate` option, you will be able to click the cliff and rotate it (right click rotates it in the opposite direction). There are a few rotations of the cliff objects that actually do not have graphics for them and hence appear invisible. but since they are still present on the map, just not visible, they block units from going through them. This mechanic can be used to make invisible walls on the map!
-
-### 3.4. Map Copy
-
-This option allows you to copy a part of the map and paste it using a brush. There are options to rotate and flip the selected area as well.
+此选项允许您复制地图的一部分并使用画刷粘贴。还有旋转和翻转所选区域的选项。
 
 !!! bug
-When a selection that is rectangular is rotated, the highlighted area that shows the brush DOES NOT rotate accordingly to show this rotation, but the game still pastes a rotated as you would expect.
 
-There is also another option called `Change Player`. This option allows you to change the player of the units in the selection to another player when pasting the selection.
+    当旋转矩形选区时，显示画刷的高亮显示区域**不会**相应旋转以显示此旋转，但游戏仍会按照您的预期粘贴旋转。
 
-### 3.5. Erase
+还有另一个 `更改玩家` 的选项。此选项允许您在粘贴选择时将选区单位的玩家更改为另一个玩家。
 
-This option allows you to selectively remove parts of the map in an area using a brush. The objects that can be selectively removed when using this feature are:
+### 2.5. 擦除
 
-1. Buildings
-2. Gaia Objects
-3. Invisible Units
-4. Layered Terrain
-5. Trees
-6. Units
+此选项允许您使用画刷有选择地删除某个区域中的地图部分。使用此功能时可以选择性删除的对象有：
 
-!!! abstract
-The layering mode option in this tab seems to have no effect on the way that elements are erased.
+1. 建筑物
+2. 盖亚物体
+3. 隐形单位
+4. 分层地形
+5. 树木
+6. 单位
 
-## 4. Options
+!!! abstract "摘要"
 
-Under the `Options` tab in the editor, there are options to:
+    此选项卡中的分层模式选项似乎对删除元素的方式没有影响。
 
-### 4.1. Point of View
+## 3. 玩家
 
-Set the specified player's starting PoV to your current view in the editor using the `set view` button. Once the view is set, check that it works by clicking `go to view`
+在编辑器的 `玩家` 选项卡下，有几个关于玩家的属性可以更改
 
-### 4.2. Testing Difficulty
+### 3.1. 玩家数量
 
-Set the `Testing Difficulty`
+您的场景中的玩家总数
 
-### 4.3. Full Tech Tree
+### 3.2. 起始时代
 
-Enable `Full Tech Tree` for all players.
+指定当前所选玩家的起始时代
 
-!!! warning
-This option does not disable civ bonuses unlike the full tech tree option in normal games!
+### 3.3. 颜色
 
-### 4.4. Disable Objects
+指定当前所选玩家的颜色
 
-Disable Buildings, Units or Techs by moving them from the `Full List` to the `Disabled List` by clicking the `<` arrow. remove an object from the disabled list by clicking `>`. The `<<` and `>>` move all items at once  
-Note: Using this option to disable objects is not recommended as there is a better way to do it via triggers which are covered in the `Triggers` section of this guide.
+### 3.4. 起始资源
 
-### 4.5. Collide & Correcting
+`食物`、`木材`、`石料`、`黄金` 决定当前选择的玩家资源的起始数量
 
-Enabling this option makes stationary units move out the way to let moving units pass through.
+### 3.5. 人口限制
 
-### 4.6. Villager Force Drop
+确定当前所选玩家允许的最大人口限制。该值上限为 500
 
-Makes villagers instantly lose their resources when their tasks are switched instead of losing when they actually start working on the other task. This mimics FE behaviour, i.e. if villagers are switched from hunters to sheep, they don't lose any food.
+### 3.6. 基础优先级
 
-### 4.7. Block Humanity Team Change
+这个选项似乎对游戏没有影响。
 
-Lock Teams ONLY for human players.
+!!! question "问题"
 
-## 5. Players
+    如果您知道这是做什么的，请联系本指南的作者之一并让他们知道！
 
-Under the `Players` tab in the editor, there are several properties that can be changed about the players
+### 3.7. 部落名称
 
-### 5.1. Number of Players
+设置当前选定玩家的名称**如果**他们是 AI。不影响人类玩家
 
-The total number of players you have in your scenario
+### 3.8. 名称字符串 ID
 
-### 5.2. Starting Age
+该字段用于引用游戏默认识别的名称。它可用于通过使用游戏识别的值自动设置 `部落名称`。在 AI 上尝试该字段中的值 `1` 并看看会发生什么，留给读者作为练习。
 
-Specify the starting age for the currently selected player
+### 3.9. 性格
 
-### 5.3. Colour
+该玩家使用的 AI（如果该玩家不是人类）。选择 `E3-p2.ai` 来模拟挂机玩家。
 
-Specify the colour of the currently selected player
+### 3.10. 玩家类型
 
-### 5.4. Starting Resources
+此设置不会对游戏玩法产生影响。这两个选项之间的唯一区别是，将其设置为 `任一` 不会自动用 AI 填充大厅空位。将其设置为 `AI` 将在大厅游戏中自动为您设置该玩家
 
-`Food`, `Wood`, `Stone`, `Gold` determine the starting amount of the currently selected player's resources
+### 3.11. 文明
 
-### 5.5. Pop Limit
+设置当前选择玩家的文明
 
-Determine the maximum population limit allowed for the currently selected player. This value is capped at 500
+### 3.12. 锁定文明
 
-### 5.6. Base Priority
+阻止当前选择的玩家在大厅中改变他们的文明
 
-This option seems to have no effect on the game.
+### 3.13. 建筑风格
 
-!!! question
-If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
+将当前选择的玩家的建筑风格设置更改为另一个文明的。
 
-### 5.7. Tribe Name
+### 3.14. 交换玩家
 
-Sets the name for the currently selected player **if** they are an AI. Does not effect human players
+将当前选定的玩家的设置与指定的玩家交换。
 
-### 5.8. Name String ID
+## 4. 单位
 
-This field is used for refering to names that the game recognises by default. It can be used to automatically set a `Tribe name` by using a value that the game recognises. Trying out the value `1` in this field on an AI and seeing what happens is left as an excersise for the reader.
+在 `单位` 选项卡下，有多个用于放置和操作单位的选项。
 
-### 5.9. Personality
+### 4.1. 放置单位
 
-The AI to use for this player if they are not a human player. Pick `E3-p2.ai` to simulate an afk player
+可以通过此选项卡中的 4 个菜单将单位放置在地图上：
 
-### 5.10. Player Type
+游戏将游戏中的所有单位对象分为 4 类：`单位`、`建筑物`、`英雄`、`其他`。
 
-This setting doesn't make a difference to gameplay. The only difference between the two options is that setting this to `Either` wont auto fill lobby slots with AIs. Setting it to `AI` will automatically set that player up for you in a lobby game
+1. `单位` 允许您放置常规游戏中最常见的单位。
+2. `建筑物` 允许您放置游戏中的大多数不同建筑物。
+3. `英雄` 允许您放置在战役和场景中使用的英雄单位。
+4. `其他` 这些是不直接属于上述任何类别的杂项单位。
 
-### 5.11. Civilization
+默认情况下，单位以随机旋转面放置，但是在放置单位之前向上/向下滚动可让您将其旋转面固定为您想要的任何方向。要返回到随机旋转面放置，请在菜单中选择另一个单位，然后重新选择要放置的单位。
 
-Set the currently selected player's civilization
+在放置这些单位时，将玩家更改为盖亚将显示额外的隐藏单位，例如树木、矿藏、狼以及其他在正常游戏中只有盖亚才能拥有的单位。游戏中还有一些即使使用盖亚放置也无法在编辑器列表中看到的单位。
 
-### 5.12. Lock Civ
+有两种方法可以使用这些隐藏单位：
 
-Prevent the currently selected player from changing their civilization in a lobby
+1. 使用创建对象触发器，用隐藏单位的对象 ID
+2. 使用高级数据编辑器（A.G.E.）取消隐藏编辑器中的隐藏单位，以允许手动放置。
 
-### 5.13. Architecture
+如果您不知道如何执行其中任何一个，您可以参考本指南的 [效果](./triggers/effects "跳转到：自定义场景 > 触发器 > 效果") 部分了解第一个选项 ，并/或 参阅本指南的 [取消隐藏编辑器单位]("跳转至：取消隐藏编辑器单元 NON EXISTENT") 部分
 
-Change the currently selected player's architecture set to another civilization's.
+### 4.2. 删除单位
 
-### 5.14. Swap Players
+已经放置在地图上的单位可以通过以下方式从地图上删除：
 
-Swap the settings for the currently selected player with the specified player.
+1. 第一个也是最明显的选项是使用此选项卡中的 `删除` 选项。这使我们能够从地图上一一删除单位。
+2. 如果您需要删除大量单位，第一个选项可能会很乏味，因此第二个选项是使用 `地形` 选项卡下 `擦除` 菜单中的 `擦除单位` 选项。请参阅 [2.5. 擦除](./#25 "跳转至：2.5. 擦除") 了解如何使用 `擦除` 选项。
 
-## 6. Messages
+### 4.3. 移动单位
 
-Under the `Messages` tab, there are different options for displaying text in the scenario.
+使用此选项卡中的 `移动` 选项可以在地图上移动已放置在地图上的单位。
 
-### 6.1. Scenario Instructions
+### 4.4. 旋转单位
 
-This option lets you set the text that is shown in the `Instructions` tab of the `Objectives Panel`.
+可以使用此选项卡中的 `旋转` 选项来旋转已放置在地图上的单位。选择 `旋转` 选项后，单击某个单位将使其顺时针旋转，右键单击该单位将使其逆时针旋转。
 
-!!! Note
-The `Objective Panel` can be opened by clicking the button to the right of the Tech Tree button at the top of the screen.
+### 4.5. 选择单位
 
-### 6.2. Objectives
+当选择一个单位时，会显示其生命值、攻击力、护甲值以及驻扎在其中的单位等统计数据。其他单位内部的单位可以使用驻扎删除来删除。
 
-This option lets you set the text that is shown in the `Objectives` tab of the `Objectives Panel`.
+### 4.6. 转化单位
 
-### 6.3. Hints
+此选项允许您将现有单位**从**一个或多个玩家转换**到**另一位玩家。
 
-This option lets you set the text that is shown in the `Hints` tab of the `Objectives Panel`.
+启用后，菜单中会出现 9 个新选项（右侧），用于选择要**从**何玩家转换单位。当前选定的玩家（左侧）是将单位转换**到**的玩家。选择 `画刷尺寸` 后，当您单击某个区域时，属于要**从**何转换的玩家的所有单位都将转换**到**所选玩家。
 
-### 6.4. Scout
+请记住，使用复选框在右侧选择要**从**何转换的玩家，而要转换**到**的玩家是在左侧下拉列表中选择的玩家！
 
-This option lets you set the text that is shown in the `Scout` tab of the `Objectives Panel`.
+## 5. 外交
 
-### 6.5. Victory
+在 `外交` 选项卡下，有一些选项可以更改游戏的外交设置：
 
-This option lets you set the text that is shown to players who win the game before the statistics screen.
+### 5.1. 外交立场
 
-### 6.6. Defeat
+右侧的复选框网格允许您更改每个玩家与所有其他玩家的立场。
 
-This option lets you set the text that is shown to players who lose the game before the statistics screen.
+### 5.2. 锁定队伍
 
-## 7. Units
+此选项使得游戏中的玩家无法更改队伍。它们仍然可以通过触发器进行更改。
 
-Under the `Units` tab, there are several options to place and manipulate units.
+### 5.3. 玩家选择队伍
 
-### 7.1. Placing Units
+禁用此选项将不允许玩家在游戏开始前在大厅中选择队伍。然而，队伍不会被锁定，并且仍然可以在游戏中更改，**除非**也启用了 `锁定队伍` 选项。
 
-Units can be placed on the map from the 4 menus in this tab:
+### 5.4. 随机起始点
 
-The game categorises all unit objects in the game into 4 categories, `Units`, `Buildings`, `Heroes`, `Others`.
+这个选项似乎对游戏没有影响。
 
-1. `Units` allows you to place down units that are most commonly seen in regular games.
-2. `Buildings` allows you to place down most of the different buildings in the game.
-3. `Heroes` allows you to place down the hero units used in campaigns and scenarios.
-4. `Others` these are miscellanious units that do not directly come under any of the above categories.
+!!! question "问题"
 
-By default, units are placed in a random rotation, however scrolling up/down before placing a unit allows you to fix its rotation to whichever rotation you want. To go back to placing in a random rotation, select another unit in the menu and then re select the unit for placement.
+    如果您知道这是做什么的，请联系本指南的作者之一并让他们知道！
 
-While placing these units, changing the player to Gaia will reveal additional hidden units like trees, mines, wolves and other units that only Gaia can own in normal games. There are additional units in the game that cannot be seen in the editor's lists even when using Gaia to place them.
+## 6. 全局胜利
 
-There are two ways to use these hidden units:
+在编辑器的 `全局胜利` 选项卡下，有一些选项允许您为所有玩家定义自定义胜利条件。下面讨论它们：
 
-1. Use a create object trigger with the hidden unit's object ID
-2. Use the Advanced Genie Editor (A.G.E.) to unhide hidden units in the editor to allow for manual placement.
+### 6.1. 标准
 
-If you do not know how to do either of those, you can refer to the [Effects](../triggers/effects/effects/ "Jump to: Custom Scenarios > Triggers > Effects") section of this guide for the first option, and/or refer to the [Unhide Editor Units]("Jump to: Unhide Editor Units NON EXISTENT") section of this guide
+玩家通过以下方式获胜：击败所有敌人，或捕获 5 个圣物并持有它们 200 年，或建造并持有奇观 200 年
 
-### 7.2. Deleting Units
+### 6.2. 征服
 
-Units that are already placed on the map can be deleted from the map by the following ways:
+玩家只有击败所有敌方玩家才能获胜
 
-1. The first and the most obvious option is to use the `Delete` option in this tab. This allows us to delete units one by one from the map.
-2. The first option can be tedious if you need to delete a large amount of units, thus the second option is to use the `Erase Units` option in the `Erase` menu under the `Terrain` tab. Refer to [3.5. Erase](./#35-erase "Jump to: 3.5. Erase") about how to use the `Erase` option.
+### 6.3. 得分
 
-### 7.3. Moving Units
+第一个达到指定分数的玩家获胜
 
-Units already placed on the map can be moved around on the map by using the `Move` option in this tab.
+### 6.4. 时限
 
-### 7.4. Rotating Units
+游戏将进行到指定的时间限制。当达到时间限制时，得分最高的玩家获胜
 
-Units already placed on the map can be rotated by using the `Rotate` option in this tab. After the `Rotate` option is selected, clicking a unit will rotate it clockwise, and right clicking it will rotate it counter clockwise.
+### 6.5. 定制
 
-### 7.5. Selecting Units
+可以使用以下选项自定义此胜利条件：
 
-When selecting a unit, its statistics like HP, Attack, Armour and units garrisoned inside it are shown. Units inside other units can be deleted using the garrison delete.
+1. `征服` 这与上面第 2 点的胜利条件相同
+2. `探索` 第一个达到探索地图指定百分比的玩家赢得游戏。（该选项前面有一个文本框来指定百分比）
+3. `圣物` 第一个捕获指定数量圣物的玩家获胜。与标准胜利不同的是，玩家一旦收集到圣物就获胜，不需要持有它们 200 年。（该选项前面有一个文本框可以指定数量）
+4. `任一` 玩家可以完成上面启用的任何一个胜利条件来获胜
+5. `所有` 玩家必须完成上面启用的所有胜利条件才能获胜
 
-### 7.6. Converting Units
+### 6.6. 第二游戏模式
 
-This option allows you to convert existing units **from** one or more players **to** another player.
+## 7. 选项
 
-When enabled, 9 new options (to the right) appear in the menu for selecting which players' units you want to convert **from**. The currently selected player (on the left) is the player the units will be converted **to**. After picking a `Brush Size` when you click on an area, all of the units belonging to the players being converted **from** will be converted **to** the selected player.
+在编辑器的 `选项` 选项卡下，有以下选项：
 
-Remember the players being converted **from** are selected on the right side using the checkboxes, and the player being converted **to** is the one selected in the dropdown to the left!
+### 7.1. 视点
 
-## 8. Cinematics
+使用 `设置视角` 按钮将指定玩家的起始视点（PoV）设置为编辑器中的当前视角。设置视角后，通过单击 `转到视角` 检查其是否有效
 
-Under the `Cinematics` tab, there are options to change the movie clips displayed before or after a scenario.
+### 7.2. 测试难度
+
+设置 `测试难度`
+
+### 7.3. 完整科技树
+
+为所有玩家启用 `完整科技树`。
+
+!!! warning "警告"
+
+    与普通游戏中的完整科技树选项不同，此选项不会禁用文明奖励！
+
+### 7.4. 禁用对象
+
+通过单击 `<` 箭头将建筑物、单位或科技从 `完整列表` 移动到 `禁用列表` 来禁用它们。单击 `>` 从禁用列表中删除对象。`<<` 和 `>>` 一次移动所有项目
+
+注意：不建议使用此选项来禁用对象，因为有更好的方法，可以通过本指南的 `触发器` 部分中介绍的触发器来执行此操作。
+
+### 7.5. 碰撞与修正
+
+启用此选项会使静止单位移开，以让移动单位通过。
+
+### 7.6. 村民强制丢弃
+
+使村民在任务切换时立即失去资源，而不是在他们实际开始执行其他任务时才失去资源。这模仿了遗朝的行为，即如果村民从猎人转变为羊，他们不会失去任何食物。
+
+### 7.7. 禁止人为更改队伍
+
+为**人类**玩家锁定队伍。
+
+## 8. 消息
+
+在 `消息` 选项卡下，有用于在场景中显示文本的不同选项。
+
+### 8.1. 场景说明
+
+此选项允许您设置 `目标面板` 的 `说明` 选项卡中显示的文本。
+
+!!! Note "注意"
+
+    单击屏幕顶部科技树按钮右侧的按钮可以打开 `目标面板`。
+
+### 8.2. 目标
+
+此选项允许您设置 `目标面板` 的 `目标` 选项卡中显示的文本。
+
+### 8.3. 提示
+
+此选项允许您设置 `目标面板` 的 `提示` 选项卡中显示的文本。
+
+### 8.4. 侦察
+
+此选项允许您设置 `目标面板` 的 `侦察` 选项卡中显示的文本。
+
+### 8.5. 成功
+
+此选项允许您设置在统计屏幕之前向赢得游戏的玩家显示的文本。
+
+### 8.6. 失败
+
+此选项允许您设置在统计屏幕之前向输掉游戏的玩家显示的文本。
+
+## 9. 电影艺术
+
+在 `电影艺术` 选项卡下，有一些选项可以更改场景之前或之后显示的影片剪辑。
 
 !!! bug
-These are mainly used in the campaigns, and functionality for changing them in scenarios is bugged as of the time of the writing of this guide.
 
-## 9. Diplomacy
+    这些主要用于战役中，在撰写本指南时，在场景中更改它们的功能存在缺陷。
 
-Under the `Diplomacy` tab, there are options to change the diplomacy settings of the game:
+## 10. 触发器
 
-### 9.1. Diplomacy Stance
+在 `触发器` 选项卡下，可以在场景中操作触发器。触发器是场景中最强大的组成部分，因为它们允许我们在游戏中执行大量不同的操作。它们可用于向场景添加更多动态和游戏机制，几乎任何您能想到的事情（在 AoE2 及其自身限制的范围内）都可以使用触发器以某种方式完成。
 
-The grid of checkboxes to the right allows you to change each player's stance with all of the other players.
+有关如何使用触发器的详细信息，请参阅本指南的 [触发器](./triggers "跳转至：自定义场景 > 触发器 > 触发器基础知识") 部分。
 
-### 9.2. Lock Teams
+## 11. 实用热键
 
-This option makes it so that teams cannot be changed by players in the game. They can still be changed by triggers.
+了解一些热键有助于加快场景制作和测试工作流程
 
-### 9.3. Players Choose Teams
-
-Disabling this option will not allow players to pick teams in the lobby before the start of the game. The teams will not be locked however, and may still be changed in game **unless** the `Lock Teams` option is also enabled.
-
-### 9.4. Random Start Points
-
-This option seems to have no effect on the game.
-
-!!! question
-If you are aware of what this does, please reach out to one of the authors of this guide and let them know!
-
-## 10. Triggers
-
-Under the `Triggers` tab, triggers can be manipulated in a scenario. Triggers are the most powerful component of a scenario as they allow us to do a plethora of different things in a game. They can be used to add more dynamics and game mechanics to a scenario, almost anything that you could think of (within the context of AoE2 and its own limits) is possible to do in some way using triggers.
-
-Details about how to use triggers are covered in the [Triggers](./triggers/index.md "Jump To: Custom Scenarios > Triggers > Trigger Basics") section of this guide.
-
-## 11. Useful Hotkeys
-
-Some hotkeys that are useful to know and make the workflow of making and testing a scenario faster
-
-1. Scrolling up and down on a dropdown list makes the values go up and down the lists as well
-2. Pressing or holding a letter in any object selection menu will cycle through the list of objects
-3. If you are on a tab where a player can be selected (except triggers) then pressing numbers 1-8 will switch to that player
-4. When testing a scenario, pressing ++ctrl+shift++ and `F#` where # is the number of a player, will let you control that player. For example, pressing ++ctrl+shift+f4++ will shift your control to player 4
-5. Scrolling when placing objects will rotate them. Some gaia buildings and units have entirely different graphics for different rotations!
-6. Pressing ++ctrl+g++ once allows for off grid placement of units. Pressing it again allows for stacking units and off grid placement together. Pressing a 3rd time allows for on grid unit placement with stacking enabled. Pressing a 4th time makes it go back to default! Even Buildings can be stacked using this option!
-7. ++ctrl+q++ Quit the scenario editor
-8. ++ctrl+a++ Toggle hitboxes on every unit on the map
-9. ++ctrl+s++ Save the scenario
-10. ++ctrl+l++ Load a scenario
-11. ++ctrl+n++ Create a new scenario
-12. Tabs
-    1. ++f1++-++f10++ selects a tab in the scenario editor. ++f1++ - Map, ++f2++ - Terrain, and so on
-    2. ++ctrl+w++ Switch to the Messages tab
-    3. ++ctrl+r++ Switch to the Triggers tab
-    4. ++ctrl+t++ Switch to the Terrain tab
-    5. ++ctrl+u++ Switch to the Units tab
-    6. ++ctrl+o++ Switch to the Options tab
-    7. ++ctrl+p++ Switch to the Players tab
-    8. ++ctrl+d++ Switch to the Diplomacy tab
-    9. ++ctrl+c++ Switch to the Cinematics tab
-    10. ++ctrl+v++ Switch to the Global Victory tab
-    11. ++ctrl+m++ Switch to the Map tab
-13. ++ctrl+space++ Test Scenario (Currently bugged, causes a crash in the game D:)
+1. 在下拉列表上上下滚动会使值也在列表中上下移动
+2. 按下或按住任意对象选择菜单中的字母将循环浏览对象列表
+3. 如果您所在的选项卡可以选择玩家（触发器除外），则按数字 1-8 将切换到该玩家
+4. 测试场景时，按 ++ctrl+shift++ 和 `F#`（其中 # 是玩家编号）将让您控制该玩家。例如，按 ++ctrl+shift+f4++ 会将您的控制转移到玩家 4
+5. 放置物体时滚动会旋转它们。一些盖亚建筑物和单位对于不同的旋转具有完全不同的图形！
+6. 按一次 ++ctrl+g++ 可以关闭网格放置单位。再次按下它可以将单位堆叠并关闭网格放置单位。按第三次可以开启网格放置单位并启用堆叠。按第四次即可恢复默认状态！甚至建筑物也可以使用此选项堆叠！
+7. ++ctrl+q++ 退出场景编辑器
+8. ++ctrl+a++ 切换地图上每个单位的碰撞框
+9. ++ctrl+s++ 保存场景
+10. ++ctrl+l++ 加载场景
+11. ++ctrl+n++ 创建一个新场景
+12. 选项卡
+    1. ++f1++-++f10++ 在场景编辑器中选择一个选项卡。++f1++ - 地图，++f2++ - 地形等
+    2. ++ctrl+w++ 切换到消息选项卡
+    3. ++ctrl+r++ 切换到触发器选项卡
+    4. ++ctrl+t++ 切换到地形选项卡
+    5. ++ctrl+u++ 切换到单位选项卡
+    6. ++ctrl+o++ 切换到选项选项卡
+    7. ++ctrl+p++ 切换到玩家选项卡
+    8. ++ctrl+d++ 切换到外交选项卡
+    9. ++ctrl+c++ 切换到电影选项卡
+    10. ++ctrl+v++ 切换到全局胜利选项卡
+    11. ++ctrl+m++ 切换到地图选项卡
+13. ++ctrl+space++ 测试场景（目前有 bug，导致游戏崩溃 D:）
