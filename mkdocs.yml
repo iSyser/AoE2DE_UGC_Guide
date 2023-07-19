@@ -128,20 +128,18 @@ plugins:
           Damage Calculation: 伤害计算
 
           Triggers: 触发器
-          Effects: 效果
-          Conditions: 条件
-          Variables: 变量
-          Tricks and Tips: 技巧与提示
+
           Advanced: 高级
-          File Byte Structure: 文件字节结构
           Useful Tools: 实用工具
+
+          File Byte Structure: 文件字节结构
 
           Advanced Genie Editor: AGE (高级数据编辑器)
           AoE2ScenarioParser: ASP (场景解析器)
 
           For Beginners: 对于初学者
           For Programmers: 对于程序员
-          
+
           Known Bugs: 已知 Bugs
 
 theme:

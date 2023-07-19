@@ -36,13 +36,7 @@ def str2title(title: str) -> str:
 
 
 def json_list_2_dict(src: list) -> dict:
-    result = {}
-    if not src:
-        return result
-
-    for i in src:
-        result[i['name']] = i
-    return result
+    return {i['name']: i for i in src} if src else {}
 
 
 def load_json_dict(file_name: str, default_language: str, language: str = None, fix_2_dict: bool = False) -> dict:

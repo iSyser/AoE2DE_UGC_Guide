@@ -1,0 +1,186 @@
+{
+  "aa_armor_or_attack_type": {
+    "display_name": "护甲或攻击类型",
+    "desc": "欲修改的护甲/攻击类型"
+  },
+  "aa_quantity": {
+    "display_name": "数量",
+    "desc": "欲修改的数量"
+  },
+  "ai_script_goal": {
+    "display_name": "AI 脚本目标",
+    "desc": "欲设置的 AI 触发 ID"
+  },
+  "ai_signal_value": {
+    "display_name": "AI 信号值",
+    "desc": "欲确认的 AI 信号 ID"
+  },
+  "area_1_x": {
+    "display_name": "区域",
+    "desc": "只有该选定区域上的单位才会受到该效果的影响。如果未设置，整个地图上的单位都会受到影响。"
+  },
+  "area_1_y": { "display_name": "区域 1 Y", "desc": "" },
+  "area_2_x": { "display_name": "区域 2 X", "desc": "" },
+  "area_2_y": { "display_name": "区域 2 Y", "desc": "" },
+  "attack_stance": {
+    "display_name": "攻击姿态",
+    "desc": "设置单位的新姿态，进攻、防守、坚守或不进攻"
+  },
+  "button_location": {
+    "display_name": "按钮位置",
+    "desc": "单位或科技按钮的位置。该数字由 $(行-1)\\times5+列$ 给出。例如，军营中民兵**科技**的按钮位置，位于第 2 行第 1 列，该数字是 $(2-1)\\times5+1 = 6$"
+  },
+  "diplomacy": {
+    "display_name": "外交立场",
+    "desc": "新外交状态"
+  },
+  "display_time": {
+    "display_name": "显示时间",
+    "desc": "显示指南的时间量"
+  },
+  "comment": "启用和胜利是相同的属性",
+  "enabled": {
+    "display_name": "启用",
+    "desc": "如果选择此选项，则启用单位/科技（如果尚未启用）"
+  },
+  "victory": {
+    "display_name": "胜利",
+    "desc": "如果选择此项，则所选玩家将赢得游戏。如果未选择，则所选玩家被击败"
+  },
+  "facet": {
+    "display_name": "朝向",
+    "desc": "创建单位的旋转面"
+  },
+  "flash_object": {
+    "display_name": "闪烁对象",
+    "desc": "启用此功能后，如果源玩家和目标玩家相同，则所选对象（们）将闪烁"
+  },
+  "food": {
+    "display_name": "食物",
+    "desc": "单位/科技的新食物花费"
+  },
+  "force_research_technology": {
+    "display_name": "强制",
+    "desc": "如果启用，即使玩家的文明无法访问该技术，也会研究它"
+  },
+  "from_variable": {
+    "display_name": "变量",
+    "desc": "欲修改的变量"
+  },
+  "gold": {
+    "display_name": "黄金",
+    "desc": "单位/科技的新黄金花费"
+  },
+  "instruction_panel_position": {
+    "display_name": "面板位置",
+    "desc": "位置 0 将指南显示在顶部，位置 1 将指南显示在屏幕上半部分中间，位置 2 将指令显示在屏幕上半部分底部"
+  },
+  "item_id": { "display_name": "项目 ID", "desc": "" },
+  "location_object_reference": {
+    "display_name": "引用对象位置",
+    "desc": "在某些效果中，例如指派对象任务，当指派一个单位对另一个单位执行操作时，位置 x、y 会被引用对象替换"
+  },
+  "location_x": {
+    "display_name": "位置",
+    "desc": "创建单位或指派单位的位置"
+  },
+  "location_y": { "display_name": "位置 Y", "desc": "" },
+  "message": {
+    "display_name": "消息",
+    "desc": "欲在屏幕上显示的名称/消息/指南或欲执行的脚本调用"
+  },
+  "object_attributes": {
+    "display_name": "属性列表",
+    "desc": "欲修改的单位的属性"
+  },
+  "object_group": {
+    "display_name": "对象群组",
+    "desc": "这是欲生效的单位类型"
+  },
+  "object_list_unit_id": {
+    "display_name": "单位列表 1",
+    "desc": "这是欲影响的单位"
+  },
+  "object_list_unit_id_2": {
+    "display_name": "单位列表 2",
+    "desc": "这是欲影响的第二个单位"
+  },
+  "object_type": {
+    "display_name": "对象类型",
+    "desc": "这是欲生效的单位类型"
+  },
+  "operation": {
+    "display_name": "运算",
+    "desc": "加、减、乘或除以给定的数量"
+  },
+  "play_sound": { "display_name": "播放声音", "desc": "欲播放的声音" },
+  "player_color": {
+    "display_name": "玩家颜色",
+    "desc": "单位的新颜色"
+  },
+  "quantity": {
+    "display_name": "数量",
+    "desc": "欲修改的数量或定时器"
+  },
+  "scroll": {
+    "display_name": "滚动",
+    "desc": "如果启用，将摄像机更改为新位置会显示从玩家之前所在位置开始的滚动动画。如果未启用，摄像机将切换到新位置且不显示任何动画。"
+  },
+  "selected_object": {
+    "display_name": "选定对象",
+    "desc": "欲应用效果的单位"
+  },
+  "selected_object_ids": { "display_name": "选定对象 IDs", "desc": "" },
+  "sound_name": {
+    "display_name": "声音名称",
+    "desc": "欲播放的声音的名称"
+  },
+  "source_player": {
+    "display_name": "源玩家",
+    "desc": "受到该效果影响的玩家"
+  },
+  "stone": {
+    "display_name": "石料",
+    "desc": "单位/科技的新石料花费"
+  },
+  "string_id": {
+    "display_name": "字符串 ID",
+    "desc": "这与 `名称字符串 ID` 相同。请参阅手册的 [名称字符串 ID](../../#38-id \"跳转至：自定义场景 > 场景基础 > #3.8 名称字符串 ID\") 部分"
+  },
+  "target_player": {
+    "display_name": "目标玩家",
+    "desc": "这是第二个受到该效果影响的玩家"
+  },
+  "technology": {
+    "display_name": "科技",
+    "desc": "欲影响的科技"
+  },
+  "time_unit": {
+    "display_name": "时间单位",
+    "desc": "这指定了定时器触发器中使用的时间单位。这可以是秒、分钟或年"
+  },
+  "tribute_list": {
+    "display_name": "贡品列表",
+    "desc": "欲进贡的资源"
+  },
+  "trigger_id": {
+    "display_name": "触发器列表",
+    "desc": "欲激活/停用的触发器"
+  },
+  "timer": {
+    "display_name": "定时器",
+    "desc": "欲显示消息的定时器"
+  },
+  "visibility_state": {
+    "display_name": "可视性状态",
+    "desc": "新的可视性状态"
+  },
+  "wood": {
+    "display_name": "木材",
+    "desc": "单位/科技的新木材花费"
+  },
+  "color_mood": {
+    "display_name": "色调",
+    "desc": "这是要设置的新色调"
+  }
+}

@@ -85,7 +85,8 @@ def build_doc(lang: str = None):
                     xs_code = "\n\n    ```cpp\n"
                     while code_line := file.readline():
                         if '\n' != code_line:
-                            xs_code += '    ' + code_line
+                            xs_code += '    '
+                        xs_code += code_line
                     xs_code += "\n    ```\n"
 
             k = functools.partial(ugcdoc.get_key, dict_set=bug_dict, parent_key=bug_name, language=lang)

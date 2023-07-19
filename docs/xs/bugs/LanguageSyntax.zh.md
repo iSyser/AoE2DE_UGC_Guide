@@ -15,6 +15,7 @@
     void main() {
       int a = 7;
       float b = 1.1;
+
       // expected `7/1.1 = 6.363636` but actually
       // prints `7/1.1 = 6`
       xsChatData("7/1.1 = " + a / b);
@@ -71,9 +72,11 @@
       // expected `test = 13.7500000`
       // prints `test = 13`
       xsChatData("test = " + test(5));
+
       // passed 5 for the argument which should
       // get type casted into a float but it
       // actually does not.
+
       // note that this function is supposed to return a float
       // but it actually returns an integer!
     }
@@ -98,6 +101,7 @@
     void test(int a1 = 1, int a2 = 1, int a3 = 1, int a4 = 1, int a5 = 1,
               int a6 = 1, int a7 = 1, int a8 = 1, int a9 = 1, int a10 = 1,
               int a11 = 1, int a12 = 1, int a13 = 1) {}
+
     void main() { test(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13); }
 
     ```
@@ -122,10 +126,12 @@
       float x = 2;
       float y = 4;
       float z = 6;
+
       // none of these declarations work:
       vector v1 = vector(5 + 5, 10, 4);
       vector v2 = vector(5, 10 - 1, 4);
       vector v3 = vector(5, 10, 4 + 5);
+
       vector v4 = vector(x, 5, 3);
       vector v5 = vector(3, y, 2);
       vector v6 = vector(4, 4, z);
@@ -151,11 +157,14 @@
     void main() {
       int a = 5;
       float b = 3.4;
+
       // these do not work:
+
       int c = -a;
       float d = -a;
       int e = -b;
       float f = -b;
+
       int g = -a + b;
       float h = -a + b;
     }
@@ -180,12 +189,16 @@
     void main() {
       float a = 5.5;
       float b = (int)a; // will outwright assign 0 to b
+
       // expected `b = 5.000000` but
       // prints `b = 0.000000`
       xsChatData("b = " + b);
+
       b = 6.7;
       xsChatData("b (two) = " + b);
+
       b = (int)5.7; // this expression will do nothing
+
       // expected `b = 5.000000` but
       // prints `b = 6.700000`
       xsChatData("b (three) = " + b);
@@ -290,6 +303,7 @@
       if (a < 10 && prevent_infinite_recursion < 10)
         test();
     }
+
     void main() { test(); }
 
     ```
@@ -330,6 +344,7 @@
 
     ```cpp
     string a = "test";
+
     void main() {
       // prints random text to the screen or ??? or shows an
       // Error invalid encoding
@@ -356,6 +371,7 @@
     void main() {
       infiniteLoopLimit = 10;
       int loopCount = 1;
+
       while (true) {
         xsChatData("loop count %d", loopCount);
         loopCount++;
@@ -389,6 +405,7 @@
       calls++;
       recursionTest();
     }
+
     void main() {
       recursionTest();
       xsChatData("further xs execution");
@@ -416,6 +433,7 @@
       return 5 + 5;
       // instead, `return (5+5);` would work.
     }
+
     void main() { int a = test(); }
 
     ```
@@ -437,6 +455,7 @@
     ```cpp
     void main() {
       { int a = 10; }
+
       xsChatData("test " + a);
     }
 
@@ -506,6 +525,7 @@
       return thisDoesNotMatterWhatIsGoingOn(a) / 55 + 2 * 2;
       // seems like this is completely ignoring the first term in the expression.
     }
+
     void main() {
       // prints `test = 4`
       // once again, note that a float returning function is returning an int
@@ -532,6 +552,7 @@
     void unrelatedFunc() {
       // ...
     }
+
     void main() { string x = 'my string'; }
 
     ```

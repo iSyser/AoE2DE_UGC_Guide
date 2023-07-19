@@ -14,8 +14,10 @@ Reproduction Steps:
     ```cpp
     void main() {
       // This crashes the game altogether
+
       // prints `this  will not appear in game`
       xsChatData("this % will not appear in game");
+
       // prints `neither will this \ appear in game`
       xsChatData("neither will this \% appear in game");
     }
@@ -58,7 +60,9 @@ Reproduction Steps:
     ```cpp
     void main() {
       int a = 999999999 + 1;
+
       xsChatData("t %d", a); // crashes the game
+
       // xsChatData("t "+a); // this works normally
     }
 
